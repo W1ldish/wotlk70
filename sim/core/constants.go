@@ -4,25 +4,25 @@ import (
 	"time"
 )
 
-const CharacterLevel = 80
+const CharacterLevel = 70
 
 const GCDMin = time.Second * 1
 const GCDDefault = time.Millisecond * 1500
 
 const MeleeAttackRatingPerDamage = 14.0
-const ExpertisePerQuarterPercentReduction = 32.79 / 4 // TODO: Does it still cutoff at 1/4 percents?
-const ArmorPenPerPercentArmor = 13.99
+const ExpertisePerQuarterPercentReduction = 15.77 / 4 // TODO: Does it still cutoff at 1/4 percents?
+const ArmorPenPerPercentArmor = 5.92
 
-const HasteRatingPerHastePercent = 32.79
-const CritRatingPerCritChance = 45.91
+const HasteRatingPerHastePercent = 15.77
+const CritRatingPerCritChance = 22.08
 
-const SpellHitRatingPerHitChance = 26.232
-const MeleeHitRatingPerHitChance = 32.79
+const SpellHitRatingPerHitChance = 12.62
+const MeleeHitRatingPerHitChance = 15.77
 
-const DefenseRatingPerDefense = 4.92
-const DodgeRatingPerDodgeChance = 45.25
-const ParryRatingPerParryChance = 45.25
-const BlockRatingPerBlockChance = 16.39
+const DefenseRatingPerDefense = 2.37
+const DodgeRatingPerDodgeChance = 21.76
+const ParryRatingPerParryChance = 21.76
+const BlockRatingPerBlockChance = 7.88
 const MissDodgeParryBlockCritChancePerDefense = 0.04
 
 const DefenseRatingToChanceReduction = (1.0 / DefenseRatingPerDefense) * MissDodgeParryBlockCritChancePerDefense / 100
