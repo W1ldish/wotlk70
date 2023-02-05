@@ -1,7 +1,7 @@
 package deathknight
 
 import (
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 var BloodStrikeActionID = core.ActionID{SpellID: 49930}

@@ -5,9 +5,9 @@ import (
 
 	"golang.org/x/exp/slices"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
-	"github.com/wowsims/wotlk/sim/druid"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/druid"
 )
 
 func (cat *FeralDruid) OnEnergyGain(sim *core.Simulation) {

@@ -3,7 +3,7 @@ package shaman
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 // Totem Item IDs

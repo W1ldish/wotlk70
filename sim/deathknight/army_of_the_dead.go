@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 func (dk *Deathknight) PrecastArmyOfTheDead(sim *core.Simulation) {

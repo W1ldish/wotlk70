@@ -257,7 +257,7 @@ export abstract class SimUI extends Component {
 					if (issues.total_count > 0) {
 						window.open(issues.items[0].html_url, '_blank');
 					} else {
-						const base_url = 'https://github.com/wowsims/wotlk/issues/new?assignees=&labels=&title=Crash%20Report%20'
+						const base_url = 'https://github.com/Tereneckla/wotlk70/issues/new?assignees=&labels=&title=Crash%20Report%20'
 						const base = `${base_url}${hash}&body=`;
 						const maxBodyLength = URLMAXLEN - base.length;
 						let issueBody = encodeURIComponent(`Link:\n${link}\n\nRNG Seed: ${rngSeed}\n\n${errorStr}`)

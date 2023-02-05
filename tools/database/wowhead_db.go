@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 	"github.com/tailscale/hujson"
-	"github.com/wowsims/wotlk/sim/core/proto"
 )
 
 // Example db input file: https://nether.wowhead.com/wotlk/data/gear-planner?dv=100

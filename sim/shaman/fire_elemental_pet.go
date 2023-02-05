@@ -4,8 +4,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 // Variables that control the Fire Elemental.

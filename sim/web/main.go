@@ -18,12 +18,12 @@ import (
 	"syscall"
 	"time"
 
+	dist "github.com/Tereneckla/wotlk70/binary_dist"
+	"github.com/Tereneckla/wotlk70/sim"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	proto "github.com/Tereneckla/wotlk70/sim/core/proto"
 	"github.com/pkg/browser"
 	uuid "github.com/satori/go.uuid"
-	dist "github.com/wowsims/wotlk/binary_dist"
-	"github.com/wowsims/wotlk/sim"
-	"github.com/wowsims/wotlk/sim/core"
-	proto "github.com/wowsims/wotlk/sim/core/proto"
 
 	googleProto "google.golang.org/protobuf/proto"
 )

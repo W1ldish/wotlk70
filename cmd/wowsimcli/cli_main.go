@@ -6,10 +6,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/wowsims/wotlk/cmd/wowsimcli/bulk"
-	"github.com/wowsims/wotlk/sim"
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/cmd/wowsimcli/bulk"
+	"github.com/Tereneckla/wotlk70/sim"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 	"google.golang.org/protobuf/encoding/protojson"
 )
 

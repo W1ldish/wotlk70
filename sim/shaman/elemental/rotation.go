@@ -3,8 +3,8 @@ package elemental
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 )
 
 // func (eleShaman *ElementalShaman) GetPresimOptions(_ proto.Player) *core.PresimOptions {

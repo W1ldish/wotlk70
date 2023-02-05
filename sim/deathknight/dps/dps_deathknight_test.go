@@ -3,9 +3,9 @@ package dps
 import (
 	"testing"
 
-	_ "github.com/wowsims/wotlk/sim/common" // imported to get item effects included.
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
+	_ "github.com/Tereneckla/wotlk70/sim/common" // imported to get item effects included.
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 )
 
 func init() {

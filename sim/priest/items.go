@@ -3,8 +3,8 @@ package priest
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 var ItemSetAbsolution = core.NewItemSet(core.ItemSet{

@@ -5,7 +5,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 func (result *SpellResult) applyResistances(sim *Simulation, spell *Spell, isPeriodic bool, attackTable *AttackTable) {

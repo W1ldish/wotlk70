@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/tools"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/tools"
 )
 
 // Generic class for fetching tooltip info from the web.

@@ -3,9 +3,9 @@ package hunter
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/common/wotlk"
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/common/wotlk"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 var ItemSetGladiatorsPursuit = core.NewItemSet(core.ItemSet{

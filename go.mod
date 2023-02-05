@@ -1,4 +1,4 @@
-module github.com/wowsims/wotlk
+module github.com/Tereneckla/wotlk70
 
 go 1.18
 

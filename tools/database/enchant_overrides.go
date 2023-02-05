@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/wowsims/wotlk/sim/core/proto"
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 // Note: EffectId AND SpellId are required for all enchants, because they are

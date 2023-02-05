@@ -3,7 +3,7 @@ package rogue
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 func (rogue *Rogue) makeEnvenom(comboPoints int32) *core.Spell {

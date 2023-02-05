@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 type SpellResult struct {

@@ -1,9 +1,9 @@
 package encounters
 
 import (
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/encounters/naxxramas"
-	"github.com/wowsims/wotlk/sim/encounters/ulduar"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/encounters/naxxramas"
+	"github.com/Tereneckla/wotlk70/sim/encounters/ulduar"
 )
 
 func init() {

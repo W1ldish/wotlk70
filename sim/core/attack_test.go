@@ -4,8 +4,8 @@ import (
 	//"math/rand"
 	//"testing"
 
-	//"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
+	//"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 )
 
 // These tests are currently broken, seems like target PseudoStats are somehow not being set.

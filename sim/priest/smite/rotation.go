@@ -1,7 +1,7 @@
 package smite
 
 import (
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 func (spriest *SmitePriest) OnGCDReady(sim *core.Simulation) {

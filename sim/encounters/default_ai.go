@@ -3,7 +3,7 @@ package encounters
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 // Default implementation of TargetAI which takes a list of abilities as input

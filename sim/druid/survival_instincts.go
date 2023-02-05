@@ -3,9 +3,9 @@ package druid
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 func (druid *Druid) registerSurvivalInstinctsCD() {
@@ -38,7 +38,7 @@ func (druid *Druid) registerSurvivalInstinctsCD() {
 
 	druid.SurvivalInstincts = druid.RegisterSpell(core.SpellConfig{
 		ActionID: actionID,
-		Flags: SpellFlagOmenTrigger,
+		Flags:    SpellFlagOmenTrigger,
 		Cast: core.CastConfig{
 			CD: core.Cooldown{
 				Timer:    cdTimer,

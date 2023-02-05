@@ -3,7 +3,7 @@ package warrior
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
 func (warrior *Warrior) registerBloodthirstSpell(cdTimer *core.Timer) {

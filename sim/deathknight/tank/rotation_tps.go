@@ -3,9 +3,9 @@ package tank
 import (
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
-	"github.com/wowsims/wotlk/sim/deathknight"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/deathknight"
 )
 
 func (dk *TankDeathknight) TankRA_Tps(sim *core.Simulation, target *core.Unit, s *deathknight.Sequence) time.Duration {

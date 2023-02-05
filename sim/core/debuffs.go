@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core/proto"
-	"github.com/wowsims/wotlk/sim/core/stats"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
 func applyDebuffEffects(target *Unit, debuffs *proto.Debuffs, raid *proto.Raid) {

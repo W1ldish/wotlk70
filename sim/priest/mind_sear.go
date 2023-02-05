@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/wowsims/wotlk/sim/core"
-	"github.com/wowsims/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 )
 
 // TODO see Mind Flay: Mind Sear (53023) now "periodically triggers" Mind Sear (53022).
