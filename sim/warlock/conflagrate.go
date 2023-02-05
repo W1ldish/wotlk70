@@ -12,9 +12,9 @@ func (warlock *Warlock) registerConflagrateSpell() {
 	actionID := core.ActionID{SpellID: 17962}
 	hasGlyphOfConflag := warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfConflagrate)
 
-	directFlatDamage := 0.6 * 785 / 5 * float64(warlock.ImmolateDot.NumberOfTicks)
+	directFlatDamage := 0.6 * 615 / 5 * float64(warlock.ImmolateDot.NumberOfTicks)
 	directSpellCoeff := 0.6 * 0.2 * float64(warlock.ImmolateDot.NumberOfTicks)
-	dotFlatDamage := 0.4 / 3 * 785 / 5 * float64(warlock.ImmolateDot.NumberOfTicks)
+	dotFlatDamage := 0.4 / 3 * 615 / 5 * float64(warlock.ImmolateDot.NumberOfTicks)
 	dotSpellCoeff := 0.4 / 3 * 0.2 * float64(warlock.ImmolateDot.NumberOfTicks)
 
 	warlock.Conflagrate = warlock.RegisterSpell(core.SpellConfig{

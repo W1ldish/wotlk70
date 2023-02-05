@@ -78,7 +78,7 @@ func (wp *WarlockPet) newFirebolt() *core.Spell {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(203, 227) + 0.571*spell.SpellPower()
+			baseDamage := sim.Roll(110, 124) + 0.571*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})
@@ -94,7 +94,7 @@ func (wp *WarlockPet) newCleave() *core.Spell {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
 
 		ManaCost: core.ManaCostOptions{
-			FlatCost: 439,
+			FlatCost: 390,
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{
@@ -112,7 +112,7 @@ func (wp *WarlockPet) newCleave() *core.Spell {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			constBaseDamage := 124 + spell.BonusWeaponDamage()
+			constBaseDamage := 78 + spell.BonusWeaponDamage()
 
 			curTarget := target
 			for hitIndex := int32(0); hitIndex < numHits; hitIndex++ {
@@ -131,7 +131,7 @@ func (wp *WarlockPet) newLashOfPain() *core.Spell {
 		ProcMask:    core.ProcMaskSpellDamage,
 
 		ManaCost: core.ManaCostOptions{
-			FlatCost: 250,
+			FlatCost: 190,
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{
@@ -151,7 +151,7 @@ func (wp *WarlockPet) newLashOfPain() *core.Spell {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			// TODO: the hidden 5% damage modifier succ currently gets also applies to this ...
-			baseDamage := 237 + 0.429*spell.SpellPower()
+			baseDamage := 123 + 0.429*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})
@@ -174,7 +174,7 @@ func (wp *WarlockPet) newShadowBite() *core.Spell {
 
 		ManaCost: core.ManaCostOptions{
 			// TODO: should be 3% of BaseMana, but it's unclear what that actually refers to with pets
-			FlatCost: 131,
+			FlatCost: 100,
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{
@@ -192,7 +192,7 @@ func (wp *WarlockPet) newShadowBite() *core.Spell {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(97+1, 97+41) + 0.429*spell.SpellPower()
+			baseDamage := sim.Roll(84, 118) + 0.429*spell.SpellPower()
 
 			w := wp.owner
 			dots := []*core.Dot{

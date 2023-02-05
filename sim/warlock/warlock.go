@@ -196,7 +196,7 @@ func NewWarlock(character core.Character, options *proto.Player) *Warlock {
 
 	if warlock.Options.Armor == proto.Warlock_Options_FelArmor {
 		demonicAegisMultiplier := 1 + float64(warlock.Talents.DemonicAegis)*0.1
-		amount := 180.0 * demonicAegisMultiplier
+		amount := 100.0 * demonicAegisMultiplier
 		warlock.AddStat(stats.SpellPower, amount)
 		warlock.AddStatDependency(stats.Spirit, stats.SpellPower, 0.3*demonicAegisMultiplier)
 	}
@@ -234,11 +234,11 @@ func RegisterWarlock() {
 func init() {
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassWarlock}] = stats.Stats{
 		stats.Health:    7164,
-		stats.Strength:  56,
-		stats.Agility:   69,
-		stats.Stamina:   89,
-		stats.Intellect: 162,
-		stats.Spirit:    164,
+		stats.Strength:  48,
+		stats.Agility:   60,
+		stats.Stamina:   76,
+		stats.Intellect: 136,
+		stats.Spirit:    137,
 		stats.Mana:      3856,
 		stats.SpellCrit: 1.697 * core.CritRatingPerCritChance,
 		// Not sure how stats modify the crit chance.
@@ -246,11 +246,11 @@ func init() {
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceOrc, Class: proto.Class_ClassWarlock}] = stats.Stats{
 		stats.Health:    7164,
-		stats.Strength:  62,
-		stats.Agility:   64,
-		stats.Stamina:   90,
-		stats.Intellect: 156,
-		stats.Spirit:    168,
+		stats.Strength:  54,
+		stats.Agility:   55,
+		stats.Stamina:   77,
+		stats.Intellect: 130,
+		stats.Spirit:    141,
 		stats.Mana:      3856,
 		stats.SpellCrit: 1.697 * core.CritRatingPerCritChance,
 		// Not sure how stats modify the crit chance.
@@ -258,11 +258,11 @@ func init() {
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceUndead, Class: proto.Class_ClassWarlock}] = stats.Stats{
 		stats.Health:    7164,
-		stats.Strength:  58,
-		stats.Agility:   65,
-		stats.Stamina:   89,
-		stats.Intellect: 157,
-		stats.Spirit:    171,
+		stats.Strength:  50,
+		stats.Agility:   56,
+		stats.Stamina:   76,
+		stats.Intellect: 131,
+		stats.Spirit:    144,
 		stats.Mana:      3856,
 		stats.SpellCrit: 1.697 * core.CritRatingPerCritChance,
 		// Not sure how stats modify the crit chance.
@@ -270,11 +270,11 @@ func init() {
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassWarlock}] = stats.Stats{
 		stats.Health:    7164,
-		stats.Strength:  59,
-		stats.Agility:   67,
-		stats.Stamina:   89,
-		stats.Intellect: 159,
-		stats.Spirit:    166, // racial makes this 170
+		stats.Strength:  51,
+		stats.Agility:   58,
+		stats.Stamina:   76,
+		stats.Intellect: 133,
+		stats.Spirit:    139, // racial makes this 170
 		stats.Mana:      3856,
 		stats.SpellCrit: 1.697 * core.CritRatingPerCritChance,
 		// Not sure how stats modify the crit chance.
@@ -282,11 +282,11 @@ func init() {
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceGnome, Class: proto.Class_ClassWarlock}] = stats.Stats{
 		stats.Health:    7164,
-		stats.Strength:  54,
-		stats.Agility:   69,
-		stats.Stamina:   89,
-		stats.Intellect: 162, // racial makes this 170
-		stats.Spirit:    166,
+		stats.Strength:  46,
+		stats.Agility:   60,
+		stats.Stamina:   76,
+		stats.Intellect: 136, // racial makes this 170
+		stats.Spirit:    139,
 		stats.Mana:      3856,
 		stats.SpellCrit: 1.697 * core.CritRatingPerCritChance,
 		// Not sure how stats modify the crit chance.

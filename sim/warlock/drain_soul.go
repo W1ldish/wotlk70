@@ -42,7 +42,7 @@ func (warlock *Warlock) registerDrainSoulSpell() {
 			AffectedByCastSpeed: true,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				baseDmg := 142 + 0.429*dot.Spell.SpellPower()
+				baseDmg := 124 + 0.429*dot.Spell.SpellPower()
 
 				auras := []*core.Aura{
 					warlock.HauntDebuffAura,

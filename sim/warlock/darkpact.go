@@ -14,7 +14,7 @@ func (warlock *Warlock) registerDarkPactSpell() {
 	}
 
 	actionID := core.ActionID{SpellID: 59092}
-	baseRestore := 1200.0
+	baseRestore := 700.0
 	manaMetrics := warlock.NewManaMetrics(actionID)
 	petManaMetrics := warlock.Pet.NewManaMetrics(actionID)
 	hasGlyph := warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfLifeTap)

@@ -40,7 +40,7 @@ func (warlock *Warlock) registerImmolateSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 460 + 0.2*spell.SpellPower()
+			baseDamage := 327 + 0.2*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {
 				warlock.ImmolateDot.Apply(sim)
@@ -85,7 +85,7 @@ func (warlock *Warlock) registerImmolateSpell() {
 		TickLength:    time.Second * 3,
 
 		OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-			dot.SnapshotBaseDamage = 785/5 + 0.2*dot.Spell.SpellPower()
+			dot.SnapshotBaseDamage = 615/5 + 0.2*dot.Spell.SpellPower()
 			attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 			dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 			dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)

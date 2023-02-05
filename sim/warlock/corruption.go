@@ -49,7 +49,7 @@ func (warlock *Warlock) registerCorruptionSpell() {
 			AffectedByCastSpeed: warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfQuickDecay),
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 1080/6 + spellCoeff*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 900/6 + spellCoeff*dot.Spell.SpellPower()
 				if !isRollover {
 					attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 					dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)

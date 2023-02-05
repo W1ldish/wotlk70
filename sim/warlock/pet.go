@@ -35,19 +35,19 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 		cfg.Name = "Felguard"
 		cfg.PowerModifier = 0.77 // GetUnitPowerModifier("pet")
 		cfg.Stats = stats.Stats{
-			stats.Strength:  314,
-			stats.Agility:   90,
-			stats.Stamina:   328,
-			stats.Intellect: 150,
-			stats.Spirit:    209,
-			stats.Mana:      1559,
+			stats.Strength:  153,
+			stats.Agility:   43,
+			stats.Stamina:   280,
+			stats.Intellect: 133,
+			stats.Spirit:    122,
+			stats.Mana:      2848,
 			stats.MeleeCrit: 3.2685 * core.CritRatingPerCritChance,
 			stats.SpellCrit: 3.3355 * core.CritRatingPerCritChance,
 		}
 		cfg.AutoAttacks = core.AutoAttackOptions{
 			MainHand: core.Weapon{
-				BaseDamageMin:  88.8,
-				BaseDamageMax:  133.3,
+				BaseDamageMin:  266.42,
+				BaseDamageMax:  391.42,
 				SwingSpeed:     2,
 				SwingDuration:  time.Second * 2,
 				CritMultiplier: 2,
@@ -58,12 +58,12 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 		cfg.Name = "Imp"
 		cfg.PowerModifier = 0.33 // GetUnitPowerModifier("pet")
 		cfg.Stats = stats.Stats{
-			stats.Strength:  297,
-			stats.Agility:   79,
-			stats.Stamina:   118,
-			stats.Intellect: 369,
-			stats.Spirit:    367,
-			stats.Mana:      1174,
+			stats.Strength:  145,
+			stats.Agility:   38,
+			stats.Stamina:   101,
+			stats.Intellect: 327,
+			stats.Spirit:    263,
+			stats.Mana:      1042,
 			stats.MeleeCrit: 3.454 * core.CritRatingPerCritChance,
 			stats.SpellCrit: 0.9075 * core.CritRatingPerCritChance,
 		}
@@ -71,19 +71,19 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 		cfg.Name = "Succubus"
 		cfg.PowerModifier = 0.77 // GetUnitPowerModifier("pet")
 		cfg.Stats = stats.Stats{
-			stats.Strength:  314,
-			stats.Agility:   90,
-			stats.Stamina:   328,
-			stats.Intellect: 150,
-			stats.Spirit:    209,
+			stats.Strength:  153,
+			stats.Agility:   43,
+			stats.Stamina:   280,
+			stats.Intellect: 133,
+			stats.Spirit:    122,
 			stats.Mana:      1559,
 			stats.MeleeCrit: 3.2685 * core.CritRatingPerCritChance,
 			stats.SpellCrit: 3.3355 * core.CritRatingPerCritChance,
 		}
 		cfg.AutoAttacks = core.AutoAttackOptions{
 			MainHand: core.Weapon{
-				BaseDamageMin:  98,
-				BaseDamageMax:  147,
+				BaseDamageMin:  267.14,
+				BaseDamageMax:  398.14,
 				SwingSpeed:     2,
 				SwingDuration:  time.Second * 2,
 				CritMultiplier: 2,
@@ -94,19 +94,19 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 		cfg.Name = "Felhunter"
 		cfg.PowerModifier = 0.77 // GetUnitPowerModifier("pet")
 		cfg.Stats = stats.Stats{
-			stats.Strength:  314,
-			stats.Agility:   90,
-			stats.Stamina:   328,
-			stats.Intellect: 150,
-			stats.Spirit:    209,
+			stats.Strength:  153,
+			stats.Agility:   43,
+			stats.Stamina:   280,
+			stats.Intellect: 133,
+			stats.Spirit:    122,
 			stats.Mana:      1559,
 			stats.MeleeCrit: 3.2685 * core.CritRatingPerCritChance,
 			stats.SpellCrit: 3.3355 * core.CritRatingPerCritChance,
 		}
 		cfg.AutoAttacks = core.AutoAttackOptions{
 			MainHand: core.Weapon{
-				BaseDamageMin:  88.8,
-				BaseDamageMax:  133.3,
+				BaseDamageMin:  194.14,
+				BaseDamageMax:  294.14,
 				SwingSpeed:     2,
 				SwingDuration:  time.Second * 2,
 				CritMultiplier: 2,
@@ -128,9 +128,9 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 
 	if warlock.Options.Summon == proto.Warlock_Options_Imp {
 		// imp has a slightly different agi crit scaling coef for some reason
-		wp.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance*1/51.0204)
+		wp.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance*1/24.5378)
 	} else {
-		wp.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance*1/52.0833)
+		wp.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance*1/25.04899)
 	}
 
 	wp.AddStats(stats.Stats{

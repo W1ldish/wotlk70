@@ -32,7 +32,7 @@ func (warlock *Warlock) registerSeedSpell() {
 					continue
 				}
 
-				baseDamage := sim.Roll(1633, 1897) + dmgFromSP
+				baseDamage := sim.Roll(1110, 1290) + dmgFromSP
 				baseDamage *= sim.Encounter.AOECapMultiplier()
 				spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, spell.OutcomeMagicHitAndCrit)
 			}
@@ -42,7 +42,7 @@ func (warlock *Warlock) registerSeedSpell() {
 	warlock.SeedDamageTracker = make([]float64, len(warlock.Env.AllUnits))
 	trySeedPop := func(sim *core.Simulation, target *core.Unit, dmg float64) {
 		warlock.SeedDamageTracker[target.UnitIndex] += dmg
-		if warlock.SeedDamageTracker[target.UnitIndex] > 1518 {
+		if warlock.SeedDamageTracker[target.UnitIndex] > 1044 {
 			warlock.Seed.Dot(target).Deactivate(sim)
 			seedExplosion.Cast(sim, target)
 		}
@@ -98,7 +98,7 @@ func (warlock *Warlock) registerSeedSpell() {
 			TickLength:    time.Second * 3,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 1518/6 + 0.25*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 1044/6 + 0.25*dot.Spell.SpellPower()
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {

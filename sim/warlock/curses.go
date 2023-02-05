@@ -114,7 +114,7 @@ func (warlock *Warlock) registerCurseOfTonguesSpell() {
 
 func (warlock *Warlock) registerCurseOfAgonySpell() {
 	numberOfTicks := int32(12)
-	totalBaseDmg := 1740.0
+	totalBaseDmg := 1356.0
 	if warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfCurseOfAgony) {
 		numberOfTicks += 2
 		totalBaseDmg += 2 * totalBaseDmg * 0.056 // Glyphed ticks
@@ -200,7 +200,7 @@ func (warlock *Warlock) registerCurseOfDoomSpell() {
 			NumberOfTicks: 1,
 			TickLength:    time.Minute,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 7300 + 2*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 4200 + 2*dot.Spell.SpellPower()
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {

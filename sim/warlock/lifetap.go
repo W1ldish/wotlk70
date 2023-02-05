@@ -8,7 +8,7 @@ import (
 
 func (warlock *Warlock) registerLifeTapSpell() {
 	actionID := core.ActionID{SpellID: 57946}
-	baseRestore := 2000.0 * (1.0 + 0.1*float64(warlock.Talents.ImprovedLifeTap))
+	baseRestore := 1164.0 * (1.0 + 0.1*float64(warlock.Talents.ImprovedLifeTap))
 	manaMetrics := warlock.NewManaMetrics(actionID)
 	hasGlyph := warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfLifeTap)
 
