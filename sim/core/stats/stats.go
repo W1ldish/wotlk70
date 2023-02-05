@@ -77,7 +77,6 @@ const (
 	SchoolIndexHoly
 	SchoolIndexNature
 	SchoolIndexShadow
-
 	SchoolLen
 )
 
