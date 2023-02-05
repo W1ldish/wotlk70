@@ -303,6 +303,7 @@ enum Flask {
 	FlaskOfSupremePower = 11;
 	FlaskOfFortification = 12;
 	FlaskOfChromaticWonder = 13;
+	FlaskOfDistilledWisdom = 14;
 }
 
 enum BattleElixir {
@@ -330,6 +331,7 @@ enum BattleElixir {
 	ElixirOfTheMongoose = 19;
 	FelStrengthElixir = 20;
 	GreaterArcaneElixir = 21;
+	ElixirOfHealingPower = 22;
 }
 
 enum GuardianElixir {

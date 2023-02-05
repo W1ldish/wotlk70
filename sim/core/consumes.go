@@ -124,6 +124,10 @@ func applyConsumeEffects(agent Agent) {
 				stats.NatureResistance: 35,
 				stats.ShadowResistance: 35,
 			})
+		case proto.Flask_FlaskOfDistilledWisdom:
+			character.AddStats(stats.Stats{
+				stats.Intellect: 65,
+			})
 		}
 	} else {
 		switch consumes.BattleElixir {
@@ -179,6 +183,11 @@ func applyConsumeEffects(agent Agent) {
 			character.AddStats(stats.Stats{
 				stats.SpellCrit:  24,
 				stats.SpellPower: 24,
+			})
+		case proto.BattleElixir_ElixirOfHealingPower:
+			character.AddStats(stats.Stats{
+				stats.SpellPower: 24,
+				stats.Spirit:     24,
 			})
 		case proto.BattleElixir_ElixirOfDemonslaying:
 			if character.CurrentTarget.MobType == proto.MobType_MobTypeDemon {
