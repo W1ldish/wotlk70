@@ -41,7 +41,7 @@ func (druid *Druid) registerHurricaneSpell() {
 
 			OnSnapshot: func(sim *core.Simulation, _ *core.Unit, dot *core.Dot, _ bool) {
 				target := druid.CurrentTarget
-				dot.SnapshotBaseDamage = 451 + 0.129*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 303 + 0.129*dot.Spell.SpellPower()
 				dot.SnapshotBaseDamage *= sim.Encounter.AOECapMultiplier()
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
