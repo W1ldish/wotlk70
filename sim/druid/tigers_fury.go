@@ -11,7 +11,7 @@ func (druid *Druid) registerTigersFurySpell() {
 	energyMetrics := druid.NewEnergyMetrics(actionID)
 	instantEnergy := 20.0 * float64(druid.Talents.KingOfTheJungle)
 
-	dmgBonus := 80.0
+	dmgBonus := 40.0
 	cdReduction := core.TernaryDuration(druid.HasSetBonus(ItemSetDreamwalkerBattlegear, 4), time.Second*3, 0)
 
 	druid.TigersFuryAura = druid.RegisterAura(core.Aura{
