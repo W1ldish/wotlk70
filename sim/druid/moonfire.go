@@ -40,7 +40,7 @@ func (druid *Druid) registerMoonfireSpell() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(406, 476) + 0.15*spell.SpellPower()
+			baseDamage := sim.Roll(305, 357) + 0.15*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {
 				druid.MoonfireDot.NumberOfTicks = numTicks
@@ -99,7 +99,7 @@ func (druid *Druid) registerMoonfireSpell() {
 		TickLength:    time.Second * 3,
 
 		OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-			dot.SnapshotBaseDamage = 200 + 0.13*dot.Spell.SpellPower()
+			dot.SnapshotBaseDamage = 150 + 0.13*dot.Spell.SpellPower()
 			attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 			dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 			dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)
