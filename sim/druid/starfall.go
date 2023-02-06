@@ -49,7 +49,7 @@ func (druid *Druid) registerStarfallSpell() {
 			TickLength:    tickLength,
 
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				baseDamage := sim.Roll(563, 653) + 0.3*dot.Spell.SpellPower()
+				baseDamage := sim.Roll(325, 377) + 0.3*dot.Spell.SpellPower()
 				dot.Spell.CalcAndDealDamage(sim, target, baseDamage, dot.Spell.OutcomeMagicHitAndCrit)
 			},
 		},
@@ -80,7 +80,7 @@ func (druid *Druid) registerStarfallSpell() {
 			NumberOfTicks: numberOfTicks,
 			TickLength:    tickLength,
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				baseDamage := 101 + 0.13*dot.Spell.SpellPower()
+				baseDamage := 58 + 0.13*dot.Spell.SpellPower()
 				baseDamage *= sim.Encounter.AOECapMultiplier()
 				for _, aoeTarget := range sim.Encounter.Targets {
 					dot.Spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, dot.Spell.OutcomeMagicHitAndCrit)
