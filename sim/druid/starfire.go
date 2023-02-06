@@ -45,7 +45,7 @@ func (druid *Druid) registerStarfireSpell() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(1038, 1222) + ((spell.SpellPower() + idolSpellPower) * spellCoeff) + (spell.SpellPower() * bonusCoeff)
+			baseDamage := sim.Roll(828.1, 974.1) + ((spell.SpellPower() + idolSpellPower) * spellCoeff) + (spell.SpellPower() * bonusCoeff)
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {
 				if druid.EarthAndMoonAura != nil {
