@@ -35,7 +35,7 @@ echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
 echo 'export PATH=$PATH:$GOPATH/bin' >> $HOME/.bashrc
 source $HOME/.bashrc
 
-cd wotlk
+cd wotlk70
 
 # Install protobuf compiler and Go plugins
 sudo apt update && sudo apt upgrade
@@ -55,7 +55,7 @@ npm install
 Alternatively, install Docker and your workflow will look something like this:
 ```sh
 git clone https://github.com/Tereneckla/wotlk70.git
-cd wotlk
+cd wotlk70
 
 # Build the docker image and install npm dependencies (only need to run these once).
 docker build --tag wowsims-wotlk .
