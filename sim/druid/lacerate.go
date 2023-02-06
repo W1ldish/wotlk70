@@ -7,8 +7,8 @@ import (
 )
 
 func (druid *Druid) registerLacerateSpell() {
-	tickDamage := 320.0 / 5
-	initialDamage := 88.0
+	tickDamage := 155.0 / 5
+	initialDamage := 31.0
 	if druid.Equip[core.ItemSlotRanged].ID == 27744 { // Idol of Ursoc
 		tickDamage += 8
 		initialDamage += 8
@@ -82,7 +82,7 @@ func (druid *Druid) registerLacerateSpell() {
 			}
 
 			// Hack so that FlatThreatBonus only applies to the initial portion.
-			spell.FlatThreatBonus = 515.5
+			spell.FlatThreatBonus = 285.0
 			spell.DamageMultiplier = initialDamageMul
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 			spell.FlatThreatBonus = 0
