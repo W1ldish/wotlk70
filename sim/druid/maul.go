@@ -6,7 +6,7 @@ import (
 )
 
 func (druid *Druid) registerMaulSpell(rageThreshold float64) {
-	flatBaseDamage := 578.0
+	flatBaseDamage := 290.0
 	if druid.Equip[core.ItemSlotRanged].ID == 23198 { // Idol of Brutality
 		flatBaseDamage += 50
 	} else if druid.Equip[core.ItemSlotRanged].ID == 38365 { // Idol of Perspicacious Attacks
@@ -30,7 +30,7 @@ func (druid *Druid) registerMaulSpell(rageThreshold float64) {
 		DamageMultiplier: 1 + 0.1*float64(druid.Talents.SavageFury),
 		CritMultiplier:   druid.MeleeCritMultiplier(Bear),
 		ThreatMultiplier: 1,
-		FlatThreatBonus:  424,
+		FlatThreatBonus:  322,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			// Need to specially deactivate CC here in case maul is cast simultaneously with another spell.
