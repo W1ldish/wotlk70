@@ -12,7 +12,7 @@ func (druid *Druid) registerRipSpell() {
 		core.TernaryInt32(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfRip), 2, 0) +
 		core.TernaryInt32(druid.HasSetBonus(ItemSetDreamwalkerBattlegear, 2), 2, 0)
 
-	comboPointCoeff := 93.0
+	comboPointCoeff := 47.0
 	if druid.Equip[core.ItemSlotRanged].ID == 28372 { // Idol of Feral Shadows
 		comboPointCoeff += 7
 	} else if druid.Equip[core.ItemSlotRanged].ID == 39757 { // Idol of Worship
@@ -53,7 +53,7 @@ func (druid *Druid) registerRipSpell() {
 				cp := float64(druid.ComboPoints())
 				ap := dot.Spell.MeleeAttackPower()
 
-				dot.SnapshotBaseDamage = 36 + comboPointCoeff*cp + 0.01*cp*ap
+				dot.SnapshotBaseDamage = 24 + comboPointCoeff*cp + 0.01*cp*ap
 
 				if !isRollover {
 					attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
