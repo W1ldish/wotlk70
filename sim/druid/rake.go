@@ -41,7 +41,7 @@ func (druid *Druid) registerRakeSpell() {
 			NumberOfTicks: numTicks,
 			TickLength:    time.Second * 3,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 358 + 0.06*dot.Spell.MeleeAttackPower()
+				dot.SnapshotBaseDamage = 138 + 0.06*dot.Spell.MeleeAttackPower()
 				attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 				dot.SnapshotCritChance = dot.Spell.PhysicalCritChance(target, attackTable)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)
@@ -56,7 +56,7 @@ func (druid *Druid) registerRakeSpell() {
 		},
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 176 + 0.01*spell.MeleeAttackPower()
+			baseDamage := 90 + 0.01*spell.MeleeAttackPower()
 			if bleedCategory.AnyActive() {
 				baseDamage *= 1.3
 			}
@@ -72,8 +72,8 @@ func (druid *Druid) registerRakeSpell() {
 		},
 
 		ExpectedDamage: func(sim *core.Simulation, target *core.Unit, spell *core.Spell, _ bool) *core.SpellResult {
-			baseDamage := 176 + 0.01*spell.MeleeAttackPower()
-			tickBase := (358 + 0.06*spell.MeleeAttackPower()) * float64(numTicks)
+			baseDamage := 90 + 0.01*spell.MeleeAttackPower()
+			tickBase := (138 + 0.06*spell.MeleeAttackPower()) * float64(numTicks)
 			if bleedCategory.AnyActive() {
 				baseDamage *= 1.3
 				tickBase *= 1.3
