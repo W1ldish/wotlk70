@@ -113,7 +113,7 @@ func (warlock *Warlock) NewInfernal() *InfernalPet {
 
 	// infernal is classified as a warrior class, so we assume it gets the
 	// same agi crit coefficient
-	infernal.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance*1/62.5)
+	infernal.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance*1/33)
 
 	// command doesn't apply to infernal
 	if warlock.Race == proto.Race_RaceOrc {

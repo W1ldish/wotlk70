@@ -265,10 +265,11 @@ func New(char core.Character, form DruidForm, selfBuffs SelfBuffs, talents strin
 
 	druid.AddStatDependency(stats.Strength, stats.AttackPower, 2)
 	// Druids get 0.012 crit per agi at level 80, roughly 1 per 83.33
-	druid.AddStatDependency(stats.Agility, stats.MeleeCrit, (1.0/83.33)*core.CritRatingPerCritChance)
+	druid.AddStatDependency(stats.Agility, stats.MeleeCrit, (1.0/40)*core.CritRatingPerCritChance)
 	// Druid get 0.0209 dodge per agi (before dr), roughly 1 per 47.16
-	druid.AddStatDependency(stats.Agility, stats.Dodge, (1.0/47.16)*core.DodgeRatingPerDodgeChance)
+	druid.AddStatDependency(stats.Agility, stats.Dodge, (1.0/14.7059)*core.DodgeRatingPerDodgeChance)
 
+	druid.AddStatDependency(stats.Intellect, stats.SpellCrit, (1/80)*core.CritRatingPerCritChance)
 	// Druids get extra melee haste
 	druid.PseudoStats.MeleeHasteRatingPerHastePercent /= 1.3
 

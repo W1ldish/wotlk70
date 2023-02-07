@@ -203,6 +203,7 @@ func ApplyGlobalFilters(db *database.WowDatabase) {
 func ApplySimmableFilters(db *database.WowDatabase) {
 	db.Items = core.FilterMap(db.Items, simmableItemFilter)
 	db.Gems = core.FilterMap(db.Gems, simmableGemFilter)
+	db.Enchants = core.FilterMap(db.Enchants, tbcEnchantsFilter)
 }
 func ApplyNonSimmableFilters(db *database.WowDatabase) {
 	db.Items = core.FilterMap(db.Items, func(id int32, item *proto.UIItem) bool {
@@ -211,6 +212,18 @@ func ApplyNonSimmableFilters(db *database.WowDatabase) {
 	db.Gems = core.FilterMap(db.Gems, func(id int32, gem *proto.UIGem) bool {
 		return !simmableGemFilter(id, gem)
 	})
+	db.Enchants = core.FilterMap(db.Enchants, func(key database.EnchantDBKey, enchant *proto.UIEnchant) bool {
+		return !tbcEnchantsFilter(key, enchant)
+	})
+}
+func tbcEnchantsFilter(_ database.EnchantDBKey, enchant *proto.UIEnchant) bool {
+	if enchant.SpellId == 46594 || enchant.SpellId == 42974 {
+		return true
+	}
+	if enchant.SpellId > 42974 {
+		return false
+	}
+	return true
 }
 func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 	if _, ok := database.ItemAllowList[item.Id]; ok {
@@ -221,16 +234,12 @@ func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 		return false
 	} else if item.Quality > proto.ItemQuality_ItemQualityLegendary {
 		return false
-	} else if item.Quality < proto.ItemQuality_ItemQualityEpic {
-		if item.Ilvl < 145 {
-			return false
-		}
-		if item.Ilvl < 149 && item.SetName == "" {
+	} else if item.Quality == proto.ItemQuality_ItemQualityEpic {
+		if item.Ilvl > 164 {
 			return false
 		}
 	} else {
-		// Epic and legendary items might come from classic, so use a lower ilvl threshold.
-		if item.Ilvl < 140 {
+		if item.Ilvl > 115 {
 			return false
 		}
 	}
@@ -242,6 +251,10 @@ func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 }
 func simmableGemFilter(_ int32, gem *proto.UIGem) bool {
 	if gem.Quality < proto.ItemQuality_ItemQualityUncommon {
+		return false
+	} else if strings.Contains(gem.Name, "Scarlet Ruby") || strings.Contains(gem.Name, "Bloodstone") || strings.Contains(gem.Name, "Sky Sapphire") || strings.Contains(gem.Name, "Chalcedony") || strings.Contains(gem.Name, "Autumn's Glow") || strings.Contains(gem.Name, "Sun Crystal") || strings.Contains(gem.Name, "Forest Emerald") || strings.Contains(gem.Name, "Dark Jade") || strings.Contains(gem.Name, "Monarch Topaz") || strings.Contains(gem.Name, "Huge Citrine") || strings.Contains(gem.Name, "Twilight Opal") || strings.Contains(gem.Name, "Shadow Crystal") || strings.Contains(gem.Name, "Earthsiege") || strings.Contains(gem.Name, "Skyflare") || strings.Contains(gem.Name, "Enchanted Tear") || strings.Contains(gem.Name, "Enchanted Pearl") || strings.Contains(gem.Name, "Dragon's Eye") {
+		return false
+	} else if strings.Contains(gem.Name, "Cardinal") || strings.Contains(gem.Name, "Majestic Zircon") || strings.Contains(gem.Name, "King's Amber") || strings.Contains(gem.Name, "Eye of Zul") || strings.Contains(gem.Name, "Ametrine") || strings.Contains(gem.Name, "Dreadstone") || strings.Contains(gem.Name, "Nightmare Tear") {
 		return false
 	}
 	return true

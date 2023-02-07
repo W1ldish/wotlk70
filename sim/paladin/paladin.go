@@ -183,12 +183,12 @@ func NewPaladin(character core.Character, talentsStr string) *Paladin {
 	// then 2 AP per STR, then lose the first 20 AP
 	paladin.AddStatDependency(stats.Strength, stats.AttackPower, 2.0)
 	paladin.AddStat(stats.AttackPower, -20)
-
+	paladin.AddStatDependency(stats.Intellect, stats.SpellCrit, (1/80.5)*core.CritRatingPerCritChance)
 	// Paladins get 1% crit per 52.08 agil
 	paladin.AddStatDependency(stats.Agility, stats.MeleeCrit, (1.0/52.08)*core.CritRatingPerCritChance)
 
 	// Paladins get 1% dodge per 52.08 agil
-	paladin.AddStatDependency(stats.Agility, stats.Dodge, (1.0/52.08)*core.DodgeRatingPerDodgeChance)
+	paladin.AddStatDependency(stats.Agility, stats.Dodge, (1.0/25)*core.DodgeRatingPerDodgeChance)
 
 	// Paladins get more melee haste from haste than other classes, 25.22/1%
 	paladin.PseudoStats.MeleeHasteRatingPerHastePercent = 25.22

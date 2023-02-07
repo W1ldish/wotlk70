@@ -181,7 +181,7 @@ func New(char core.Character, selfBuffs SelfBuffs, talents string) *Priest {
 		Talents:   &proto.PriestTalents{},
 	}
 	core.FillTalentsProto(priest.Talents.ProtoReflect(), talents, TalentTreeSizes)
-
+	priest.AddStatDependency(stats.Intellect, stats.SpellCrit, (1/80)*core.CritRatingPerCritChance)
 	priest.EnableManaBar()
 	priest.ShadowfiendPet = priest.NewShadowfiend()
 

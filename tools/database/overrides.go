@@ -272,6 +272,7 @@ var ExtraItemIcons = []int32{
 	43015,
 
 	// Flask IDs
+	13511,
 	13512,
 	22851,
 	22853,
@@ -322,6 +323,7 @@ var ExtraItemIcons = []int32{
 	44331,
 	9088,
 	9224,
+	22825,
 
 	// Potions / In Battle Consumes
 	13442,

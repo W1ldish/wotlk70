@@ -73,7 +73,7 @@ func (druid *Druid) NewTreant() *TreantPet {
 		druidOwner: druid,
 	}
 	treant.AddStatDependency(stats.Strength, stats.AttackPower, 2)
-	treant.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance/83.3)
+	treant.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance/40)
 
 	treant.PseudoStats.DamageDealtMultiplier = 1 + 0.05*float64(druid.Talents.Brambles)
 	treant.EnableAutoAttacks(treant, core.AutoAttackOptions{

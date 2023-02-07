@@ -193,7 +193,7 @@ func NewWarlock(character core.Character, options *proto.Player) *Warlock {
 	warlock.EnableManaBar()
 
 	warlock.AddStatDependency(stats.Strength, stats.AttackPower, 1)
-
+	warlock.AddStatDependency(stats.Intellect, stats.SpellCrit, (1/81.92)*core.CritRatingPerCritChance)
 	if warlock.Options.Armor == proto.Warlock_Options_FelArmor {
 		demonicAegisMultiplier := 1 + float64(warlock.Talents.DemonicAegis)*0.1
 		amount := 100.0 * demonicAegisMultiplier

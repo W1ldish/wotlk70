@@ -43,7 +43,7 @@ func (shaman *Shaman) NewFireElemental() *FireElemental {
 		},
 		AutoSwingMelee: true,
 	})
-	fireElemental.AddStatDependency(stats.Intellect, stats.SpellCrit, core.CritRatingPerCritChance/212)
+	fireElemental.AddStatDependency(stats.Intellect, stats.SpellCrit, core.CritRatingPerCritChance/100)
 	fireElemental.OnPetEnable = fireElemental.enable
 	fireElemental.OnPetDisable = fireElemental.disable
 

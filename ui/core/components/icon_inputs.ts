@@ -431,6 +431,7 @@ export const makeFlasksInput = makeConsumeInputFactory({
 		{ actionId: ActionId.fromItemId(13512), value: Flask.FlaskOfSupremePower },
 		{ actionId: ActionId.fromItemId(22851), value: Flask.FlaskOfFortification },
 		{ actionId: ActionId.fromItemId(33208), value: Flask.FlaskOfChromaticWonder },
+		{ actionId: ActionId.fromItemId(13511), value: Flask.FlaskOfDistilledWisdom },
 	] as Array<IconEnumValueConfig<Player<any>, Flask>>,
 	onSet: (eventID: EventID, player: Player<any>, newValue: Flask) => {
 		if (newValue) {
@@ -466,6 +467,7 @@ export const makeBattleElixirsInput = makeConsumeInputFactory({
 		{ actionId: ActionId.fromItemId(13452), value: BattleElixir.ElixirOfTheMongoose },
 		{ actionId: ActionId.fromItemId(31679), value: BattleElixir.FelStrengthElixir },
 		{ actionId: ActionId.fromItemId(13454), value: BattleElixir.GreaterArcaneElixir },
+		{ actionId: ActionId.fromItemId(22825), value: BattleElixir.ElixirOfHealingPower },
 	] as Array<IconEnumValueConfig<Player<any>, BattleElixir>>,
 	onSet: (eventID: EventID, player: Player<any>, newValue: BattleElixir) => {
 		if (newValue) {
