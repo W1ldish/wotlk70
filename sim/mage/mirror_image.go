@@ -1,6 +1,6 @@
 package mage
 
-import (
+/*import (
 	"time"
 
 	"github.com/Tereneckla/wotlk70/sim/core"
@@ -190,3 +190,4 @@ func (mi *MirrorImage) registerFireblastSpell() {
 		},
 	})
 }
+*/

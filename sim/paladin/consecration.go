@@ -50,7 +50,7 @@ func (paladin *Paladin) registerConsecrationSpell() {
 				target := paladin.CurrentTarget
 
 				// i = 113 + 0.04*HolP + 0.04*AP
-				dot.SnapshotBaseDamage = 113 +
+				dot.SnapshotBaseDamage = 72 +
 					.04*dot.Spell.MeleeAttackPower() +
 					.04*(dot.Spell.SpellPower()+bonusSpellPower)
 

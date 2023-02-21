@@ -590,9 +590,9 @@ func (paladin *Paladin) applyGuardedByTheLight() {
 				return
 			}
 
-			if paladin.DivinePleaAura.IsActive() {
+			/*if paladin.DivinePleaAura.IsActive() {
 				paladin.DivinePleaAura.Refresh(sim)
-			}
+			}*/
 		},
 	})
 }

@@ -35,7 +35,7 @@ func (mage *Mage) registerDeepFreezeSpell() {
 		ThreatMultiplier: 1 - (0.1/3)*float64(mage.Talents.FrostChanneling),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(2369, 2641) + (7.5/3.5)*spell.SpellPower()
+			baseDamage := sim.Roll(1919, 2191) + (7.5/3.5)*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})

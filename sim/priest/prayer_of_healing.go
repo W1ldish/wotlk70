@@ -46,7 +46,7 @@ func (priest *Priest) registerPrayerOfHealingSpell() {
 
 			for _, partyAgent := range party.PlayersAndPets {
 				partyTarget := &partyAgent.GetCharacter().Unit
-				baseHealing := sim.Roll(2109, 2228) + 0.526*spell.HealingPower(partyTarget)
+				baseHealing := sim.Roll(1251.6, 1321.6) + 0.526*spell.HealingPower(partyTarget)
 				spell.CalcAndDealHealing(sim, partyTarget, baseHealing, spell.OutcomeHealingCrit)
 				if glyphSpell != nil {
 					glyphSpell.Hot(partyTarget).Activate(sim)

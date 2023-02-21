@@ -69,7 +69,7 @@ func (spriest *SmitePriest) Initialize() {
 	spriest.RegisterHolyFireSpell(spriest.rotation.MemeDream)
 	spriest.RegisterSmiteSpell(spriest.rotation.MemeDream)
 	spriest.RegisterPenanceSpell()
-	spriest.RegisterHymnOfHopeCD()
+	//spriest.RegisterHymnOfHopeCD()
 }
 
 func (spriest *SmitePriest) Reset(sim *core.Simulation) {

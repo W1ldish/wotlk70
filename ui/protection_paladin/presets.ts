@@ -53,7 +53,7 @@ export const DefaultRotation = ProtectionPaladinRotation.create({
 	useCustomPrio: false,
 	customRotation: CustomRotation.create({
 		spells: [
-			CustomSpell.create({ spell: SpellOption.ShieldOfRighteousness }),
+			//CustomSpell.create({ spell: SpellOption.ShieldOfRighteousness }),
 			CustomSpell.create({ spell: SpellOption.HammerOfTheRighteous }),
 			CustomSpell.create({ spell: SpellOption.HolyShield }),
 			CustomSpell.create({ spell: SpellOption.HammerOfWrath }),

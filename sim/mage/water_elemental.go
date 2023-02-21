@@ -109,8 +109,8 @@ func (we *WaterElemental) OnGCDReady(sim *core.Simulation) {
 
 // These numbers are just rough guesses based on looking at some logs.
 var waterElementalBaseStats = stats.Stats{
-	stats.Mana:      1082,
-	stats.Intellect: 369,
+	stats.Mana:      600,
+	stats.Intellect: 250,
 }
 
 var waterElementalStatInheritance = func(ownerStats stats.Stats) stats.Stats {
@@ -143,7 +143,7 @@ func (we *WaterElemental) registerWaterboltSpell() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(601, 673) + (2.5/3.0)*spell.SpellPower()
+			baseDamage := sim.Roll(486, 558) + (2.5/3.0)*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})

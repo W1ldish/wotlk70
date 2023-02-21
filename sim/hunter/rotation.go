@@ -53,9 +53,9 @@ func (hunter *Hunter) aoeChooseSpell(sim *core.Simulation) *core.Spell {
 }
 
 func (hunter *Hunter) singleTargetChooseSpell(sim *core.Simulation) *core.Spell {
-	if sim.IsExecutePhase20() && hunter.KillShot.IsReady(sim) {
+	/*if sim.IsExecutePhase20() && hunter.KillShot.IsReady(sim) {
 		return hunter.KillShot
-	} else if hunter.ExplosiveShotR4.IsReady(sim) && !hunter.ExplosiveShotR4.CurDot().IsActive() {
+	} else*/if hunter.ExplosiveShotR4.IsReady(sim) && !hunter.ExplosiveShotR4.CurDot().IsActive() {
 		return hunter.ExplosiveShotR4
 	} else if hunter.Rotation.AllowExplosiveShotDownrank && hunter.ExplosiveShotR3.IsReady(sim) && !hunter.ExplosiveShotR3.CurDot().IsActive() {
 		return hunter.ExplosiveShotR3
@@ -89,7 +89,7 @@ func (hunter *Hunter) trySwapAspect(sim *core.Simulation) bool {
 			hunter.permaHawk = true
 		}
 		if hunter.permaHawk || currentMana > hunter.Rotation.ViperStopManaPercent {
-			hunter.AspectOfTheDragonhawk.Cast(sim, nil)
+			hunter.AspectOfTheHawk.Cast(sim, nil)
 			return true
 		}
 	} else if hunter.currentAspect != hunter.AspectOfTheViperAura && !hunter.permaHawk && currentMana < hunter.Rotation.ViperStartManaPercent {
@@ -169,15 +169,6 @@ func (hunter *Hunter) makeCustomRotation() *common.CustomRotation {
 			},
 			Condition: func(sim *core.Simulation) bool {
 				return hunter.ExplosiveTrap.IsReady(sim) && !hunter.ExplosiveTrapDot.IsActive()
-			},
-		},
-		int32(proto.Hunter_Rotation_KillShot): {
-			Action: func(sim *core.Simulation, target *core.Unit) (bool, float64) {
-				cost := hunter.KillShot.CurCast.Cost
-				return hunter.KillShot.Cast(sim, target), cost
-			},
-			Condition: func(sim *core.Simulation) bool {
-				return sim.IsExecutePhase20() && hunter.KillShot.IsReady(sim)
 			},
 		},
 		int32(proto.Hunter_Rotation_MultiShot): {

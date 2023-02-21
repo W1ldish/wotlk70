@@ -65,7 +65,7 @@ export const RetributionPaladinRotationConsSlackConfig = InputHelpers.makeRotati
 })
 
 
-export const RetributionPaladinRotationDivinePleaSelection = InputHelpers.makeRotationBooleanInput<Spec.SpecRetributionPaladin>({
+/*export const RetributionPaladinRotationDivinePleaSelection = InputHelpers.makeRotationBooleanInput<Spec.SpecRetributionPaladin>({
 	fieldName: 'useDivinePlea',
 	label: 'Use Divine Plea',
 	labelTooltip: 'Whether or not to maintain Divine Plea',
@@ -87,7 +87,7 @@ export const RetributionPaladinRotationDivinePleaPercentageConfig = InputHelpers
 	percent: true,
 	positive: true,
 })
-
+*/
 export const RetributionPaladinRotationHolyWrathConfig = InputHelpers.makeRotationNumberInput<Spec.SpecRetributionPaladin>({
 	fieldName: "holyWrathThreshold",
 	label: "Holy Wrath Threshold",

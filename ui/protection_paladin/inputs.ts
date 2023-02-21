@@ -24,7 +24,7 @@ export const ProtectionPaladinRotationPriorityConfig = InputHelpers.makeCustomRo
 		{ actionId: ActionId.fromSpellId(48819), value: SpellOption.Consecration },
 		{ actionId: ActionId.fromSpellId(48817), value: SpellOption.HolyWrath },
 		{ actionId: ActionId.fromSpellId(48801), value: SpellOption.Exorcism },
-		{ actionId: ActionId.fromSpellId(61411), value: SpellOption.ShieldOfRighteousness },
+		//{ actionId: ActionId.fromSpellId(61411), value: SpellOption.ShieldOfRighteousness },
 		{ actionId: ActionId.fromSpellId(48827), value: SpellOption.AvengersShield },
 		{ actionId: ActionId.fromSpellId(53595), value: SpellOption.HammerOfTheRighteous },
 		{ actionId: ActionId.fromSpellId(48952), value: SpellOption.HolyShield },

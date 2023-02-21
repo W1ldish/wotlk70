@@ -43,7 +43,7 @@ func (mage *Mage) registerScorchSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(mage.Talents.BurningSoul),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(382, 451) + (1.5/3.5)*spell.SpellPower()
+			baseDamage := sim.Roll(305, 361) + (1.5/3.5)*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if hasImpScorch && result.Landed() && sim.Proc(procChance, "Improved Scorch") {
 				mage.ScorchAura.Activate(sim)

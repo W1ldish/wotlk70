@@ -116,7 +116,7 @@ export const HunterRotationConfig = {
 				{ actionId: ActionId.fromSpellId(49048), value: SpellOption.MultiShot },
 				{ actionId: ActionId.fromSpellId(49001), value: SpellOption.SerpentStingSpell },
 				{ actionId: ActionId.fromSpellId(3043), value: SpellOption.ScorpidStingSpell },
-				{ actionId: ActionId.fromSpellId(61006), value: SpellOption.KillShot },
+				//{ actionId: ActionId.fromSpellId(61006), value: SpellOption.KillShot },
 				{ actionId: ActionId.fromSpellId(63672), value: SpellOption.BlackArrow },
 				{ actionId: ActionId.fromSpellId(53209), value: SpellOption.ChimeraShot },
 				{ actionId: ActionId.fromSpellId(60053), value: SpellOption.ExplosiveShot, text: 'R4' },

@@ -50,7 +50,7 @@ func (priest *Priest) registerShadowWordDeathSpell() {
 		ThreatMultiplier: 1 - 0.08*float64(priest.Talents.ShadowAffinity),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(750, 870) + 0.429*spell.SpellPower()
+			baseDamage := sim.Roll(572, 664) + 0.429*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 
 			if result.Landed() {

@@ -71,9 +71,9 @@ func (spriest *ShadowPriest) tryUseGCD(sim *core.Simulation) {
 }
 
 func (spriest *ShadowPriest) chooseSpellAOE(sim *core.Simulation) (*core.Spell, *core.Unit) {
-	if len(sim.Encounter.Targets) >= 4 {
+	/*if len(sim.Encounter.Targets) >= 4 {
 		return spriest.MindSear[5], spriest.CurrentTarget
-	}
+	}*/
 
 	for _, t := range sim.Encounter.TargetUnits {
 		if !spriest.VampiricTouch.Dot(t).IsActive() && sim.GetRemainingDuration().Seconds() > 5 {

@@ -37,7 +37,7 @@ func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			for _, aoeTarget := range sim.Encounter.Targets {
-				baseDamage := sim.Roll(523, 671) + 0.1*spell.RangedAttackPower(&aoeTarget.Unit)
+				baseDamage := sim.Roll(263, 337) + 0.1*spell.RangedAttackPower(&aoeTarget.Unit)
 				baseDamage *= sim.Encounter.AOECapMultiplier()
 				spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, spell.OutcomeRangedHitAndCrit)
 			}
@@ -65,7 +65,7 @@ func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 		TickLength:    time.Second * 2,
 
 		OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-			baseDamage := 90 + 0.1*dot.Spell.RangedAttackPower(target)
+			baseDamage := 45 + 0.1*dot.Spell.RangedAttackPower(target)
 			for _, aoeTarget := range sim.Encounter.Targets {
 				if hasGlyph {
 					dot.Spell.CalcAndDealPeriodicDamage(sim, &aoeTarget.Unit, baseDamage, dot.Spell.OutcomeRangedHitAndCrit)

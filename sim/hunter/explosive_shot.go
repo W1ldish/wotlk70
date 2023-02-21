@@ -19,12 +19,12 @@ func (hunter *Hunter) registerExplosiveShotSpell(timer *core.Timer) {
 
 func (hunter *Hunter) makeExplosiveShotSpell(timer *core.Timer, downrank bool) *core.Spell {
 	actionID := core.ActionID{SpellID: 60053}
-	minFlatDamage := 386.0
-	maxFlatDamage := 464.0
+	minFlatDamage := 221.0
+	maxFlatDamage := 265.0
 	if downrank {
 		actionID = core.ActionID{SpellID: 60052}
-		minFlatDamage = 325.0
-		maxFlatDamage = 391.0
+		minFlatDamage = 144.0
+		maxFlatDamage = 172.0
 	}
 
 	return hunter.RegisterSpell(core.SpellConfig{

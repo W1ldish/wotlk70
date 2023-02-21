@@ -67,7 +67,7 @@ func (priest *Priest) registerShadowWordPainSpell() {
 			TickLength: time.Second * 3,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 1380/6 + 0.1833*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 1116/6 + 0.1833*dot.Spell.SpellPower()
 				if !isRollover {
 					dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 					dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])

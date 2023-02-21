@@ -37,7 +37,7 @@ func (priest *Priest) registerVampiricTouchSpell() {
 			AffectedByCastSpeed: priest.Talents.Shadowform,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 850/5 + 0.4*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 650/5 + 0.4*dot.Spell.SpellPower()
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},

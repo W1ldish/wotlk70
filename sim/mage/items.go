@@ -51,7 +51,7 @@ var ItemSetKirinTorGarb = core.NewItemSet(core.ItemSet{
 				ProcChance: 0.25,
 				ICD:        time.Second * 45,
 				Handler: func(sim *core.Simulation, spell *core.Spell, _ *core.SpellResult) {
-					if spell == mage.ArcaneBlast || spell == mage.Fireball || spell == mage.FrostfireBolt || spell == mage.Frostbolt {
+					if spell == mage.ArcaneBlast || spell == mage.Fireball /*|| spell == mage.FrostfireBolt*/ || spell == mage.Frostbolt {
 						procAura.Activate(sim)
 					}
 				},

@@ -23,14 +23,14 @@ func (prot *ProtectionPaladin) customRotation(sim *core.Simulation) {
 	isExecutePhase := sim.IsExecutePhase20()
 
 	// Forced CD remaining on HotR/ShoR to cast the other. Can't be exactly 3sec or lusted consecration GCDs will desync us.
-	gapSlack := time.Millisecond * 4000
+	//	gapSlack := time.Millisecond * 4000
 
 	// Allowed time to wait for HotR/ShoR to come off cooldown so we can cast them on cooldown and maintain 969.
 	maxWait := time.Duration(prot.Rotation.WaitSlack) * time.Millisecond
 
 	// Helper vars since we call these repeatedly in many cases
 	nextHammer := prot.HammerOfTheRighteous.TimeToReady(sim)
-	nextShield := prot.ShieldOfRighteousness.TimeToReady(sim)
+	//nextShield := prot.ShieldOfRighteousness.TimeToReady(sim)
 
 	if prot.GCD.IsReady(sim) {
 
@@ -41,32 +41,32 @@ func (prot *ProtectionPaladin) customRotation(sim *core.Simulation) {
 			if prot.Rotation.HammerFirst && prot.HammerOfTheRighteous.IsReady(sim) {
 				// Always cast HotR if ready
 				prot.HammerOfTheRighteous.Cast(sim, target)
-			} else if prot.Rotation.HammerFirst &&
-				prot.ShieldOfRighteousness.IsReady(sim) &&
-				(nextHammer < gapSlack) {
-				// Cast ShoR if ready but only if you've spent a global since HotR
-				prot.ShieldOfRighteousness.Cast(sim, target)
-			} else if !prot.Rotation.HammerFirst && prot.ShieldOfRighteousness.IsReady(sim) {
-				// Always cast ShoR if ready
-				prot.ShieldOfRighteousness.Cast(sim, target)
-			} else if !prot.Rotation.HammerFirst &&
-				prot.HammerOfTheRighteous.IsReady(sim) &&
-				(nextShield < gapSlack) {
-				// Cast HotR if ready but only if you've spent a global since ShoR
-				prot.HammerOfTheRighteous.Cast(sim, target)
+				/*} else if prot.Rotation.HammerFirst &&
+					prot.ShieldOfRighteousness.IsReady(sim) &&
+					(nextHammer < gapSlack) {
+					// Cast ShoR if ready but only if you've spent a global since HotR
+					prot.ShieldOfRighteousness.Cast(sim, target)
+				} else if !prot.Rotation.HammerFirst && prot.ShieldOfRighteousness.IsReady(sim) {
+					// Always cast ShoR if ready
+					prot.ShieldOfRighteousness.Cast(sim, target)
+				} else if !prot.Rotation.HammerFirst &&
+					prot.HammerOfTheRighteous.IsReady(sim) &&
+					(nextShield < gapSlack) {
+					// Cast HotR if ready but only if you've spent a global since ShoR
+					prot.HammerOfTheRighteous.Cast(sim, target)
 
-				// Maximum WaitSlack checking here to see if we should delay casting anything else because it will clip our 6
-				// This callback method is probably inefficient, TODO perf improvement
-			} else if (nextHammer < maxWait) && (nextShield < gapSlack-maxWait) {
-				if sim.Log != nil {
-					prot.Log(sim, "Waiting %d ms to cast HotR...", int32(nextHammer.Milliseconds()))
-				}
-				prot.waitUntilNextEvent(sim, prot.customRotation)
-			} else if (nextShield < maxWait) && (nextHammer < gapSlack-maxWait) {
-				if sim.Log != nil {
-					prot.Log(sim, "Waiting %d ms to cast ShoR...", int32(nextShield.Milliseconds()))
-				}
-				prot.waitUntilNextEvent(sim, prot.customRotation)
+					// Maximum WaitSlack checking here to see if we should delay casting anything else because it will clip our 6
+					// This callback method is probably inefficient, TODO perf improvement
+				} else if (nextHammer < maxWait) && (nextShield < gapSlack-maxWait) {
+					if sim.Log != nil {
+						prot.Log(sim, "Waiting %d ms to cast HotR...", int32(nextHammer.Milliseconds()))
+					}
+					prot.waitUntilNextEvent(sim, prot.customRotation)
+				} else if (nextShield < maxWait) && (nextHammer < gapSlack-maxWait) {
+					if sim.Log != nil {
+						prot.Log(sim, "Waiting %d ms to cast ShoR...", int32(nextShield.Milliseconds()))
+					}
+					prot.waitUntilNextEvent(sim, prot.customRotation)*/
 
 			} else if isExecutePhase && prot.HammerOfWrath.IsReady(sim) {
 				// TODO: Prio may depend on gear; consider Glyph behavior
@@ -121,27 +121,27 @@ func (prot *ProtectionPaladin) customRotation(sim *core.Simulation) {
 						prot.Exorcism.Cast(sim, target)
 						break rotationLoop
 					}
-				case int32(proto.ProtectionPaladin_Rotation_ShieldOfRighteousness):
-					if prot.ShieldOfRighteousness.IsReady(sim) && (nextHammer < gapSlack) {
-						prot.ShieldOfRighteousness.Cast(sim, target)
-						break rotationLoop
-					} else if (nextShield < maxWait) && (nextHammer < gapSlack-maxWait) {
-						if sim.Log != nil {
-							prot.Log(sim, "Waiting %d ms to cast ShoR...", int32(nextShield.Milliseconds()))
-						}
-						prot.waitUntilNextEvent(sim, prot.customRotation)
-						break rotationLoop
+				/*case int32(proto.ProtectionPaladin_Rotation_ShieldOfRighteousness):
+				if prot.ShieldOfRighteousness.IsReady(sim) && (nextHammer < gapSlack) {
+					prot.ShieldOfRighteousness.Cast(sim, target)
+					break rotationLoop
+				} else if (nextShield < maxWait) && (nextHammer < gapSlack-maxWait) {
+					if sim.Log != nil {
+						prot.Log(sim, "Waiting %d ms to cast ShoR...", int32(nextShield.Milliseconds()))
 					}
+					prot.waitUntilNextEvent(sim, prot.customRotation)
+					break rotationLoop
+				}*/
 				case int32(proto.ProtectionPaladin_Rotation_AvengersShield):
 					if prot.AvengersShield.IsReady(sim) {
 						prot.AvengersShield.Cast(sim, target)
 						break rotationLoop
 					}
 				case int32(proto.ProtectionPaladin_Rotation_HammerOfTheRighteous):
-					if prot.HammerOfTheRighteous.IsReady(sim) && (nextShield < gapSlack) {
+					if prot.HammerOfTheRighteous.IsReady(sim) /* && (nextShield < gapSlack)*/ {
 						prot.HammerOfTheRighteous.Cast(sim, target)
 						break rotationLoop
-					} else if nextHammer < maxWait && (nextShield < gapSlack-maxWait) {
+					} else if nextHammer < maxWait /*&& (nextShield < gapSlack-maxWait)*/ {
 						if sim.Log != nil {
 							prot.Log(sim, "Waiting %d ms to cast HotR...", int32(nextHammer.Milliseconds()))
 						}
@@ -178,7 +178,7 @@ func (prot *ProtectionPaladin) waitUntilNextEvent(sim *core.Simulation, rotation
 		prot.Consecration.ReadyAt(),
 		prot.HolyWrath.ReadyAt(),
 		prot.Exorcism.ReadyAt(),
-		prot.ShieldOfRighteousness.ReadyAt(),
+		//prot.ShieldOfRighteousness.ReadyAt(),
 		prot.AvengersShield.ReadyAt(),
 		prot.HammerOfTheRighteous.ReadyAt(),
 		prot.HolyShield.ReadyAt(),

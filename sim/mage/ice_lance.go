@@ -26,7 +26,7 @@ func (mage *Mage) registerIceLanceSpell() {
 		ThreatMultiplier:         1 - (0.1/3)*float64(mage.Talents.FrostChanneling),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(224, 258) + (1.5/3.5/3.0)*spell.SpellPower()
+			baseDamage := sim.Roll(161+3.2*4, 184+3.2*4) + (1.5/3.5/3.0)*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {
 				spell.DealDamage(sim, result)

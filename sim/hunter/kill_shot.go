@@ -1,6 +1,6 @@
 package hunter
 
-import (
+/*import (
 	"time"
 
 	"github.com/Tereneckla/wotlk70/sim/core"
@@ -48,3 +48,4 @@ func (hunter *Hunter) registerKillShotSpell() {
 		},
 	})
 }
+*/

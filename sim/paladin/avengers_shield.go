@@ -43,7 +43,7 @@ func (paladin *Paladin) registerAvengersShieldSpell() {
 
 			curTarget := target
 			for hitIndex := int32(0); hitIndex < numHits; hitIndex++ {
-				baseDamage := constBaseDamage + sim.Roll(1100, 1344)
+				baseDamage := constBaseDamage + sim.Roll(796, 972)
 
 				results[hitIndex] = spell.CalcDamage(sim, curTarget, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 				curTarget = sim.Environment.NextTargetUnit(curTarget)

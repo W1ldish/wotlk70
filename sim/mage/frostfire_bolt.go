@@ -1,6 +1,6 @@
 package mage
 
-import (
+/*import (
 	"strconv"
 	"time"
 
@@ -98,3 +98,4 @@ func (mage *Mage) registerFrostfireBoltSpell() {
 		},
 	})
 }
+*/

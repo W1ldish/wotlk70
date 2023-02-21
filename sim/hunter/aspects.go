@@ -8,7 +8,7 @@ import (
 	"github.com/Tereneckla/wotlk70/sim/core/stats"
 )
 
-func (hunter *Hunter) registerAspectOfTheDragonhawkSpell() {
+func (hunter *Hunter) registerAspectOfTheHawkSpell() {
 	var impHawkAura *core.Aura
 	const improvedHawkProcChance = 0.1
 	if hunter.Talents.ImprovedAspectOfTheHawk > 0 {
@@ -30,12 +30,11 @@ func (hunter *Hunter) registerAspectOfTheDragonhawkSpell() {
 	}
 
 	actionID := core.ActionID{SpellID: 61847}
-	hunter.AspectOfTheDragonhawkAura = hunter.NewTemporaryStatsAuraWrapped(
-		"Aspect of the Dragonhawk",
+	hunter.AspectOfTheHawkAura = hunter.NewTemporaryStatsAuraWrapped(
+		"Aspect of the Hawk",
 		actionID,
 		stats.Stats{
-			stats.RangedAttackPower: core.TernaryFloat64(hunter.Talents.AspectMastery, 390, 300),
-			stats.Dodge:             (18 + 2*float64(hunter.Talents.ImprovedAspectOfTheMonkey)) * core.DodgeRatingPerDodgeChance,
+			stats.RangedAttackPower: core.TernaryFloat64(hunter.Talents.AspectMastery, 155*1.3, 155),
 		},
 		core.NeverExpires,
 		func(aura *core.Aura) {
@@ -58,13 +57,13 @@ func (hunter *Hunter) registerAspectOfTheDragonhawkSpell() {
 				}
 			}
 		})
-	hunter.applySharedAspectConfig(true, hunter.AspectOfTheDragonhawkAura)
+	hunter.applySharedAspectConfig(true, hunter.AspectOfTheHawkAura)
 
-	hunter.AspectOfTheDragonhawk = hunter.RegisterSpell(core.SpellConfig{
+	hunter.AspectOfTheHawk = hunter.RegisterSpell(core.SpellConfig{
 		ActionID: actionID,
 
 		ApplyEffects: func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
-			hunter.AspectOfTheDragonhawkAura.Activate(sim)
+			hunter.AspectOfTheHawkAura.Activate(sim)
 		},
 	})
 }

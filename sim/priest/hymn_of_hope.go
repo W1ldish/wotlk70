@@ -1,6 +1,6 @@
 package priest
 
-import (
+/*import (
 	"time"
 
 	"github.com/Tereneckla/wotlk70/sim/core"
@@ -52,3 +52,4 @@ func (priest *Priest) RegisterHymnOfHopeCD() {
 		},
 	})
 }
+*/
