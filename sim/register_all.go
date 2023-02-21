@@ -2,8 +2,6 @@ package sim
 
 import (
 	_ "github.com/Tereneckla/wotlk70/sim/common"
-	dpsDeathKnight "github.com/Tereneckla/wotlk70/sim/deathknight/dps"
-	tankDeathKnight "github.com/Tereneckla/wotlk70/sim/deathknight/tank"
 	"github.com/Tereneckla/wotlk70/sim/druid/balance"
 	"github.com/Tereneckla/wotlk70/sim/druid/feral"
 	restoDruid "github.com/Tereneckla/wotlk70/sim/druid/restoration"
@@ -53,6 +51,4 @@ func RegisterAll() {
 	protectionPaladin.RegisterProtectionPaladin()
 	retribution.RegisterRetributionPaladin()
 	warlock.RegisterWarlock()
-	dpsDeathKnight.RegisterDpsDeathknight()
-	tankDeathKnight.RegisterTankDeathknight()
 }
