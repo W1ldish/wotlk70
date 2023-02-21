@@ -66,7 +66,7 @@ func (priest *Priest) registerDevouringPlagueSpell() {
 			AffectedByCastSpeed: priest.Talents.Shadowform,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 1376/8 + 0.1849*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 1088/8 + 0.1849*dot.Spell.SpellPower()
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},

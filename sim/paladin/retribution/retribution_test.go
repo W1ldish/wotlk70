@@ -62,7 +62,7 @@ func TestRetribution(t *testing.T) {
 						Rotation: &proto.RetributionPaladin_Rotation{
 							ConsSlack:            500,
 							ExoSlack:             500,
-							UseDivinePlea:        true,
+							UseDivinePlea:        false,
 							DivinePleaPercentage: 0.75,
 							HolyWrathThreshold:   4,
 							SovTargets:           2,
@@ -128,7 +128,7 @@ var StandardGlyphs = &proto.Glyphs{
 var defaultRetRotation = &proto.RetributionPaladin_Rotation{
 	ConsSlack:            500,
 	ExoSlack:             500,
-	UseDivinePlea:        true,
+	UseDivinePlea:        false,
 	DivinePleaPercentage: 0.75,
 	HolyWrathThreshold:   4,
 }

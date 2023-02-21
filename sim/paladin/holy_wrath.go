@@ -39,7 +39,7 @@ func (paladin *Paladin) registerHolyWrathSpell() {
 
 			for i, aoeTarget := range sim.Encounter.Targets {
 				aoeUnit := &aoeTarget.Unit
-				baseDamage := constBaseDamage + sim.Roll(1050, 1234)
+				baseDamage := constBaseDamage + sim.Roll(779.2, 915.2)
 
 				if aoeUnit.MobType == proto.MobType_MobTypeDemon || aoeUnit.MobType == proto.MobType_MobTypeUndead {
 					results[i] = spell.CalcDamage(sim, aoeUnit, baseDamage, spell.OutcomeMagicHitAndCrit)

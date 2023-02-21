@@ -71,7 +71,7 @@ func (mage *Mage) registerArcaneMissilesSpell() {
 			AffectedByCastSpeed: true,
 
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				baseDamage := 362 + spellCoeff*dot.Spell.SpellPower()
+				baseDamage := 280 + spellCoeff*dot.Spell.SpellPower()
 				result := dot.Spell.CalcDamage(sim, target, baseDamage, dot.Spell.OutcomeMagicHitAndCrit)
 				dot.Spell.WaitTravelTime(sim, func(sim *core.Simulation) {
 					dot.Spell.DealDamage(sim, result)

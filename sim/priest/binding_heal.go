@@ -37,10 +37,10 @@ func (priest *Priest) registerBindingHealSpell() {
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			healFromSP := spellCoeff * spell.HealingPower(target)
 
-			selfHealing := sim.Roll(1959, 2516) + healFromSP
+			selfHealing := sim.Roll(1042+1.9*6, 1338+1.9*6) + healFromSP
 			spell.CalcAndDealHealing(sim, &priest.Unit, selfHealing, spell.OutcomeHealingCrit)
 
-			targetHealing := sim.Roll(1959, 2516) + healFromSP
+			targetHealing := sim.Roll(1042+1.9*6, 1338+1.9*6) + healFromSP
 			spell.CalcAndDealHealing(sim, target, targetHealing, spell.OutcomeHealingCrit)
 		},
 	})

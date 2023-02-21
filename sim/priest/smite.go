@@ -30,7 +30,7 @@ func (priest *Priest) RegisterSmiteSpell(memeDream bool) {
 		ThreatMultiplier: 1 - []float64{0, .07, .14, .20}[priest.Talents.SilentResolve],
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(713, 799) + 0.7143*spell.SpellPower()
+			baseDamage := sim.Roll(549.1, 615.1) + 0.7143*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})

@@ -27,7 +27,7 @@ func (mage *Mage) registerLivingBombSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(mage.Talents.BurningSoul),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 690 + 0.4*spell.SpellPower()
+			baseDamage := 512 + 0.4*spell.SpellPower()
 			baseDamage *= sim.Encounter.AOECapMultiplier()
 			for _, aoeTarget := range sim.Encounter.Targets {
 				spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, spell.OutcomeMagicHitAndCrit)
@@ -79,7 +79,7 @@ func (mage *Mage) registerLivingBombSpell() {
 			TickLength:    time.Second * 3,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 345 + 0.2*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 256 + 0.2*dot.Spell.SpellPower()
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},

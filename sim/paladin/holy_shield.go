@@ -23,7 +23,7 @@ func (paladin *Paladin) registerHolyShieldSpell() {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			// Beta testing shows wowhead coeffs are probably correct
-			baseDamage := 274 +
+			baseDamage := 208 +
 				0.0732*spell.MeleeAttackPower() +
 				0.117*spell.SpellPower()
 

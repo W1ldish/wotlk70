@@ -46,7 +46,7 @@ func (paladin *Paladin) registerExorcismSpell() {
 		CritMultiplier:   paladin.SpellCritMultiplier(),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(1028, 1146) +
+			baseDamage := sim.Roll(694, 772) +
 				.15*spell.SpellPower() +
 				.15*spell.MeleeAttackPower()
 

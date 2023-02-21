@@ -38,7 +38,7 @@ func (paladin *Paladin) registerHammerOfWrathSpell() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(1139, 1257) +
+			baseDamage := sim.Roll(740, 816) +
 				.15*spell.SpellPower() +
 				.15*spell.MeleeAttackPower()
 

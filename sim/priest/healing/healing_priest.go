@@ -80,7 +80,7 @@ func (hpriest *HealingPriest) Initialize() {
 	hpriest.Priest.RegisterHealingSpells()
 
 	hpriest.ApplyRapture(hpriest.Options.RapturesPerMinute)
-	hpriest.RegisterHymnOfHopeCD()
+	//hpriest.RegisterHymnOfHopeCD()
 
 	if hpriest.rotation.Type == proto.HealingPriest_Rotation_Custom {
 		hpriest.CustomRotation = hpriest.makeCustomRotation()

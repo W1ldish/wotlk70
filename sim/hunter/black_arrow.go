@@ -57,7 +57,7 @@ func (hunter *Hunter) registerBlackArrowSpell(timer *core.Timer) {
 			TickLength:    time.Second * 3,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
 				// scales slightly better (11.5%) than the tooltip implies (10%), but isn't affected by Hunter's Mark
-				dot.SnapshotBaseDamage = 553 + 0.023*(dot.Spell.Unit.GetStat(stats.RangedAttackPower)+dot.Spell.Unit.PseudoStats.MobTypeAttackPower)
+				dot.SnapshotBaseDamage = 296 + 0.023*(dot.Spell.Unit.GetStat(stats.RangedAttackPower)+dot.Spell.Unit.PseudoStats.MobTypeAttackPower)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {

@@ -51,7 +51,7 @@ type Mage struct {
 	delayedPyroAt     time.Duration
 
 	waterElemental *WaterElemental
-	mirrorImage    *MirrorImage
+	//mirrorImage    *MirrorImage
 
 	// Cached values for a few mechanics.
 	bonusCritDamage float64
@@ -68,16 +68,16 @@ type Mage struct {
 	FireBlast       *core.Spell
 	Flamestrike     *core.Spell
 	Frostbolt       *core.Spell
-	FrostfireBolt   *core.Spell
-	IceLance        *core.Spell
-	Pyroblast       *core.Spell
-	Scorch          *core.Spell
-	MirrorImage     *core.Spell
+	//FrostfireBolt   *core.Spell
+	IceLance    *core.Spell
+	Pyroblast   *core.Spell
+	Scorch      *core.Spell
+	MirrorImage *core.Spell
 
 	IcyVeins             *core.Spell
 	SummonWaterElemental *core.Spell
 
-	FrostfireDot *core.Dot
+	//FrostfireDot *core.Dot
 
 	ArcaneBlastAura    *core.Aura
 	ArcanePotencyAura  *core.Aura
@@ -133,11 +133,11 @@ func (mage *Mage) Initialize() {
 	mage.registerPyroblastSpell()
 	mage.registerScorchSpell()
 	mage.registerLivingBombSpell()
-	mage.registerFrostfireBoltSpell()
+	//mage.registerFrostfireBoltSpell()
 
 	mage.registerEvocationCD()
 	mage.registerManaGemsCD()
-	mage.registerMirrorImageCD()
+	//mage.registerMirrorImageCD()
 }
 
 func (mage *Mage) Reset(sim *core.Simulation) {
@@ -196,7 +196,7 @@ func NewMage(character core.Character, options *proto.Player) *Mage {
 		mage.Character.AddStatDependency(stats.Spirit, stats.SpellCrit, multi)
 	}
 
-	mage.mirrorImage = mage.NewMirrorImage()
+	//mage.mirrorImage = mage.NewMirrorImage()
 
 	if mage.Talents.SummonWaterElemental {
 		mage.waterElemental = mage.NewWaterElemental(mage.Rotation.WaterElementalDisobeyChance)
@@ -210,9 +210,9 @@ func init() {
 		stats.Health:    3213,
 		stats.Strength:  30,
 		stats.Agility:   41,
-		stats.Stamina:   50,
-		stats.Intellect: 185,
-		stats.Spirit:    173,
+		stats.Stamina:   51,
+		stats.Intellect: 154,
+		stats.Spirit:    143,
 		stats.Mana:      3268,
 		stats.SpellCrit: core.CritRatingPerCritChance * 0.926,
 	}
@@ -220,19 +220,19 @@ func init() {
 		stats.Health:    3213,
 		stats.Strength:  34,
 		stats.Agility:   36,
-		stats.Stamina:   50,
-		stats.Intellect: 182,
-		stats.Spirit:    176,
+		stats.Stamina:   51,
+		stats.Intellect: 151,
+		stats.Spirit:    147,
 		stats.Mana:      3268,
 		stats.SpellCrit: core.CritRatingPerCritChance * 0.933,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceGnome, Class: proto.Class_ClassMage}] = stats.Stats{
 		stats.Health:    3213,
 		stats.Strength:  28,
-		stats.Agility:   42,
-		stats.Stamina:   50,
-		stats.Intellect: 193, // Gnomes start with 162 int, we assume this include racial so / 1.05
-		stats.Spirit:    174,
+		stats.Agility:   41,
+		stats.Stamina:   51,
+		stats.Intellect: 154, // Gnomes start with 162 int, we assume this include racial so / 1.05
+		stats.Spirit:    145,
 		stats.Mana:      3268,
 		stats.SpellCrit: core.CritRatingPerCritChance * 0.93,
 	}
@@ -241,8 +241,8 @@ func init() {
 		stats.Strength:  33,
 		stats.Agility:   39,
 		stats.Stamina:   51,
-		stats.Intellect: 181,
-		stats.Spirit:    179,
+		stats.Intellect: 151,
+		stats.Spirit:    145,
 		stats.Mana:      3268,
 		stats.SpellCrit: core.CritRatingPerCritChance * 0.926,
 	}
@@ -250,9 +250,9 @@ func init() {
 		stats.Health:    3213,
 		stats.Strength:  34,
 		stats.Agility:   41,
-		stats.Stamina:   52,
-		stats.Intellect: 177,
-		stats.Spirit:    175,
+		stats.Stamina:   51,
+		stats.Intellect: 147,
+		stats.Spirit:    146,
 		stats.Mana:      3268,
 		stats.SpellCrit: core.CritRatingPerCritChance * 0.935,
 	}
@@ -260,9 +260,9 @@ func init() {
 		stats.Health:    3213,
 		stats.Strength:  32,
 		stats.Agility:   37,
-		stats.Stamina:   52,
-		stats.Intellect: 179,
-		stats.Spirit:    179,
+		stats.Stamina:   51,
+		stats.Intellect: 149,
+		stats.Spirit:    150,
 		stats.Mana:      3268,
 		stats.SpellCrit: core.CritRatingPerCritChance * 0.930,
 	}

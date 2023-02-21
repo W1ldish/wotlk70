@@ -48,7 +48,7 @@ func (hunter *Hunter) registerMultiShotSpell(timer *core.Timer) {
 			sharedDmg := hunter.AutoAttacks.Ranged.BaseDamage(sim) +
 				hunter.AmmoDamageBonus +
 				spell.BonusWeaponDamage() +
-				408
+				205
 
 			curTarget := target
 			for hitIndex := int32(0); hitIndex < numHits; hitIndex++ {

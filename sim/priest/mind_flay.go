@@ -70,7 +70,7 @@ func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
 			AffectedByCastSpeed: true,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 588.0/3 + miseryCoeff*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 450.0/3 + miseryCoeff*dot.Spell.SpellPower()
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},

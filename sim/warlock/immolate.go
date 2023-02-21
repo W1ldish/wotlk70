@@ -40,7 +40,7 @@ func (warlock *Warlock) registerImmolateSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 327 + 0.2*spell.SpellPower()
+			baseDamage := 327 + 4.3 + 0.2*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {
 				warlock.ImmolateDot.Apply(sim)

@@ -74,11 +74,11 @@ export const hunterGlyphsConfig: GlyphsConfig = {
 			description: 'Decreases the duration of the effect from your Immolation Trap by 6 sec., but damage while active is increased by 100%.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_fire_flameshock.jpg',
 		},
-		[HunterMajorGlyph.GlyphOfKillShot]: {
+		/*[HunterMajorGlyph.GlyphOfKillShot]: {
 			name: 'Glyph of Kill Shot',
 			description: 'Reduces the cooldown of Kill Shot by 6 sec.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/ability_hunter_assassinate2.jpg',
-		},
+		},*/
 		[HunterMajorGlyph.GlyphOfMending]: {
 			name: 'Glyph of Mending',
 			description: 'Increases the healing done by your Mend Pet ability by 40%.',

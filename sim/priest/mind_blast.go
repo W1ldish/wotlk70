@@ -47,7 +47,7 @@ func (priest *Priest) registerMindBlastSpell() {
 		ThreatMultiplier: 1 - 0.08*float64(priest.Talents.ShadowAffinity),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(997, 1053) + spellCoeff*spell.SpellPower()
+			baseDamage := sim.Roll(711.2, 751.2) + spellCoeff*spell.SpellPower()
 
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {

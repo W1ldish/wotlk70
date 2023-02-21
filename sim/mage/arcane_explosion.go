@@ -31,7 +31,7 @@ func (mage *Mage) registerArcaneExplosionSpell() {
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			dmgFromSP := (1.5 / 3.5 / 2) * spell.SpellPower()
 			for _, aoeTarget := range sim.Encounter.Targets {
-				baseDamage := sim.Roll(538, 582) + dmgFromSP
+				baseDamage := sim.Roll(377, 407) + dmgFromSP
 				baseDamage *= sim.Encounter.AOECapMultiplier()
 				spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, spell.OutcomeMagicHitAndCrit)
 			}

@@ -30,8 +30,10 @@ func (mage *Mage) registerManaGemsCD() {
 
 	minManaEmeraldGain := 2340.0 * manaMultiplier
 	maxManaEmeraldGain := 2460.0 * manaMultiplier
-	minManaSapphireGain := 3330.0 * manaMultiplier
-	maxManaSapphireGain := 3500.0 * manaMultiplier
+	//minManaSapphireGain := 3330.0 * manaMultiplier
+	//maxManaSapphireGain := 3500.0 * manaMultiplier
+	minManaRubyGain := 1073 * manaMultiplier
+	maxManaRubyGain := 1127 * manaMultiplier
 
 	var remainingManaGems int
 	mage.RegisterResetEffect(func(sim *core.Simulation) {
@@ -52,11 +54,11 @@ func (mage *Mage) registerManaGemsCD() {
 		ApplyEffects: func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 			var manaGain float64
 			if remainingManaGems > 3 {
-				// Mana Sapphire: Restores 3330 to 3500 mana. (2 Min Cooldown)
-				manaGain = sim.Roll(minManaSapphireGain, maxManaSapphireGain)
-			} else {
-				// Mana Emerald: Restores 2340 to 2460 mana. (2 Min Cooldown)
+				// Mana Emerald
 				manaGain = sim.Roll(minManaEmeraldGain, maxManaEmeraldGain)
+			} else {
+				// Mana Ruby
+				manaGain = sim.Roll(minManaRubyGain, maxManaRubyGain)
 			}
 
 			if gemAura != nil {
@@ -86,9 +88,9 @@ func (mage *Mage) registerManaGemsCD() {
 		ShouldActivate: func(sim *core.Simulation, character *core.Character) bool {
 			// Only pop if we have less than the max mana provided by the gem minus 1mp5 tick.
 			totalRegen := character.ManaRegenPerSecondWhileCasting() * 5
-			maxManaGain := maxManaSapphireGain
+			maxManaGain := maxManaEmeraldGain
 			if remainingManaGems <= 3 {
-				maxManaGain = maxManaEmeraldGain
+				maxManaGain = maxManaRubyGain
 			}
 			if character.MaxMana()-(character.CurrentMana()+totalRegen) < maxManaGain {
 				return false

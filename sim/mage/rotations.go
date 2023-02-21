@@ -141,8 +141,8 @@ func (mage *Mage) doFireRotation(sim *core.Simulation) *core.Spell {
 
 	if mage.Rotation.PrimaryFireSpell == proto.Mage_Rotation_Fireball {
 		return mage.Fireball
-	} else if mage.Rotation.PrimaryFireSpell == proto.Mage_Rotation_FrostfireBolt {
-		return mage.FrostfireBolt
+		/*} else if mage.Rotation.PrimaryFireSpell == proto.Mage_Rotation_FrostfireBolt {
+		return mage.FrostfireBolt*/
 	} else {
 		return mage.Scorch
 	}
@@ -154,7 +154,7 @@ func (mage *Mage) doFrostRotation(sim *core.Simulation) *core.Spell {
 		if mage.DeepFreeze != nil && mage.DeepFreeze.IsReady(sim) {
 			return mage.DeepFreeze
 		} else if hasBrainFreeze {
-			return mage.FrostfireBolt
+			return mage.Fireball
 		} else if mage.Rotation.UseIceLance {
 			return mage.IceLance
 		}

@@ -41,7 +41,7 @@ func (mage *Mage) registerArcaneBarrageSpell() {
 		ThreatMultiplier: 1 - 0.2*float64(mage.Talents.ArcaneSubtlety),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(936, 1144) + (2.5/3.5)*spell.SpellPower()
+			baseDamage := sim.Roll(709, 865) + (2.5/3.5)*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {

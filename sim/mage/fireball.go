@@ -50,7 +50,7 @@ func (mage *Mage) registerFireballSpell() {
 			NumberOfTicks: 4,
 			TickLength:    time.Second * 2,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 116.0 / 4.0
+				dot.SnapshotBaseDamage = 92.0 / 4.0
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
@@ -59,7 +59,7 @@ func (mage *Mage) registerFireballSpell() {
 		},
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(898, 1143) + spellCoeff*spell.SpellPower()
+			baseDamage := sim.Roll(717, 913) + spellCoeff*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {
 				if result.Landed() && !hasGlyph {

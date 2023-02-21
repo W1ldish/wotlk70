@@ -51,7 +51,7 @@ func (priest *Priest) RegisterHolyFireSpell(memeDream bool) {
 			NumberOfTicks: 7,
 			TickLength:    time.Second * 1,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 50 + 0.024*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 21 + 0.024*dot.Spell.SpellPower()
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
@@ -60,7 +60,7 @@ func (priest *Priest) RegisterHolyFireSpell(memeDream bool) {
 		},
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(900, 1140) + 0.5711*spell.SpellPower()
+			baseDamage := sim.Roll(705+3.6*4, 895+3.6*4) + 0.5711*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {
 				spell.Dot(target).Apply(sim)

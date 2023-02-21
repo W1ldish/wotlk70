@@ -49,11 +49,11 @@ export const priestGlyphsConfig: GlyphsConfig = {
 			description: 'Increases the damage and healing of your Holy Nova spell by an additional 20%.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holynova.jpg',
 		},
-		[PriestMajorGlyph.GlyphOfHymnOfHope]: {
+		/*[PriestMajorGlyph.GlyphOfHymnOfHope]: {
 			name: 'Glyph of Hymn of Hope',
 			description: 'Your Hymn of Hope lasts an additional 2 sec.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_symbolofhope.jpg',
-		},
+		},*/
 		[PriestMajorGlyph.GlyphOfInnerFire]: {
 			name: 'Glyph of Inner Fire',
 			description: 'Increases the armor from your Inner Fire spell by 50%.',
@@ -79,11 +79,11 @@ export const priestGlyphsConfig: GlyphsConfig = {
 			description: 'Increases the damage done by your Mind Flay spell by 10% when your target is afflicted with Shadow Word: Pain.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_siphonmana.jpg',
 		},
-		[PriestMajorGlyph.GlyphOfMindSear]: {
+		/*[PriestMajorGlyph.GlyphOfMindSear]: {
 			name: 'Glyph of Mind Sear',
 			description: 'Increases the radius of effect on Mind Sear by 5 yards.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_mindshear.jpg',
-		},
+		},*/
 		[PriestMajorGlyph.GlyphOfPainSuppression]: {
 			name: 'Glyph of Pain Suppression',
 			description: 'Allows Pain Suppression to be cast while stunned.',
