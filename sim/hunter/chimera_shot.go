@@ -18,7 +18,7 @@ func (hunter *Hunter) registerChimeraShotSpell() {
 		ActionID:    core.ActionID{SpellID: 53209},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskRangedSpecial,
-		Flags:       core.SpellFlagMeleeMetrics,
+		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagAPL,
 
 		ManaCost: core.ManaCostOptions{
 			BaseCost: 0.12,
@@ -53,8 +53,8 @@ func (hunter *Hunter) registerChimeraShotSpell() {
 				if hunter.SerpentSting.Dot(target).IsActive() {
 					hunter.SerpentSting.Dot(target).Rollover(sim)
 					ssProcSpell.Cast(sim, target)
-				} else if hunter.ScorpidStingAura.IsActive() {
-					hunter.ScorpidStingAura.Refresh(sim)
+				} else if hunter.ScorpidStingAuras.Get(target).IsActive() {
+					hunter.ScorpidStingAuras.Get(target).Refresh(sim)
 				}
 			}
 			spell.DealDamage(sim, result)

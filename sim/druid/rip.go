@@ -36,6 +36,9 @@ func (druid *Druid) registerRipSpell() {
 			},
 			IgnoreHaste: true,
 		},
+		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
+			return druid.InForm(Cat) && druid.ComboPoints() > 0
+		},
 
 		BonusCritRating:  core.TernaryFloat64(druid.HasSetBonus(ItemSetMalfurionsBattlegear, 4), 5*core.CritRatingPerCritChance, 0.0),
 		DamageMultiplier: 1 + core.TernaryFloat64(druid.HasSetBonus(ItemSetThunderheartHarness, 4), 0.15, 0),
@@ -93,10 +96,6 @@ func (druid *Druid) MaxRipTicks() int32 {
 	return base + ripGlyphBonus + shredGlyphBonus + t7bonus
 }
 
-func (druid *Druid) CanRip() bool {
-	return druid.InForm(Cat) && druid.ComboPoints() > 0 && druid.CurrentEnergy() >= druid.CurrentRipCost()
-}
-
 func (druid *Druid) CurrentRipCost() float64 {
-	return druid.Rip.ApplyCostModifiers(druid.Rip.BaseCost)
+	return druid.Rip.ApplyCostModifiers(druid.Rip.DefaultCast.Cost)
 }

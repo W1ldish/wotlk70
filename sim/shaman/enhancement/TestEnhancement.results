@@ -81,15 +81,15 @@ dps_results: {
 dps_results: {
  key: "TestEnhancement-AllItems-BaubleofTrueBlood-50354"
  value: {
-  dps: 6969.88771
-  tps: 9313.521
+  dps: 6969.01929
+  tps: 9226.6019
  }
 }
 dps_results: {
  key: "TestEnhancement-AllItems-BaubleofTrueBlood-50726"
  value: {
-  dps: 6969.88771
-  tps: 9313.521
+  dps: 6969.01929
+  tps: 9226.6019
  }
 }
 dps_results: {
@@ -690,13 +690,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestEnhancement-AllItems-SparkofHope-45703"
- value: {
-  dps: 6968.82784
-  tps: 3901.75831
- }
-}
-dps_results: {
  key: "TestEnhancement-AllItems-SparkofLife-37657"
  value: {
   dps: 7020.45551
@@ -902,8 +895,8 @@ dps_results: {
 dps_results: {
  key: "TestEnhancement-AllItems-WorldbreakerGarb"
  value: {
-  dps: 6439.98743
-  tps: 3640.74508
+  dps: 6442.52819
+  tps: 3642.52361
  }
 }
 dps_results: {

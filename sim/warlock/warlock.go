@@ -24,7 +24,6 @@ type Warlock struct {
 	ShadowBolt         *core.Spell
 	Incinerate         *core.Spell
 	Immolate           *core.Spell
-	ImmolateDot        *core.Dot
 	UnstableAffliction *core.Spell
 	Corruption         *core.Spell
 	Haunt              *core.Spell
@@ -33,20 +32,19 @@ type Warlock struct {
 	ChaosBolt          *core.Spell
 	SoulFire           *core.Spell
 	Conflagrate        *core.Spell
-	ConflagrateDot     *core.Dot
 	DrainSoul          *core.Spell
 	Shadowburn         *core.Spell
 
-	CurseOfElements     *core.Spell
-	CurseOfElementsAura *core.Aura
-	CurseOfWeakness     *core.Spell
-	CurseOfWeaknessAura *core.Aura
-	CurseOfTongues      *core.Spell
-	CurseOfTonguesAura  *core.Aura
-	CurseOfAgony        *core.Spell
-	CurseOfDoom         *core.Spell
-	Seed                *core.Spell
-	SeedDamageTracker   []float64
+	CurseOfElements      *core.Spell
+	CurseOfElementsAuras core.AuraArray
+	CurseOfWeakness      *core.Spell
+	CurseOfWeaknessAuras core.AuraArray
+	CurseOfTongues       *core.Spell
+	CurseOfTonguesAuras  core.AuraArray
+	CurseOfAgony         *core.Spell
+	CurseOfDoom          *core.Spell
+	Seed                 *core.Spell
+	SeedDamageTracker    []float64
 
 	NightfallProcAura      *core.Aura
 	EradicationAura        *core.Aura
@@ -57,7 +55,7 @@ type Warlock struct {
 	Metamorphosis          *core.Spell
 	MetamorphosisAura      *core.Aura
 	ImmolationAura         *core.Spell
-	HauntDebuffAura        *core.Aura
+	HauntDebuffAuras       core.AuraArray
 	MoltenCoreAura         *core.Aura
 	DecimationAura         *core.Aura
 	PyroclasmAura          *core.Aura
@@ -137,6 +135,24 @@ func (warlock *Warlock) Initialize() {
 	warlock.registerInfernoSpell()
 
 	warlock.defineRotation()
+
+	precastSpell := warlock.ShadowBolt
+	if warlock.Rotation.Type == proto.Warlock_Rotation_Destruction {
+		precastSpell = warlock.SoulFire
+	}
+	// Do this post-finalize so cast speed is updated with new stats
+	warlock.Env.RegisterPostFinalizeEffect(func() {
+		precastSpellAt := -warlock.ApplyCastSpeedForSpell(precastSpell.DefaultCast.CastTime, precastSpell)
+
+		warlock.RegisterPrepullAction(precastSpellAt, func(sim *core.Simulation) {
+			precastSpell.Cast(sim, warlock.CurrentTarget)
+		})
+		if warlock.GlyphOfLifeTapAura != nil || warlock.SpiritsoftheDamnedAura != nil {
+			warlock.RegisterPrepullAction(precastSpellAt-warlock.SpellGCD(), func(sim *core.Simulation) {
+				warlock.LifeTap.Cast(sim, nil)
+			})
+		}
+	})
 }
 
 func (warlock *Warlock) AddRaidBuffs(raidBuffs *proto.RaidBuffs) {
@@ -149,28 +165,6 @@ func (warlock *Warlock) AddRaidBuffs(raidBuffs *proto.RaidBuffs) {
 		warlock.Options.Summon == proto.Warlock_Options_Felhunter,
 		warlock.Talents.ImprovedFelhunter == 2,
 	))
-}
-
-func (warlock *Warlock) Prepull(sim *core.Simulation) {
-	spellChoice := warlock.ShadowBolt
-	if warlock.Rotation.Type == proto.Warlock_Rotation_Destruction {
-		spellChoice = warlock.SoulFire
-	}
-
-	delay := (warlock.ApplyCastSpeed(core.GCDDefault) + warlock.ApplyCastSpeed(spellChoice.DefaultCast.CastTime))
-	if warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfLifeTap) {
-		warlock.GlyphOfLifeTapAura.Activate(sim)
-		warlock.GlyphOfLifeTapAura.UpdateExpires(warlock.GlyphOfLifeTapAura.Duration - delay)
-	}
-
-	if warlock.SpiritsoftheDamnedAura != nil {
-		warlock.SpiritsoftheDamnedAura.Activate(sim)
-		warlock.SpiritsoftheDamnedAura.UpdateExpires(warlock.SpiritsoftheDamnedAura.Duration - delay)
-	}
-
-	warlock.SpendMana(sim, spellChoice.DefaultCast.Cost, spellChoice.Cost.(*core.ManaCost).ResourceMetrics)
-	spellChoice.CD.UsePrePull(sim, warlock.ApplyCastSpeed(spellChoice.DefaultCast.CastTime))
-	spellChoice.SkipCastAndApplyEffects(sim, warlock.CurrentTarget)
 }
 
 func (warlock *Warlock) Reset(sim *core.Simulation) {
@@ -187,7 +181,6 @@ func NewWarlock(character core.Character, options *proto.Player) *Warlock {
 		Talents:   &proto.WarlockTalents{},
 		Options:   warlockOptions.Options,
 		Rotation:  warlockOptions.Rotation,
-		// manaTracker:           common.NewManaSpendingRateTracker(),
 	}
 	core.FillTalentsProto(warlock.Talents.ProtoReflect(), options.TalentsString, TalentTreeSizes)
 	warlock.EnableManaBar()

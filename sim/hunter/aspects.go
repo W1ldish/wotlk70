@@ -61,6 +61,7 @@ func (hunter *Hunter) registerAspectOfTheHawkSpell() {
 
 	hunter.AspectOfTheHawk = hunter.RegisterSpell(core.SpellConfig{
 		ActionID: actionID,
+		Flags:    core.SpellFlagAPL,
 
 		ApplyEffects: func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 			hunter.AspectOfTheHawkAura.Activate(sim)
@@ -95,7 +96,7 @@ func (hunter *Hunter) registerAspectOfTheViperSpell() {
 			tickPA = core.StartPeriodicAction(sim, core.PeriodicActionOptions{
 				Period: time.Second * 3,
 				OnAction: func(sim *core.Simulation) {
-					hunter.AddMana(sim, 0.04*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics, false)
+					hunter.AddMana(sim, 0.04*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics)
 				},
 			})
 		},
@@ -109,11 +110,11 @@ func (hunter *Hunter) registerAspectOfTheViperSpell() {
 		},
 		OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 			if spell.ProcMask.Matches(core.ProcMaskRanged) {
-				hunter.AddMana(sim, manaPerRangedHitMultiplier*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics, false)
+				hunter.AddMana(sim, manaPerRangedHitMultiplier*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics)
 			} else if spell.ProcMask.Matches(core.ProcMaskMeleeMH) {
-				hunter.AddMana(sim, manaPerMHHitMultiplier*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics, false)
+				hunter.AddMana(sim, manaPerMHHitMultiplier*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics)
 			} else if spell.ProcMask.Matches(core.ProcMaskMeleeOH) {
-				hunter.AddMana(sim, manaPerOHHitMultiplier*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics, false)
+				hunter.AddMana(sim, manaPerOHHitMultiplier*hunter.MaxMana(), hunter.AspectOfTheViper.ResourceMetrics)
 			}
 		},
 	}
@@ -122,6 +123,7 @@ func (hunter *Hunter) registerAspectOfTheViperSpell() {
 
 	hunter.AspectOfTheViper = hunter.RegisterSpell(core.SpellConfig{
 		ActionID: actionID,
+		Flags:    core.SpellFlagAPL,
 
 		ApplyEffects: func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 			hunter.AspectOfTheViperAura.Activate(sim)

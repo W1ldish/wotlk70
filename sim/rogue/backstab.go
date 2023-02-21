@@ -8,8 +8,7 @@ import (
 )
 
 func (rogue *Rogue) registerBackstabSpell() {
-	// FIXME: Require a dagger MH
-	//daggerMH := rogue.Equip[proto.ItemSlot_ItemSlotMainHand].WeaponType == proto.WeaponType_WeaponTypeDagger
+	hasGlyph := rogue.HasMajorGlyph(proto.RogueMajorGlyph_GlyphOfBackstab)
 
 	rogue.Backstab = rogue.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 26863},
@@ -27,9 +26,8 @@ func (rogue *Rogue) registerBackstabSpell() {
 			},
 			IgnoreHaste: true,
 		},
-
 		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
-			return rogue.GetMHWeapon().WeaponType == proto.WeaponType_WeaponTypeDagger
+			return !rogue.PseudoStats.InFrontOfTarget && rogue.GetMHWeapon().WeaponType == proto.WeaponType_WeaponTypeDagger
 		},
 
 		BonusCritRating: core.TernaryFloat64(rogue.HasSetBonus(ItemSetVanCleefs, 4), 5*core.CritRatingPerCritChance, 0) +
@@ -57,10 +55,11 @@ func (rogue *Rogue) registerBackstabSpell() {
 			if result.Landed() {
 				rogue.AddComboPoints(sim, 1, spell.ComboPointMetrics())
 				// FIXME: Extension of a Rupture Dot can occur up to 3 times
-				if rogue.HasGlyph(42956) && rogue.Rupture[0].Dot(rogue.CurrentTarget).IsActive() {
-					rogue.Rupture[0].Dot(rogue.CurrentTarget).NumberOfTicks += 1
-					rogue.Rupture[0].Dot(rogue.CurrentTarget).RecomputeAuraDuration()
-					rogue.Rupture[0].Dot(rogue.CurrentTarget).UpdateExpires(rogue.Rupture[0].Dot(rogue.CurrentTarget).ExpiresAt() + rogue.Rupture[0].Dot(rogue.CurrentTarget).TickLength)
+				ruptureDot := rogue.Rupture.Dot(target)
+				if hasGlyph && ruptureDot.IsActive() {
+					ruptureDot.NumberOfTicks += 1
+					ruptureDot.RecomputeAuraDuration()
+					ruptureDot.UpdateExpires(ruptureDot.ExpiresAt() + ruptureDot.TickLength)
 				}
 			} else {
 				spell.IssueRefund(sim)

@@ -74,13 +74,13 @@ dps_results: {
 dps_results: {
  key: "TestRestoration-AllItems-BaubleofTrueBlood-50354"
  value: {
-  tps: 2183.25924
+  tps: 2061.54657
  }
 }
 dps_results: {
  key: "TestRestoration-AllItems-BaubleofTrueBlood-50726"
  value: {
-  tps: 2183.25924
+  tps: 2061.54657
  }
 }
 dps_results: {
@@ -535,12 +535,6 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-SouloftheDead-40382"
- value: {
-  tps: 0.1
- }
-}
-dps_results: {
- key: "TestRestoration-AllItems-SparkofHope-45703"
  value: {
   tps: 0.1
  }

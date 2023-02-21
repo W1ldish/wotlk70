@@ -122,14 +122,12 @@ func (dk *Deathknight) registerThassariansBattlegearProc() {
 	core.MakePermanent(dk.GetOrRegisterAura(core.Aura{
 		Label: "Unholy Might",
 		OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
-			if dk.HeartStrike == nil {
-				if !icd.IsReady(sim) || spell != dk.BloodStrike {
-					return
-				}
-			} else {
-				if !icd.IsReady(sim) || (spell != dk.BloodStrike && spell != dk.HeartStrike) {
-					return
-				}
+			if !icd.IsReady(sim) {
+				return
+			}
+
+			if spell != dk.BloodStrike && spell != dk.HeartStrike {
+				return
 			}
 
 			if sim.RandomFloat("UnholyMight") < 0.5 {
@@ -286,11 +284,11 @@ func (dk *Deathknight) sigilOfArthriticBindingBonus() float64 {
 }
 
 func (dk *Deathknight) sigilOfTheVengefulHeartDeathCoil() float64 {
-	return core.TernaryFloat64(dk.Equip[proto.ItemSlot_ItemSlotRanged].ID == 45254, 437, 0)
+	return core.TernaryFloat64(dk.Equip[proto.ItemSlot_ItemSlotRanged].ID == 45254, 403, 0)
 }
 
 func (dk *Deathknight) sigilOfTheVengefulHeartFrostStrike() float64 {
-	return core.TernaryFloat64(dk.Equip[proto.ItemSlot_ItemSlotRanged].ID == 45254, 247, 0) // (1 / 0.55) * 137
+	return core.TernaryFloat64(dk.Equip[proto.ItemSlot_ItemSlotRanged].ID == 45254, 218, 0) // (1 / 0.55) * 120
 }
 
 func init() {
@@ -333,9 +331,8 @@ func init() {
 			return
 		}
 
-		target := character.CurrentTarget
 		procMask := core.GetMeleeProcMaskForHands(mh, oh)
-		vulnAura := core.RuneOfRazoriceVulnerabilityAura(target)
+		vulnAuras := character.NewEnemyAuraArray(core.RuneOfRazoriceVulnerabilityAura)
 		mhRazoriceSpell := newRazoriceHitSpell(character, true)
 		ohRazoriceSpell := newRazoriceHitSpell(character, false)
 		aura := character.GetOrRegisterAura(core.Aura{
@@ -350,12 +347,13 @@ func init() {
 					return
 				}
 
+				vulnAura := vulnAuras.Get(result.Target)
 				vulnAura.Activate(sim)
 				if spell.IsMH() {
-					mhRazoriceSpell.Cast(sim, target)
+					mhRazoriceSpell.Cast(sim, result.Target)
 					vulnAura.AddStack(sim)
 				} else {
-					ohRazoriceSpell.Cast(sim, target)
+					ohRazoriceSpell.Cast(sim, result.Target)
 					vulnAura.AddStack(sim)
 				}
 			},

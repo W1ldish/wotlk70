@@ -18,7 +18,9 @@ type BloodRotation struct {
 
 func (br *BloodRotation) Reset(sim *core.Simulation) {
 	br.activatingDrw = false
-	br.drwSnapshot.ResetProcTrackers()
+	if br.drwSnapshot != nil {
+		br.drwSnapshot.ResetProcTrackers()
+	}
 	br.drwMaxDelay = -1
 }
 
@@ -121,7 +123,7 @@ func (dk *DpsDeathknight) blBloodTapCheck(sim *core.Simulation, target *core.Uni
 		return false
 	}
 
-	if dk.RuneWeapon.IsEnabled() && dk.BloodTap.IsReady(sim) {
+	if (!dk.Talents.DancingRuneWeapon || dk.RuneWeapon.IsEnabled()) && dk.BloodTap.IsReady(sim) {
 		return dk.BloodTap.Cast(sim, target)
 	}
 

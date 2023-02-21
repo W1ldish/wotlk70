@@ -187,7 +187,7 @@ func (hunter *Hunter) applyInvigoration() {
 			}
 
 			if sim.Proc(procChance, "Invigoration") {
-				hunter.AddMana(sim, 0.01*hunter.MaxMana(), manaMetrics, false)
+				hunter.AddMana(sim, 0.01*hunter.MaxMana(), manaMetrics)
 			}
 		},
 	})
@@ -208,13 +208,13 @@ func (hunter *Hunter) applyCobraStrikes() {
 		MaxStacks: 2,
 		OnGain: func(aura *core.Aura, sim *core.Simulation) {
 			hunter.pet.focusDump.BonusCritRating += 100 * core.CritRatingPerCritChance
-			if !hunter.pet.specialAbility.IsEmpty() {
+			if hunter.pet.specialAbility != nil {
 				hunter.pet.specialAbility.BonusCritRating += 100 * core.CritRatingPerCritChance
 			}
 		},
 		OnExpire: func(aura *core.Aura, sim *core.Simulation) {
 			hunter.pet.focusDump.BonusCritRating -= 100 * core.CritRatingPerCritChance
-			if !hunter.pet.specialAbility.IsEmpty() {
+			if hunter.pet.specialAbility != nil {
 				hunter.pet.specialAbility.BonusCritRating -= 100 * core.CritRatingPerCritChance
 			}
 		},
@@ -458,9 +458,6 @@ func (hunter *Hunter) registerBestialWrathCD() {
 	hunter.AddMajorCooldown(core.MajorCooldown{
 		Spell: bwSpell,
 		Type:  core.CooldownTypeDPS,
-		CanActivate: func(sim *core.Simulation, character *core.Character) bool {
-			return hunter.CurrentMana() >= bwSpell.DefaultCast.Cost
-		},
 	})
 }
 
@@ -576,7 +573,7 @@ func (hunter *Hunter) applyLockAndLoad() {
 			aura.Activate(sim)
 		},
 		OnPeriodicDamageDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
-			if spell != hunter.BlackArrow && spell != hunter.ExplosiveTrapDot.Spell {
+			if spell != hunter.BlackArrow && spell != hunter.ExplosiveTrap {
 				return
 			}
 
@@ -618,14 +615,14 @@ func (hunter *Hunter) applyThrillOfTheHunt() {
 			}
 
 			if sim.Proc(procChance, "ThrillOfTheHunt") {
-				hunter.AddMana(sim, spell.CurCast.Cost*0.4, manaMetrics, false)
+				hunter.AddMana(sim, spell.CurCast.Cost*0.4, manaMetrics)
 			}
 		},
 		OnPeriodicDamageDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 			if result.DidCrit() && (spell == hunter.ExplosiveShotR4 || spell == hunter.ExplosiveShotR3) {
 				// Explosive shot ticks can proc TotH but with 1/3 the bonus.
 				if sim.Proc(procChance, "ThrillOfTheHunt") {
-					hunter.AddMana(sim, spell.CurCast.Cost*0.4/3, manaMetrics, false)
+					hunter.AddMana(sim, spell.CurCast.Cost*0.4/3, manaMetrics)
 				}
 			}
 		},
@@ -762,7 +759,7 @@ func (hunter *Hunter) applySniperTraining() {
 		},
 	})
 
-	core.ApplyFixedUptimeAura(stAura, uptime, time.Second*15)
+	core.ApplyFixedUptimeAura(stAura, uptime, time.Second*15, 1)
 }
 
 func (hunter *Hunter) applyHuntingParty() {
@@ -815,6 +812,10 @@ func (hunter *Hunter) registerReadinessCD() {
 				Duration: time.Minute * 3,
 			},
 		},
+		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
+			// Don't use if there are no cooldowns to reset.
+			return !hunter.RapidFire.IsReady(sim)
+		},
 
 		ApplyEffects: func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 			hunter.RapidFire.CD.Reset()
@@ -852,10 +853,6 @@ func (hunter *Hunter) registerReadinessCD() {
 	hunter.AddMajorCooldown(core.MajorCooldown{
 		Spell: readinessSpell,
 		Type:  core.CooldownTypeDPS,
-		CanActivate: func(sim *core.Simulation, character *core.Character) bool {
-			// Don't use if there are no cooldowns to reset.
-			return !hunter.RapidFire.IsReady(sim)
-		},
 		ShouldActivate: func(sim *core.Simulation, character *core.Character) bool {
 			// If RF is about to become ready naturally, wait so we can get 2x usages.
 			if !hunter.RapidFire.IsReady(sim) && hunter.RapidFire.TimeToReady(sim) < time.Second*10 {

@@ -77,20 +77,18 @@ type Mage struct {
 	IcyVeins             *core.Spell
 	SummonWaterElemental *core.Spell
 
-	//FrostfireDot *core.Dot
-
 	ArcaneBlastAura    *core.Aura
 	ArcanePotencyAura  *core.Aura
 	ArcanePowerAura    *core.Aura
 	MissileBarrageAura *core.Aura
 	ClearcastingAura   *core.Aura
-	ScorchAura         *core.Aura
+	ScorchAuras        core.AuraArray
 	HotStreakAura      *core.Aura
 	CombustionAura     *core.Aura
 	FingersOfFrostAura *core.Aura
 	BrainFreezeAura    *core.Aura
 
-	CritDebuffCategory *core.ExclusiveCategory
+	CritDebuffCategories core.ExclusiveCategoryArray
 }
 
 func (mage *Mage) GetCharacter() *core.Character {
@@ -137,7 +135,17 @@ func (mage *Mage) Initialize() {
 
 	mage.registerEvocationCD()
 	mage.registerManaGemsCD()
-	//mage.registerMirrorImageCD()
+	/*
+	mage.registerMirrorImageCD()
+
+	if mirrorImageMCD := mage.GetMajorCooldownIgnoreTag(mage.MirrorImage.ActionID); mirrorImageMCD != nil {
+		if len(mirrorImageMCD.GetTimings()) == 0 {
+			mage.RegisterPrepullAction(-1500*time.Millisecond, func(sim *core.Simulation) {
+				mage.MirrorImage.Cast(sim, nil)
+			})
+		}
+	}
+	*/
 }
 
 func (mage *Mage) Reset(sim *core.Simulation) {

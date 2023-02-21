@@ -124,8 +124,6 @@ type Shaman struct {
 	WrathOfAirTotem      *core.Spell
 	FlametongueTotem     *core.Spell
 
-	FlameShockDot *core.Dot
-
 	MaelstromWeaponAura *core.Aura
 }
 

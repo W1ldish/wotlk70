@@ -83,11 +83,11 @@ type Rogue struct {
 	MasterOfSubtlety *core.Spell
 	Overkill         *core.Spell
 
-	Envenom      [6]*core.Spell
-	Eviscerate   [6]*core.Spell
-	ExposeArmor  [6]*core.Spell
-	Rupture      [6]*core.Spell
-	SliceAndDice [6]*core.Spell
+	Envenom      *core.Spell
+	Eviscerate   *core.Spell
+	ExposeArmor  *core.Spell
+	Rupture      *core.Spell
+	SliceAndDice *core.Spell
 
 	lastDeadlyPoisonProcMask    core.ProcMask
 	deadlyPoisonProcChanceBonus float64
@@ -97,7 +97,7 @@ type Rogue struct {
 	AdrenalineRushAura   *core.Aura
 	BladeFlurryAura      *core.Aura
 	EnvenomAura          *core.Aura
-	ExposeArmorAura      *core.Aura
+	ExposeArmorAuras     core.AuraArray
 	HungerForBloodAura   *core.Aura
 	KillingSpreeAura     *core.Aura
 	OverkillAura         *core.Aura

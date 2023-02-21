@@ -247,7 +247,7 @@ func JudgementOfWisdomAura(target *Unit) *Aura {
 				unit.JowManaMetrics = unit.NewManaMetrics(actionID)
 			}
 			// JoW returns 2% of base mana 50% of the time.
-			unit.AddMana(sim, unit.BaseMana*0.02, unit.JowManaMetrics, false)
+			unit.AddMana(sim, unit.BaseMana*0.02, unit.JowManaMetrics)
 		},
 	})
 }
@@ -463,7 +463,7 @@ func ImprovedScorchAura(target *Unit) *Aura {
 	return majorSpellCritDebuffAura(target, "Improved Scorch", ActionID{SpellID: 12873}, 5)
 }
 
-const spellCritEffectCategory = "spellcritdebuff"
+const SpellCritEffectCategory = "spellcritdebuff"
 
 func WintersChillAura(target *Unit, startingStacks int32) *Aura {
 	var effect *ExclusiveEffect
@@ -480,7 +480,7 @@ func WintersChillAura(target *Unit, startingStacks int32) *Aura {
 		},
 	})
 
-	effect = aura.NewExclusiveEffect(spellCritEffectCategory, true, ExclusiveEffect{
+	effect = aura.NewExclusiveEffect(SpellCritEffectCategory, true, ExclusiveEffect{
 		Priority: 0,
 		OnGain: func(ee *ExclusiveEffect, sim *Simulation) {
 			ee.Aura.Unit.PseudoStats.BonusSpellCritRatingTaken += ee.Priority * CritRatingPerCritChance
@@ -500,7 +500,7 @@ func majorSpellCritDebuffAura(target *Unit, label string, actionID ActionID, per
 	})
 
 	bonusSpellCrit := percent * CritRatingPerCritChance
-	aura.NewExclusiveEffect(spellCritEffectCategory, true, ExclusiveEffect{
+	aura.NewExclusiveEffect(SpellCritEffectCategory, true, ExclusiveEffect{
 		Priority: percent,
 		OnGain: func(ee *ExclusiveEffect, sim *Simulation) {
 			ee.Aura.Unit.PseudoStats.BonusSpellCritRatingTaken += bonusSpellCrit

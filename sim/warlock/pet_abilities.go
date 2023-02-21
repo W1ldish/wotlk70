@@ -197,11 +197,11 @@ func (wp *WarlockPet) newShadowBite() *core.Spell {
 			w := wp.owner
 			dots := []*core.Dot{
 				w.UnstableAffliction.Dot(target),
-				w.ImmolateDot,
+				w.Immolate.Dot(target),
 				w.CurseOfAgony.Dot(target),
 				w.CurseOfDoom.Dot(target),
 				w.Corruption.Dot(target),
-				w.ConflagrateDot,
+				w.Conflagrate.Dot(target),
 				w.Seed.Dot(target),
 				w.DrainSoul.Dot(target),
 				// missing: drain life, shadowflame
@@ -217,7 +217,7 @@ func (wp *WarlockPet) newShadowBite() *core.Spell {
 
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if impFelhunter && result.Landed() {
-				wp.AddMana(sim, wp.MaxMana()*maxManaMult, petManaMetrics, true)
+				wp.AddMana(sim, wp.MaxMana()*maxManaMult, petManaMetrics)
 			}
 			spell.DealDamage(sim, result)
 		},

@@ -8,7 +8,6 @@ import (
 )
 
 func (druid *Druid) registerRakeSpell() {
-	bleedCategory := druid.CurrentTarget.GetExclusiveEffectCategory(core.BleedEffectCategory)
 	numTicks := 3 + core.TernaryInt32(druid.HasSetBonus(ItemSetMalfurionsBattlegear, 2), 1, 0)
 	dotCanCrit := druid.HasSetBonus(ItemSetLasherweaveBattlegear, 4)
 
@@ -27,6 +26,9 @@ func (druid *Druid) registerRakeSpell() {
 				GCD: time.Second,
 			},
 			IgnoreHaste: true,
+		},
+		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
+			return druid.InForm(Cat)
 		},
 
 		DamageMultiplier: 1 + 0.1*float64(druid.Talents.SavageFury),
@@ -57,7 +59,7 @@ func (druid *Druid) registerRakeSpell() {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			baseDamage := 90 + 0.01*spell.MeleeAttackPower()
-			if bleedCategory.AnyActive() {
+			if druid.BleedCategories.Get(target).AnyActive() {
 				baseDamage *= 1.3
 			}
 
@@ -74,7 +76,7 @@ func (druid *Druid) registerRakeSpell() {
 		ExpectedDamage: func(sim *core.Simulation, target *core.Unit, spell *core.Spell, _ bool) *core.SpellResult {
 			baseDamage := 90 + 0.01*spell.MeleeAttackPower()
 			tickBase := (138 + 0.06*spell.MeleeAttackPower()) * float64(numTicks)
-			if bleedCategory.AnyActive() {
+			if druid.BleedCategories.Get(target).AnyActive() {
 				baseDamage *= 1.3
 				tickBase *= 1.3
 			}
@@ -84,7 +86,7 @@ func (druid *Druid) registerRakeSpell() {
 
 			critRating := druid.GetStat(stats.MeleeCrit) + spell.BonusCritRating
 			critChance := critRating / (core.CritRatingPerCritChance * 100)
-			critMod := (critChance * (spell.CritMultiplier - 1))
+			critMod := (critChance * (spell.FinalCritMultiplier() - 1))
 
 			if dotCanCrit {
 				ticks.Damage *= critChance * (1 + critMod)
@@ -96,10 +98,6 @@ func (druid *Druid) registerRakeSpell() {
 	})
 }
 
-func (druid *Druid) CanRake() bool {
-	return druid.InForm(Cat) && druid.CurrentEnergy() >= druid.CurrentRakeCost()
-}
-
 func (druid *Druid) CurrentRakeCost() float64 {
-	return druid.Rake.ApplyCostModifiers(druid.Rake.BaseCost)
+	return druid.Rake.ApplyCostModifiers(druid.Rake.DefaultCast.Cost)
 }

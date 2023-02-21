@@ -66,13 +66,13 @@ dps_results: {
 dps_results: {
  key: "TestRestoration-AllItems-BaubleofTrueBlood-50354"
  value: {
-  tps: 1760.90349
+  tps: 1734.19554
  }
 }
 dps_results: {
  key: "TestRestoration-AllItems-BaubleofTrueBlood-50726"
  value: {
-  tps: 1760.90349
+  tps: 1734.19554
  }
 }
 dps_results: {
@@ -269,6 +269,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-IdolofLunarFury-47670"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-IdolofMutilation-47668"
  value: {}
 }
@@ -438,10 +442,6 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-SouloftheDead-40382"
- value: {}
-}
-dps_results: {
- key: "TestRestoration-AllItems-SparkofHope-45703"
  value: {}
 }
 dps_results: {

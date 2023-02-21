@@ -24,7 +24,7 @@ func (moonkin *BalanceDruid) rotation(sim *core.Simulation) *core.Spell {
 	rotation := moonkin.Rotation
 	target := moonkin.CurrentTarget
 
-	if rotation.MaintainFaerieFire && moonkin.ShouldFaerieFire(sim) {
+	if rotation.MaintainFaerieFire && moonkin.ShouldFaerieFire(sim, moonkin.CurrentTarget) {
 		return moonkin.FaerieFire
 	}
 
@@ -54,7 +54,7 @@ func (moonkin *BalanceDruid) rotation(sim *core.Simulation) *core.Spell {
 		return moonkin.Hurricane
 	}
 
-	moonfireUptime := moonkin.MoonfireDot.RemainingDuration(sim)
+	moonfireUptime := moonkin.Moonfire.CurDot().RemainingDuration(sim)
 	insectSwarmUptime := moonkin.InsectSwarm.CurDot().RemainingDuration(sim)
 	useMf := moonkin.Rotation.MfUsage != proto.BalanceDruid_Rotation_NoMf
 	useIs := moonkin.Rotation.IsUsage != proto.BalanceDruid_Rotation_NoIs
@@ -82,7 +82,6 @@ func (moonkin *BalanceDruid) rotation(sim *core.Simulation) *core.Spell {
 	fishingForLunar := lunarICD <= solarICD
 
 	if moonkin.Talents.Eclipse > 0 {
-
 		solarUptime := moonkin.SolarEclipseProcAura.ExpiresAt() - sim.CurrentTime
 		solarIsActive := moonkin.SolarEclipseProcAura.IsActive()
 
@@ -115,7 +114,9 @@ func (moonkin *BalanceDruid) rotation(sim *core.Simulation) *core.Spell {
 				return moonkin.Starfire
 			} else if solarIsActive {
 				if rotation.UseWrath {
-					if moonkin.MoonkinT84PCAura.IsActive() && moonkin.LunarICD.TimeToReady(sim)+playerLatency > moonkin.MoonkinT84PCAura.RemainingDuration(sim) {
+					if moonkin.MoonkinT84PCAura.IsActive() &&
+						(moonkin.LunarICD.TimeToReady(sim)+playerLatency > moonkin.MoonkinT84PCAura.RemainingDuration(sim) ||
+							moonkin.MoonkinT84PCAura.RemainingDuration(sim) < solarUptime) {
 						return moonkin.Starfire
 					}
 					if (rotation.UseSmartCooldowns && solarUptime > 10*time.Second) || sim.GetRemainingDuration() < 15*time.Second {

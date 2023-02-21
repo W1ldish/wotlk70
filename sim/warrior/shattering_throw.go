@@ -31,6 +31,9 @@ func (warrior *Warrior) RegisterShatteringThrowCD() {
 				} else {
 					warrior.AutoAttacks.StopMeleeUntil(sim, sim.CurrentTime+cast.CastTime, false)
 				}
+				if !warrior.StanceMatches(BattleStance) && warrior.BattleStance.IsReady(sim) {
+					warrior.BattleStance.Cast(sim, nil)
+				}
 			},
 			IgnoreHaste: true,
 		},
@@ -43,9 +46,6 @@ func (warrior *Warrior) RegisterShatteringThrowCD() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			if !warrior.StanceMatches(BattleStance) && warrior.BattleStance.IsReady(sim) {
-				warrior.BattleStance.Cast(sim, nil)
-			}
 
 			baseDamage := 0.5 * spell.MeleeAttackPower()
 			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialNoBlockDodgeParry)

@@ -8,8 +8,8 @@ import (
 	"golang.org/x/exp/slices"
 	googleProto "google.golang.org/protobuf/proto"
 
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/wowsims/wotlk/sim/core/proto"
+	"github.com/wowsims/wotlk/sim/core/stats"
 )
 
 // Applies buffs that affect individual players.
@@ -17,23 +17,23 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	character := agent.GetCharacter()
 
 	if raidBuffs.ArcaneBrilliance || raidBuffs.FelIntelligence > 0 {
-		val := GetTristateValueFloat(raidBuffs.FelIntelligence, 32.0, 32.0*1.1)
+		val := GetTristateValueFloat(raidBuffs.FelIntelligence, 48.0, 48.0*1.1)
 		if raidBuffs.ArcaneBrilliance {
-			val = 40.0
+			val = 60.0
 		}
 		character.AddStat(stats.Intellect, val)
 	} else if raidBuffs.ScrollOfIntellect {
 		character.AddStats(stats.Stats{
-			stats.Intellect: 32,
+			stats.Intellect: 48,
 		})
 	}
 
 	if raidBuffs.DrumsOfTheWild {
 		raidBuffs.GiftOfTheWild = MaxTristate(raidBuffs.GiftOfTheWild, proto.TristateEffect_TristateEffectRegular)
 	}
-	gotwAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 14, 14*1.4)
-	gotwArmorAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 340, 340*1.4)
-	gotwResistAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 25, 25*1.4)
+	gotwAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 37, 51)
+	gotwArmorAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 750, 1050)
+	gotwResistAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 54, 75)
 	if gotwAmount > 0 {
 		character.AddStats(stats.Stats{
 			stats.Armor:            gotwArmorAmount,
@@ -94,36 +94,36 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	}
 
 	if raidBuffs.BloodPact > 0 || raidBuffs.CommandingShout > 0 {
-		health := GetTristateValueFloat(raidBuffs.BloodPact, 660, 660*1.3)
-		health2 := GetTristateValueFloat(raidBuffs.CommandingShout, 1080, 1080*1.25)
+		health := GetTristateValueFloat(raidBuffs.BloodPact, 1330, 1330*1.3)
+		health2 := GetTristateValueFloat(raidBuffs.CommandingShout, 2255, 2255*1.25)
 		character.AddStat(stats.Health, MaxFloat(health, health2))
 	}
 
 	if raidBuffs.PowerWordFortitude != proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Stamina: GetTristateValueFloat(raidBuffs.PowerWordFortitude, 79, 79*1.3),
+			stats.Stamina: GetTristateValueFloat(raidBuffs.PowerWordFortitude, 165, 165*1.3),
 		})
 	} else if raidBuffs.ScrollOfStamina {
 		character.AddStats(stats.Stats{
-			stats.Stamina: 63,
+			stats.Stamina: 132,
 		})
 	}
 	if raidBuffs.ShadowProtection {
 		character.AddStats(stats.Stats{
-			stats.ShadowResistance: 70 - gotwResistAmount,
+			stats.ShadowResistance: 130 - gotwResistAmount,
 		})
 	}
 	if raidBuffs.DivineSpirit || raidBuffs.FelIntelligence > 0 {
-		v := GetTristateValueFloat(raidBuffs.FelIntelligence, 40.0, 40.0*1.1)
+		v := GetTristateValueFloat(raidBuffs.FelIntelligence, 64.0, 64.0*1.1)
 		if raidBuffs.DivineSpirit {
-			v = 50.0
+			v = 80.0
 		}
 		character.AddStats(stats.Stats{
 			stats.Spirit: v,
 		})
 	} else if raidBuffs.ScrollOfSpirit {
 		character.AddStats(stats.Stats{
-			stats.Spirit: 40,
+			stats.Spirit: 64,
 		})
 	}
 
@@ -175,19 +175,19 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	// TODO: Is scroll exclusive to totem?
 	if raidBuffs.StoneskinTotem != proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Armor: GetTristateValueFloat(raidBuffs.StoneskinTotem, 860, 860*1.2),
+			stats.Armor: GetTristateValueFloat(raidBuffs.StoneskinTotem, 1150, 1380),
 		})
 	}
 
 	if raidBuffs.DevotionAura != proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Armor: GetTristateValueFloat(raidBuffs.DevotionAura, 861, 861*1.5),
+			stats.Armor: GetTristateValueFloat(raidBuffs.DevotionAura, 1205, 1807.5),
 		})
 	}
 
 	if raidBuffs.ScrollOfProtection && raidBuffs.DevotionAura == proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Armor: 340,
+			stats.Armor: 750,
 		})
 	}
 
@@ -196,7 +196,7 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	}
 
 	if raidBuffs.BattleShout > 0 || individualBuffs.BlessingOfMight > 0 {
-		bonusAP := 306 * GetTristateValueFloat(MaxTristate(raidBuffs.BattleShout, individualBuffs.BlessingOfMight), 1, 1.25)
+		bonusAP := 550 * GetTristateValueFloat(MaxTristate(raidBuffs.BattleShout, individualBuffs.BlessingOfMight), 1, 1.25)
 		character.AddStats(stats.Stats{
 			stats.AttackPower:       math.Floor(bonusAP),
 			stats.RangedAttackPower: math.Floor(bonusAP),
@@ -220,7 +220,7 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	}
 	if raidBuffs.StrengthOfEarthTotem > 0 || raidBuffs.HornOfWinter {
 		val := MaxTristate(proto.TristateEffect_TristateEffectRegular, raidBuffs.StrengthOfEarthTotem)
-		bonus := GetTristateValueFloat(val, 86, 86*1.15)
+		bonus := GetTristateValueFloat(val, 155, 178)
 		character.AddStats(stats.Stats{
 			stats.Strength: bonus,
 			stats.Agility:  bonus,
@@ -228,19 +228,19 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	} else {
 		if raidBuffs.ScrollOfStrength {
 			character.AddStats(stats.Stats{
-				stats.Strength: 25,
+				stats.Strength: 30,
 			})
 		}
 		if raidBuffs.ScrollOfAgility {
 			character.AddStats(stats.Stats{
-				stats.Agility: 25,
+				stats.Agility: 30,
 			})
 		}
 	}
 
 	if individualBuffs.BlessingOfWisdom > 0 || raidBuffs.ManaSpringTotem > 0 {
 		character.AddStats(stats.Stats{
-			stats.MP5: GetTristateValueFloat(MaxTristate(individualBuffs.BlessingOfWisdom, raidBuffs.ManaSpringTotem), 41, 41*1.2),
+			stats.MP5: GetTristateValueFloat(MaxTristate(individualBuffs.BlessingOfWisdom, raidBuffs.ManaSpringTotem), 91, 109),
 		})
 	}
 
@@ -363,13 +363,13 @@ func ApplyInspiration(character *Character, uptime float64) {
 
 	inspirationAura := InspirationAura(&character.Unit, 3)
 
-	ApplyFixedUptimeAura(inspirationAura, uptime, time.Millisecond*2500)
+	ApplyFixedUptimeAura(inspirationAura, uptime, time.Millisecond*2500, 1)
 }
 
 func RetributionAura(character *Character, sanctifiedRetribution bool) *Aura {
 	actionID := ActionID{SpellID: 54043}
 
-	baseDamage := 62.0
+	baseDamage := 112.0
 	if sanctifiedRetribution {
 		baseDamage *= 1.5
 	}
@@ -405,7 +405,7 @@ func RetributionAura(character *Character, sanctifiedRetribution bool) *Aura {
 
 func ThornsAura(character *Character, points int32) *Aura {
 	actionID := ActionID{SpellID: 53307}
-	baseDamage := 25 * (1 + 0.25*float64(points))
+	baseDamage := 73 * (1 + 0.25*float64(points))
 
 	procSpell := character.RegisterSpell(SpellConfig{
 		ActionID:    actionID,
@@ -452,7 +452,7 @@ func BlessingOfSanctuaryAura(character *Character) {
 		},
 		OnSpellHitTaken: func(aura *Aura, sim *Simulation, spell *Spell, result *SpellResult) {
 			if result.Outcome.Matches(OutcomeBlock | OutcomeDodge | OutcomeParry) {
-				character.AddMana(sim, 0.02*character.MaxMana(), manaMetrics, false)
+				character.AddMana(sim, 0.02*character.MaxMana(), manaMetrics)
 			}
 		},
 	})
@@ -502,6 +502,17 @@ func registerExternalConsecutiveCDApproximation(agent Agent, config externalCons
 				Duration: config.AuraDuration, // Assumes that multiple buffs are different sources.
 			},
 		},
+		ExtraCastCondition: func(sim *Simulation, target *Unit) bool {
+			if !externalTimers[nextExternalIndex].IsReady(sim) {
+				return false
+			}
+
+			if character.HasActiveAuraWithTag(config.AuraTag) {
+				return false
+			}
+
+			return true
+		},
 
 		ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
 			config.AddAura(sim, character)
@@ -522,17 +533,6 @@ func registerExternalConsecutiveCDApproximation(agent Agent, config externalCons
 		Priority: config.CooldownPriority,
 		Type:     config.Type,
 
-		CanActivate: func(sim *Simulation, character *Character) bool {
-			if !externalTimers[nextExternalIndex].IsReady(sim) {
-				return false
-			}
-
-			if character.HasActiveAuraWithTag(config.AuraTag) {
-				return false
-			}
-
-			return true
-		},
 		ShouldActivate: config.ShouldActivate,
 	})
 }
@@ -883,7 +883,7 @@ func registerRevitalizeHotCD(agent Agent, label string, hotID ActionID, ticks in
 					if s.RandomFloat("Revitalize Proc") < 0.15 {
 						cpb := aura.Unit.GetCurrentPowerBar()
 						if cpb == ManaBar {
-							aura.Unit.AddMana(s, aura.Unit.MaxMana()*0.01, manaMetrics, true)
+							aura.Unit.AddMana(s, 0.01*aura.Unit.MaxMana(), manaMetrics)
 						} else if cpb == EnergyBar {
 							aura.Unit.AddEnergy(s, 8, energyMetrics)
 						} else if cpb == RageBar {
@@ -898,7 +898,7 @@ func registerRevitalizeHotCD(agent Agent, label string, hotID ActionID, ticks in
 		},
 	})
 
-	ApplyFixedUptimeAura(aura, uptimePercent, totalDuration)
+	ApplyFixedUptimeAura(aura, uptimePercent, totalDuration, 1)
 }
 
 const ShatteringThrowCD = time.Minute * 5
@@ -948,17 +948,12 @@ func registerInnervateCD(agent Agent, numInnervates int32) {
 	}
 
 	innervateThreshold := 0.0
-	expectedManaPerInnervate := 0.0
-	remainingInnervateUsages := 0
 	var innervateAura *Aura
 
 	character := agent.GetCharacter()
 	character.Env.RegisterPostFinalizeEffect(func() {
 		innervateThreshold = InnervateManaThreshold(character)
-		expectedManaPerInnervate = 2370 * 2.25 // WotLK druid's base mana
-		remainingInnervateUsages = int(1 + (MaxDuration(0, character.Env.BaseDuration))/InnervateCD)
-		character.ExpectedBonusMana += expectedManaPerInnervate * float64(remainingInnervateUsages)
-		innervateAura = InnervateAura(character, expectedManaPerInnervate, -1)
+		innervateAura = InnervateAura(character, -1)
 	})
 
 	registerExternalConsecutiveCDApproximation(
@@ -976,17 +971,12 @@ func registerInnervateCD(agent Agent, numInnervates int32) {
 			},
 			AddAura: func(sim *Simulation, character *Character) {
 				innervateAura.Activate(sim)
-
-				newRemainingUsages := int(sim.GetRemainingDuration() / InnervateCD)
-				// AddInnervateAura already accounts for 1 usage, which is why we subtract 1 less.
-				character.ExpectedBonusMana -= expectedManaPerInnervate * MaxFloat(0, float64(remainingInnervateUsages-newRemainingUsages-1))
-				remainingInnervateUsages = newRemainingUsages
 			},
 		},
 		numInnervates)
 }
 
-func InnervateAura(character *Character, expectedBonusManaReduction float64, actionTag int32) *Aura {
+func InnervateAura(character *Character, actionTag int32) *Aura {
 	actionID := ActionID{SpellID: 29166, Tag: actionTag}
 	manaMetrics := character.NewManaMetrics(actionID)
 	return character.GetOrRegisterAura(Aura{
@@ -995,13 +985,12 @@ func InnervateAura(character *Character, expectedBonusManaReduction float64, act
 		ActionID: actionID,
 		Duration: InnervateDuration,
 		OnGain: func(aura *Aura, sim *Simulation) {
-			expectedBonusManaPerTick := expectedBonusManaReduction / 10
+			const manaPerTick = 3496 * 2.25 / 10 // WotLK druid's base mana
 			StartPeriodicAction(sim, PeriodicActionOptions{
 				Period:   InnervateDuration / 10,
 				NumTicks: 10,
 				OnAction: func(sim *Simulation) {
-					character.ExpectedBonusMana -= expectedBonusManaPerTick
-					character.AddMana(sim, expectedBonusManaPerTick, manaMetrics, true)
+					character.AddMana(sim, manaPerTick, manaMetrics)
 				},
 			})
 		},
@@ -1019,8 +1008,6 @@ func registerManaTideTotemCD(agent Agent, numManaTideTotems int32) {
 		return
 	}
 
-	expectedManaPerManaTideTotem := 0.0
-	remainingManaTideTotemUsages := 0
 	initialDelay := time.Duration(0)
 	var mttAura *Aura
 
@@ -1028,10 +1015,6 @@ func registerManaTideTotemCD(agent Agent, numManaTideTotems int32) {
 	character.Env.RegisterPostFinalizeEffect(func() {
 		// Use first MTT at 60s, or halfway through the fight, whichever comes first.
 		initialDelay = MinDuration(character.Env.BaseDuration/2, time.Second*60)
-
-		expectedManaPerManaTideTotem = 0.24 * character.MaxMana()
-		remainingManaTideTotemUsages = int(1 + MaxDuration(0, character.Env.BaseDuration-initialDelay)/ManaTideTotemCD)
-		character.ExpectedBonusMana += expectedManaPerManaTideTotem * float64(remainingManaTideTotemUsages)
 		mttAura = ManaTideTotemAura(character, -1)
 	})
 
@@ -1050,11 +1033,6 @@ func registerManaTideTotemCD(agent Agent, numManaTideTotems int32) {
 			},
 			AddAura: func(sim *Simulation, character *Character) {
 				mttAura.Activate(sim)
-
-				newRemainingUsages := int(sim.GetRemainingDuration() / ManaTideTotemCD)
-				// AddManaTideTotemAura already accounts for 1 usage, which is why we subtract 1 less.
-				character.ExpectedBonusMana -= expectedManaPerManaTideTotem * MaxFloat(0, float64(remainingManaTideTotemUsages-newRemainingUsages-1))
-				remainingManaTideTotemUsages = newRemainingUsages
 			},
 		},
 		numManaTideTotems)
@@ -1084,9 +1062,7 @@ func ManaTideTotemAura(character *Character, actionTag int32) *Aura {
 					for i, player := range character.Party.Players {
 						if metrics[i] != nil {
 							char := player.GetCharacter()
-							manaGain := 0.06 * char.MaxMana()
-							char.AddMana(sim, manaGain, metrics[i], true)
-							char.ExpectedBonusMana -= manaGain
+							char.AddMana(sim, 0.06*char.MaxMana(), metrics[i])
 						}
 					}
 				},
@@ -1207,7 +1183,7 @@ func TotemOfWrathAura(character *Character) *Aura {
 			aura.Activate(sim)
 		},
 	})
-	spellPowerBonusEffect(aura, 140)
+	spellPowerBonusEffect(aura, 280)
 	return aura
 }
 
@@ -1221,7 +1197,7 @@ func FlametongueTotemAura(character *Character) *Aura {
 			aura.Activate(sim)
 		},
 	})
-	spellPowerBonusEffect(aura, 73)
+	spellPowerBonusEffect(aura, 144)
 	return aura
 }
 
