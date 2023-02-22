@@ -32,7 +32,7 @@ func (warrior *Warrior) registerSlamSpell() {
 		FlatThreatBonus:  140,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 250 +
+			baseDamage := 140 +
 				spell.Unit.MHWeaponDamage(sim, spell.MeleeAttackPower()) +
 				spell.BonusWeaponDamage()
 

@@ -1,5 +1,6 @@
 package warrior
 
+/*
 import (
 	"time"
 
@@ -60,3 +61,4 @@ func (warrior *Warrior) RegisterShatteringThrowCD() {
 		Type:  core.CooldownTypeDPS,
 	})
 }
+*/

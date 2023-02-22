@@ -30,7 +30,7 @@ func (warrior *Warrior) registerHeroicStrikeSpell() {
 		FlatThreatBonus:  259,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 495 +
+			baseDamage := 317 +
 				spell.Unit.MHWeaponDamage(sim, spell.MeleeAttackPower()) +
 				spell.BonusWeaponDamage()
 
@@ -48,7 +48,7 @@ func (warrior *Warrior) registerHeroicStrikeSpell() {
 }
 
 func (warrior *Warrior) registerCleaveSpell() {
-	flatDamageBonus := 222 * (1 + 0.4*float64(warrior.Talents.ImprovedCleave))
+	flatDamageBonus := 135 * (1 + 0.4*float64(warrior.Talents.ImprovedCleave))
 
 	targets := core.TernaryInt32(warrior.HasMajorGlyph(proto.WarriorMajorGlyph_GlyphOfCleaving), 3, 2)
 	numHits := core.MinInt32(targets, warrior.Env.GetNumTargets())

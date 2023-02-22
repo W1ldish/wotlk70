@@ -9,12 +9,12 @@ character_stats_results: {
   final_stats: 2619.2536
   final_stats: 385
   final_stats: 0
-  final_stats: 1450.87245
+  final_stats: 726.696
   final_stats: 645
   final_stats: 0
   final_stats: 1652.75
   final_stats: 0
-  final_stats: 1147.06482
+  final_stats: 839.4696
   final_stats: 645
   final_stats: 0
   final_stats: 0
@@ -74,13 +74,13 @@ dps_results: {
 dps_results: {
  key: "TestRestoration-AllItems-BaubleofTrueBlood-50354"
  value: {
-  tps: 2061.54657
+  tps: 2074.41261
  }
 }
 dps_results: {
  key: "TestRestoration-AllItems-BaubleofTrueBlood-50726"
  value: {
-  tps: 2061.54657
+  tps: 2074.41261
  }
 }
 dps_results: {
@@ -335,8 +335,8 @@ dps_results: {
 dps_results: {
  key: "TestRestoration-AllItems-GnomishLightningGenerator-41121"
  value: {
-  dps: 33.41229
-  tps: 33.51229
+  dps: 33.54677
+  tps: 33.64677
  }
 }
 dps_results: {

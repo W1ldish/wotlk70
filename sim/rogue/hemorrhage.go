@@ -9,7 +9,7 @@ import (
 
 func (rogue *Rogue) registerHemorrhageSpell() {
 	actionID := core.ActionID{SpellID: 26864}
-	bonusDamage := 75.0
+	bonusDamage := 42.0
 	if rogue.HasMajorGlyph(proto.RogueMajorGlyph_GlyphOfHemorrhage) {
 		bonusDamage *= 1.4
 	}

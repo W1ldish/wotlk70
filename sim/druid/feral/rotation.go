@@ -335,7 +335,7 @@ func (cat *FeralDruid) doRotation(sim *core.Simulation) {
 		berserkNow = sim.GetRemainingDuration() < cat.BerserkAura.Duration+(3*time.Second)
 	}
 
-	roarNow := curCp >= 1 && (!cat.SavageRoarAura.IsActive() || cat.clipRoar(sim))
+	//roarNow := curCp >= 1 && (!cat.SavageRoarAura.IsActive() || cat.clipRoar(sim))
 
 	ripRefreshPending := false
 	pendingActions := make([]pendingAction, 0, 4)
@@ -541,12 +541,12 @@ func (cat *FeralDruid) doRotation(sim *core.Simulation) {
 		cat.Berserk.Cast(sim, nil)
 		cat.UpdateMajorCooldowns()
 		return
-	} else if roarNow {
+		/*} else if roarNow {
 		if cat.SavageRoar.CanCast(sim, cat.CurrentTarget) {
 			cat.SavageRoar.Cast(sim, nil)
 			return
 		}
-		timeToNextAction = time.Duration((cat.CurrentSavageRoarCost() - curEnergy) * float64(core.EnergyTickDuration))
+		timeToNextAction = time.Duration((cat.CurrentSavageRoarCost() - curEnergy) * float64(core.EnergyTickDuration))*/
 	} else if ripNow {
 		if cat.Rip.CanCast(sim, cat.CurrentTarget) {
 			cat.Rip.Cast(sim, cat.CurrentTarget)

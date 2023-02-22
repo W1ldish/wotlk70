@@ -39,7 +39,7 @@ func (druid *Druid) registerTyphoonSpell() {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {
-				baseDamage := 1190 + 0.193*spell.SpellPower()
+				baseDamage := 735 + 0.193*spell.SpellPower()
 				baseDamage *= sim.Encounter.AOECapMultiplier()
 				for _, aoeTarget := range sim.Encounter.Targets {
 					spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, spell.OutcomeMagicHitAndCrit)

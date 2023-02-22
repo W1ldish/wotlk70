@@ -51,7 +51,7 @@ func (shaman *Shaman) newShockSpellConfig(spellID int32, spellSchool core.SpellS
 func (shaman *Shaman) registerEarthShockSpell(shockTimer *core.Timer) {
 	config := shaman.newShockSpellConfig(49231, core.SpellSchoolNature, 0.18, shockTimer)
 	config.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-		baseDamage := sim.Roll(854, 900) + 0.386*spell.SpellPower()
+		baseDamage := sim.Roll(661.6, 695.6) + 0.386*spell.SpellPower()
 		spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 	}
 
@@ -66,7 +66,7 @@ func (shaman *Shaman) registerFlameShockSpell(shockTimer *core.Timer) {
 	config.DamageMultiplier += 0.1 * float64(shaman.Talents.BoomingEchoes)
 
 	config.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-		baseDamage := 500 + 0.214*spell.SpellPower()
+		baseDamage := 377 + 0.214*spell.SpellPower()
 		result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		if result.Landed() {
 			spell.Dot(target).Apply(sim)
@@ -94,7 +94,7 @@ func (shaman *Shaman) registerFlameShockSpell(shockTimer *core.Timer) {
 		AffectedByCastSpeed: true,
 
 		OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-			dot.SnapshotBaseDamage = 834/6 + 0.1*dot.Spell.SpellPower()
+			dot.SnapshotBaseDamage = 630/6 + 0.1*dot.Spell.SpellPower()
 			dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 
 			dot.Spell.DamageMultiplierAdditive += bonusPeriodicDamageMultiplier
@@ -115,7 +115,7 @@ func (shaman *Shaman) registerFrostShockSpell(shockTimer *core.Timer) {
 	config.DamageMultiplier += 0.1 * float64(shaman.Talents.BoomingEchoes)
 	config.ThreatMultiplier *= 2
 	config.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-		baseDamage := sim.Roll(812, 858) + 0.386*spell.SpellPower()
+		baseDamage := sim.Roll(647, 683) + 0.386*spell.SpellPower()
 		spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 	}
 

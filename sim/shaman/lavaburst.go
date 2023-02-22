@@ -1,5 +1,6 @@
 package shaman
 
+/*
 import (
 	"time"
 
@@ -84,3 +85,4 @@ func (shaman *Shaman) registerLavaBurstSpell() {
 		},
 	})
 }
+*/

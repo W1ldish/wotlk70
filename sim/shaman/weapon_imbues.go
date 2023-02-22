@@ -26,7 +26,7 @@ func (shaman *Shaman) RegisterOnItemSwapWithImbue(effectID int32, procMask *core
 }
 
 func (shaman *Shaman) newWindfuryImbueSpell(isMH bool) *core.Spell {
-	apBonus := 1250.0
+	apBonus := 445.0
 	if shaman.Equip[proto.ItemSlot_ItemSlotRanged].ID == TotemOfTheAstralWinds {
 		apBonus += 80
 	} else if shaman.Equip[proto.ItemSlot_ItemSlotRanged].ID == TotemOfSplintering {
@@ -146,7 +146,7 @@ func (shaman *Shaman) newFlametongueImbueSpell(isMH bool) *core.Spell {
 
 			var damage float64 = 0
 			if weapon != nil {
-				baseDamage := weapon.SwingSpeed * 68.5
+				baseDamage := weapon.SwingSpeed * 31.07
 				spellCoeff := 0.1 * weapon.SwingSpeed / 2.6
 				damage = baseDamage + spellCoeff*spell.SpellPower()
 			}
@@ -161,11 +161,11 @@ func (shaman *Shaman) ApplyFlametongueImbueToItem(item *core.Item, isDownranked 
 		return
 	}
 
-	spBonus := 211.0
+	spBonus := 96.0
 	spMod := 1.0 + 0.1*float64(shaman.Talents.ElementalWeapons)
 	id := 3781
 	if isDownranked {
-		spBonus = 186.0
+		spBonus = 45.0
 		id = 3780
 	}
 
@@ -243,7 +243,7 @@ func (shaman *Shaman) newFlametongueDownrankImbueSpell(isMH bool) *core.Spell {
 
 			var damage float64 = 0
 			if weapon != nil {
-				baseDamage := weapon.SwingSpeed * 64
+				baseDamage := weapon.SwingSpeed * 24.98
 				spellCoeff := 0.1 * weapon.SwingSpeed / 2.6
 				damage = baseDamage + spellCoeff*spell.SpellPower()
 			}
@@ -338,7 +338,7 @@ func (shaman *Shaman) newFrostbrandImbueSpell(isMH bool) *core.Spell {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 530 + 0.1*spell.SpellPower()
+			baseDamage := 259 + 0.1*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})

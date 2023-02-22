@@ -70,7 +70,7 @@ func (warrior *Warrior) registerShieldSlamSpell() {
 
 			sbv = sbvMod * (core.TernaryFloat64(sbv <= 1960.0, sbv, 0.0) + core.TernaryFloat64(sbv > 1960.0 && sbv <= 3160.0, 0.09333333333*sbv+1777.06666667, 0.0) + core.TernaryFloat64(sbv > 3160.0, 2072.0, 0.0))
 
-			baseDamage := sim.Roll(990, 1040) + sbv
+			baseDamage := sim.Roll(549, 577) + sbv
 			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 
 			if result.Landed() {

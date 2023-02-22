@@ -56,7 +56,7 @@ func (warrior *Warrior) registerExecuteSpell() {
 			warrior.SpendRage(sim, extraRage, rageMetrics)
 			rageMetrics.Events--
 
-			baseDamage := 1456 + 0.2*spell.MeleeAttackPower() + 38*(extraRage+extraRageBonus)
+			baseDamage := 865 + 0.2*spell.MeleeAttackPower() + 21*(extraRage+extraRageBonus)
 			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 
 			if !result.Landed() {

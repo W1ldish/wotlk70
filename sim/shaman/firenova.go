@@ -40,7 +40,7 @@ func (shaman *Shaman) registerFireNovaSpell() {
 			// FIXME: double check spell coefficients
 			dmgFromSP := 0.2142 * spell.SpellPower()
 			for _, aoeTarget := range sim.Encounter.Targets {
-				baseDamage := sim.Roll(893, 997) + dmgFromSP
+				baseDamage := sim.Roll(772, 813) + dmgFromSP
 				// TODO: Uncomment this
 				//baseDamage *= sim.Encounter.AOECapMultiplier()
 				spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDamage, spell.OutcomeMagicHitAndCrit)

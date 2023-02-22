@@ -50,7 +50,7 @@ func (rogue *Rogue) registerGarrote() {
 			NumberOfTicks: numTicks,
 			TickLength:    time.Second * 3,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 119 + dot.Spell.MeleeAttackPower()*0.07
+				dot.SnapshotBaseDamage = 102 + dot.Spell.MeleeAttackPower()*0.07
 				attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)
 			},

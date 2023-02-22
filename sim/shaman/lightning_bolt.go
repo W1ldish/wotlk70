@@ -62,7 +62,7 @@ func (shaman *Shaman) newLightningBoltSpellConfig(isLightningOverload bool) core
 	canLO := !isLightningOverload && shaman.Talents.LightningOverload > 0
 	lightningOverloadChance := float64(shaman.Talents.LightningOverload) * 0.11
 	spellConfig.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-		baseDamage := dmgBonus + sim.Roll(719, 819) + spellCoeff*spell.SpellPower()
+		baseDamage := dmgBonus + sim.Roll(563+2.8*3, 643+2.8*3) + spellCoeff*spell.SpellPower()
 		result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 
 		if !isLightningOverload && lbDotSpell != nil && result.DidCrit() {

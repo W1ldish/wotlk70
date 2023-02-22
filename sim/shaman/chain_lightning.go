@@ -42,7 +42,7 @@ func (shaman *Shaman) newChainLightningSpell(isLightningOverload bool) *core.Spe
 		bounceCoeff := 1.0
 		curTarget := target
 		for hitIndex := int32(0); hitIndex < numHits; hitIndex++ {
-			baseDamage := dmgBonus + sim.Roll(973, 1111) + spellCoeff*spell.SpellPower()
+			baseDamage := dmgBonus + sim.Roll(734, 838) + spellCoeff*spell.SpellPower()
 			baseDamage *= bounceCoeff
 			result := spell.CalcDamage(sim, curTarget, baseDamage, spell.OutcomeMagicHitAndCrit)
 

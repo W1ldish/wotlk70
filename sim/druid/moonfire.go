@@ -3,8 +3,8 @@ package druid
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
 	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk70/sim/core/proto"
 )
 
 func (druid *Druid) registerMoonfireSpell() {
@@ -60,7 +60,7 @@ func (druid *Druid) registerMoonfireSpell() {
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
 				dot.Spell.DamageMultiplier = baseDamageMultiplier + bonusPeriodicDamageMultiplier
-				dot.SnapshotBaseDamage = 200 + 0.13*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 150 + 0.13*dot.Spell.SpellPower()
 				attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)

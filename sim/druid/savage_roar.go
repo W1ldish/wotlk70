@@ -1,13 +1,6 @@
 package druid
 
-import (
-	"time"
-
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
-)
-
+/*
 func (druid *Druid) getSavageRoarMultiplier() float64 {
 	return 1.3 + core.TernaryFloat64(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfSavageRoar), 0.03, 0)
 }
@@ -69,3 +62,4 @@ func (druid *Druid) registerSavageRoarSpell() {
 func (druid *Druid) CurrentSavageRoarCost() float64 {
 	return druid.SavageRoar.ApplyCostModifiers(druid.SavageRoar.DefaultCast.Cost)
 }
+*/

@@ -95,7 +95,7 @@ func (warrior *Warrior) registerRevengeSpell(cdTimer *core.Timer) {
 		FlatThreatBonus:  121,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(1636, 1998) + 0.31*spell.MeleeAttackPower()
+			baseDamage := sim.Roll(963, 1175) + 0.31*spell.MeleeAttackPower()
 			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 			if !result.Landed() {
 				spell.IssueRefund(sim)

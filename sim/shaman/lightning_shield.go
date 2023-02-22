@@ -27,7 +27,7 @@ func (shaman *Shaman) registerLightningShieldSpell() {
 		ThreatMultiplier: 1, //fix when spirit weapons is fixed
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 380 + 0.267*spell.SpellPower()
+			baseDamage := 287 + 0.267*spell.SpellPower()
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHit)
 		},
 	})

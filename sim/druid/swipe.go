@@ -1,8 +1,6 @@
 package druid
 
 import (
-	"time"
-
 	"github.com/Tereneckla/wotlk70/sim/core"
 )
 
@@ -51,7 +49,7 @@ func (druid *Druid) registerSwipeBearSpell() {
 	})
 }
 
-func (druid *Druid) registerSwipeCatSpell() {
+/*func (druid *Druid) registerSwipeCatSpell() {
 	weaponMulti := 2.5
 	fidm := 1.0 + 0.1*float64(druid.Talents.FeralInstinct)
 
@@ -91,7 +89,7 @@ func (druid *Druid) registerSwipeCatSpell() {
 func (druid *Druid) CurrentSwipeCatCost() float64 {
 	return druid.SwipeCat.ApplyCostModifiers(druid.SwipeCat.DefaultCast.Cost)
 }
-
+*/
 func (druid *Druid) IsSwipeSpell(spell *core.Spell) bool {
 	return spell == druid.SwipeBear || spell == druid.SwipeCat
 }

@@ -136,15 +136,15 @@ func (mage *Mage) Initialize() {
 	mage.registerEvocationCD()
 	mage.registerManaGemsCD()
 	/*
-	mage.registerMirrorImageCD()
+		mage.registerMirrorImageCD()
 
-	if mirrorImageMCD := mage.GetMajorCooldownIgnoreTag(mage.MirrorImage.ActionID); mirrorImageMCD != nil {
-		if len(mirrorImageMCD.GetTimings()) == 0 {
-			mage.RegisterPrepullAction(-1500*time.Millisecond, func(sim *core.Simulation) {
-				mage.MirrorImage.Cast(sim, nil)
-			})
+		if mirrorImageMCD := mage.GetMajorCooldownIgnoreTag(mage.MirrorImage.ActionID); mirrorImageMCD != nil {
+			if len(mirrorImageMCD.GetTimings()) == 0 {
+				mage.RegisterPrepullAction(-1500*time.Millisecond, func(sim *core.Simulation) {
+					mage.MirrorImage.Cast(sim, nil)
+				})
+			}
 		}
-	}
 	*/
 }
 
@@ -215,64 +215,64 @@ func NewMage(character core.Character, options *proto.Player) *Mage {
 
 func init() {
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3213,
+		stats.Health:    3393,
 		stats.Strength:  30,
 		stats.Agility:   41,
 		stats.Stamina:   51,
 		stats.Intellect: 154,
 		stats.Spirit:    143,
-		stats.Mana:      3268,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0.926,
+		stats.Mana:      2241,
+		stats.SpellCrit: core.CritRatingPerCritChance * 0,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3213,
+		stats.Health:    3393,
 		stats.Strength:  34,
 		stats.Agility:   36,
 		stats.Stamina:   51,
 		stats.Intellect: 151,
 		stats.Spirit:    147,
-		stats.Mana:      3268,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0.933,
+		stats.Mana:      2241,
+		stats.SpellCrit: core.CritRatingPerCritChance * 0,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceGnome, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3213,
+		stats.Health:    3393,
 		stats.Strength:  28,
 		stats.Agility:   41,
 		stats.Stamina:   51,
 		stats.Intellect: 154, // Gnomes start with 162 int, we assume this include racial so / 1.05
 		stats.Spirit:    145,
-		stats.Mana:      3268,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0.93,
+		stats.Mana:      2241,
+		stats.SpellCrit: core.CritRatingPerCritChance * 0,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3213,
+		stats.Health:    3393,
 		stats.Strength:  33,
 		stats.Agility:   39,
 		stats.Stamina:   51,
 		stats.Intellect: 151,
 		stats.Spirit:    145,
-		stats.Mana:      3268,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0.926,
+		stats.Mana:      2241,
+		stats.SpellCrit: core.CritRatingPerCritChance * 0,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3213,
+		stats.Health:    3393,
 		stats.Strength:  34,
 		stats.Agility:   41,
 		stats.Stamina:   51,
 		stats.Intellect: 147,
 		stats.Spirit:    146,
-		stats.Mana:      3268,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0.935,
+		stats.Mana:      2241,
+		stats.SpellCrit: core.CritRatingPerCritChance * 0,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceUndead, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3213,
+		stats.Health:    3393,
 		stats.Strength:  32,
 		stats.Agility:   37,
 		stats.Stamina:   51,
 		stats.Intellect: 149,
 		stats.Spirit:    150,
-		stats.Mana:      3268,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0.930,
+		stats.Mana:      2241,
+		stats.SpellCrit: core.CritRatingPerCritChance * 0,
 	}
 }
 

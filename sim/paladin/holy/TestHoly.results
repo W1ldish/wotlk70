@@ -9,12 +9,12 @@ character_stats_results: {
   final_stats: 2030
   final_stats: 212
   final_stats: 0
-  final_stats: 1255.2603
+  final_stats: 1056.28901
   final_stats: 620
   final_stats: 0
   final_stats: 2031.04
   final_stats: 0
-  final_stats: 1125.59429
+  final_stats: 761.9445
   final_stats: 620
   final_stats: 0
   final_stats: 0
@@ -26,7 +26,7 @@ character_stats_results: {
   final_stats: 0
   final_stats: 0
   final_stats: 455.85
-  final_stats: 316.35033
+  final_stats: 316.91264
   final_stats: 0
   final_stats: 0
   final_stats: 22007.5
@@ -74,13 +74,13 @@ dps_results: {
 dps_results: {
  key: "TestHoly-AllItems-BaubleofTrueBlood-50354"
  value: {
-  tps: 2121.02206
+  tps: 2317.05731
  }
 }
 dps_results: {
  key: "TestHoly-AllItems-BaubleofTrueBlood-50726"
  value: {
-  tps: 2121.02206
+  tps: 2317.05731
  }
 }
 dps_results: {
@@ -252,8 +252,8 @@ dps_results: {
 dps_results: {
  key: "TestHoly-AllItems-GnomishLightningGenerator-41121"
  value: {
-  dps: 40.49231
-  tps: 46.28892
+  dps: 42.26655
+  tps: 48.06316
  }
 }
 dps_results: {

@@ -76,13 +76,13 @@ type Hunter struct {
 	// Fake spells to encapsulate weaving logic.
 	TrapWeaveSpell *core.Spell
 
-	AspectOfTheHawkAura *core.Aura
-	AspectOfTheViperAura      *core.Aura
-	ImprovedSteadyShotAura    *core.Aura
-	LockAndLoadAura           *core.Aura
-	RapidFireAura             *core.Aura
-	ScorpidStingAuras         core.AuraArray
-	TalonOfAlarAura           *core.Aura
+	AspectOfTheHawkAura    *core.Aura
+	AspectOfTheViperAura   *core.Aura
+	ImprovedSteadyShotAura *core.Aura
+	LockAndLoadAura        *core.Aura
+	RapidFireAura          *core.Aura
+	ScorpidStingAuras      core.AuraArray
+	TalonOfAlarAura        *core.Aura
 
 	CustomRotation *common.CustomRotation
 }
@@ -235,91 +235,91 @@ func NewHunter(character core.Character, options *proto.Player) *Hunter {
 
 func init() {
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  61,
 		stats.Agility:   153,
 		stats.Stamina:   108,
 		stats.Intellect: 80,
 		stats.Spirit:    81,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
 		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  65,
 		stats.Agility:   148,
 		stats.Stamina:   108,
 		stats.Intellect: 77,
 		stats.Spirit:    85,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
 		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDwarf, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  69,
 		stats.Agility:   147,
 		stats.Stamina:   109,
 		stats.Intellect: 76,
 		stats.Spirit:    82,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
 		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceNightElf, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  60,
 		stats.Agility:   155,
 		stats.Stamina:   108,
 		stats.Intellect: 77,
 		stats.Spirit:    83,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
 		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceOrc, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  67,
 		stats.Agility:   148,
 		stats.Stamina:   109,
 		stats.Intellect: 74,
 		stats.Spirit:    85,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
 		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTauren, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  69,
 		stats.Agility:   147,
 		stats.Stamina:   109,
 		stats.Intellect: 73,
 		stats.Spirit:    85,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
 		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    7324,
+		stats.Health:    3568,
 		stats.Strength:  65,
 		stats.Agility:   153,
 		stats.Stamina:   108,
 		stats.Intellect: 73,
 		stats.Spirit:    84,
-		stats.Mana:      5046,
+		stats.Mana:      3383,
 
 		stats.AttackPower:       140,
 		stats.RangedAttackPower: 140,
