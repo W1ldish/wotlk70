@@ -65,7 +65,11 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			// weapon_speed * (0.022* AP + 0.044*HolP)
-			baseDamage := paladin.GetMHWeapon().SwingSpeed * (.022*spell.MeleeAttackPower() + .044*spell.SpellPower())
+			speed := 2.0
+			if paladin.GetMHWeapon() != nil {
+				speed = paladin.GetMHWeapon().SwingSpeed
+			}
+			baseDamage := speed * (.022*spell.MeleeAttackPower() + .044*spell.SpellPower())
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeAlwaysHit)
 		},
 	})
