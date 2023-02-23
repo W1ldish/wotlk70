@@ -25,10 +25,10 @@ import { gemEligibleForSocket, gemMatchesSocket } from './gems.js';
 import { EquippedItem } from './equipped_item.js';
 import { Gear } from './gear.js';
 
-const dbUrlJson = '/wotlk/assets/database/db.json';
-const dbUrlBin = '/wotlk/assets/database/db.bin';
-const leftoversUrlJson = '/wotlk/assets/database/leftover_db.json';
-const leftoversUrlBin = '/wotlk/assets/database/leftover_db.bin';
+const dbUrlJson = '/wotlk70/assets/database/db.json';
+const dbUrlBin = '/wotlk70/assets/database/db.bin';
+const leftoversUrlJson = '/wotlk70/assets/database/leftover_db.json';
+const leftoversUrlBin = '/wotlk70/assets/database/leftover_db.bin';
 // When changing this value, don't forget to change the html <link> for preloading!
 const READ_JSON = true;
 
@@ -247,7 +247,7 @@ export class Database {
 		return Database.getWowheadTooltipData(id, 'spell');
 	}
 	private static async getWowheadTooltipData(id: number, tooltipPostfix: string): Promise<IconData> {
-		const url = `https://nether.wowhead.com/wotlk/tooltip/${tooltipPostfix}/${id}`;
+		const url = `https://nether.wowhead.com/wotlk70/tooltip/${tooltipPostfix}/${id}`;
 		try {
 			const response = await fetch(url);
 			const json = await response.json();

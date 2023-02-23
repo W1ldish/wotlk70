@@ -175,8 +175,8 @@ class ItemPicker extends Component {
 		WowSim.WhOnLoadHook = (a: any) => {
 			if (a.tooltip) {
 				// This fixes wowhead being able to parse 'pcs' aka set bonus highlighting in tooltip
-				// Their internal regex looks for 'href="/item=' but for wotlk we get 'href="/wotlk/item="'
-				a.tooltip = (<String>a.tooltip).replaceAll("href=\"/wotlk/item", "href=\"/item");
+				// Their internal regex looks for 'href="/item=' but for wotlk we get 'href="/wotlk70/item="'
+				a.tooltip = (<String>a.tooltip).replaceAll("href=\"/wotlk70/item", "href=\"/item");
 			}
 			return a;
 		}
@@ -347,8 +347,8 @@ export class IconItemSwapPicker<SpecType extends Spec, ValueType> extends Input<
 		WowSim.WhOnLoadHook = (a: any) => {
 			if (a.tooltip) {
 				// This fixes wowhead being able to parse 'pcs' aka set bonus highlighting in tooltip
-				// Their internal regex looks for 'href="/item=' but for wotlk we get 'href="/wotlk/item="'
-				a.tooltip = (<String>a.tooltip).replaceAll("href=\"/wotlk/item", "href=\"/item");
+				// Their internal regex looks for 'href="/item=' but for wotlk we get 'href="/wotlk70/item="'
+				a.tooltip = (<String>a.tooltip).replaceAll("href=\"/wotlk70/item", "href=\"/item");
 			}
 			return a;
 		}
@@ -1107,23 +1107,23 @@ interface ItemData<T> {
 }
 
 const emptySlotIcons: Record<ItemSlot, string> = {
-	[ItemSlot.ItemSlotHead]: '/wotlk/assets/item_slots/head.jpg',
-	[ItemSlot.ItemSlotNeck]: '/wotlk/assets/item_slots/neck.jpg',
-	[ItemSlot.ItemSlotShoulder]: '/wotlk/assets/item_slots/shoulders.jpg',
-	[ItemSlot.ItemSlotBack]: '/wotlk/assets/item_slots/shirt.jpg',
-	[ItemSlot.ItemSlotChest]: '/wotlk/assets/item_slots/chest.jpg',
-	[ItemSlot.ItemSlotWrist]: '/wotlk/assets/item_slots/wrists.jpg',
-	[ItemSlot.ItemSlotHands]: '/wotlk/assets/item_slots/hands.jpg',
-	[ItemSlot.ItemSlotWaist]: '/wotlk/assets/item_slots/waist.jpg',
-	[ItemSlot.ItemSlotLegs]: '/wotlk/assets/item_slots/legs.jpg',
-	[ItemSlot.ItemSlotFeet]: '/wotlk/assets/item_slots/feet.jpg',
-	[ItemSlot.ItemSlotFinger1]: '/wotlk/assets/item_slots/finger.jpg',
-	[ItemSlot.ItemSlotFinger2]: '/wotlk/assets/item_slots/finger.jpg',
-	[ItemSlot.ItemSlotTrinket1]: '/wotlk/assets/item_slots/trinket.jpg',
-	[ItemSlot.ItemSlotTrinket2]: '/wotlk/assets/item_slots/trinket.jpg',
-	[ItemSlot.ItemSlotMainHand]: '/wotlk/assets/item_slots/mainhand.jpg',
-	[ItemSlot.ItemSlotOffHand]: '/wotlk/assets/item_slots/offhand.jpg',
-	[ItemSlot.ItemSlotRanged]: '/wotlk/assets/item_slots/ranged.jpg',
+	[ItemSlot.ItemSlotHead]: '/wotlk70/assets/item_slots/head.jpg',
+	[ItemSlot.ItemSlotNeck]: '/wotlk70/assets/item_slots/neck.jpg',
+	[ItemSlot.ItemSlotShoulder]: '/wotlk70/assets/item_slots/shoulders.jpg',
+	[ItemSlot.ItemSlotBack]: '/wotlk70/assets/item_slots/shirt.jpg',
+	[ItemSlot.ItemSlotChest]: '/wotlk70/assets/item_slots/chest.jpg',
+	[ItemSlot.ItemSlotWrist]: '/wotlk70/assets/item_slots/wrists.jpg',
+	[ItemSlot.ItemSlotHands]: '/wotlk70/assets/item_slots/hands.jpg',
+	[ItemSlot.ItemSlotWaist]: '/wotlk70/assets/item_slots/waist.jpg',
+	[ItemSlot.ItemSlotLegs]: '/wotlk70/assets/item_slots/legs.jpg',
+	[ItemSlot.ItemSlotFeet]: '/wotlk70/assets/item_slots/feet.jpg',
+	[ItemSlot.ItemSlotFinger1]: '/wotlk70/assets/item_slots/finger.jpg',
+	[ItemSlot.ItemSlotFinger2]: '/wotlk70/assets/item_slots/finger.jpg',
+	[ItemSlot.ItemSlotTrinket1]: '/wotlk70/assets/item_slots/trinket.jpg',
+	[ItemSlot.ItemSlotTrinket2]: '/wotlk70/assets/item_slots/trinket.jpg',
+	[ItemSlot.ItemSlotMainHand]: '/wotlk70/assets/item_slots/mainhand.jpg',
+	[ItemSlot.ItemSlotOffHand]: '/wotlk70/assets/item_slots/offhand.jpg',
+	[ItemSlot.ItemSlotRanged]: '/wotlk70/assets/item_slots/ranged.jpg',
 };
 export function getEmptySlotIconUrl(slot: ItemSlot): string {
 	return emptySlotIcons[slot];

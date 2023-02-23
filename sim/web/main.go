@@ -53,7 +53,7 @@ func main() {
 	fmt.Printf("Version: %s\n", Version)
 	if !*skipVersionCheck && Version != "development" {
 		go func() {
-			resp, err := http.Get("https://api.github.com/repos/wowsims/wotlk/releases/latest")
+			resp, err := http.Get("https://api.github.com/repos/wowsims/wotlk70/releases/latest")
 			if err != nil {
 				return
 			}
@@ -257,7 +257,7 @@ func runServer(useFS bool, host string, launchBrowser bool, simName string, wasm
 	http.HandleFunc("/raidSim", handleAPI)
 	http.HandleFunc("/", func(resp http.ResponseWriter, req *http.Request) {
 		if req.URL.Path == "/" {
-			http.Redirect(resp, req, "/wotlk/", http.StatusPermanentRedirect)
+			http.Redirect(resp, req, "/wotlk70/", http.StatusPermanentRedirect)
 			return
 		}
 		resp.Header().Add("Cache-Control", "no-cache")
@@ -276,7 +276,7 @@ func runServer(useFS bool, host string, launchBrowser bool, simName string, wasm
 	})
 
 	if launchBrowser {
-		url := fmt.Sprintf("http://localhost%s/wotlk/%s", host, simName)
+		url := fmt.Sprintf("http://localhost%s/wotlk70/%s", host, simName)
 		log.Printf("Launching interface on %s", url)
 		go func() {
 			err := browser.OpenURL(url)
