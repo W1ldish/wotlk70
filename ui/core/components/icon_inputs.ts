@@ -47,49 +47,46 @@ export const buildIconInput = (parent: HTMLElement, player: Player<Spec>, inputC
 // Raid Buffs
 
 export const AllStatsBuff = InputHelpers.makeMultiIconInput([
-	makeTristateRaidBuffInput(ActionId.fromSpellId(48470), ActionId.fromSpellId(17051), 'giftOfTheWild'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(26991), ActionId.fromSpellId(17051), 'giftOfTheWild'),
 	makeBooleanRaidBuffInput(ActionId.fromItemId(49634), 'drumsOfTheWild'),
 ], 'Stats');
 
 export const AllStatsPercentBuff = InputHelpers.makeMultiIconInput([
 	makeBooleanIndividualBuffInput(ActionId.fromSpellId(25898), 'blessingOfKings'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(49633), 'drumsOfForgottenKings'),
-	makeBooleanIndividualBuffInput(ActionId.fromSpellId(25899), 'blessingOfSanctuary'),
 ], 'Stats %');
 
 export const ArmorBuff = InputHelpers.makeMultiIconInput([
-	makeTristateRaidBuffInput(ActionId.fromSpellId(48942), ActionId.fromSpellId(20140), 'devotionAura'),
-	makeTristateRaidBuffInput(ActionId.fromSpellId(58753), ActionId.fromSpellId(16293), 'stoneskinTotem'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(43468), 'scrollOfProtection'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(27149), ActionId.fromSpellId(20140), 'devotionAura'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(25509), ActionId.fromSpellId(16293), 'stoneskinTotem'),
+	makeBooleanRaidBuffInput(ActionId.fromItemId(33459), 'scrollOfProtection'),
 ], 'Armor');
 
 export const StaminaBuff = InputHelpers.makeMultiIconInput([
-	makeTristateRaidBuffInput(ActionId.fromSpellId(48161), ActionId.fromSpellId(14767), 'powerWordFortitude'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(37094), 'scrollOfStamina'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(25389), ActionId.fromSpellId(14767), 'powerWordFortitude'),
+	makeBooleanRaidBuffInput(ActionId.fromItemId(33461), 'scrollOfStamina'),
 ], 'Stamina');
 
 export const StrengthAndAgilityBuff = InputHelpers.makeMultiIconInput([
-	makeTristateRaidBuffInput(ActionId.fromSpellId(58643), ActionId.fromSpellId(52456), 'strengthOfEarthTotem'),
-	makeBooleanRaidBuffInput(ActionId.fromSpellId(57623), 'hornOfWinter'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(43464), 'scrollOfAgility'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(43466), 'scrollOfStrength'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(25528), ActionId.fromSpellId(52456), 'strengthOfEarthTotem'),
+	makeBooleanRaidBuffInput(ActionId.fromItemId(33457), 'scrollOfAgility'),
+	makeBooleanRaidBuffInput(ActionId.fromItemId(33462), 'scrollOfStrength'),
 ], 'Str/Agi');
 
 export const IntellectBuff = InputHelpers.makeMultiIconInput([
-	makeBooleanRaidBuffInput(ActionId.fromSpellId(43002), 'arcaneBrilliance'),
-	makeTristateRaidBuffInput(ActionId.fromSpellId(57567), ActionId.fromSpellId(54038), 'felIntelligence'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(37092), 'scrollOfIntellect'),
+	makeBooleanRaidBuffInput(ActionId.fromSpellId(27127), 'arcaneBrilliance'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(57566), ActionId.fromSpellId(54038), 'felIntelligence'),
+	makeBooleanRaidBuffInput(ActionId.fromItemId(33458), 'scrollOfIntellect'),
 ], 'Int');
 
 export const SpiritBuff = InputHelpers.makeMultiIconInput([
-	makeBooleanRaidBuffInput(ActionId.fromSpellId(48073), 'divineSpirit'),
-	makeTristateRaidBuffInput(ActionId.fromSpellId(57567), ActionId.fromSpellId(54038), 'felIntelligence'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(37098), 'scrollOfSpirit'),
+	makeBooleanRaidBuffInput(ActionId.fromSpellId(25312), 'divineSpirit'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(57566), ActionId.fromSpellId(54038), 'felIntelligence'),
+	makeBooleanRaidBuffInput(ActionId.fromItemId(33460), 'scrollOfSpirit'),
 ], 'Spirit');
 
 export const AttackPowerBuff = InputHelpers.makeMultiIconInput([
-	makeTristateIndividualBuffInput(ActionId.fromSpellId(48934), ActionId.fromSpellId(20045), 'blessingOfMight'),
-	makeTristateRaidBuffInput(ActionId.fromSpellId(47436), ActionId.fromSpellId(12861), 'battleShout'),
+	makeTristateIndividualBuffInput(ActionId.fromSpellId(27141), ActionId.fromSpellId(20045), 'blessingOfMight'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(2048), ActionId.fromSpellId(12861), 'battleShout'),
 ], 'AP');
 
 export const AttackPowerPercentBuff = InputHelpers.makeMultiIconInput([
@@ -116,13 +113,13 @@ export const HastePercentBuff = InputHelpers.makeMultiIconInput([
 ], 'Haste %');
 
 export const HealthBuff = InputHelpers.makeMultiIconInput([
-	makeTristateRaidBuffInput(ActionId.fromSpellId(47440), ActionId.fromSpellId(12861), 'commandingShout'),
-	makeTristateRaidBuffInput(ActionId.fromSpellId(47982), ActionId.fromSpellId(18696), 'bloodPact'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(469), ActionId.fromSpellId(12861), 'commandingShout'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(27268), ActionId.fromSpellId(18696), 'bloodPact'),
 ], 'Health');
 
 export const MP5Buff = InputHelpers.makeMultiIconInput([
-	makeTristateIndividualBuffInput(ActionId.fromSpellId(48938), ActionId.fromSpellId(20245), 'blessingOfWisdom'),
-	makeTristateRaidBuffInput(ActionId.fromSpellId(58774), ActionId.fromSpellId(16206), 'manaSpringTotem'),
+	makeTristateIndividualBuffInput(ActionId.fromSpellId(27143), ActionId.fromSpellId(20245), 'blessingOfWisdom'),
+	makeTristateRaidBuffInput(ActionId.fromSpellId(25570), ActionId.fromSpellId(16206), 'manaSpringTotem'),
 ], 'MP5');
 
 export const MeleeCritBuff = InputHelpers.makeMultiIconInput([
@@ -151,9 +148,9 @@ export const SpellCritBuff = InputHelpers.makeMultiIconInput([
 export const SpellHasteBuff = withLabel(makeBooleanRaidBuffInput(ActionId.fromSpellId(3738), 'wrathOfAirTotem'), 'Spell Haste');
 
 export const SpellPowerBuff = InputHelpers.makeMultiIconInput([
-	makeMultistateRaidBuffInput(ActionId.fromSpellId(47240), 5000, 'demonicPact', 500),
-	makeBooleanRaidBuffInput(ActionId.fromSpellId(57722), 'totemOfWrath'),
-	makeBooleanRaidBuffInput(ActionId.fromSpellId(58656), 'flametongueTotem'),
+	makeMultistateRaidBuffInput(ActionId.fromSpellId(47240), 3000, 'demonicPact', 100),
+	makeBooleanRaidBuffInput(ActionId.fromSpellId(57721), 'totemOfWrath'),
+	makeBooleanRaidBuffInput(ActionId.fromSpellId(25557), 'flametongueTotem'),
 ], 'Spell Power');
 
 export const Bloodlust = withLabel(makeBooleanRaidBuffInput(ActionId.fromSpellId(2825), 'bloodlust'), 'Lust');
@@ -164,13 +161,13 @@ export const DefensiveCooldownBuff = InputHelpers.makeMultiIconInput([
 ], 'Defensive CDs');
 
 // Misc Buffs
-export const RetributionAura = makeBooleanRaidBuffInput(ActionId.fromSpellId(54043), 'retributionAura');
-export const ShadowProtection = makeBooleanRaidBuffInput(ActionId.fromSpellId(48170), 'shadowProtection');
+export const RetributionAura = makeBooleanRaidBuffInput(ActionId.fromSpellId(27150), 'retributionAura');
+export const ShadowProtection = makeBooleanRaidBuffInput(ActionId.fromSpellId(39374), 'shadowProtection');
 export const BraidedEterniumChain = makeBooleanPartyBuffInput(ActionId.fromSpellId(31025), 'braidedEterniumChain');
 export const ChainOfTheTwilightOwl = makeBooleanPartyBuffInput(ActionId.fromSpellId(31035), 'chainOfTheTwilightOwl');
 export const HeroicPresence = makeBooleanPartyBuffInput(ActionId.fromSpellId(6562), 'heroicPresence');
 export const EyeOfTheNight = makeBooleanPartyBuffInput(ActionId.fromSpellId(31033), 'eyeOfTheNight');
-export const Thorns = makeTristateRaidBuffInput(ActionId.fromSpellId(53307), ActionId.fromSpellId(16840), 'thorns');
+export const Thorns = makeTristateRaidBuffInput(ActionId.fromSpellId(26992), ActionId.fromSpellId(16840), 'thorns');
 export const ManaTideTotem = makeMultistatePartyBuffInput(ActionId.fromSpellId(16190), 5, 'manaTideTotems');
 export const Innervate = makeMultistateIndividualBuffInput(ActionId.fromSpellId(29166), 11, 'innervates');
 export const PowerInfusion = makeMultistateIndividualBuffInput(ActionId.fromSpellId(10060), 11, 'powerInfusions');

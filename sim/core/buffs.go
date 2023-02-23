@@ -17,23 +17,23 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	character := agent.GetCharacter()
 
 	if raidBuffs.ArcaneBrilliance || raidBuffs.FelIntelligence > 0 {
-		val := GetTristateValueFloat(raidBuffs.FelIntelligence, 48.0, 48.0*1.1)
+		val := GetTristateValueFloat(raidBuffs.FelIntelligence, 32.0, 32.0*1.1)
 		if raidBuffs.ArcaneBrilliance {
-			val = 60.0
+			val = 40.0
 		}
 		character.AddStat(stats.Intellect, val)
 	} else if raidBuffs.ScrollOfIntellect {
 		character.AddStats(stats.Stats{
-			stats.Intellect: 48,
+			stats.Intellect: 24,
 		})
 	}
 
 	if raidBuffs.DrumsOfTheWild {
 		raidBuffs.GiftOfTheWild = MaxTristate(raidBuffs.GiftOfTheWild, proto.TristateEffect_TristateEffectRegular)
 	}
-	gotwAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 37, 51)
-	gotwArmorAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 750, 1050)
-	gotwResistAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 54, 75)
+	gotwAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 14, 14*1.4)
+	gotwArmorAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 340, 340*1.4)
+	gotwResistAmount := GetTristateValueFloat(raidBuffs.GiftOfTheWild, 25, 25*1.4)
 	if gotwAmount > 0 {
 		character.AddStats(stats.Stats{
 			stats.Armor:            gotwArmorAmount,
@@ -94,36 +94,36 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	}
 
 	if raidBuffs.BloodPact > 0 || raidBuffs.CommandingShout > 0 {
-		health := GetTristateValueFloat(raidBuffs.BloodPact, 1330, 1330*1.3)
-		health2 := GetTristateValueFloat(raidBuffs.CommandingShout, 2255, 2255*1.25)
+		health := GetTristateValueFloat(raidBuffs.BloodPact, 660, 660*1.3)
+		health2 := GetTristateValueFloat(raidBuffs.CommandingShout, 1080, 1080*1.25)
 		character.AddStat(stats.Health, MaxFloat(health, health2))
 	}
 
 	if raidBuffs.PowerWordFortitude != proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Stamina: GetTristateValueFloat(raidBuffs.PowerWordFortitude, 165, 165*1.3),
+			stats.Stamina: GetTristateValueFloat(raidBuffs.PowerWordFortitude, 79, 79*1.3),
 		})
 	} else if raidBuffs.ScrollOfStamina {
 		character.AddStats(stats.Stats{
-			stats.Stamina: 132,
+			stats.Stamina: 43,
 		})
 	}
 	if raidBuffs.ShadowProtection {
 		character.AddStats(stats.Stats{
-			stats.ShadowResistance: 130 - gotwResistAmount,
+			stats.ShadowResistance: 70 - gotwResistAmount,
 		})
 	}
 	if raidBuffs.DivineSpirit || raidBuffs.FelIntelligence > 0 {
-		v := GetTristateValueFloat(raidBuffs.FelIntelligence, 64.0, 64.0*1.1)
+		v := GetTristateValueFloat(raidBuffs.FelIntelligence, 40.0, 40.0*1.1)
 		if raidBuffs.DivineSpirit {
-			v = 80.0
+			v = 50.0
 		}
 		character.AddStats(stats.Stats{
 			stats.Spirit: v,
 		})
 	} else if raidBuffs.ScrollOfSpirit {
 		character.AddStats(stats.Stats{
-			stats.Spirit: 64,
+			stats.Spirit: 32,
 		})
 	}
 
@@ -175,19 +175,19 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	// TODO: Is scroll exclusive to totem?
 	if raidBuffs.StoneskinTotem != proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Armor: GetTristateValueFloat(raidBuffs.StoneskinTotem, 1150, 1380),
+			stats.Armor: GetTristateValueFloat(raidBuffs.StoneskinTotem, 860, 860*1.2),
 		})
 	}
 
 	if raidBuffs.DevotionAura != proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Armor: GetTristateValueFloat(raidBuffs.DevotionAura, 1205, 1807.5),
+			stats.Armor: GetTristateValueFloat(raidBuffs.DevotionAura, 861, 861*1.5),
 		})
 	}
 
 	if raidBuffs.ScrollOfProtection && raidBuffs.DevotionAura == proto.TristateEffect_TristateEffectMissing {
 		character.AddStats(stats.Stats{
-			stats.Armor: 750,
+			stats.Armor: 285,
 		})
 	}
 
@@ -195,8 +195,22 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 		RetributionAura(character, raidBuffs.SanctifiedRetribution)
 	}
 
-	if raidBuffs.BattleShout > 0 || individualBuffs.BlessingOfMight > 0 {
-		bonusAP := 550 * GetTristateValueFloat(MaxTristate(raidBuffs.BattleShout, individualBuffs.BlessingOfMight), 1, 1.25)
+	if raidBuffs.DevotionAura != proto.TristateEffect_TristateEffectMissing {
+		character.AddStats(stats.Stats{
+			stats.Armor: GetTristateValueFloat(raidBuffs.DevotionAura, 861, 861*1.5),
+		})
+	}
+
+	if raidBuffs.BattleShout > 0 {
+		bonusAP := 312 * GetTristateValueFloat(raidBuffs.BattleShout, 1, 1.25)
+		character.AddStats(stats.Stats{
+			stats.AttackPower:       math.Floor(bonusAP),
+			stats.RangedAttackPower: math.Floor(bonusAP),
+		})
+	}
+
+	if individualBuffs.BlessingOfMight > 0 {
+		bonusAP := 306 * GetTristateValueFloat(individualBuffs.BlessingOfMight, 1, 1.25)
 		character.AddStats(stats.Stats{
 			stats.AttackPower:       math.Floor(bonusAP),
 			stats.RangedAttackPower: math.Floor(bonusAP),
@@ -220,7 +234,7 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	}
 	if raidBuffs.StrengthOfEarthTotem > 0 || raidBuffs.HornOfWinter {
 		val := MaxTristate(proto.TristateEffect_TristateEffectRegular, raidBuffs.StrengthOfEarthTotem)
-		bonus := GetTristateValueFloat(val, 155, 178)
+		bonus := GetTristateValueFloat(val, 86, 86*1.15)
 		character.AddStats(stats.Stats{
 			stats.Strength: bonus,
 			stats.Agility:  bonus,
@@ -228,19 +242,19 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	} else {
 		if raidBuffs.ScrollOfStrength {
 			character.AddStats(stats.Stats{
-				stats.Strength: 30,
+				stats.Strength: 20,
 			})
 		}
 		if raidBuffs.ScrollOfAgility {
 			character.AddStats(stats.Stats{
-				stats.Agility: 30,
+				stats.Agility: 20,
 			})
 		}
 	}
 
 	if individualBuffs.BlessingOfWisdom > 0 || raidBuffs.ManaSpringTotem > 0 {
 		character.AddStats(stats.Stats{
-			stats.MP5: GetTristateValueFloat(MaxTristate(individualBuffs.BlessingOfWisdom, raidBuffs.ManaSpringTotem), 91, 109),
+			stats.MP5: GetTristateValueFloat(MaxTristate(individualBuffs.BlessingOfWisdom, raidBuffs.ManaSpringTotem), 41, 41*1.2),
 		})
 	}
 
@@ -367,9 +381,9 @@ func ApplyInspiration(character *Character, uptime float64) {
 }
 
 func RetributionAura(character *Character, sanctifiedRetribution bool) *Aura {
-	actionID := ActionID{SpellID: 54043}
+	actionID := ActionID{SpellID: 27150}
 
-	baseDamage := 112.0
+	baseDamage := 62.0
 	if sanctifiedRetribution {
 		baseDamage *= 1.5
 	}
@@ -404,8 +418,8 @@ func RetributionAura(character *Character, sanctifiedRetribution bool) *Aura {
 }
 
 func ThornsAura(character *Character, points int32) *Aura {
-	actionID := ActionID{SpellID: 53307}
-	baseDamage := 73 * (1 + 0.25*float64(points))
+	actionID := ActionID{SpellID: 26992}
+	baseDamage := 25 * (1 + 0.25*float64(points))
 
 	procSpell := character.RegisterSpell(SpellConfig{
 		ActionID:    actionID,
@@ -1176,28 +1190,28 @@ func (raid *Raid) ProcReplenishment(sim *Simulation, src ReplenishmentSource) {
 func TotemOfWrathAura(character *Character) *Aura {
 	aura := character.GetOrRegisterAura(Aura{
 		Label:      "Totem of Wrath",
-		ActionID:   ActionID{SpellID: 57722},
+		ActionID:   ActionID{SpellID: 57721},
 		Duration:   NeverExpires,
 		BuildPhase: CharacterBuildPhaseBuffs,
 		OnReset: func(aura *Aura, sim *Simulation) {
 			aura.Activate(sim)
 		},
 	})
-	spellPowerBonusEffect(aura, 280)
+	spellPowerBonusEffect(aura, 140)
 	return aura
 }
 
 func FlametongueTotemAura(character *Character) *Aura {
 	aura := character.GetOrRegisterAura(Aura{
 		Label:      "Flametongue Totem",
-		ActionID:   ActionID{SpellID: 58656},
+		ActionID:   ActionID{SpellID: 25557},
 		Duration:   NeverExpires,
 		BuildPhase: CharacterBuildPhaseBuffs,
 		OnReset: func(aura *Aura, sim *Simulation) {
 			aura.Activate(sim)
 		},
 	})
-	spellPowerBonusEffect(aura, 144)
+	spellPowerBonusEffect(aura, 73)
 	return aura
 }
 

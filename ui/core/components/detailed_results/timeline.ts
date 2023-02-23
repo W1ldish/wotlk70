@@ -1163,7 +1163,7 @@ const idToCategoryMap: Record<number, number> = {
 	[49938]: MELEE_ACTION_CATEGORY + 0.25, // Death and Decay
 	[63560]: MELEE_ACTION_CATEGORY + 0.25, // Ghoul Frenzy
 	[50536]: MELEE_ACTION_CATEGORY + 0.25, // Unholy Blight
-	[57623]: MELEE_ACTION_CATEGORY + 0.25, // HoW
+	[57330]: MELEE_ACTION_CATEGORY + 0.25, // HoW
 	[59131]: MELEE_ACTION_CATEGORY + 0.3, // Icy touch
 	[49921]: MELEE_ACTION_CATEGORY + 0.3, // Plague strike
 	[51271]: MELEE_ACTION_CATEGORY + 0.35, // UA
@@ -1182,8 +1182,8 @@ const idToCategoryMap: Record<number, number> = {
 	[48265]: DEFAULT_ACTION_CATEGORY + 0.1, // Unholy Presence
 
 	// Generic
-	[53307]: SPELL_ACTION_CATEGORY + 0.931, // Thorns
-	[54043]: SPELL_ACTION_CATEGORY + 0.932, // Retribution Aura
+	[26992]: SPELL_ACTION_CATEGORY + 0.931, // Thorns
+	[27150]: SPELL_ACTION_CATEGORY + 0.932, // Retribution Aura
 	[54758]: SPELL_ACTION_CATEGORY + 0.933, // Hyperspeed Acceleration
 	[42641]: SPELL_ACTION_CATEGORY + 0.941, // Sapper
 	[40536]: SPELL_ACTION_CATEGORY + 0.942, // Explosive Decoy

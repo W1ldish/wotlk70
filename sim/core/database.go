@@ -1,8 +1,6 @@
 package core
 
 import (
-	"fmt"
-
 	"github.com/Tereneckla/wotlk70/sim/core/proto"
 	"github.com/Tereneckla/wotlk70/sim/core/stats"
 	"google.golang.org/protobuf/encoding/protojson"
@@ -132,6 +130,7 @@ type ItemSpec struct {
 type Equipment [proto.ItemSlot_ItemSlotRanged + 1]Item
 
 func (equipment *Equipment) EquipItem(item Item) {
+	//fmt.Println(item.Name + " " + item.Type.String())
 	if item.Type == proto.ItemType_ItemTypeFinger {
 		if equipment[ItemSlotFinger1].ID == 0 {
 			equipment[ItemSlotFinger1] = item
@@ -159,7 +158,9 @@ func (equipment *Equipment) EquipItem(item Item) {
 			}
 		}
 	} else {
-		equipment[ItemTypeToSlot(item.Type)] = item
+		if ItemTypeToSlot(item.Type) <= 17 {
+			equipment[ItemTypeToSlot(item.Type)] = item
+		}
 	}
 }
 
@@ -196,14 +197,14 @@ func NewItem(itemSpec ItemSpec) Item {
 	if foundItem, ok := ItemsByID[itemSpec.ID]; ok {
 		item = foundItem
 	} else {
-		panic(fmt.Sprintf("No item with id: %d", itemSpec.ID))
+		//panic(fmt.Sprintf("No item with id: %d", itemSpec.ID))
 	}
 
 	if itemSpec.Enchant != 0 {
 		if enchant, ok := EnchantsByEffectID[itemSpec.Enchant]; ok {
 			item.Enchant = enchant
 		} else {
-			panic(fmt.Sprintf("No enchant with id: %d", itemSpec.Enchant))
+			//panic(fmt.Sprintf("No enchant with id: %d", itemSpec.Enchant))
 		}
 	}
 
@@ -220,7 +221,7 @@ func NewItem(itemSpec ItemSpec) Item {
 				item.Gems[gemIdx] = gem
 			} else {
 				if gemID != 0 {
-					panic(fmt.Sprintf("No gem with id: %d", gemID))
+					//panic(fmt.Sprintf("No gem with id: %d", gemID))
 				}
 			}
 		}

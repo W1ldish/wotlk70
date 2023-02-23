@@ -210,11 +210,11 @@ var P1Gear = core.EquipmentSpecFromJsonString(`{"items": [
 		"id": 37220
 	},
 	{
-		"id": 40345,
-		"enchant": 3788
+		"id": 30874,
+		"enchant": 2673
 	},
 	{
-		"id": 40400,
+		"id": 32375,
 		"enchant": 3849
 	},
 	{

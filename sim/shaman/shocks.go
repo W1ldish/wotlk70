@@ -82,12 +82,12 @@ func (shaman *Shaman) registerFlameShockSpell(shockTimer *core.Timer) {
 	config.Dot = core.DotConfig{
 		Aura: core.Aura{
 			Label: "FlameShock",
-			OnGain: func(aura *core.Aura, sim *core.Simulation) {
+			/*OnGain: func(aura *core.Aura, sim *core.Simulation) {
 				shaman.LavaBurst.BonusCritRating += 100 * core.CritRatingPerCritChance
 			},
 			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
 				shaman.LavaBurst.BonusCritRating -= 100 * core.CritRatingPerCritChance
-			},
+			},*/
 		},
 		NumberOfTicks:       6 + core.TernaryInt32(shaman.HasSetBonus(ItemSetThrallsRegalia, 2), 3, 0),
 		TickLength:          time.Second * 3,

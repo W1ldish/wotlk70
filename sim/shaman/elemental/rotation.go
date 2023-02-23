@@ -63,24 +63,13 @@ func (rotation *AdaptiveRotation) DoAction(eleShaman *ElementalShaman, sim *core
 	}
 
 	fsTime := eleShaman.FlameShock.CurDot().RemainingDuration(sim)
-	lvTime := eleShaman.LavaBurst.CD.TimeToReady(sim)
-	lvCastTime := eleShaman.ApplyCastSpeed(eleShaman.LavaBurst.DefaultCast.CastTime)
+	//lvTime := eleShaman.LavaBurst.CD.TimeToReady(sim)
+	//lvCastTime := eleShaman.ApplyCastSpeed(eleShaman.LavaBurst.DefaultCast.CastTime)
 	if fsTime <= 0 && eleShaman.FlameShock.IsReady(sim) {
 		if !eleShaman.FlameShock.Cast(sim, target) {
 			eleShaman.WaitForMana(sim, eleShaman.FlameShock.CurCast.Cost)
 		}
 		return
-	} else if fsTime > lvCastTime {
-		if lvTime <= 0 {
-			if !eleShaman.LavaBurst.Cast(sim, target) {
-				eleShaman.WaitForMana(sim, eleShaman.LavaBurst.CurCast.Cost)
-			}
-			return
-		} else if lvTime <= rotation.lvbFSWait && fsTime > lvCastTime+lvTime {
-			// If we have enough time to wait lvbFSWait and still have FS up, we should just wait to cast LvB.
-			eleShaman.WaitUntil(sim, sim.CurrentTime+lvTime)
-			return
-		}
 	}
 
 	fsCD := eleShaman.FlameShock.CD.TimeToReady(sim)
@@ -192,20 +181,6 @@ func (rotation *ManualRotation) DoAction(eleShaman *ElementalShaman, sim *core.S
 	fsRemain := eleShaman.FlameShock.CurDot().RemainingDuration(sim)
 	needFS := fsRemain <= 0
 	// Only overwrite if lvb is ready right now.
-	if !needFS && rotation.options.OverwriteFlameshock && eleShaman.LavaBurst.CD.TimeToReady(sim) <= core.GCDDefault {
-		lvbTime := core.MaxDuration(eleShaman.ApplyCastSpeed(eleShaman.LavaBurst.DefaultCast.CastTime), core.GCDMin)
-		if fsRemain < lvbTime {
-			needFS = true
-		}
-	}
-
-	allowLvB := true
-	if rotation.options.AlwaysCritLvb {
-		lvbTime := core.MaxDuration(eleShaman.ApplyCastSpeed(eleShaman.LavaBurst.DefaultCast.CastTime), core.GCDMin)
-		if fsRemain <= lvbTime {
-			allowLvB = false
-		}
-	}
 
 	shouldCL := rotation.options.UseChainLightning && cmp > (rotation.options.ClMinManaPer/100) && eleShaman.ChainLightning.IsReady(sim)
 	lbTime := eleShaman.ApplyCastSpeed(eleShaman.LightningBolt.DefaultCast.CastTime)
@@ -214,13 +189,13 @@ func (rotation *ManualRotation) DoAction(eleShaman *ElementalShaman, sim *core.S
 	if lbTime <= time.Second && len(eleShaman.Env.Encounter.Targets) == 1 {
 		shouldCL = false // never CL if your LB is just as fast.
 	}
-	lvbCD := eleShaman.LavaBurst.CD.TimeToReady(sim)
+
 	if shouldCL && rotation.options.UseClOnlyGap {
 		shouldCL = false
 		clCast := core.MaxDuration(eleShaman.ApplyCastSpeed(eleShaman.ChainLightning.DefaultCast.CastTime), core.GCDMin)
 		// If LvB CD < CL cast time, we should use CL to pass the time until then.
 		// Or if FS is about to expire and we didn't cast LvB.
-		if fsRemain <= clCast || (lvbCD <= clCast) {
+		if fsRemain <= clCast {
 			shouldCL = true
 		}
 	}
@@ -236,20 +211,9 @@ func (rotation *ManualRotation) DoAction(eleShaman *ElementalShaman, sim *core.S
 		return
 	}
 
-	// If LvB will be ready in < lvbFSWait time, delay
-	if lvbCD <= lvbFSWait && lvbCD > 0 {
-		eleShaman.WaitUntil(sim, sim.CurrentTime+lvbCD)
-		return
-	}
-
 	if needFS && eleShaman.FlameShock.IsReady(sim) {
 		if !eleShaman.FlameShock.Cast(sim, target) {
 			eleShaman.WaitForMana(sim, eleShaman.FlameShock.CurCast.Cost)
-		}
-		return
-	} else if allowLvB && eleShaman.LavaBurst.IsReady(sim) {
-		if !eleShaman.LavaBurst.Cast(sim, target) {
-			eleShaman.WaitForMana(sim, eleShaman.LavaBurst.CurCast.Cost)
 		}
 		return
 	} else if shouldCL {

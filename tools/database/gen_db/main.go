@@ -234,6 +234,8 @@ func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 		return false
 	} else if item.Quality > proto.ItemQuality_ItemQualityLegendary {
 		return false
+	} else if item.Name == "Warglaive of Azzinoth" || item.Name == "Thori'dal, the Stars' Fury" {
+		return true
 	} else if item.Quality == proto.ItemQuality_ItemQualityEpic {
 		if item.Ilvl > 164 {
 			return false

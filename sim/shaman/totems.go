@@ -44,7 +44,7 @@ func (shaman *Shaman) registerWindfuryTotemSpell() {
 }
 
 func (shaman *Shaman) registerManaSpringTotemSpell() {
-	config := shaman.newTotemSpellConfig(0.04, 58774)
+	config := shaman.newTotemSpellConfig(0.04, 25570)
 	config.ApplyEffects = func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 		shaman.NextTotemDrops[WaterTotem] = sim.CurrentTime + time.Second*300
 	}
@@ -52,7 +52,7 @@ func (shaman *Shaman) registerManaSpringTotemSpell() {
 }
 
 func (shaman *Shaman) registerTotemOfWrathSpell() {
-	config := shaman.newTotemSpellConfig(0.05, 57722)
+	config := shaman.newTotemSpellConfig(0.05, 57721)
 	config.ApplyEffects = func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 		shaman.NextTotemDrops[FireTotem] = sim.CurrentTime + time.Second*300
 		shaman.applyToWDebuff(sim)
@@ -68,7 +68,7 @@ func (shaman *Shaman) applyToWDebuff(sim *core.Simulation) {
 }
 
 func (shaman *Shaman) registerFlametongueTotemSpell() {
-	config := shaman.newTotemSpellConfig(0.11, 58656)
+	config := shaman.newTotemSpellConfig(0.11, 25557)
 	config.ApplyEffects = func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 		shaman.NextTotemDrops[FireTotem] = sim.CurrentTime + time.Second*300
 	}
@@ -76,7 +76,7 @@ func (shaman *Shaman) registerFlametongueTotemSpell() {
 }
 
 func (shaman *Shaman) registerStrengthOfEarthTotemSpell() {
-	config := shaman.newTotemSpellConfig(0.1, 58643)
+	config := shaman.newTotemSpellConfig(0.1, 25528)
 	config.ApplyEffects = func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 		shaman.NextTotemDrops[EarthTotem] = sim.CurrentTime + time.Second*300
 	}
@@ -92,7 +92,7 @@ func (shaman *Shaman) registerTremorTotemSpell() {
 }
 
 func (shaman *Shaman) registerStoneskinTotemSpell() {
-	config := shaman.newTotemSpellConfig(0.1, 58753)
+	config := shaman.newTotemSpellConfig(0.1, 25509)
 	config.ApplyEffects = func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
 		shaman.NextTotemDrops[EarthTotem] = sim.CurrentTime + time.Second*300
 	}

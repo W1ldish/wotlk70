@@ -1,0 +1,213 @@
+character_stats_results: {
+ key: "TestAPL-CharacterStats-Default"
+ value: {
+  final_stats: 204.05
+  final_stats: 340.49373
+  final_stats: 279.873
+  final_stats: 146.96
+  final_stats: 170.06
+  final_stats: 140
+  final_stats: 49.2
+  final_stats: 0
+  final_stats: 110.4
+  final_stats: 0
+  final_stats: 0
+  final_stats: 1855.15619
+  final_stats: 15.77
+  final_stats: 364.59254
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 5307.4
+  final_stats: 0
+  final_stats: 0
+  final_stats: 3739.98745
+  final_stats: 1792.35719
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 6366.73
+  final_stats: 35
+  final_stats: 35
+  final_stats: 35
+  final_stats: 35
+  final_stats: 70
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+  final_stats: 0
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-AshtongueTalismanofSwiftness-32487"
+ value: {
+  dps: 1840.32287
+  tps: 1408.71933
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Beast-tamer'sShoulders-30892"
+ value: {
+  dps: 1899.09163
+  tps: 1437.10109
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-BlessedGarboftheUndeadSlayer"
+ value: {
+  dps: 2196.96654
+  tps: 1734.40174
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-BlessedRegaliaofUndeadCleansing"
+ value: {
+  dps: 2005.78099
+  tps: 1565.677
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-DeathKnight'sAnguish-38212"
+ value: {
+  dps: 1851.31757
+  tps: 1417.20986
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Gladiator'sPursuit"
+ value: {
+  dps: 2271.89568
+  tps: 1781.53248
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Gronnstalker'sArmor"
+ value: {
+  dps: 2795.48021
+  tps: 2237.25798
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-StormshroudArmor"
+ value: {
+  dps: 1848.26516
+  tps: 1414.5105
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-TheFistsofFury"
+ value: {
+  dps: 1876.36378
+  tps: 1435.9441
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-UndeadSlayer'sBlessedArmor"
+ value: {
+  dps: 2084.1218
+  tps: 1625.00429
+ }
+}
+dps_results: {
+ key: "TestAPL-Average-Default"
+ value: {
+  dps: 1797.61364
+  tps: 1374.83084
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Dwarf-P1-SV-FullBuffs-LongMultiTarget"
+ value: {
+  dps: 1870.96029
+  tps: 2242.27612
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Dwarf-P1-SV-FullBuffs-LongSingleTarget"
+ value: {
+  dps: 1870.96029
+  tps: 1462.88126
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Dwarf-P1-SV-FullBuffs-ShortSingleTarget"
+ value: {
+  dps: 2129.39548
+  tps: 1671.39617
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Dwarf-P1-SV-NoBuffs-LongMultiTarget"
+ value: {
+  dps: 686.39937
+  tps: 1623.25844
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Dwarf-P1-SV-NoBuffs-LongSingleTarget"
+ value: {
+  dps: 686.39937
+  tps: 615.05923
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Dwarf-P1-SV-NoBuffs-ShortSingleTarget"
+ value: {
+  dps: 805.92883
+  tps: 706.94964
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Orc-P1-SV-FullBuffs-LongMultiTarget"
+ value: {
+  dps: 1909.15176
+  tps: 2260.4104
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Orc-P1-SV-FullBuffs-LongSingleTarget"
+ value: {
+  dps: 1909.15176
+  tps: 1477.44138
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Orc-P1-SV-FullBuffs-ShortSingleTarget"
+ value: {
+  dps: 2194.24141
+  tps: 1707.22052
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Orc-P1-SV-NoBuffs-LongMultiTarget"
+ value: {
+  dps: 698.88241
+  tps: 1630.59499
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Orc-P1-SV-NoBuffs-LongSingleTarget"
+ value: {
+  dps: 698.88241
+  tps: 620.57964
+ }
+}
+dps_results: {
+ key: "TestAPL-Settings-Orc-P1-SV-NoBuffs-ShortSingleTarget"
+ value: {
+  dps: 831.78802
+  tps: 724.70623
+ }
+}
+dps_results: {
+ key: "TestAPL-SwitchInFrontOfTarget-Default"
+ value: {
+  dps: 1735.19621
+  tps: 1377.11019
+ }
+}

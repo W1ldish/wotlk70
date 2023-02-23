@@ -91,7 +91,7 @@ type Shaman struct {
 	ChainLightningHits []*core.Spell
 	ChainLightningLOs  []*core.Spell
 
-	LavaBurst   *core.Spell
+	//LavaBurst   *core.Spell
 	FireNova    *core.Spell
 	LavaLash    *core.Spell
 	Stormstrike *core.Spell

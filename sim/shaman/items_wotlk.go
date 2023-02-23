@@ -59,7 +59,7 @@ var ItemSetFrostWitchRegalia = core.NewItemSet(core.ItemSet{
 				},
 				OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 					fsDot := shaman.FlameShock.Dot(result.Target)
-					if spell == shaman.LavaBurst && fsDot.IsActive() { // Doesn't have to hit from tooltip
+					if fsDot.IsActive() { // Doesn't have to hit from tooltip
 						// Modify dot to last 6 more seconds than it has left, and refresh aura
 						fsDot.Duration = fsDot.RemainingDuration(sim) + time.Second*6
 						fsDot.Refresh(sim)

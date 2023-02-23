@@ -2,6 +2,7 @@ package core
 
 import (
 	"fmt"
+
 	"golang.org/x/exp/slices"
 )
 
@@ -56,28 +57,28 @@ func NewItemSet(setStruct ItemSet) *ItemSet {
 	}
 
 	set.Items = make(map[int32]struct{})
-	foundName := false
-	foundAlternativeName := false
+	//foundName := false
+	//foundAlternativeName := false
 	for _, item := range ItemsByID {
 		if item.SetName == set.Name || (len(set.AlternativeName) > 0 && item.SetName == set.AlternativeName) {
 			//fmt.Printf("Adding item %s-%d to set %s\n", item.Name, item.ID, item.SetName)
 			set.Items[item.ID] = struct{}{}
 
-			if item.SetName == set.Name {
-				foundName = true
-			} else {
-				foundAlternativeName = true
-			}
+			/* 			if item.SetName == set.Name {
+			   				foundName = true
+			   			} else {
+			   				foundAlternativeName = true
+			   			} */
 		}
 	}
 
 	if WITH_DB {
-		if !foundName {
-			panic("No items found for set " + set.Name)
-		}
-		if len(set.AlternativeName) > 0 && !foundAlternativeName {
-			panic("No items found for set alternative " + set.AlternativeName)
-		}
+		/* 		if !foundName {
+		   			panic("No items found for set " + set.Name)
+		   		}
+		   		if len(set.AlternativeName) > 0 && !foundAlternativeName {
+		   			panic("No items found for set alternative " + set.AlternativeName)
+		   		} */
 	}
 
 	sets = append(sets, set)

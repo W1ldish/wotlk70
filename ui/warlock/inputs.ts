@@ -33,8 +33,8 @@ export const ArmorInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecWar
 	fieldName: 'armor',
 	values: [
 		{ value: Armor.NoArmor, tooltip: 'No Armor' },
-		{ actionId: ActionId.fromSpellId(47893), value: Armor.FelArmor },
-		{ actionId: ActionId.fromSpellId(47889), value: Armor.DemonArmor },
+		{ actionId: ActionId.fromSpellId(28189), value: Armor.FelArmor },
+		{ actionId: ActionId.fromSpellId(23260), value: Armor.DemonArmor },
 	],
 });
 
@@ -42,8 +42,8 @@ export const WeaponImbueInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.S
 	fieldName: 'weaponImbue',
 	values: [
 		{ value: WeaponImbue.NoWeaponImbue, tooltip: 'No Weapon Stone' },
-		{ actionId: ActionId.fromItemId(41174), value: WeaponImbue.GrandFirestone },
-		{ actionId: ActionId.fromItemId(41196), value: WeaponImbue.GrandSpellstone },
+		{ actionId: ActionId.fromItemId(40773), value: WeaponImbue.GrandFirestone },
+		{ actionId: ActionId.fromItemId(41194), value: WeaponImbue.GrandSpellstone },
 	],
 });
 
@@ -65,9 +65,9 @@ export const PetInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecWarlo
 export const PrimarySpellInput = InputHelpers.makeRotationEnumIconInput<Spec.SpecWarlock, PrimarySpell>({
 	fieldName: 'primarySpell',
 	values: [
-		{ actionId: ActionId.fromSpellId(47809), value: PrimarySpell.ShadowBolt },
-		{ actionId: ActionId.fromSpellId(47838), value: PrimarySpell.Incinerate },
-		{ actionId: ActionId.fromSpellId(47836), value: PrimarySpell.Seed },
+		{ actionId: ActionId.fromSpellId(27209), value: PrimarySpell.ShadowBolt },
+		{ actionId: ActionId.fromSpellId(32231), value: PrimarySpell.Incinerate },
+		{ actionId: ActionId.fromSpellId(27243), value: PrimarySpell.Seed },
 	],
 	setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: number) => {
 		const newRotation = player.getRotation();
@@ -84,9 +84,9 @@ export const SecondaryDotInput = InputHelpers.makeRotationEnumIconInput<Spec.Spe
 	fieldName: 'secondaryDot',
 	values: [
 		{ value: SecondaryDot.NoSecondaryDot },
-		{ actionId: ActionId.fromSpellId(47811), value: SecondaryDot.Immolate },
+		{ actionId: ActionId.fromSpellId(27215), value: SecondaryDot.Immolate },
 		{
-			actionId: ActionId.fromSpellId(47843), value: SecondaryDot.UnstableAffliction,
+			actionId: ActionId.fromSpellId(30405), value: SecondaryDot.UnstableAffliction,
 			showWhen: (player: Player<Spec.SpecWarlock>) => player.getTalents().unstableAffliction,
 		},
 	],
@@ -104,11 +104,11 @@ export const SpecSpellInput = InputHelpers.makeRotationEnumIconInput<Spec.SpecWa
 	values: [
 		{ value: SpecSpell.NoSpecSpell },
 		{
-			actionId: ActionId.fromSpellId(59164), value: SpecSpell.Haunt,
+			actionId: ActionId.fromSpellId(59161), value: SpecSpell.Haunt,
 			showWhen: (player: Player<Spec.SpecWarlock>) => player.getTalents().haunt,
 		},
 		{
-			actionId: ActionId.fromSpellId(59172), value: SpecSpell.ChaosBolt,
+			actionId: ActionId.fromSpellId(59170), value: SpecSpell.ChaosBolt,
 			showWhen: (player: Player<Spec.SpecWarlock>) => player.getTalents().chaosBolt,
 		},
 	],
@@ -125,7 +125,7 @@ export const SpecSpellInput = InputHelpers.makeRotationEnumIconInput<Spec.SpecWa
 
 export const CorruptionSpell = {
 	type: 'icon' as const,
-	id: ActionId.fromSpellId(47813),
+	id: ActionId.fromSpellId(27216),
 	states: 2,
 	extraCssClasses: [
 		'Corruption-picker',

@@ -65,7 +65,7 @@ export const ProtectionWarriorRotationConfig = {
 			values: [
 				{ actionId: ActionId.fromSpellId(30357), value: SpellOption.Revenge },
 				{ actionId: ActionId.fromSpellId(47488), value: SpellOption.ShieldSlam },
-				{ actionId: ActionId.fromSpellId(47440), value: SpellOption.Shout },
+				{ actionId: ActionId.fromSpellId(469), value: SpellOption.Shout },
 				{ actionId: ActionId.fromSpellId(47502), value: SpellOption.ThunderClap },
 				{ actionId: ActionId.fromSpellId(25203), value: SpellOption.DemoralizingShout },
 				{ actionId: ActionId.fromSpellId(71552), value: SpellOption.MortalStrike },

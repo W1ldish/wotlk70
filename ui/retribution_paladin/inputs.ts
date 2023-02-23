@@ -21,7 +21,7 @@ export const AuraSelection = InputHelpers.makeSpecOptionsEnumIconInput<Spec.Spec
 	fieldName: 'aura',
 	values: [
 		{ value: PaladinAura.NoPaladinAura, tooltip: 'No Aura' },
-		{ actionId: ActionId.fromSpellId(54043), value: PaladinAura.RetributionAura },
+		{ actionId: ActionId.fromSpellId(27150), value: PaladinAura.RetributionAura },
 	],
 });
 

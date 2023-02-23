@@ -312,7 +312,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Gift of the Wild',
-						actionId: ActionId.fromSpellId(48470),
+						actionId: ActionId.fromSpellId(26991),
 						playerData: playerClassAndMissingTalent(Class.ClassDruid, 'improvedMarkOfTheWild'),
 					},
 					{
@@ -330,16 +330,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 						actionId: ActionId.fromSpellId(25898),
 						playerData: playerClass(Class.ClassPaladin),
 					},
-					{
-						label: 'Drums of Forgotten Kings',
-						actionId: ActionId.fromItemId(49633),
-						raidData: raidBuff('drumsOfForgottenKings'),
-					},
-					{
-						label: 'Blessing of Sanctuary',
-						actionId: ActionId.fromSpellId(25899),
-						playerData: playerClass(Class.ClassPaladin),
-					},
+					
 				],
 			},
 			{
@@ -352,7 +343,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Devotion Aura',
-						actionId: ActionId.fromSpellId(48942),
+						actionId: ActionId.fromSpellId(27149),
 						playerData: playerClassAndMissingTalent(Class.ClassPaladin, 'improvedDevotionAura', player => player.getSpecOptions().aura == PaladinAura.DevotionAura),
 					},
 					{
@@ -362,12 +353,12 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Stoneskin Totem',
-						actionId: ActionId.fromSpellId(58753),
+						actionId: ActionId.fromSpellId(25509),
 						playerData: playerClassAndMissingTalent(Class.ClassShaman, 'guardianTotems', player => player.getRotation().totems?.earth == EarthTotem.StoneskinTotem),
 					},
 					{
 						label: 'Scroll of Protection',
-						actionId: ActionId.fromItemId(43468),
+						actionId: ActionId.fromItemId(33459),
 						raidData: raidBuff('scrollOfProtection'),
 					},
 				],
@@ -382,12 +373,12 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Power Word Fortitude',
-						actionId: ActionId.fromSpellId(48161),
+						actionId: ActionId.fromSpellId(25389),
 						playerData: playerClassAndMissingTalent(Class.ClassPriest, 'improvedPowerWordFortitude'),
 					},
 					{
 						label: 'Scroll of Stamina',
-						actionId: ActionId.fromItemId(37094),
+						actionId: ActionId.fromItemId(33461),
 						raidData: raidBuff('scrollOfStamina'),
 					},
 				],
@@ -402,22 +393,17 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Strength of Earth Totem',
-						actionId: ActionId.fromSpellId(58643),
+						actionId: ActionId.fromSpellId(25528),
 						playerData: playerClassAndMissingTalent(Class.ClassShaman, 'enhancingTotems', player => player.getRotation().totems?.earth == EarthTotem.StrengthOfEarthTotem),
 					},
 					{
-						label: 'Horn of Winter',
-						actionId: ActionId.fromSpellId(57623),
-						playerData: playerClass(Class.ClassDeathknight),
-					},
-					{
 						label: 'Scroll of Strength',
-						actionId: ActionId.fromItemId(43466),
+						actionId: ActionId.fromItemId(33462),
 						raidData: raidBuff('scrollOfStrength'),
 					},
 					{
 						label: 'Scroll of Agility',
-						actionId: ActionId.fromItemId(43464),
+						actionId: ActionId.fromItemId(33457),
 						raidData: raidBuff('scrollOfAgility'),
 					},
 				],
@@ -427,7 +413,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 				effects: [
 					{
 						label: 'Arcane Brilliance',
-						actionId: ActionId.fromSpellId(43002),
+						actionId: ActionId.fromSpellId(27127),
 						playerData: playerClass(Class.ClassMage),
 					},
 					{
@@ -437,12 +423,12 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Fel Intelligence',
-						actionId: ActionId.fromSpellId(57567),
+						actionId: ActionId.fromSpellId(57566),
 						playerData: playerClassAndMissingTalent(Class.ClassWarlock, 'improvedFelhunter', player => player.getSpecOptions().summon == WarlockSummon.Felhunter),
 					},
 					{
 						label: 'Scroll of Intellect',
-						actionId: ActionId.fromItemId(37092),
+						actionId: ActionId.fromItemId(33458),
 						raidData: raidBuff('scrollOfIntellect'),
 					},
 				],
@@ -452,7 +438,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 				effects: [
 					{
 						label: 'Divine Spirit',
-						actionId: ActionId.fromSpellId(48073),
+						actionId: ActionId.fromSpellId(25312),
 						playerData: playerClass(Class.ClassPriest),
 					},
 					{
@@ -462,12 +448,12 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Fel Intelligence',
-						actionId: ActionId.fromSpellId(57567),
+						actionId: ActionId.fromSpellId(57566),
 						playerData: playerClassAndMissingTalent(Class.ClassWarlock, 'improvedFelhunter', player => player.getSpecOptions().summon == WarlockSummon.Felhunter),
 					},
 					{
 						label: 'Scroll of Spirit',
-						actionId: ActionId.fromItemId(37098),
+						actionId: ActionId.fromItemId(33460),
 						raidData: raidBuff('scrollOfSpirit'),
 					},
 				],
@@ -482,7 +468,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Blessing of Might',
-						actionId: ActionId.fromSpellId(48934),
+						actionId: ActionId.fromSpellId(27141),
 						playerData: playerClass(Class.ClassPaladin),
 					},
 					{
@@ -492,7 +478,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Battle Shout',
-						actionId: ActionId.fromSpellId(47436),
+						actionId: ActionId.fromSpellId(2048),
 						playerData: playerClassAndMissingTalent(Class.ClassWarrior, 'commandingPresence', player => player.getSpecOptions().shout == WarriorShout.WarriorShoutBattle),
 					},
 				],
@@ -582,7 +568,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Blessing of Wisdom',
-						actionId: ActionId.fromSpellId(48938),
+						actionId: ActionId.fromSpellId(27143),
 						playerData: playerClassAndMissingTalent(Class.ClassPaladin, 'improvedBlessingOfWisdom'),
 					},
 					{
@@ -592,7 +578,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Mana Spring Totem',
-						actionId: ActionId.fromSpellId(58774),
+						actionId: ActionId.fromSpellId(25570),
 						playerData: playerClassAndMissingTalent(Class.ClassShaman, 'restorativeTotems', player => player.getRotation().totems?.water == WaterTotem.ManaSpringTotem),
 					},
 				],
@@ -642,12 +628,12 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Totem of Wrath',
-						actionId: ActionId.fromSpellId(57722),
+						actionId: ActionId.fromSpellId(57721),
 						playerData: playerClassAndTalent(Class.ClassShaman, 'totemOfWrath', player => player.getRotation().totems?.fire == FireTotem.TotemOfWrath),
 					},
 					{
 						label: 'Flametongue Totem',
-						actionId: ActionId.fromSpellId(58656),
+						actionId: ActionId.fromSpellId(25557),
 						playerData: playerClass(Class.ClassShaman, player => player.getRotation().totems?.fire == FireTotem.FlametongueTotem),
 					},
 				],
@@ -687,7 +673,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Commanding Shout',
-						actionId: ActionId.fromSpellId(47440),
+						actionId: ActionId.fromSpellId(469),
 						playerData: playerClassAndMissingTalent(Class.ClassWarrior, 'commandingPresence', player => player.getSpecOptions().shout == WarriorShout.WarriorShoutCommanding),
 					},
 					{
@@ -697,7 +683,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Blood Pact',
-						actionId: ActionId.fromSpellId(47982),
+						actionId: ActionId.fromSpellId(27268),
 						playerData: playerClassAndMissingTalent(Class.ClassWarlock, 'improvedImp', player => player.getSpecOptions().summon == WarlockSummon.Imp),
 					},
 				],

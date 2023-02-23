@@ -52,8 +52,8 @@ type Hunter struct {
 	// The most recent time at which moving could have started, for trap weaving.
 	mayMoveAt time.Duration
 
-	AspectOfTheHawk  *core.Spell
-	AspectOfTheViper *core.Spell
+	AspectOfTheDragonHawk *core.Spell
+	AspectOfTheViper      *core.Spell
 
 	AimedShot       *core.Spell
 	ArcaneShot      *core.Spell
@@ -76,13 +76,13 @@ type Hunter struct {
 	// Fake spells to encapsulate weaving logic.
 	TrapWeaveSpell *core.Spell
 
-	AspectOfTheHawkAura    *core.Aura
-	AspectOfTheViperAura   *core.Aura
-	ImprovedSteadyShotAura *core.Aura
-	LockAndLoadAura        *core.Aura
-	RapidFireAura          *core.Aura
-	ScorpidStingAuras      core.AuraArray
-	TalonOfAlarAura        *core.Aura
+	AspectOfTheDragonHawkAura *core.Aura
+	AspectOfTheViperAura      *core.Aura
+	ImprovedSteadyShotAura    *core.Aura
+	LockAndLoadAura           *core.Aura
+	RapidFireAura             *core.Aura
+	ScorpidStingAuras         core.AuraArray
+	TalonOfAlarAura           *core.Aura
 
 	CustomRotation *common.CustomRotation
 }
@@ -119,7 +119,7 @@ func (hunter *Hunter) Initialize() {
 	hunter.AutoAttacks.OHConfig.CritMultiplier = hunter.critMultiplier(false, false)
 	hunter.AutoAttacks.RangedConfig.CritMultiplier = hunter.critMultiplier(false, false)
 
-	hunter.registerAspectOfTheHawkSpell()
+	hunter.registerAspectOfTheDragonHawkSpell()
 	hunter.registerAspectOfTheViperSpell()
 
 	multiShotTimer := hunter.NewTimer()

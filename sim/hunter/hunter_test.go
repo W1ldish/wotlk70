@@ -165,7 +165,6 @@ var DefaultRotation = core.APLRotationFromJsonString(`{
 			"condition": {"not": {"val": {"dotIsActive": {"spellId": { "spellId": 49001 }}}}},
 			"castSpell": {"spellId": { "spellId": 49001 }}
 		}},
-		{"action": {"castSpell": {"spellId": { "spellId": 61006 }}}},
 		{"action": {"castSpell": {"spellId": { "spellId": 63672 }}}},
 		{"action": {"castSpell": {"spellId": { "spellId": 60053 }}}},
 		{"action": {"castSpell": {"spellId": { "spellId": 49050 }}}},
@@ -323,7 +322,7 @@ var P1Gear = core.EquipmentSpecFromJsonString(`{"items": [
 	},
 	{},
 	{
-		"id": 40385,
+		"id": 32336,
 		"enchant": 3608
 	}
 ]}`)

@@ -170,25 +170,8 @@ func (enh *EnhancementShaman) CastLavaBurstWeave(sim *core.Simulation, reactionT
 	reactionTime = core.TernaryDuration(previousAttack < reactionTime, reactionTime-previousAttack, 0)
 
 	//calculate cast times for weaving
-	lvbCastTime := enh.ApplyCastSpeed(enh.LavaBurst.DefaultCast.CastTime) + reactionTime
+	//lvbCastTime := enh.ApplyCastSpeed(enh.LavaBurst.DefaultCast.CastTime) + reactionTime
 	//calculate swing times for weaving
-	timeUntilSwing := enh.AutoAttacks.NextAttackAt() - sim.CurrentTime
-
-	if lvbCastTime < timeUntilSwing {
-		if reactionTime > 0 {
-			reactionTime += sim.CurrentTime
-
-			enh.HardcastWaitUntil(sim, reactionTime, func(_ *core.Simulation, _ *core.Unit) {
-				enh.GCD.Reset()
-				enh.LavaBurst.Cast(sim, enh.CurrentTarget)
-			})
-
-			enh.WaitUntil(sim, reactionTime)
-			return true
-		}
-
-		return enh.LavaBurst.Cast(sim, enh.CurrentTarget)
-	}
 
 	return false
 }
