@@ -184,7 +184,7 @@ func init() {
 
 	newProcStatBonusEffect(ProcStatBonusEffect{
 		Name:     "Eye of Magtheridon",
-		ID:       28418,
+		ID:       28789,
 		Bonus:    stats.Stats{stats.SpellPower: 170},
 		Duration: time.Second * 10,
 		Callback: core.CallbackOnSpellHitDealt | core.CallbackOnPeriodicDamageDealt,
@@ -277,8 +277,8 @@ func init() {
 	})
 
 	newProcStatBonusEffect(ProcStatBonusEffect{
-		Name:     "Tsunami Talisman Proc",
-		ID:       30627,
+		Name:     "Singing Crystal Axe",
+		ID:       31318,
 		Bonus:    stats.Stats{stats.MeleeHaste: 400},
 		Duration: time.Second * 10,
 		Callback: core.CallbackOnSpellHitDealt,

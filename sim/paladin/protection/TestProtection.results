@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5322.9
   final_stats: 0
   final_stats: 0
-  final_stats: 10830.5
+  final_stats: 9539
   final_stats: 849.2
   final_stats: 47
   final_stats: 0
@@ -51,10 +51,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 589.98602
+  tps: 1301.18816
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 587.74982
+  tps: 1299.17866
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-Beast-tamer'sShoulders-30892"
  value: {
   dps: 594.33036
   tps: 1310.39086
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 594.87428
+  tps: 1311.50763
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
  }
 }
 dps_results: {
@@ -79,6 +107,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 597.14838
+  tps: 1315.56496
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 587.52853
@@ -86,10 +121,66 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 588.32636
+  tps: 1296.98206
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 592.7751
+  tps: 1306.97529
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 579.17195
+  tps: 1278.90668
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-Gladiator'sVindication"
  value: {
   dps: 773.35764
   tps: 1720.70297
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-KhoriumChampion-23541"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
  }
 }
 dps_results: {
@@ -107,6 +198,69 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-LionheartChampion-28429"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-LionheartExecutioner-28430"
+ value: {
+  dps: 575.68335
+  tps: 1269.927
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 599.13236
+  tps: 1320.38013
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 578.07369
+  tps: 1276.07974
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 581.7908
+  tps: 1285.70064
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 587.87042
+  tps: 1301.09439
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 582.52511
+  tps: 1283.54303
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 598.12816
+  tps: 1311.44687
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 580.43652
+  tps: 1279.3282
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-StormshroudArmor"
  value: {
   dps: 584.65907
@@ -121,6 +275,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 597.27686
+  tps: 1315.8924
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 651.08009
@@ -128,11 +289,18 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 588.04991
+  tps: 1291.5345
+ }
+}
+dps_results: {
  key: "TestProtection-Average-Default"
  value: {
-  dps: 914.71894
-  tps: 2125.0249
-  dtps: 497.89407
+  dps: 918.19477
+  tps: 2134.63866
+  dtps: 528.9792
  }
 }
 dps_results: {
@@ -390,8 +558,8 @@ dps_results: {
 dps_results: {
  key: "TestProtection-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 943.04413
-  tps: 2166.6165
-  dtps: 461.22978
+  dps: 946.41086
+  tps: 2176.4094
+  dtps: 489.79514
  }
 }

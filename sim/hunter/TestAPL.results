@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5307.4
   final_stats: 0
   final_stats: 0
-  final_stats: 3739.98745
+  final_stats: 2448.48745
   final_stats: 1792.35719
   final_stats: 0
   final_stats: 0
@@ -51,10 +51,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 1858.2357
+  tps: 1423.86032
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 1862.4321
+  tps: 1428.23207
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-Beast-tamer'sShoulders-30892"
  value: {
   dps: 1899.09163
   tps: 1437.10109
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 1853.97386
+  tps: 1429.69083
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
  }
 }
 dps_results: {
@@ -72,10 +100,66 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 1851.47021
+  tps: 1420.66978
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 1851.31757
   tps: 1417.20986
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 1817.62954
+  tps: 1388.4039
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 1853.56255
+  tps: 1423.89147
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 1819.24814
+  tps: 1389.3909
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 1863.36662
+  tps: 1424.186
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
  }
 }
 dps_results: {
@@ -93,10 +177,94 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-KhoriumChampion-23541"
+ value: {
+  dps: 1895.80701
+  tps: 1447.27151
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-LionheartChampion-28429"
+ value: {
+  dps: 1844.33268
+  tps: 1410.42202
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-LionheartExecutioner-28430"
+ value: {
+  dps: 1844.33268
+  tps: 1410.42202
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 1878.07395
+  tps: 1437.80803
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 1834.97734
+  tps: 1402.56738
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 1870.67812
+  tps: 1435.77062
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 1829.18109
+  tps: 1399.66383
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 1820.98316
+  tps: 1391.74081
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 1823.31263
+  tps: 1392.16745
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-SingingCrystalAxe-31318"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-StormshroudArmor"
  value: {
   dps: 1848.26516
   tps: 1414.5105
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-TheBladefist-29348"
+ value: {
+  dps: 1816.1728
+  tps: 1387.5156
  }
 }
 dps_results: {
@@ -107,10 +275,24 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 1873.85988
+  tps: 1437.1718
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 2084.1218
   tps: 1625.00429
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 1850.34376
+  tps: 1412.19569
  }
 }
 dps_results: {

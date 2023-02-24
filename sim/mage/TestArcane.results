@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5881.235
   final_stats: 0
   final_stats: 0
-  final_stats: 3409.9
+  final_stats: 2118.4
   final_stats: 849.2
   final_stats: 0
   final_stats: 0
@@ -44,10 +44,45 @@ character_stats_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-AshtongueTalismanofInsight-32488"
+ value: {
+  dps: 960.56223
+  tps: 615.12535
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 945.26651
+  tps: 605.75736
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 1017.94173
+  tps: 651.29036
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 959.94757
+  tps: 614.87188
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
   dps: 1355.60053
   tps: 860.70687
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 951.88952
+  tps: 609.73116
  }
 }
 dps_results: {
@@ -58,6 +93,27 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 945.26651
+  tps: 605.75736
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 954.32566
+  tps: 611.2529
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 1033.30008
+  tps: 658.5775
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-Gladiator'sRegalia"
  value: {
   dps: 1319.12307
@@ -65,10 +121,108 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-KhoriumChampion-23541"
+ value: {
+  dps: 981.33615
+  tps: 627.75469
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-LionheartChampion-28429"
+ value: {
+  dps: 945.26651
+  tps: 605.75736
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-LionheartExecutioner-28430"
+ value: {
+  dps: 945.26651
+  tps: 605.75736
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 954.32566
+  tps: 611.2529
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-MindQuickeningGem-19339"
+ value: {
+  dps: 939.61345
+  tps: 602.32615
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 969.79083
+  tps: 620.53346
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 995.20894
+  tps: 636.04239
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 1060.17334
+  tps: 677.06718
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-Serpent-CoilBraid-30720"
+ value: {
+  dps: 1007.40793
+  tps: 646.11452
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 987.7076
+  tps: 631.22201
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 945.26651
+  tps: 605.75736
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 978.19926
+  tps: 625.517
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-TempestRegalia"
  value: {
   dps: 2244.25635
   tps: 1411.94846
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 970.63131
+  tps: 621.10514
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 954.32566
+  tps: 611.2529
  }
 }
 dps_results: {

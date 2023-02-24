@@ -195,12 +195,6 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 		RetributionAura(character, raidBuffs.SanctifiedRetribution)
 	}
 
-	if raidBuffs.DevotionAura != proto.TristateEffect_TristateEffectMissing {
-		character.AddStats(stats.Stats{
-			stats.Armor: GetTristateValueFloat(raidBuffs.DevotionAura, 861, 861*1.5),
-		})
-	}
-
 	if raidBuffs.BattleShout > 0 {
 		bonusAP := 312 * GetTristateValueFloat(raidBuffs.BattleShout, 1, 1.25)
 		character.AddStats(stats.Stats{

@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5463.4
   final_stats: 0
   final_stats: 0
-  final_stats: 3440.7
+  final_stats: 2149.2
   final_stats: 937.2
   final_stats: 0
   final_stats: 0
@@ -62,6 +62,13 @@ dps_results: {
  value: {
   dps: 2816.01391
   tps: 2400.6937
+ }
+}
+dps_results: {
+ key: "TestAffliction-AllItems-VoidStarTalisman-30449"
+ value: {
+  dps: 1862.07496
+  tps: 1544.96948
  }
 }
 dps_results: {

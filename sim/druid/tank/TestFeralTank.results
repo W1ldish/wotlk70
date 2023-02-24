@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 6277.35786
   final_stats: 0
   final_stats: 0
-  final_stats: 3640.57748
+  final_stats: 2349.07748
   final_stats: 849.2
   final_stats: 0
   final_stats: 0
@@ -52,6 +52,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 479.94687
+  tps: 1169.66671
+  dtps: 5.17494
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 458.40926
+  tps: 1125.82198
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 486.92626
+  tps: 1178.83939
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 505.3668
+  tps: 1224.70362
+  dtps: 5.11967
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
   dps: 477.26383
@@ -68,10 +100,74 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 473.39554
+  tps: 1157.40798
+  dtps: 5.17648
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 475.56326
   tps: 1156.31958
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 584.34095
+  tps: 1380.41479
+  dtps: 5.01473
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 472.74727
+  tps: 1153.36977
+  dtps: 5.18077
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 607.37177
+  tps: 1413.75384
+  dtps: 4.9829
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 476.79204
+  tps: 1164.49145
+  dtps: 5.17611
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 559.80941
+  tps: 1328.40982
+  dtps: 5.04831
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 445.93701
+  tps: 1109.00425
+  dtps: 5.22566
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 449.25253
+  tps: 1103.8279
   dtps: 5.19243
  }
 }
@@ -116,6 +212,70 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-LivingRootoftheWildheart-30664"
+ value: {
+  dps: 449.25253
+  tps: 1103.8279
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 481.91836
+  tps: 1180.53795
+  dtps: 5.16794
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 449.25253
+  tps: 1103.8279
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 458.26233
+  tps: 1124.97996
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 458.40926
+  tps: 1125.82198
+  dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 463.43142
+  tps: 1135.61556
+  dtps: 5.45401
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 477.68707
+  tps: 1168.36042
+  dtps: 5.27061
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 457.17893
+  tps: 1120.94888
+  dtps: 5.19243
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-StormshroudArmor"
  value: {
   dps: 472.07568
@@ -140,6 +300,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 486.78515
+  tps: 1185.17147
+  dtps: 5.4375
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 548.82196
@@ -156,11 +324,19 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 477.47626
+  tps: 1163.32219
+  dtps: 5.19243
+ }
+}
+dps_results: {
  key: "TestFeralTank-Average-Default"
  value: {
-  dps: 631.31042
-  tps: 1588.11258
-  dtps: 711.27771
+  dps: 641.549
+  tps: 1616.86304
+  dtps: 775.98839
  }
 }
 dps_results: {
@@ -211,8 +387,8 @@ dps_results: {
 dps_results: {
  key: "TestFeralTank-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 671.65696
-  tps: 1665.24824
-  dtps: 676.40356
+  dps: 680.27012
+  tps: 1685.38025
+  dtps: 736.85411
  }
 }

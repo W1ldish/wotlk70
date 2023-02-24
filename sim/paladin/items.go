@@ -490,36 +490,6 @@ func init() {
 		})
 	})
 
-	core.NewItemEffect(32491, func(agent core.Agent) {
-		paladin := agent.GetCharacter()
-		procAura := paladin.NewTemporaryStatsAura("Tome of Fiery Redemption", core.ActionID{ItemID: 30447}, stats.Stats{stats.SpellPower: 290}, time.Second*15)
-
-		icd := core.Cooldown{
-			Timer:    paladin.NewTimer(),
-			Duration: time.Second * 45,
-		}
-		paladin.RegisterAura(core.Aura{
-			Label:    "Tome of Fiery Redemption",
-			Duration: core.NeverExpires,
-			OnReset: func(aura *core.Aura, sim *core.Simulation) {
-				aura.Activate(sim)
-			},
-
-			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
-
-				if sim.RandomFloat("Tome of Fiery Redemption") > 0.15 {
-					return
-				}
-				if !icd.IsReady(sim) {
-					return
-				}
-				icd.Use(sim)
-				procAura.Activate(sim)
-
-			},
-		})
-	})
-
 	core.NewItemEffect(32489, func(agent core.Agent) {
 		paladin := agent.(PaladinAgent).GetPaladin()
 

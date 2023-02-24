@@ -38,34 +38,6 @@ func init() {
 			},
 		})
 	})
-	core.NewItemEffect(45507, func(agent core.Agent) {
-		character := agent.GetCharacter()
-		actionID := core.ActionID{ItemID: 45507}
-
-		procAura := character.RegisterAura(core.Aura{
-			Label:    "The General's Heart",
-			ActionID: actionID,
-			Duration: time.Second * 10,
-		})
-
-		character.AddDynamicDamageTakenModifier(func(sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
-			if procAura.IsActive() {
-				result.Damage = core.MaxFloat(0, result.Damage-205)
-			}
-		})
-
-		core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
-			Name:       "The General's Heart Trigger",
-			Callback:   core.CallbackOnSpellHitTaken,
-			ProcMask:   core.ProcMaskMelee,
-			Harmful:    true,
-			ProcChance: 0.05,
-			ICD:        time.Second * 50,
-			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
-				procAura.Activate(sim)
-			},
-		})
-	})
 
 	core.NewItemEffect(37734, func(agent core.Agent) {
 		character := agent.GetCharacter()

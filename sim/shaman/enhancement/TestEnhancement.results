@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5255.352
   final_stats: 0
   final_stats: 0
-  final_stats: 3464.9
+  final_stats: 2173.4
   final_stats: 849.2
   final_stats: 0
   final_stats: 0
@@ -46,8 +46,22 @@ character_stats_results: {
 dps_results: {
  key: "TestEnhancement-AllItems-AshtongueTalismanofVision-32491"
  value: {
-  dps: 789.36892
-  tps: 326.41683
+  dps: 807.59248
+  tps: 333.65289
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 785.68119
+  tps: 322.72811
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 788.88378
+  tps: 326.80944
  }
 }
 dps_results: {
@@ -55,6 +69,20 @@ dps_results: {
  value: {
   dps: 798.76131
   tps: 323.71776
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 790.39426
+  tps: 325.29471
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 934.40529
+  tps: 416.40867
  }
 }
 dps_results: {
@@ -72,10 +100,73 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 768.95316
+  tps: 316.05807
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 784.07092
   tps: 323.81916
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 1004.3351
+  tps: 455.27279
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 767.98744
+  tps: 317.31233
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 1016.44358
+  tps: 464.58425
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 787.94227
+  tps: 321.33105
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 1002.69126
+  tps: 459.57022
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 980.92878
+  tps: 449.37129
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 766.65032
+  tps: 314.65562
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-Fathom-BroochoftheTidewalker-30663"
+ value: {
+  dps: 1057.81208
+  tps: 557.12977
  }
 }
 dps_results: {
@@ -90,6 +181,62 @@ dps_results: {
  value: {
   dps: 937.65066
   tps: 402.04868
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 794.39828
+  tps: 325.68271
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 756.85448
+  tps: 310.13677
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 772.7281
+  tps: 318.72499
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 791.75299
+  tps: 327.96565
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 769.05243
+  tps: 315.81433
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 757.07984
+  tps: 310.26287
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 758.50507
+  tps: 308.94958
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-SingingCrystalAxe-31318"
+ value: {
+  dps: 1099.98921
+  tps: 520.55321
  }
 }
 dps_results: {
@@ -128,6 +275,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-TheBladefist-29348"
+ value: {
+  dps: 985.32504
+  tps: 445.16608
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-TheFistsofFury"
  value: {
   dps: 1405.86999
@@ -142,10 +296,24 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 787.53223
+  tps: 324.02184
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 871.35062
   tps: 366.38134
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 773.68224
+  tps: 314.03896
  }
 }
 dps_results: {

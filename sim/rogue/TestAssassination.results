@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 0
   final_stats: 0
   final_stats: 0
-  final_stats: 3667.3
+  final_stats: 2375.8
   final_stats: 1047.2
   final_stats: 0
   final_stats: 0
@@ -51,10 +51,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 1094.55684
+  tps: 777.13535
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 1057.13085
+  tps: 750.5629
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 1118.06712
+  tps: 793.82765
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
   dps: 1062.12763
   tps: 754.11062
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 1073.07266
+  tps: 761.88159
  }
 }
 dps_results: {
@@ -65,10 +93,80 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 1073.59557
+  tps: 762.25285
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 1097.00027
+  tps: 778.87019
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 1047.14566
+  tps: 743.47342
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-Gladiator'sVestments"
  value: {
   dps: 1323.93488
   tps: 939.99376
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 1109.24714
+  tps: 787.56547
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 1047.14566
+  tps: 743.47342
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 1058.56295
+  tps: 751.57969
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 1057.13085
+  tps: 750.5629
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 1062.08115
+  tps: 754.07762
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 1075.37446
+  tps: 763.51587
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 1058.03189
+  tps: 751.20264
  }
 }
 dps_results: {
@@ -86,6 +184,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-TheBladefist-29348"
+ value: {
+  dps: 967.97154
+  tps: 687.25979
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-TheFistsofFury"
  value: {
   dps: 1342.41613
@@ -93,10 +198,24 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 1102.4266
+  tps: 782.72289
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 1233.88237
   tps: 876.05648
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 1085.04381
+  tps: 770.38111
  }
 }
 dps_results: {

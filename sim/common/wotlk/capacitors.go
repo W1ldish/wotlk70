@@ -82,7 +82,7 @@ func init() {
 	core.AddEffectsToTest = false
 	newCapacitorDamageEffect(CapacitorDamageEffect{
 		Name:      "The Lightning Capacitor",
-		ID:        38072,
+		ID:        28785,
 		MaxStacks: 3,
 		Trigger: core.ProcTrigger{
 			Callback: core.CallbackOnSpellHitDealt,

@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5395.576
   final_stats: 0
   final_stats: 0
-  final_stats: 3668.752
+  final_stats: 2377.252
   final_stats: 1667.28584
   final_stats: 0
   final_stats: 0
@@ -51,10 +51,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 2179.47811
+  tps: 1752.92973
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 2179.6601
+  tps: 1754.16467
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-Beast-tamer'sShoulders-30892"
  value: {
   dps: 2228.51636
   tps: 1779.38553
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 2234.28111
+  tps: 1798.53886
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
  }
 }
 dps_results: {
@@ -72,10 +100,66 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 2185.41684
+  tps: 1759.78023
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 2198.62803
   tps: 1761.21053
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 2202.8809
+  tps: 1774.02922
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 2180.27797
+  tps: 1744.92752
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
  }
 }
 dps_results: {
@@ -93,10 +177,94 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-KhoriumChampion-23541"
+ value: {
+  dps: 2191.54575
+  tps: 1745.31591
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-LionheartChampion-28429"
+ value: {
+  dps: 2174.11874
+  tps: 1749.57622
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-LionheartExecutioner-28430"
+ value: {
+  dps: 2174.11874
+  tps: 1749.57622
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 2201.11978
+  tps: 1764.63571
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 2144.59842
+  tps: 1718.11372
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 2187.10786
+  tps: 1761.22019
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 2168.66428
+  tps: 1741.31777
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 2137.55551
+  tps: 1714.47903
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 2155.50988
+  tps: 1732.48736
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-SingingCrystalAxe-31318"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-StormshroudArmor"
  value: {
   dps: 2166.96408
   tps: 1736.30725
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-TheBladefist-29348"
+ value: {
+  dps: 2131.56707
+  tps: 1709.14619
  }
 }
 dps_results: {
@@ -107,10 +275,24 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 2217.62428
+  tps: 1780.02189
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 2395.81812
   tps: 1942.15017
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 2165.32928
+  tps: 1730.3535
  }
 }
 dps_results: {

@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5309.34
   final_stats: 0
   final_stats: 0
-  final_stats: 3464.9
+  final_stats: 2173.4
   final_stats: 849.2
   final_stats: 0
   final_stats: 0
@@ -91,8 +91,22 @@ stat_weights_results: {
 dps_results: {
  key: "TestElemental-AllItems-AshtongueTalismanofVision-32491"
  value: {
+  dps: 876.58066
+  tps: 596.26795
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-BandoftheEternalChampion-29301"
+ value: {
   dps: 614.87389
   tps: 405.4905
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 682.74848
+  tps: 449.41868
  }
 }
 dps_results: {
@@ -100,6 +114,20 @@ dps_results: {
  value: {
   dps: 614.87389
   tps: 405.4905
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 620.93718
+  tps: 410.51424
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
  }
 }
 dps_results: {
@@ -117,10 +145,73 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 625.62974
+  tps: 412.30991
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 628.77055
   tps: 414.1409
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 614.87389
+  tps: 405.4905
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 629.80489
+  tps: 413.77327
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 686.64476
+  tps: 450.51341
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Fathom-BroochoftheTidewalker-30663"
+ value: {
+  dps: 876.58066
+  tps: 615.52168
  }
 }
 dps_results: {
@@ -135,6 +226,62 @@ dps_results: {
  value: {
   dps: 994.65905
   tps: 643.73609
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 629.80489
+  tps: 413.77327
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 637.08092
+  tps: 419.5044
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 648.08031
+  tps: 427.39532
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 689.18875
+  tps: 452.89948
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 650.9737
+  tps: 428.0238
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 614.87389
+  tps: 405.4905
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 644.07301
+  tps: 424.12001
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-SingingCrystalAxe-31318"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
  }
 }
 dps_results: {
@@ -173,6 +320,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-TheBladefist-29348"
+ value: {
+  dps: 685.63406
+  tps: 449.66814
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-TheFistsofFury"
  value: {
   dps: 756.39423
@@ -187,10 +341,24 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 640.01058
+  tps: 422.14971
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
   dps: 624.10668
   tps: 413.18439
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 630.35074
+  tps: 414.07328
  }
 }
 dps_results: {

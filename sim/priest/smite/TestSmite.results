@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 6184.335
   final_stats: 0
   final_stats: 0
-  final_stats: 6952.3
+  final_stats: 5660.8
   final_stats: 937.2
   final_stats: 0
   final_stats: 0
@@ -58,6 +58,34 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-BandoftheEternalChampion-29301"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-BandoftheEternalSage-29305"
+ value: {
+  dps: 471.77405
+  tps: 415.6784
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-BlackenedNaaruSliver-34427"
+ value: {
+  dps: 428.16786
+  tps: 378.20889
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-BlackoutTruncheon-27901"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
   dps: 596.57482
@@ -65,10 +93,73 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-CloakofDarkness-33122"
+ value: {
+  dps: 435.01266
+  tps: 383.77328
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-DeathKnight'sAnguish-38212"
  value: {
   dps: 435.01266
   tps: 383.77328
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-Dragonmaw-28438"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-DragonspineTrophy-28830"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-Dragonstrike-28439"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-DrakeFangTalisman-19406"
+ value: {
+  dps: 443.87592
+  tps: 391.79323
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-DrakefistHammer-28437"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-EarringofSoulfulMeditation-30665"
+ value: {
+  dps: 464.39142
+  tps: 408.43571
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-EmpyreanDemolisher-17112"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-EyeofMagtheridon-28789"
+ value: {
+  dps: 468.7991
+  tps: 409.11511
  }
 }
 dps_results: {
@@ -86,10 +177,73 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-MadnessoftheBetrayer-32505"
+ value: {
+  dps: 443.87592
+  tps: 391.79323
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-Quagmirran'sEye-27683"
+ value: {
+  dps: 443.12668
+  tps: 391.00211
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-RingoftheFallenGod-21709"
+ value: {
+  dps: 454.62043
+  tps: 400.28758
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-RobeoftheElderScribes-28602"
+ value: {
+  dps: 483.74713
+  tps: 426.59
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-SextantofUnstableCurrents-30626"
+ value: {
+  dps: 444.65374
+  tps: 390.29112
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-ShardofContempt-34472"
+ value: {
+  dps: 433.74272
+  tps: 382.81753
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {
+  dps: 440.89393
+  tps: 388.05068
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-TsunamiTalisman-30627"
+ value: {
+  dps: 439.68346
+  tps: 387.62452
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-VestmentsofAbsolution"
  value: {
   dps: 914.80927
   tps: 803.37218
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-Warp-SpringCoil-30450"
+ value: {
+  dps: 444.01578
+  tps: 391.79323
  }
 }
 dps_results: {

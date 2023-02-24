@@ -21,7 +21,7 @@ character_stats_results: {
   final_stats: 5045.348
   final_stats: 0
   final_stats: 0
-  final_stats: 3473.018
+  final_stats: 2181.518
   final_stats: 849.2
   final_stats: 0
   final_stats: 0
@@ -48,6 +48,22 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-BandoftheEternalChampion-29301"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-BandoftheEternalSage-29305"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-BlackenedNaaruSliver-34427"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-BlackoutTruncheon-27901"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {}
 }
@@ -56,7 +72,39 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-CloakofDarkness-33122"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-DeathKnight'sAnguish-38212"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Dragonmaw-28438"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-DragonspineTrophy-28830"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Dragonstrike-28439"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-DrakeFangTalisman-19406"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-DrakefistHammer-28437"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-EmpyreanDemolisher-17112"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-EyeofMagtheridon-28789"
  value: {}
 }
 dps_results: {
@@ -80,6 +128,38 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-LivingRootoftheWildheart-30664"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-MadnessoftheBetrayer-32505"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Quagmirran'sEye-27683"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-RingoftheFallenGod-21709"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-RobeoftheElderScribes-28602"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-SextantofUnstableCurrents-30626"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-ShardofContempt-34472"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-StormshroudArmor"
  value: {}
 }
@@ -92,11 +172,19 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-TsunamiTalisman-30627"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-UndeadSlayer'sBlessedArmor"
  value: {}
 }
 dps_results: {
  key: "TestRestoration-AllItems-VengefulGladiator'sIdolofResolve-33947"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Warp-SpringCoil-30450"
  value: {}
 }
 dps_results: {
