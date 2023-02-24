@@ -7,6 +7,101 @@ import (
 	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
+// T4 Balance
+var ItemSetMalorneRegalia = core.NewItemSet(core.ItemSet{
+	Name: "Malorne Regalia",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			druid := agent.(DruidAgent).GetDruid()
+			manaMetrics := druid.NewManaMetrics(core.ActionID{SpellID: 37295})
+
+			druid.RegisterAura(core.Aura{
+				Label:    "Malorne Regalia 2pc",
+				Duration: core.NeverExpires,
+				OnReset: func(aura *core.Aura, sim *core.Simulation) {
+					aura.Activate(sim)
+				},
+				OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+					if spell.ProcMask.Matches(core.ProcMaskMeleeOrRanged) {
+						return
+					}
+					if !result.Landed() {
+						return
+					}
+					if sim.RandomFloat("malorne 2p") > 0.05 {
+						return
+					}
+					spell.Unit.AddMana(sim, 120, manaMetrics)
+				},
+			})
+		},
+		4: func(agent core.Agent) {
+			// Currently this is handled in druid.go (reducing CD of innervate)
+		},
+	},
+})
+
+//T4 feral
+var ItemSetMalorneHarness = core.NewItemSet(core.ItemSet{
+	Name: "Malorne Harness",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			druid := agent.(DruidAgent).GetDruid()
+
+			procChance := 0.04
+			rageMetrics := druid.NewRageMetrics(core.ActionID{SpellID: 37306})
+			energyMetrics := druid.NewEnergyMetrics(core.ActionID{SpellID: 37311})
+
+			druid.RegisterAura(core.Aura{
+				Label:    "Malorne 4pc",
+				Duration: core.NeverExpires,
+				OnReset: func(aura *core.Aura, sim *core.Simulation) {
+					aura.Activate(sim)
+				},
+				OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+					if result.Landed() && spell.ProcMask.Matches(core.ProcMaskMelee) {
+						if sim.RandomFloat("Malorne 2pc") < procChance {
+							if druid.InForm(Bear) {
+								druid.AddRage(sim, 10, rageMetrics)
+							} else if druid.InForm(Cat) {
+								druid.AddEnergy(sim, 20, energyMetrics)
+							}
+						}
+					}
+				},
+			})
+		},
+		4: func(agent core.Agent) {
+			druid := agent.(DruidAgent).GetDruid()
+			if druid.InForm(Bear) {
+				druid.AddStat(stats.Armor, 1400)
+			} else if druid.InForm(Cat) {
+				druid.AddStat(stats.Strength, 30)
+			}
+		},
+	},
+})
+
+//T5 Balance
+var ItemSetNordrassilRegalia = core.NewItemSet(core.ItemSet{
+	Name: "Nordrassil Regalia",
+	Bonuses: map[int32]core.ApplyEffect{
+		4: func(agent core.Agent) {
+			// Implemented in starfire.go.
+		},
+	},
+})
+
+//T5 Feral
+var ItemSetNordrassilHarness = core.NewItemSet(core.ItemSet{
+	Name: "Nordrassil Harness",
+	Bonuses: map[int32]core.ApplyEffect{
+		4: func(agent core.Agent) {
+			// Implemented in lacerate.go.
+		},
+	},
+})
+
 var ItemSetThunderheartRegalia = core.NewItemSet(core.ItemSet{
 	Name: "Thunderheart Regalia",
 	Bonuses: map[int32]core.ApplyEffect{

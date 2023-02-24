@@ -249,6 +249,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestDisc-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 34.02464
+  tps: 29.86153
+  hps: 1213.8853
+ }
+}
+dps_results: {
  key: "TestDisc-AllItems-Quagmirran'sEye-27683"
  value: {
   dps: 30.8035
@@ -297,6 +305,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestDisc-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 33.93737
+  tps: 25.50154
+  hps: 916.66003
+ }
+}
+dps_results: {
  key: "TestDisc-AllItems-TsunamiTalisman-30627"
  value: {
   dps: 30.13808
@@ -318,6 +334,14 @@ dps_results: {
   dps: 30.04908
   tps: 24.54331
   hps: 848.39624
+ }
+}
+dps_results: {
+ key: "TestDisc-AllItems-WrathofSpellfire"
+ value: {
+  dps: 34.39914
+  tps: 26.69934
+  hps: 1057.7792
  }
 }
 dps_results: {

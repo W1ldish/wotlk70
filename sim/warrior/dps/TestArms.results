@@ -107,6 +107,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-BurningRage"
+ value: {
+  dps: 530.2773
+  tps: 450.8742
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-CloakofDarkness-33122"
  value: {
   dps: 399.87035
@@ -118,6 +125,20 @@ dps_results: {
  value: {
   dps: 396.87647
   tps: 334.35632
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-DesolationBattlegear"
+ value: {
+  dps: 496.52014
+  tps: 421.41685
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-DoomplateBattlegear"
+ value: {
+  dps: 525.3421
+  tps: 445.59991
  }
 }
 dps_results: {
@@ -170,6 +191,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-FelstalkerArmor"
+ value: {
+  dps: 433.26569
+  tps: 366.0618
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-Gladiator'sBattlegear"
  value: {
   dps: 583.81799
@@ -205,6 +233,27 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 393.60501
+  tps: 330.21949
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-NetherscaleArmor"
+ value: {
+  dps: 450.03434
+  tps: 381.15572
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-NetherstrikeArmor"
+ value: {
+  dps: 399.99261
+  tps: 336.75758
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-OnslaughtArmor"
  value: {
   dps: 566.69564
@@ -216,6 +265,13 @@ dps_results: {
  value: {
   dps: 838.01128
   tps: 723.76509
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-PrimalIntent"
+ value: {
+  dps: 468.26192
+  tps: 396.41669
  }
 }
 dps_results: {
@@ -268,6 +324,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 400.27084
+  tps: 337.71682
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-StormshroudArmor"
  value: {
   dps: 390.7932
@@ -307,6 +370,20 @@ dps_results: {
  value: {
   dps: 401.92981
   tps: 340.01509
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-WastewalkerArmor"
+ value: {
+  dps: 496.20948
+  tps: 420.54912
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-WrathofSpellfire"
+ value: {
+  dps: 392.79122
+  tps: 330.27745
  }
 }
 dps_results: {

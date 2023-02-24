@@ -72,6 +72,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-BeastLordArmor"
+ value: {
+  dps: 2162.47826
+  tps: 1696.94921
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-BlackenedNaaruSliver-34427"
  value: {
   dps: 1853.97386
@@ -111,6 +118,13 @@ dps_results: {
  value: {
   dps: 1851.31757
   tps: 1417.20986
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-DesolationBattlegear"
+ value: {
+  dps: 2267.34582
+  tps: 1767.14628
  }
 }
 dps_results: {
@@ -163,6 +177,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-FelstalkerArmor"
+ value: {
+  dps: 2041.78379
+  tps: 1583.3155
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-Gladiator'sPursuit"
  value: {
   dps: 2271.89568
@@ -202,6 +223,34 @@ dps_results: {
  value: {
   dps: 1878.07395
   tps: 1437.80803
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 2015.12565
+  tps: 1565.82196
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-NetherscaleArmor"
+ value: {
+  dps: 2078.74972
+  tps: 1613.86321
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-NetherstrikeArmor"
+ value: {
+  dps: 1973.0611
+  tps: 1530.8938
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-PrimalIntent"
+ value: {
+  dps: 2006.05842
+  tps: 1549.71923
  }
 }
 dps_results: {
@@ -254,6 +303,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAPL-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 1990.93528
+  tps: 1526.68562
+ }
+}
+dps_results: {
  key: "TestAPL-AllItems-StormshroudArmor"
  value: {
   dps: 1848.26516
@@ -293,6 +349,20 @@ dps_results: {
  value: {
   dps: 1850.34376
   tps: 1412.19569
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-WastewalkerArmor"
+ value: {
+  dps: 2258.49808
+  tps: 1730.34711
+ }
+}
+dps_results: {
+ key: "TestAPL-AllItems-WrathofSpellfire"
+ value: {
+  dps: 1929.11651
+  tps: 1490.40627
  }
 }
 dps_results: {

@@ -228,6 +228,54 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-MalorneHarness"
+ value: {
+  dps: 588.63425
+  tps: 1386.28564
+  dtps: 5.06069
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-MalorneRegalia"
+ value: {
+  dps: 486.29417
+  tps: 1186.56024
+  dtps: 5.45401
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 479.92719
+  tps: 1176.81951
+  dtps: 6.0861
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-NordrassilHarness"
+ value: {
+  dps: 629.92015
+  tps: 1445.72636
+  dtps: 5.04821
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-NordrassilRegalia"
+ value: {
+  dps: 509.72581
+  tps: 1239.17881
+  dtps: 5.45401
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-PrimalIntent"
+ value: {
+  dps: 534.99302
+  tps: 1284.04048
+  dtps: 5.10615
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-Quagmirran'sEye-27683"
  value: {
   dps: 449.25253
@@ -273,6 +321,14 @@ dps_results: {
   dps: 457.17893
   tps: 1120.94888
   dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 492.47183
+  tps: 1201.12005
+  dtps: 5.45401
  }
 }
 dps_results: {
@@ -329,6 +385,22 @@ dps_results: {
   dps: 477.47626
   tps: 1163.32219
   dtps: 5.19243
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-WastewalkerArmor"
+ value: {
+  dps: 562.04596
+  tps: 1345.22261
+  dtps: 5.04964
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-WrathofSpellfire"
+ value: {
+  dps: 473.3004
+  tps: 1161.15971
+  dtps: 5.45401
  }
 }
 dps_results: {

@@ -108,6 +108,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-BurningRage"
+ value: {
+  dps: 3178.16458
+  tps: 3247.92405
+  dtps: 9.92224
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-CloakofDarkness-33122"
  value: {
   dps: 3281.2928
@@ -120,6 +128,22 @@ dps_results: {
  value: {
   dps: 3262.10505
   tps: 3332.45972
+  dtps: 9.58627
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-DesolationBattlegear"
+ value: {
+  dps: 2919.73838
+  tps: 2987.59781
+  dtps: 9.92224
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-DoomplateBattlegear"
+ value: {
+  dps: 3014.33485
+  tps: 3084.1127
   dtps: 9.58627
  }
 }
@@ -188,6 +212,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-FelstalkerArmor"
+ value: {
+  dps: 3024.34229
+  tps: 3093.03938
+  dtps: 9.58627
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-ForlornStarflareDiamond"
  value: {
   dps: 3270.00221
@@ -244,6 +276,30 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 2744.53468
+  tps: 2812.2501
+  dtps: 10.99028
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-NetherscaleArmor"
+ value: {
+  dps: 3074.19275
+  tps: 3140.32701
+  dtps: 9.58627
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-NetherstrikeArmor"
+ value: {
+  dps: 2983.12452
+  tps: 3048.96351
+  dtps: 9.58627
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-PersistentEarthshatterDiamond"
  value: {
   dps: 3288.5587
@@ -256,6 +312,14 @@ dps_results: {
  value: {
   dps: 3265.22797
   tps: 3335.58263
+  dtps: 9.58627
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-PrimalIntent"
+ value: {
+  dps: 3131.01921
+  tps: 3199.90509
   dtps: 9.58627
  }
 }
@@ -313,6 +377,14 @@ dps_results: {
   dps: 3400.8347
   tps: 3471.40525
   dtps: 9.58627
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 3117.59386
+  tps: 3186.67462
+  dtps: 9.92224
  }
 }
 dps_results: {
@@ -384,6 +456,22 @@ dps_results: {
  value: {
   dps: 3236.29481
   tps: 3306.64948
+  dtps: 9.58627
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-WastewalkerArmor"
+ value: {
+  dps: 2910.7024
+  tps: 2980.49177
+  dtps: 9.58627
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-WrathofSpellfire"
+ value: {
+  dps: 2993.59966
+  tps: 3062.21535
   dtps: 9.58627
  }
 }

@@ -51,6 +51,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-AssassinationArmor"
+ value: {
+  dps: 1324.56371
+  tps: 940.44024
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-BandoftheEternalChampion-29301"
  value: {
   dps: 1094.55684
@@ -128,6 +135,20 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 1108.61156
+  tps: 787.11421
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-PrimalIntent"
+ value: {
+  dps: 1221.47243
+  tps: 867.24542
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-Quagmirran'sEye-27683"
  value: {
   dps: 1047.14566
@@ -177,6 +198,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 1120.96446
+  tps: 795.88477
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-StormshroudArmor"
  value: {
   dps: 1113.93264
@@ -216,6 +244,20 @@ dps_results: {
  value: {
   dps: 1085.04381
   tps: 770.38111
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-WastewalkerArmor"
+ value: {
+  dps: 1331.83845
+  tps: 945.6053
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-WrathofSpellfire"
+ value: {
+  dps: 1080.07907
+  tps: 766.85614
  }
 }
 dps_results: {

@@ -205,6 +205,48 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestBalance-AllItems-MalorneHarness"
+ value: {
+  dps: 1144.39329
+  tps: 1061.42908
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-MalorneRegalia"
+ value: {
+  dps: 1572.89519
+  tps: 1493.29828
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 1378.07603
+  tps: 1290.90321
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-NordrassilHarness"
+ value: {
+  dps: 1157.50097
+  tps: 1075.72243
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-NordrassilRegalia"
+ value: {
+  dps: 1613.53524
+  tps: 1519.53066
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-PrimalIntent"
+ value: {
+  dps: 1057.15875
+  tps: 968.87818
+ }
+}
+dps_results: {
  key: "TestBalance-AllItems-Quagmirran'sEye-27683"
  value: {
   dps: 1073.70142
@@ -244,6 +286,13 @@ dps_results: {
  value: {
   dps: 1088.43332
   tps: 1000.66877
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 1256.453
+  tps: 1168.38216
  }
 }
 dps_results: {
@@ -293,6 +342,20 @@ dps_results: {
  value: {
   dps: 1071.10467
   tps: 983.17508
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-WastewalkerArmor"
+ value: {
+  dps: 1137.5389
+  tps: 1050.64363
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-WrathofSpellfire"
+ value: {
+  dps: 1310.93757
+  tps: 1222.65745
  }
 }
 dps_results: {

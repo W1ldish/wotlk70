@@ -10,7 +10,10 @@ import (
 func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 	hasGlyph := hunter.HasMajorGlyph(proto.HunterMajorGlyph_GlyphOfExplosiveTrap)
 	bonusPeriodicDamageMultiplier := .10 * float64(hunter.Talents.TrapMastery)
-
+	cdReduction := time.Second * 0
+	if hunter.HasSetBonus(ItemSetBeastLord, 2) {
+		cdReduction = time.Second * 4
+	}
 	hunter.ExplosiveTrap = hunter.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 49067},
 		SpellSchool: core.SpellSchoolFire,
@@ -26,7 +29,7 @@ func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 			},
 			CD: core.Cooldown{
 				Timer:    timer,
-				Duration: time.Second*30 - time.Second*2*time.Duration(hunter.Talents.Resourcefulness),
+				Duration: time.Second*30 - time.Second*2*time.Duration(hunter.Talents.Resourcefulness) - cdReduction,
 			},
 		},
 

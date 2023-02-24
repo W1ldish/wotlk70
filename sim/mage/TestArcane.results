@@ -149,6 +149,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 1314.08552
+  tps: 835.66129
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-MindQuickeningGem-19339"
  value: {
   dps: 939.61345
@@ -205,6 +212,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 1121.6455
+  tps: 713.50363
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-TempestRegalia"
  value: {
   dps: 2244.25635
@@ -223,6 +237,13 @@ dps_results: {
  value: {
   dps: 954.32566
   tps: 611.2529
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-WrathofSpellfire"
+ value: {
+  dps: 1136.46495
+  tps: 723.74283
  }
 }
 dps_results: {

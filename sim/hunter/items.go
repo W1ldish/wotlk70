@@ -19,6 +19,17 @@ var ItemSetGronnstalker = core.NewItemSet(core.ItemSet{
 	},
 })
 
+var ItemSetBeastLord = core.NewItemSet(core.ItemSet{
+	Name: "Beast Lord Armor",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+		},
+		4: func(agent core.Agent) {
+			// Handled in kill_command.go
+		},
+	},
+})
+
 func init() {
 	core.NewItemEffect(32336, func(agent core.Agent) {
 		hunter := agent.(HunterAgent).GetHunter()

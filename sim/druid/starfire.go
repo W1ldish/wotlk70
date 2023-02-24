@@ -17,7 +17,10 @@ func (druid *Druid) registerStarfireSpell() {
 
 	hasGlyph := druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfStarfire)
 	maxMoonfireTicks := druid.moonfireTicks() + core.TernaryInt32(hasGlyph, 3, 0)
-
+	nordrassilMult := 1.0
+	if druid.HasSetBonus(ItemSetNordrassilRegalia, 4) {
+		nordrassilMult = 1.1
+	}
 	druid.Starfire = druid.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 48465},
 		SpellSchool: core.SpellSchoolArcane,
@@ -55,6 +58,9 @@ func (druid *Druid) registerStarfireSpell() {
 				if hasGlyph && moonfireDot.IsActive() && moonfireDot.NumberOfTicks < maxMoonfireTicks {
 					moonfireDot.NumberOfTicks += 1
 					moonfireDot.UpdateExpires(moonfireDot.ExpiresAt() + time.Second*3)
+				}
+				if moonfireDot.IsActive() || druid.InsectSwarm.Dot(target).IsActive() {
+					baseDamage *= nordrassilMult
 				}
 			}
 			spell.DealDamage(sim, result)

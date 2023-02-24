@@ -84,6 +84,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-DesolationBattlegear"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-Dragonmaw-28438"
  value: {}
 }
@@ -118,6 +122,10 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRestoration-AllItems-FelstalkerArmor"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-Gladiator'sEarthshaker"
  value: {}
 }
@@ -127,6 +135,22 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-MadnessoftheBetrayer-32505"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Mana-EtchedRegalia"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-NetherscaleArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-NetherstrikeArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-PrimalIntent"
  value: {}
 }
 dps_results: {
@@ -170,6 +194,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-SpellstrikeInfusion"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-Stonebreaker'sTotem-33507"
  value: {}
 }
@@ -199,6 +227,14 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-Warp-SpringCoil-30450"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-WastewalkerArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-WrathofSpellfire"
  value: {}
 }
 dps_results: {

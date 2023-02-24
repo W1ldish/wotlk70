@@ -7,6 +7,10 @@ import (
 )
 
 func (rogue *Rogue) registerEnvenom() {
+	cost := 35.0
+	if rogue.HasSetBonus(ItemSetAssassination, 4) {
+		cost -= 10
+	}
 	rogue.EnvenomAura = rogue.RegisterAura(core.Aura{
 		Label:    "Envenom",
 		ActionID: core.ActionID{SpellID: 57993},
@@ -30,7 +34,7 @@ func (rogue *Rogue) registerEnvenom() {
 		MetricSplits: 6,
 
 		EnergyCost: core.EnergyCostOptions{
-			Cost:          35,
+			Cost:          cost,
 			Refund:        0.4 * float64(rogue.Talents.QuickRecovery),
 			RefundMetrics: rogue.QuickRecoveryMetrics,
 		},

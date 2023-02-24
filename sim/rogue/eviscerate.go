@@ -8,6 +8,11 @@ import (
 )
 
 func (rogue *Rogue) registerEviscerate() {
+	cost := 35.0
+	if rogue.HasSetBonus(ItemSetAssassination, 4) {
+		cost -= 10
+	}
+
 	rogue.Eviscerate = rogue.RegisterSpell(core.SpellConfig{
 		ActionID:     core.ActionID{SpellID: 48668},
 		SpellSchool:  core.SpellSchoolPhysical,
@@ -16,10 +21,11 @@ func (rogue *Rogue) registerEviscerate() {
 		MetricSplits: 6,
 
 		EnergyCost: core.EnergyCostOptions{
-			Cost:          35,
+			Cost:          cost,
 			Refund:        0.4 * float64(rogue.Talents.QuickRecovery),
 			RefundMetrics: rogue.QuickRecoveryMetrics,
 		},
+
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{
 				GCD: time.Second,

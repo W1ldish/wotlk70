@@ -159,6 +159,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-DesolationBattlegear"
+ value: {
+  dps: 817.3546
+  tps: 530.78635
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-Dragonmaw-28438"
  value: {
   dps: 685.63406
@@ -215,6 +222,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-FelstalkerArmor"
+ value: {
+  dps: 686.19575
+  tps: 451.18317
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-Gladiator'sEarthshaker"
  value: {
   dps: 715.64112
@@ -233,6 +247,34 @@ dps_results: {
  value: {
   dps: 629.80489
   tps: 413.77327
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 894.65874
+  tps: 579.6789
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-NetherscaleArmor"
+ value: {
+  dps: 740.36098
+  tps: 484.7195
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-NetherstrikeArmor"
+ value: {
+  dps: 806.10766
+  tps: 525.89824
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-PrimalIntent"
+ value: {
+  dps: 622.83795
+  tps: 410.4778
  }
 }
 dps_results: {
@@ -306,6 +348,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 757.096
+  tps: 494.53779
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-Stonebreaker'sTotem-33507"
  value: {
   dps: 614.87389
@@ -359,6 +408,20 @@ dps_results: {
  value: {
   dps: 630.35074
   tps: 414.07328
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-WastewalkerArmor"
+ value: {
+  dps: 691.68377
+  tps: 450.07413
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-WrathofSpellfire"
+ value: {
+  dps: 790.58597
+  tps: 517.44675
  }
 }
 dps_results: {

@@ -204,6 +204,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 36.5782
+  tps: 20.07422
+  hps: 871.48254
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-Quagmirran'sEye-27683"
  value: {
   dps: 32.78023
@@ -252,6 +260,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 36.00594
+  tps: 17.847
+  hps: 736.15195
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-TsunamiTalisman-30627"
  value: {
   dps: 32.14129
@@ -273,6 +289,14 @@ dps_results: {
   dps: 32.04669
   tps: 12.00592
   hps: 542.90306
+ }
+}
+dps_results: {
+ key: "TestHoly-AllItems-WrathofSpellfire"
+ value: {
+  dps: 36.29356
+  tps: 18.45887
+  hps: 804.18428
  }
 }
 dps_results: {

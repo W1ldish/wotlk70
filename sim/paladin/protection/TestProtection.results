@@ -107,6 +107,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-BurningRage"
+ value: {
+  dps: 698.58997
+  tps: 1537.062
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-CloakofDarkness-33122"
  value: {
   dps: 597.14838
@@ -118,6 +125,20 @@ dps_results: {
  value: {
   dps: 587.52853
   tps: 1293.62699
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-DesolationBattlegear"
+ value: {
+  dps: 706.61461
+  tps: 1569.62468
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-DoomplateBattlegear"
+ value: {
+  dps: 697.55253
+  tps: 1536.86326
  }
 }
 dps_results: {
@@ -170,6 +191,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-FelstalkerArmor"
+ value: {
+  dps: 633.12539
+  tps: 1401.35054
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-Gladiator'sVindication"
  value: {
   dps: 773.35764
@@ -219,6 +247,34 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 640.85271
+  tps: 1431.19537
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-NetherscaleArmor"
+ value: {
+  dps: 655.56015
+  tps: 1452.35731
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-NetherstrikeArmor"
+ value: {
+  dps: 625.44046
+  tps: 1392.09585
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-PrimalIntent"
+ value: {
+  dps: 643.27372
+  tps: 1417.0481
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-Quagmirran'sEye-27683"
  value: {
   dps: 578.07369
@@ -261,6 +317,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 612.70105
+  tps: 1353.45473
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-StormshroudArmor"
  value: {
   dps: 584.65907
@@ -293,6 +356,20 @@ dps_results: {
  value: {
   dps: 588.04991
   tps: 1291.5345
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-WastewalkerArmor"
+ value: {
+  dps: 665.03795
+  tps: 1457.85401
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-WrathofSpellfire"
+ value: {
+  dps: 607.92516
+  tps: 1347.73396
  }
 }
 dps_results: {

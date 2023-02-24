@@ -136,6 +136,30 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-MalorneHarness"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-MalorneRegalia"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Mana-EtchedRegalia"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-NordrassilHarness"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-NordrassilRegalia"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-PrimalIntent"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-Quagmirran'sEye-27683"
  value: {}
 }
@@ -157,6 +181,10 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-Shiffar'sNexus-Horn-28418"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-SpellstrikeInfusion"
  value: {}
 }
 dps_results: {
@@ -185,6 +213,14 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-Warp-SpringCoil-30450"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-WastewalkerArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-WrathofSpellfire"
  value: {}
 }
 dps_results: {

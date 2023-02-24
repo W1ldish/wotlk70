@@ -21,6 +21,18 @@ var ItemSetGladiatorsVestments = core.NewItemSet(core.ItemSet{
 	},
 })
 
+var ItemSetAssassination = core.NewItemSet(core.ItemSet{
+	Name: "Assassination Armor",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+		},
+		4: func(agent core.Agent) {
+			// Your Eviscerate and Envenom abilities cost 10 less energy.
+			// Handled in eviscerate.go.
+		},
+	},
+})
+
 var ItemSetVanCleefs = core.NewItemSet(core.ItemSet{
 	Name: "VanCleef's Battlegear",
 	Bonuses: map[int32]core.ApplyEffect{

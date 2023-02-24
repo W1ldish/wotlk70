@@ -80,11 +80,23 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-BurningRage"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-CloakofDarkness-33122"
  value: {}
 }
 dps_results: {
  key: "TestHoly-AllItems-DeathKnight'sAnguish-38212"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-DesolationBattlegear"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-DoomplateBattlegear"
  value: {}
 }
 dps_results: {
@@ -116,6 +128,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-FelstalkerArmor"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-Gladiator'sVindication"
  value: {}
 }
@@ -144,6 +160,22 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-Mana-EtchedRegalia"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-NetherscaleArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-NetherstrikeArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-PrimalIntent"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-Quagmirran'sEye-27683"
  value: {}
 }
@@ -168,6 +200,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-SpellstrikeInfusion"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-StormshroudArmor"
  value: {}
 }
@@ -185,6 +221,14 @@ dps_results: {
 }
 dps_results: {
  key: "TestHoly-AllItems-Warp-SpringCoil-30450"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-WastewalkerArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-WrathofSpellfire"
  value: {}
 }
 dps_results: {

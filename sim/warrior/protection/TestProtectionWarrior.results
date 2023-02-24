@@ -152,6 +152,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-BurningRage"
+ value: {
+  dps: 249.10141
+  tps: 600.30678
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-CloakofDarkness-33122"
  value: {
   dps: 182.16307
@@ -163,6 +170,20 @@ dps_results: {
  value: {
   dps: 181.85644
   tps: 435.48104
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-DesolationBattlegear"
+ value: {
+  dps: 227.33921
+  tps: 547.14326
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-DoomplateBattlegear"
+ value: {
+  dps: 249.15226
+  tps: 601.3456
  }
 }
 dps_results: {
@@ -215,6 +236,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-FelstalkerArmor"
+ value: {
+  dps: 199.17881
+  tps: 480.643
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-Gladiator'sBattlegear"
  value: {
   dps: 283.40083
@@ -250,6 +278,27 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-Mana-EtchedRegalia"
+ value: {
+  dps: 182.40799
+  tps: 438.13952
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-NetherscaleArmor"
+ value: {
+  dps: 207.51069
+  tps: 498.78815
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-NetherstrikeArmor"
+ value: {
+  dps: 183.7813
+  tps: 441.37017
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-OnslaughtArmor"
  value: {
   dps: 283.91812
@@ -261,6 +310,13 @@ dps_results: {
  value: {
   dps: 409.97987
   tps: 987.7982
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-PrimalIntent"
+ value: {
+  dps: 216.8922
+  tps: 522.22538
  }
 }
 dps_results: {
@@ -313,6 +369,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-SpellstrikeInfusion"
+ value: {
+  dps: 181.59628
+  tps: 436.85232
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-StormshroudArmor"
  value: {
   dps: 175.99016
@@ -352,6 +415,20 @@ dps_results: {
  value: {
   dps: 180.89691
   tps: 435.6034
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-WastewalkerArmor"
+ value: {
+  dps: 233.32271
+  tps: 560.63331
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-WrathofSpellfire"
+ value: {
+  dps: 180.46512
+  tps: 433.85647
  }
 }
 dps_results: {
