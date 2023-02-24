@@ -3,9 +3,9 @@ package sim
 import (
 	"testing"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 // 1 moonkin, 1 ele shaman, 1 spriest, 2x arcane

@@ -3,8 +3,8 @@ package druid
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
 // We register two spells to apply two different dot effects and get two entries in Damage/Detailed results

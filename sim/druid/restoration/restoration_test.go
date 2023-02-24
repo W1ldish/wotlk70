@@ -3,9 +3,9 @@ package restoration
 import (
 	"testing"
 
-	_ "github.com/Tereneckla/wotlk70/sim/common" // imported to get caster sets included. (we use spellfire here)
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	_ "github.com/Tereneckla/wotlk/sim/common" // imported to get caster sets included. (we use spellfire here)
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
 func init() {

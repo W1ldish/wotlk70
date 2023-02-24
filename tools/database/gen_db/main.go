@@ -9,11 +9,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	_ "github.com/Tereneckla/wotlk70/sim/encounters" // Needed for preset encounters.
-	"github.com/Tereneckla/wotlk70/tools"
-	"github.com/Tereneckla/wotlk70/tools/database"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
+	_ "github.com/Tereneckla/wotlk/sim/encounters" // Needed for preset encounters.
+	"github.com/Tereneckla/wotlk/tools"
+	"github.com/Tereneckla/wotlk/tools/database"
 )
 
 // To do a full re-scrape, delete the previous output file first.

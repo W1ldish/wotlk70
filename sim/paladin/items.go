@@ -3,9 +3,9 @@ package paladin
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 // Tier 6 ret
@@ -486,6 +486,36 @@ func init() {
 				if spell.SpellID == paladin.HolyShield.SpellID {
 					procAura.Activate(sim)
 				}
+			},
+		})
+	})
+
+	core.NewItemEffect(32491, func(agent core.Agent) {
+		paladin := agent.GetCharacter()
+		procAura := paladin.NewTemporaryStatsAura("Tome of Fiery Redemption", core.ActionID{ItemID: 30447}, stats.Stats{stats.SpellPower: 290}, time.Second*15)
+
+		icd := core.Cooldown{
+			Timer:    paladin.NewTimer(),
+			Duration: time.Second * 45,
+		}
+		paladin.RegisterAura(core.Aura{
+			Label:    "Tome of Fiery Redemption",
+			Duration: core.NeverExpires,
+			OnReset: func(aura *core.Aura, sim *core.Simulation) {
+				aura.Activate(sim)
+			},
+
+			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
+
+				if sim.RandomFloat("Tome of Fiery Redemption") > 0.15 {
+					return
+				}
+				if !icd.IsReady(sim) {
+					return
+				}
+				icd.Use(sim)
+				procAura.Activate(sim)
+
 			},
 		})
 	})

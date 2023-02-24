@@ -1,7 +1,7 @@
 package enhancement
 
 import (
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 func (enh *EnhancementShaman) OnAutoAttack(sim *core.Simulation, spell *core.Spell) {

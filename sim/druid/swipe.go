@@ -1,7 +1,7 @@
 package druid
 
 import (
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 func (druid *Druid) registerSwipeBearSpell() {

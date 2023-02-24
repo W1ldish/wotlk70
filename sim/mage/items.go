@@ -3,9 +3,11 @@ package mage
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
+
+const SerpentCoilBraidID = 30720
 
 // T6 Sunwell
 var ItemSetTempestRegalia = core.NewItemSet(core.ItemSet{
@@ -121,3 +123,67 @@ var ItemSetGladiatorsRegalia = core.NewItemSet(core.ItemSet{
 		},
 	},
 })
+
+func init() {
+	core.NewSimpleStatOffensiveTrinketEffect(19339, stats.Stats{stats.SpellHaste: 330}, time.Second*20, time.Minute*5) // MQG
+
+	core.NewItemEffect(45507, func(agent core.Agent) {
+		character := agent.GetCharacter()
+		actionID := core.ActionID{ItemID: 45507}
+
+		procAura := character.RegisterAura(core.Aura{
+			Label:    "The General's Heart",
+			ActionID: actionID,
+			Duration: time.Second * 10,
+		})
+
+		character.AddDynamicDamageTakenModifier(func(sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+			if procAura.IsActive() {
+				result.Damage = core.MaxFloat(0, result.Damage-205)
+			}
+		})
+
+		core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
+			Name:       "The General's Heart Trigger",
+			Callback:   core.CallbackOnSpellHitTaken,
+			ProcMask:   core.ProcMaskMelee,
+			Harmful:    true,
+			ProcChance: 0.05,
+			ICD:        time.Second * 50,
+			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+				procAura.Activate(sim)
+			},
+		})
+	})
+	core.NewItemEffect(32488, func(agent core.Agent) {
+		mage := agent.(MageAgent).GetMage()
+		procAura := mage.NewTemporaryStatsAura("Asghtongue Talisman Proc", core.ActionID{ItemID: 32488}, stats.Stats{stats.SpellHaste: 150}, time.Second*5)
+
+		mage.RegisterAura(core.Aura{
+			Label:    "Ashtongue Talisman",
+			Duration: core.NeverExpires,
+			OnReset: func(aura *core.Aura, sim *core.Simulation) {
+				aura.Activate(sim)
+			},
+			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+				if !spell.ProcMask.Matches(core.ProcMaskSpellDamage) {
+					return
+
+				}
+				if !result.Outcome.Matches(core.OutcomeCrit) {
+					return
+				}
+
+				if sim.RandomFloat("Ashtongue Talisman of Insight") > 0.5 {
+					return
+				}
+
+				procAura.Activate(sim)
+			},
+		})
+	})
+
+	// Even though these item effects are handled elsewhere, add them so they are
+	// detected for automatic testing.
+	core.NewItemEffect(SerpentCoilBraidID, func(core.Agent) {})
+}

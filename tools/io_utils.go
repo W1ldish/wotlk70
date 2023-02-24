@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 	"golang.org/x/exp/slices"
 	protojson "google.golang.org/protobuf/encoding/protojson"
 	googleProto "google.golang.org/protobuf/proto"

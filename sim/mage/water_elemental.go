@@ -3,9 +3,9 @@ package mage
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 // The numbers in this file are VERY rough approximations based on logs.

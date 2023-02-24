@@ -4,8 +4,8 @@ import (
 	"math/bits"
 	"strconv"
 
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 type ProcMask uint32

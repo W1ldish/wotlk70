@@ -3,7 +3,7 @@ package druid
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 const IdolAvenger int32 = 31025

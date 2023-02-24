@@ -1,4 +1,4 @@
-module github.com/Tereneckla/wotlk70
+module github.com/Tereneckla/wotlk
 
 go 1.18
 

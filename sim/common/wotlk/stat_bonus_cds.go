@@ -3,8 +3,8 @@ package wotlk
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 type StatCDFactory func(itemID int32, bonus float64, duration time.Duration, cooldown time.Duration)

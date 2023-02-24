@@ -8,9 +8,9 @@ import (
 	"runtime/debug"
 	"syscall/js"
 
-	"github.com/Tereneckla/wotlk70/sim"
-	"github.com/Tereneckla/wotlk70/sim/core"
-	proto "github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim"
+	"github.com/Tereneckla/wotlk/sim/core"
+	proto "github.com/Tereneckla/wotlk/sim/core/proto"
 	protojson "google.golang.org/protobuf/encoding/protojson"
 	googleProto "google.golang.org/protobuf/proto"
 )

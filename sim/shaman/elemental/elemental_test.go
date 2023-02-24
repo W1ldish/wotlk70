@@ -3,9 +3,9 @@ package elemental
 import (
 	"testing"
 
-	_ "github.com/Tereneckla/wotlk70/sim/common"
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	_ "github.com/Tereneckla/wotlk/sim/common"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
 func init() {

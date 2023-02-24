@@ -3,7 +3,7 @@ package druid
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 // Right now, add the additional GCD + mana cost for shifting back to Moonkin form as a hack

@@ -3,8 +3,8 @@ package wotlk
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 type StackingStatBonusEffect struct {
@@ -129,6 +129,38 @@ func newStackingStatBonusCD(config StackingStatBonusCD) {
 }
 
 func init() {
+
+	core.NewItemEffect(34427, func(agent core.Agent) {
+		character := agent.GetCharacter()
+
+		procAura := core.MakeStackingAura(character, core.StackingStatAura{
+			Aura: core.Aura{
+				Label:     "Blackened Naaru Sliver Proc",
+				ActionID:  core.ActionID{ItemID: 34427},
+				Duration:  time.Second * 20,
+				MaxStacks: 10,
+				OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+					if result.Landed() && spell.ProcMask.Matches(core.ProcMaskMeleeOrRanged) {
+						aura.AddStack(sim)
+					}
+				},
+			},
+			BonusPerStack: stats.Stats{stats.AttackPower: 44, stats.RangedAttackPower: 44},
+		})
+
+		core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
+			Name:       "Blackened Naaru Sliver",
+			Callback:   core.CallbackOnSpellHitDealt,
+			ProcMask:   core.ProcMaskMeleeOrRanged,
+			Outcome:    core.OutcomeLanded,
+			ProcChance: 0.1,
+			ICD:        time.Second * 45,
+			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+				procAura.Activate(sim)
+			},
+		})
+	})
+
 	core.NewItemEffect(38212, func(agent core.Agent) {
 		character := agent.GetCharacter()
 

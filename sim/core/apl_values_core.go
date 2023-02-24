@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
 func (unit *Unit) aplGetDot(spellId *proto.ActionID) *Dot {

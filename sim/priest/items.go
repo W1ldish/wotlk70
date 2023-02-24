@@ -3,8 +3,8 @@ package priest
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 var ItemSetAbsolution = core.NewItemSet(core.ItemSet{
@@ -226,6 +226,9 @@ var ItemSetGladiatorsRaiment = core.NewItemSet(core.ItemSet{
 })
 
 func init() {
+
+	core.NewSimpleStatDefensiveTrinketEffect(30665, stats.Stats{stats.Spirit: 300}, time.Second*20, time.Minute*2)
+
 	core.NewItemEffect(32490, func(agent core.Agent) {
 		priest := agent.(PriestAgent).GetPriest()
 		// Not in the game yet so cant test; this logic assumes that:

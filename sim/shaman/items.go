@@ -3,9 +3,9 @@ package shaman
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 var ItemSetTidefury = core.NewItemSet(core.ItemSet{
@@ -65,6 +65,33 @@ var ItemSetSkyshatterHarness = core.NewItemSet(core.ItemSet{
 })
 
 func init() {
+	core.NewItemEffect(30663, func(agent core.Agent) {
+		shaman := agent.(ShamanAgent).GetShaman()
+		icd := core.Cooldown{
+			Timer:    shaman.NewTimer(),
+			Duration: time.Second * 40,
+		}
+		shaman.RegisterAura(core.Aura{
+			Label:    "Fathom-Brooch of the Tidewalker",
+			Duration: core.NeverExpires,
+			OnReset: func(aura *core.Aura, sim *core.Simulation) {
+				aura.Activate(sim)
+			},
+			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
+				if !icd.IsReady(sim) {
+					return
+				}
+				if spell.SchoolIndex == stats.SchoolIndex(proto.SpellSchool_SpellSchoolNature) {
+					return
+				}
+				if sim.RandomFloat("Fathom-Brooch of the Tidewalker") > 0.15 {
+					shaman.AddMana(sim, 335, shaman.NewManaMetrics(core.ActionID{ItemID: 30663}))
+				}
+
+			},
+		})
+	})
+
 	core.NewItemEffect(32491, func(agent core.Agent) {
 		shaman := agent.(ShamanAgent).GetShaman()
 		procAura := shaman.NewTemporaryStatsAura("Ashtongue Talisman of Vision Proc", core.ActionID{ItemID: 32491}, stats.Stats{stats.AttackPower: 275}, time.Second*10)
@@ -77,13 +104,18 @@ func init() {
 			},
 			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
 				// Note that shaman.Stormstrike is the first 'fake' SS hit.
-				if spell != shaman.Stormstrike {
-					return
+				if spell == shaman.Stormstrike {
+					if sim.RandomFloat("Ashtongue Talisman of Vision") > 0.5 {
+						return
+					}
+					procAura.Activate(sim)
+				} else if spell == shaman.LightningBolt {
+					if sim.RandomFloat("Lightning Bolt") > 0.85 {
+						return
+					}
+					shaman.AddMana(sim, 170, shaman.NewManaMetrics(core.ActionID{ItemID: 32491}))
 				}
-				if sim.RandomFloat("Ashtongue Talisman of Vision") > 0.5 {
-					return
-				}
-				procAura.Activate(sim)
+
 			},
 		})
 	})

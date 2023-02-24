@@ -3,8 +3,8 @@ package warlock
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 // T6
@@ -199,6 +199,21 @@ var ItemSetGladiatorsFelshroud = core.NewItemSet(core.ItemSet{
 })
 
 func init() {
+
+	core.NewItemEffect(30449, func(agent core.Agent) {
+		warlock := agent.(WarlockAgent).GetWarlock()
+		warlock.AddStat(stats.SpellPower, 48)
+		if warlock.Pet != nil {
+			warlock.Pet.AddStats(stats.Stats{
+				stats.ArcaneResistance: 130,
+				stats.FireResistance:   130,
+				stats.FrostResistance:  130,
+				stats.NatureResistance: 130,
+				stats.ShadowResistance: 130,
+			})
+		}
+	})
+
 	core.NewItemEffect(32493, func(agent core.Agent) {
 		warlock := agent.(WarlockAgent).GetWarlock()
 		procAura := warlock.NewTemporaryStatsAura("Asghtongue Talisman Proc", core.ActionID{SpellID: 40478}, stats.Stats{stats.SpellPower: 220}, time.Second*5)

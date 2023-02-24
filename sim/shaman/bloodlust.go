@@ -1,7 +1,7 @@
 package shaman
 
 import (
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 func (shaman *Shaman) BloodlustActionID() core.ActionID {

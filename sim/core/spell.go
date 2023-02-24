@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 type ApplySpellResults func(sim *Simulation, target *Unit, spell *Spell)

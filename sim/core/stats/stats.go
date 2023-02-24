@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
 type Stats [Len]float64

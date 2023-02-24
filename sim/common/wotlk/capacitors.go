@@ -3,8 +3,8 @@ package wotlk
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
-	//"github.com/Tereneckla/wotlk70/sim/core/stats"
+	"github.com/Tereneckla/wotlk/sim/core"
+	//"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 type CapacitorHandler func(*core.Simulation)
@@ -80,7 +80,20 @@ func newCapacitorDamageEffect(config CapacitorDamageEffect) {
 
 func init() {
 	core.AddEffectsToTest = false
-
+	newCapacitorDamageEffect(CapacitorDamageEffect{
+		Name:      "The Lightning Capacitor",
+		ID:        38072,
+		MaxStacks: 3,
+		Trigger: core.ProcTrigger{
+			Callback: core.CallbackOnSpellHitDealt,
+			ProcMask: core.ProcMaskSpellDamage,
+			Outcome:  core.OutcomeCrit,
+			ICD:      time.Millisecond * 2500,
+		},
+		School: core.SpellSchoolNature,
+		MinDmg: 694,
+		MaxDmg: 806,
+	})
 	newCapacitorDamageEffect(CapacitorDamageEffect{
 		Name:      "Thunder Capacitor",
 		ID:        38072,

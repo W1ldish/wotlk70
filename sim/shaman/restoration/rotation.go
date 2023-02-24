@@ -3,7 +3,7 @@ package restoration
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 func (resto *RestorationShaman) OnGCDReady(sim *core.Simulation) {

@@ -3,7 +3,7 @@ package tank
 import (
 	"time"
 
-	"github.com/Tereneckla/wotlk70/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core"
 )
 
 func (bear *FeralTankDruid) OnGCDReady(sim *core.Simulation) {

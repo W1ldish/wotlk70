@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Tereneckla/wotlk70/sim/core/proto"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
 // Agent can be thought of as the 'Player', i.e. the thing controlling the Character.

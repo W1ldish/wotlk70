@@ -11,13 +11,13 @@ This project is licensed with MIT license. We request that anyone using this sof
 # Downloading Sim
 
 Links for latest Sim build:
-- [Windows Sim](https://github.com/Tereneckla/wotlk70/releases/latest/download/wowsimwotlk-windows.exe.zip)
-- [MacOS Sim](https://github.com/Tereneckla/wotlk70/releases/latest/download/wowsimwotlk-amd64-darwin.zip)
-- [Linux Sim](https://github.com/Tereneckla/wotlk70/releases/latest/download/wowsimwotlk-amd64-linux.zip)
+- [Windows Sim](https://github.com/Tereneckla/wotlk/releases/latest/download/wowsimwotlk-windows.exe.zip)
+- [MacOS Sim](https://github.com/Tereneckla/wotlk/releases/latest/download/wowsimwotlk-amd64-darwin.zip)
+- [Linux Sim](https://github.com/Tereneckla/wotlk/releases/latest/download/wowsimwotlk-amd64-linux.zip)
 
 Then unzip the downloaded file, then open the unzipped file to open the sim in your browser!
 
-Alternatively, you can choose from a specific relase on the [Releases](https://github.com/Tereneckla/wotlk70/releases) page and click the suitable link under "Assets"
+Alternatively, you can choose from a specific relase on the [Releases](https://github.com/Tereneckla/wotlk/releases) page and click the suitable link under "Assets"
 # Local Dev Installation
 
 This project has dependencies on Go >=1.18, protobuf-compiler and the corresponding Go plugins, and node >= 14.0.
@@ -35,7 +35,7 @@ echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
 echo 'export PATH=$PATH:$GOPATH/bin' >> $HOME/.bashrc
 source $HOME/.bashrc
 
-cd wotlk70
+cd wotlk
 
 # Install protobuf compiler and Go plugins
 sudo apt update && sudo apt upgrade
@@ -54,8 +54,8 @@ npm install
 ## Docker
 Alternatively, install Docker and your workflow will look something like this:
 ```sh
-git clone https://github.com/Tereneckla/wotlk70.git
-cd wotlk70
+git clone https://github.com/Tereneckla/wotlk.git
+cd wotlk
 
 # Build the docker image and install npm dependencies (only need to run these once).
 docker build --tag wowsims-wotlk .
