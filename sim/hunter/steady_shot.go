@@ -83,7 +83,7 @@ func (hunter *Hunter) registerSteadyShotSpell() {
 			baseDamage := 0.1*spell.RangedAttackPower(target) +
 				hunter.AutoAttacks.Ranged.BaseDamage(sim)*2.8/hunter.AutoAttacks.Ranged.SwingSpeed +
 				hunter.NormalizedAmmoDamageBonus +
-				108
+				108 + hunter.talonOfAlarActive()
 
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeRangedHitAndCrit)
 			if result.Landed() && impSSProcChance > 0 && sim.RandomFloat("Imp Steady Shot") < impSSProcChance {

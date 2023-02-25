@@ -52,7 +52,32 @@ var ItemSetBeastLord = core.NewItemSet(core.ItemSet{
 	},
 })
 
+func (hunter *Hunter) talonOfAlarActive() float64 {
+	return core.TernaryFloat64(hunter.TalonOfAlarAura != nil && hunter.TalonOfAlarAura.IsActive(), 40, 0)
+}
+
 func init() {
+	core.NewItemEffect(30488, func(agent core.Agent) {
+		hunter := agent.(HunterAgent).GetHunter()
+
+		hunter.TalonOfAlarAura = hunter.RegisterAura(core.Aura{
+			Label:    "Improved Shots",
+			ActionID: core.ActionID{SpellID: 37507},
+			Duration: time.Second * 6,
+		})
+
+		hunter.RegisterAura(core.Aura{
+			Label:    "Talon of Al'ar",
+			Duration: core.NeverExpires,
+			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+				if spell != hunter.ArcaneShot || !result.Landed() {
+					return
+				}
+
+			},
+		})
+	})
+
 	core.NewItemEffect(32336, func(agent core.Agent) {
 		hunter := agent.(HunterAgent).GetHunter()
 		const manaGain = 8.0

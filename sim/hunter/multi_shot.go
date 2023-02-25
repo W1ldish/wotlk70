@@ -53,7 +53,7 @@ func (hunter *Hunter) registerMultiShotSpell(timer *core.Timer) {
 
 			curTarget := target
 			for hitIndex := int32(0); hitIndex < numHits; hitIndex++ {
-				baseDamage := sharedDmg + 0.2*spell.RangedAttackPower(curTarget)
+				baseDamage := sharedDmg + 0.2*spell.RangedAttackPower(curTarget) + hunter.talonOfAlarActive()
 				spell.CalcAndDealDamage(sim, curTarget, baseDamage, spell.OutcomeRangedHitAndCrit)
 
 				curTarget = sim.Environment.NextTargetUnit(curTarget)
