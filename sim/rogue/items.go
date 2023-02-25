@@ -188,7 +188,7 @@ var ItemSetDeathmantle = core.NewItemSet(core.ItemSet{
 			// Your attacks have a chance to make your next finishing move cost no energy.
 			rogue := agent.(RogueAgent).GetRogue()
 
-			rogue.RegisterAura(core.Aura{
+			rogue.DeathmantleProcAura = rogue.RegisterAura(core.Aura{
 				Label:    "Deathmantle 4pc Proc",
 				ActionID: core.ActionID{SpellID: 37171},
 				Duration: time.Second * 15,
@@ -196,7 +196,7 @@ var ItemSetDeathmantle = core.NewItemSet(core.ItemSet{
 
 			ppmm := rogue.AutoAttacks.NewPPMManager(1.0, core.ProcMaskMelee)
 
-			rogue.DeathmantleProcAura = rogue.RegisterAura(core.Aura{
+			rogue.RegisterAura(core.Aura{
 				Label:    "Deathmantle 4pc",
 				Duration: core.NeverExpires,
 				OnReset: func(aura *core.Aura, sim *core.Simulation) {
