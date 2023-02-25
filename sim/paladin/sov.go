@@ -47,7 +47,7 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		DamageMultiplier: 1 *
-			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()),
+			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()) * core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1),
 		ThreatMultiplier: 1,
 
 		Dot: core.DotConfig{
@@ -98,7 +98,8 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() +
 				paladin.getTalentSealsOfThePureBonus() + paladin.getMajorGlyphOfJudgementBonus() + paladin.getTalentTheArtOfWarBonus()) *
-			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()),
+			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
+			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1),
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
 
@@ -110,7 +111,7 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 
 			// i = i * (1 + (0.10 * stacks))
 			baseDamage *= 1 + .1*float64(dotSpell.Dot(target).GetStacks())
-
+			baseDamage += core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
 			// Secondary Judgements cannot miss if the Primary Judgement hit, only roll for crit.
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialCritOnly)
 		},

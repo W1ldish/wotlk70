@@ -25,7 +25,7 @@ func (warlock *Warlock) registerSeedSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.ImprovedDrainSoul),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			dmgFromSP := 0.2129 * spell.SpellPower()
+			dmgFromSP := 0.2129 * (spell.SpellPower() + core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 			for _, aoeTarget := range sim.Encounter.Targets {
 				// Seeded target is not affected by explosion.
 				if &aoeTarget.Unit == target {
@@ -98,7 +98,7 @@ func (warlock *Warlock) registerSeedSpell() {
 			TickLength:    time.Second * 3,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 1044/6 + 0.25*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 1044/6 + 0.25*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {

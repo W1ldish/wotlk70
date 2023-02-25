@@ -33,7 +33,7 @@ func (warlock *Warlock) registerLifeTapSpell() {
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			// Life tap adds 0.5*sp to mana restore
-			restore := baseRestore + 0.5*warlock.GetStat(stats.SpellPower)
+			restore := baseRestore + 0.5*(warlock.GetStat(stats.SpellPower)+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 			warlock.AddMana(sim, restore, manaMetrics)
 
 			if warlock.Talents.ManaFeed {

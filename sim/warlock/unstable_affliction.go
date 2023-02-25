@@ -46,7 +46,7 @@ func (warlock *Warlock) registerUnstableAfflictionSpell() {
 			NumberOfTicks: 5,
 			TickLength:    time.Second * 3,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, _ bool) {
-				dot.SnapshotBaseDamage = 875/5 + spellCoeff*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 875/5 + spellCoeff*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 				attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)

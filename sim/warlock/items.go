@@ -7,6 +7,73 @@ import (
 	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
+var ItemSetOblivionRaiment = core.NewItemSet(core.ItemSet{
+	Name: "Oblivion Raiment",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// in pet.go constructor
+		},
+		4: func(agent core.Agent) {
+			// in seed.go
+		},
+	},
+})
+
+var ItemSetVoidheartRaiment = core.NewItemSet(core.ItemSet{
+	Name: "Voidheart Raiment",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			warlock := agent.(WarlockAgent).GetWarlock()
+
+			shadowBonus := warlock.RegisterAura(core.Aura{
+				Label:    "Shadowflame",
+				Duration: time.Second * 15,
+				ActionID: core.ActionID{SpellID: 37377},
+			})
+
+			fireBonus := warlock.RegisterAura(core.Aura{
+				Label:    "Shadowflame Hellfire",
+				Duration: time.Second * 15,
+				ActionID: core.ActionID{SpellID: 39437},
+			})
+
+			warlock.RegisterAura(core.Aura{
+				Label:    "Voidheart Raiment 2pc",
+				Duration: core.NeverExpires,
+				OnReset: func(aura *core.Aura, sim *core.Simulation) {
+					aura.Activate(sim)
+				},
+				OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
+					if sim.RandomFloat("cycl4p") > 0.05 {
+						return
+					}
+					if spell.SpellSchool.Matches(core.SpellSchoolShadow) {
+						shadowBonus.Activate(sim)
+					}
+					if spell.SpellSchool.Matches(core.SpellSchoolFire) {
+						fireBonus.Activate(sim)
+					}
+				},
+			})
+		},
+		4: func(agent core.Agent) {
+			// implemented in immolate.go and corruption.go
+		},
+	},
+})
+
+var ItemSetCorruptorRaiment = core.NewItemSet(core.ItemSet{
+	Name: "Corruptor Raiment",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// heals pet
+		},
+		4: func(agent core.Agent) {
+			// implemented in immolate.go and corruption.go
+		},
+	},
+})
+
 // T6
 var ItemSetMaleficRaiment = core.NewItemSet(core.ItemSet{
 	Name: "Malefic Raiment",

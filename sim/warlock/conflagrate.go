@@ -61,7 +61,7 @@ func (warlock *Warlock) registerConflagrateSpell() {
 			TickLength:    time.Second * 2,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = dotFlatDamage + dotSpellCoeff*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = dotFlatDamage + dotSpellCoeff*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))
 				attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 				dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
 
@@ -75,7 +75,7 @@ func (warlock *Warlock) registerConflagrateSpell() {
 		},
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := directFlatDamage + directSpellCoeff*spell.SpellPower()
+			baseDamage := directFlatDamage + directSpellCoeff*(spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			if result.Landed() {
 				spell.Dot(target).Apply(sim)

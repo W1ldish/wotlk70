@@ -49,7 +49,8 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 				spell.BonusWeaponDamage()
 			baseDamage := 0.19*mhWeaponDamage +
 				0.08*spell.MeleeAttackPower() +
-				0.13*spell.SpellPower()
+				0.13*spell.SpellPower() +
+				core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
 
 			// Secondary Judgements cannot miss if the Primary Judgement hit, only roll for crit.
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialCritOnly)
@@ -66,6 +67,7 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
+			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1) *
 			0.36, // Only 36% of weapon damage.
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
@@ -98,6 +100,7 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
+			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1) *
 			0.36, // Only 36% of weapon damage.
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,

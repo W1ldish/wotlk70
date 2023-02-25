@@ -10,7 +10,7 @@ func (paladin *Paladin) registerSpiritualAttunement() {
 	}
 
 	// No longer baseline in WotLK, affected by talent points and glyphs. Ignoring the old set bonus here.
-	SpiritualAttunementScalar := (0.05*float64(paladin.Talents.SpiritualAttunement) + core.TernaryFloat64(paladin.HasMajorGlyph(41096), 0.02, 0))
+	SpiritualAttunementScalar := (0.05*float64(paladin.Talents.SpiritualAttunement) + core.TernaryFloat64(paladin.HasMajorGlyph(41096), 0.02, 0)) * core.TernaryFloat64(paladin.HasSetBonus(ItemSetLightbringerArmor, 2), 1.1, 1)
 
 	paladin.SpiritualAttunementMetrics = paladin.NewManaMetrics(core.ActionID{SpellID: 33776})
 

@@ -16,7 +16,7 @@ func (priest *Priest) registerShadowfiendSpell() {
 	priest.ShadowfiendAura = priest.RegisterAura(core.Aura{
 		ActionID: actionID,
 		Label:    "Shadowfiend",
-		Duration: time.Second * 15.0,
+		Duration: time.Second*15.0 + core.TernaryDuration(priest.HasSetBonus(ItemSetIncarnateRegalia, 2), time.Second*3, 0.0),
 		OnGain: func(aura *core.Aura, sim *core.Simulation) {
 			priest.ShadowfiendPet.Enable(sim, priest.ShadowfiendPet)
 		},

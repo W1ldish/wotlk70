@@ -18,7 +18,7 @@ func (paladin *Paladin) registerHolyShieldSpell() {
 		ProcMask:    core.ProcMaskEmpty,
 
 		// DamageMultiplier: 1 + 0.1*float64(paladin.Talents.ImprovedHolyShield),
-		DamageMultiplier: 1,
+		DamageMultiplier: 1 * core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 4), 1.1, 1),
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {

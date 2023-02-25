@@ -36,7 +36,8 @@ func (warlock *Warlock) registerCorruptionSpell() {
 			0.01*float64(warlock.Talents.Contagion) +
 			0.02*float64(warlock.Talents.ImprovedCorruption) +
 			core.TernaryFloat64(warlock.Talents.SiphonLife, 0.05, 0) +
-			core.TernaryFloat64(warlock.HasSetBonus(ItemSetGuldansRegalia, 4), 0.1, 0),
+			core.TernaryFloat64(warlock.HasSetBonus(ItemSetGuldansRegalia, 4), 0.1, 0) +
+			core.TernaryFloat64(warlock.HasSetBonus(ItemSetCorruptorRaiment, 4), 0.05, 0),
 		CritMultiplier:   warlock.SpellCritMultiplier(1, 1),
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.ImprovedDrainSoul),
 
@@ -44,12 +45,12 @@ func (warlock *Warlock) registerCorruptionSpell() {
 			Aura: core.Aura{
 				Label: "Corruption",
 			},
-			NumberOfTicks:       6,
+			NumberOfTicks:       6 + core.TernaryInt32(warlock.HasSetBonus(ItemSetVoidheartRaiment, 4), 1, 0),
 			TickLength:          time.Second * 3,
 			AffectedByCastSpeed: warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfQuickDecay),
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 900/6 + spellCoeff*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 900/6 + spellCoeff*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 				if !isRollover {
 					attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
 					dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)

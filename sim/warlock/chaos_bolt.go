@@ -43,7 +43,8 @@ func (warlock *Warlock) registerChaosBoltSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(1077, 1367) + spellCoeff*spell.SpellPower()
+			shadowflame := core.MaxFloat(core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0), core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))
+			baseDamage := sim.Roll(1077, 1367) + spellCoeff*(spell.SpellPower()+shadowflame)
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicCrit)
 		},
 	})

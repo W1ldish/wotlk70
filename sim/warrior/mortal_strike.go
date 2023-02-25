@@ -19,7 +19,7 @@ func (warrior *Warrior) registerMortalStrikeSpell(cdTimer *core.Timer) {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
 
 		RageCost: core.RageCostOptions{
-			Cost:   30,
+			Cost:   30 - core.TernaryFloat64(warrior.HasSetBonus(ItemSetDestroyerBattlegear, 2), 5, 0),
 			Refund: 0.8,
 		},
 		Cast: core.CastConfig{

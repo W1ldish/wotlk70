@@ -53,7 +53,7 @@ func (warlock *Warlock) registerShadowBurnSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(597, 665) + spellCoeff*spell.SpellPower()
+			baseDamage := sim.Roll(597, 665) + spellCoeff*(spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 		},
 	})

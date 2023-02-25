@@ -8,6 +8,29 @@ import (
 	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
+var ItemSetJusticarBattlegear = core.NewItemSet(core.ItemSet{
+	Name: "Justicar Battlegear",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// sim/debuffs.go handles this (and paladin/judgement.go)
+		},
+		4: func(agent core.Agent) {
+			// TODO: if we ever implemented judgement of command, add bonus from 4p
+		},
+	},
+})
+var ItemSetCrystalforgeBattlegear = core.NewItemSet(core.ItemSet{
+	Name: "Crystalforge Battlegear",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// judgement.go
+		},
+		4: func(agent core.Agent) {
+			// TODO: if we implement healing, this heals party.
+		},
+	},
+})
+
 // Tier 6 ret
 var ItemSetLightbringerBattlegear = core.NewItemSet(core.ItemSet{
 	Name: "Lightbringer Battlegear",
@@ -145,6 +168,76 @@ var ItemSetGladiatorsVindication = core.NewItemSet(core.ItemSet{
 			paladin := agent.(PaladinAgent).GetPaladin()
 			paladin.AddStat(stats.AttackPower, 150)
 			// Rest implemented in judgement.go
+		},
+	},
+})
+var ItemSetJusticarArmor = core.NewItemSet(core.ItemSet{
+	Name: "Justicar Armor",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// Increases the damage dealt by your Seal of Righteousness, Seal of
+			// Vengeance, and Seal of Corruption by 10%.
+			// Implemented in seals.go.
+		},
+		4: func(agent core.Agent) {
+			// Increases the damage dealt by Holy Shield by 15.
+			// Implemented in holy_shield.go.
+		},
+	},
+})
+
+var ItemSetCrystalforgeArmor = core.NewItemSet(core.ItemSet{
+	Name: "Crystalforge Armor",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// Increases the damage from your Retribution Aura by 15.
+			// TODO
+		},
+		4: func(agent core.Agent) {
+			// Each time you use your Holy Shield ability, you gain 100 Block Value
+			// against a single attack in the next 6 seconds.
+			paladin := agent.(PaladinAgent).GetPaladin()
+
+			procAura := paladin.RegisterAura(core.Aura{
+				Label:    "Crystalforge 4pc Proc",
+				ActionID: core.ActionID{SpellID: 37191},
+				Duration: time.Second * 6,
+				OnGain: func(aura *core.Aura, sim *core.Simulation) {
+					paladin.AddStatDynamic(sim, stats.BlockValue, 100)
+				},
+				OnExpire: func(aura *core.Aura, sim *core.Simulation) {
+					paladin.AddStatDynamic(sim, stats.BlockValue, -100)
+				},
+				OnSpellHitTaken: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, spellEffect *core.SpellResult) {
+					if spellEffect.Outcome.Matches(core.OutcomeBlock) {
+						aura.Deactivate(sim)
+					}
+				},
+			})
+
+			paladin.RegisterAura(core.Aura{
+				Label:    "Crystalforge 2pc",
+				Duration: core.NeverExpires,
+				OnReset: func(aura *core.Aura, sim *core.Simulation) {
+					aura.Activate(sim)
+				},
+				OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
+					if spell == paladin.HolyShield {
+						procAura.Activate(sim)
+					}
+				},
+			})
+		},
+	},
+})
+var ItemSetLightbringerArmor = core.NewItemSet(core.ItemSet{
+	Name: "Lightbringer Armor",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// Increases the mana gained from your Spiritual Attunement ability by 10%.
+		},
+		4: func(agent core.Agent) {
+			// Increases the damage dealt by Consecration by 10%.
 		},
 	},
 })

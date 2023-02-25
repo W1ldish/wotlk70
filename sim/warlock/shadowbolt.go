@@ -50,7 +50,7 @@ func (warlock *Warlock) registerShadowBoltSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(541+3.4, 603+3.4) + spellCoeff*spell.SpellPower()
+			baseDamage := sim.Roll(541+3.4, 603+3.4) + spellCoeff*(spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {
 				spell.DealDamage(sim, result)

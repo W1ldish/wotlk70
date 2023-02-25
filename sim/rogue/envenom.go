@@ -11,6 +11,7 @@ func (rogue *Rogue) registerEnvenom() {
 	if rogue.HasSetBonus(ItemSetAssassination, 4) {
 		cost -= 10
 	}
+	deathMantleDamage := core.TernaryFloat64(rogue.HasSetBonus(ItemSetDeathmantle, 2), 40, 0)
 	rogue.EnvenomAura = rogue.RegisterAura(core.Aura{
 		Label:    "Envenom",
 		ActionID: core.ActionID{SpellID: 57993},
@@ -45,6 +46,10 @@ func (rogue *Rogue) registerEnvenom() {
 			IgnoreHaste: true,
 			ModifyCast: func(sim *core.Simulation, spell *core.Spell, cast *core.Cast) {
 				spell.SetMetricsSplit(spell.Unit.ComboPoints())
+				if rogue.deathmantleActive() {
+					cast.Cost = 0
+					rogue.DeathmantleProcAura.Deactivate(sim)
+				}
 			},
 		},
 		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
@@ -69,7 +74,7 @@ func (rogue *Rogue) registerEnvenom() {
 			// - 215 base is scaled by consumed doses (<= comboPoints)
 			// - apRatio is independent of consumed doses (== comboPoints)
 			consumed := core.MinInt32(dp.GetStacks(), comboPoints)
-			baseDamage := 147*float64(consumed) + 0.09*float64(comboPoints)*spell.MeleeAttackPower()
+			baseDamage := 147*float64(consumed) + 0.09*float64(comboPoints)*spell.MeleeAttackPower() + deathMantleDamage*float64(comboPoints)
 
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 

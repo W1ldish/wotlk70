@@ -35,7 +35,7 @@ func (warlock *Warlock) registerSoulFireSpell() {
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := sim.Roll(1003, 1257) + 1.15*spell.SpellPower()
+			baseDamage := sim.Roll(1003, 1257) + 1.15*(spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {
 				spell.DealDamage(sim, result)

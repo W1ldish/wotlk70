@@ -57,7 +57,8 @@ func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
 			core.TernaryFloat64(priest.HasSetBonus(ItemSetZabras, 4), 5, 0)*core.CritRatingPerCritChance,
 		DamageMultiplier: 1 +
 			0.02*float64(priest.Talents.Darkness) +
-			0.01*float64(priest.Talents.TwinDisciplines),
+			0.01*float64(priest.Talents.TwinDisciplines) +
+			core.TernaryFloat64(priest.HasSetBonus(ItemSetIncarnateRegalia, 4), 0.05, 0),
 		CritMultiplier:   priest.SpellCritMultiplier(1, float64(priest.Talents.ShadowPower)/5),
 		ThreatMultiplier: 1 - 0.08*float64(priest.Talents.ShadowAffinity),
 

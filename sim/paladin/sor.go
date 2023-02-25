@@ -44,7 +44,8 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 			// i = 1 + 0.2 * AP + 0.32 * HolP
 			baseDamage := 1 +
 				.20*spell.MeleeAttackPower() +
-				.32*spell.SpellPower()
+				.32*spell.SpellPower() +
+				core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
 
 			// Secondary Judgements cannot miss if the Primary Judgement hit, only roll for crit.
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialCritOnly)
@@ -60,7 +61,8 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()) *
 			(1 + paladin.getMajorGlyphSealOfRighteousnessBonus()) *
-			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()),
+			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
+			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1),
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {

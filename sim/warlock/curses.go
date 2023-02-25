@@ -150,7 +150,7 @@ func (warlock *Warlock) registerCurseOfAgonySpell() {
 			TickLength:    time.Second * 2,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
 				// Ignored: CoA ramp up effect
-				dot.SnapshotBaseDamage = totalBaseDmg/float64(numberOfTicks) + 0.1*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = totalBaseDmg/float64(numberOfTicks) + 0.1*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
@@ -200,7 +200,7 @@ func (warlock *Warlock) registerCurseOfDoomSpell() {
 			NumberOfTicks: 1,
 			TickLength:    time.Minute,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 4200 + 2*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 4200 + 2*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0))
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {

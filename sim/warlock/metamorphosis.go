@@ -83,7 +83,7 @@ func (warlock *Warlock) registerImmolationAuraSpell() {
 			TickLength:          time.Second * 1,
 			AffectedByCastSpeed: true,
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				baseDmg := (366 + 20*11.5 + 0.143*dot.Spell.SpellPower()) * sim.Encounter.AOECapMultiplier()
+				baseDmg := (366 + 20*11.5 + 0.143*(dot.Spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))) * sim.Encounter.AOECapMultiplier()
 				for _, aoeTarget := range sim.Encounter.Targets {
 					dot.Spell.CalcAndDealDamage(sim, &aoeTarget.Unit, baseDmg, dot.Spell.OutcomeMagicHit)
 				}

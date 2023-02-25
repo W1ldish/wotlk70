@@ -161,11 +161,11 @@ func (shaman *Shaman) ApplyFlametongueImbueToItem(item *core.Item, isDownranked 
 		return
 	}
 
-	spBonus := 96.0
+	spBonus := 96.0 + core.TernaryFloat64(shaman.HasSetBonus(ItemSetCycloneRegalia, 2), 20, 0)
 	spMod := 1.0 + 0.1*float64(shaman.Talents.ElementalWeapons)
 	id := 3781
 	if isDownranked {
-		spBonus = 45.0
+		spBonus = 45.0 + core.TernaryFloat64(shaman.HasSetBonus(ItemSetCycloneRegalia, 2), 20, 0)
 		id = 3780
 	}
 

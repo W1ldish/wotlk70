@@ -177,6 +177,77 @@ var ItemSetSlayers = core.NewItemSet(core.ItemSet{
 	},
 })
 
+var ItemSetDeathmantle = core.NewItemSet(core.ItemSet{
+	Name: "Deathmantle",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// Your Eviscerate and Envenom abilities cause 40 extra damage per combo point.
+			// Handled in eviscerate.go.
+		},
+		4: func(agent core.Agent) {
+			// Your attacks have a chance to make your next finishing move cost no energy.
+			rogue := agent.(RogueAgent).GetRogue()
+
+			rogue.RegisterAura(core.Aura{
+				Label:    "Deathmantle 4pc Proc",
+				ActionID: core.ActionID{SpellID: 37171},
+				Duration: time.Second * 15,
+			})
+
+			ppmm := rogue.AutoAttacks.NewPPMManager(1.0, core.ProcMaskMelee)
+
+			rogue.RegisterAura(core.Aura{
+				Label:    "Deathmantle 4pc",
+				Duration: core.NeverExpires,
+				OnReset: func(aura *core.Aura, sim *core.Simulation) {
+					aura.Activate(sim)
+				},
+				OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+					if !result.Landed() {
+						return
+					}
+
+					// https://tbc.wowhead.com/spell=37170/free-finisher-chance, proc mask = 20.
+					if !spell.ProcMask.Matches(core.ProcMaskMelee) {
+						return
+					}
+
+					if !ppmm.Proc(sim, spell.ProcMask, "Deathmantle 4pc") {
+						return
+					}
+
+					rogue.DeathmantleProcAura.Activate(sim)
+				},
+			})
+		},
+	},
+})
+
+func (rogue *Rogue) deathmantleActive() bool {
+	return rogue.DeathmantleProcAura != nil && rogue.DeathmantleProcAura.IsActive()
+}
+
+func (rogue *Rogue) applyDeathmantle(sim *core.Simulation, _ *core.Spell, cast *core.Cast) {
+	if rogue.deathmantleActive() {
+		cast.Cost = 0
+		rogue.DeathmantleProcAura.Deactivate(sim)
+	}
+}
+
+var ItemSetNetherblade = core.NewItemSet(core.ItemSet{
+	Name: "Netherblade",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			// Increases the duration of your Slice and Dice ability by 3 sec.
+			// Handled in slice_and_dice.go.
+		},
+		4: func(agent core.Agent) {
+			// Your finishing moves have a 15% chance to grant you an extra combo point.
+			// Handled in talents.go.
+		},
+	},
+})
+
 func init() {
 	core.NewItemEffect(32492, func(agent core.Agent) {
 		rogue := agent.(RogueAgent).GetRogue()

@@ -70,6 +70,8 @@ func getRelentlessStrikesSpellID(talentPoints int32) int32 {
 func (rogue *Rogue) makeFinishingMoveEffectApplier() func(sim *core.Simulation, numPoints int32) {
 	ruthlessnessMetrics := rogue.NewComboPointMetrics(core.ActionID{SpellID: 14161})
 	relentlessStrikesMetrics := rogue.NewEnergyMetrics(core.ActionID{SpellID: getRelentlessStrikesSpellID(rogue.Talents.RelentlessStrikes)})
+	netherblade4pc := rogue.HasSetBonus(ItemSetNetherblade, 4)
+	netherblade4pcMetrics := rogue.NewComboPointMetrics(core.ActionID{SpellID: 37168})
 
 	return func(sim *core.Simulation, numPoints int32) {
 		if t := rogue.Talents.Ruthlessness; t > 0 {
@@ -82,7 +84,11 @@ func (rogue *Rogue) makeFinishingMoveEffectApplier() func(sim *core.Simulation, 
 				rogue.AddEnergy(sim, 25, relentlessStrikesMetrics)
 			}
 		}
+		if netherblade4pc && sim.RandomFloat("Netherblade 4pc") < 0.15 {
+			rogue.AddComboPoints(sim, 1, netherblade4pcMetrics)
+		}
 	}
+
 }
 
 func (rogue *Rogue) makeCostModifier() func(baseCost float64) float64 {

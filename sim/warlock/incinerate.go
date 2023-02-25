@@ -43,9 +43,9 @@ func (warlock *Warlock) registerIncinerateSpell() {
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			var baseDamage float64
 			if warlock.Immolate.Dot(target).IsActive() {
-				baseDamage = sim.Roll(444+111, 514+128.5) + spellCoeff*spell.SpellPower()
+				baseDamage = sim.Roll(444+111, 514+128.5) + spellCoeff*(spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))
 			} else {
-				baseDamage = sim.Roll(444, 514) + spellCoeff*spell.SpellPower()
+				baseDamage = sim.Roll(444, 514) + spellCoeff*(spell.SpellPower()+core.TernaryFloat64(warlock.HasActiveAura("Shadowflame Hellfire"), 135, 0))
 			}
 
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)

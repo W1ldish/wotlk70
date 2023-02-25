@@ -108,6 +108,7 @@ type Rogue struct {
 	ShadowDanceAura      *core.Aura
 	DirtyDeedsAura       *core.Aura
 	HonorAmongThieves    *core.Aura
+	DeathmantleProcAura  *core.Aura
 
 	masterPoisonerDebuffAuras []*core.Aura
 	savageCombatDebuffAuras   []*core.Aura
