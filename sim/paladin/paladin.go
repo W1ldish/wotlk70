@@ -185,7 +185,7 @@ func NewPaladin(character core.Character, talentsStr string) *Paladin {
 	paladin.AddStat(stats.AttackPower, -20)
 	paladin.AddStatDependency(stats.Intellect, stats.SpellCrit, (1/80.5)*core.CritRatingPerCritChance)
 	// Paladins get 1% crit per 52.08 agil
-	paladin.AddStatDependency(stats.Agility, stats.MeleeCrit, (1.0/52.08)*core.CritRatingPerCritChance)
+	paladin.AddStatDependency(stats.Agility, stats.MeleeCrit, (1.0/25)*core.CritRatingPerCritChance)
 
 	// Paladins get 1% dodge per 52.08 agil
 	paladin.AddStatDependency(stats.Agility, stats.Dodge, (1.0/25)*core.DodgeRatingPerDodgeChance)
@@ -209,52 +209,58 @@ func (paladin *Paladin) GetMutualLockoutDPAW() *core.Timer {
 }
 
 func init() {
+	const basecrit = 3.29 * core.CritRatingPerCritChance
+	const basespellcrit = 3.336 * core.CritRatingPerCritChance
+	const basehealth = 3377
+	const basemana = 2953
+	const baseap = core.CharacterLevel * 3
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassPaladin}] = stats.Stats{
-		stats.Health:      3377,
-		stats.Stamina:     143,
-		stats.Intellect:   101,
-		stats.Mana:        2953,
-		stats.Spirit:      103,
-		stats.Strength:    148,
-		stats.AttackPower: 240,
-		stats.Agility:     92,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.Health:      basehealth,
+		stats.Stamina:     120,
+		stats.Intellect:   86,
+		stats.Mana:        basemana,
+		stats.Spirit:      87,
+		stats.Strength:    123,
+		stats.AttackPower: baseap,
+		stats.Agility:     79,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassPaladin}] = stats.Stats{
-		stats.Health:      3377,
-		stats.Stamina:     143,
-		stats.Intellect:   98,
-		stats.Mana:        2953,
-		stats.Spirit:      107,
-		stats.Strength:    152,
-		stats.AttackPower: 240,
-		stats.Agility:     87,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.Health:      basehealth,
+		stats.Stamina:     120,
+		stats.Intellect:   83,
+		stats.Mana:        basemana,
+		stats.Spirit:      91,
+		stats.Strength:    127,
+		stats.AttackPower: baseap,
+		stats.Agility:     74,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin}] = stats.Stats{
-		stats.Health:      3377,
-		stats.Stamina:     143,
-		stats.Intellect:   98,
-		stats.Mana:        2953,
-		stats.Spirit:      105,
-		stats.Strength:    151,
-		stats.AttackPower: 240,
-		stats.Agility:     90,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.Health:      basehealth,
+		stats.Stamina:     120,
+		stats.Intellect:   83,
+		stats.Mana:        basemana,
+		stats.Spirit:      89,
+		stats.Strength:    126,
+		stats.AttackPower: baseap,
+		stats.Agility:     77,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDwarf, Class: proto.Class_ClassPaladin}] = stats.Stats{
-		stats.Health:      3377,
-		stats.Stamina:     144,
-		stats.Intellect:   97,
-		stats.Mana:        2953,
-		stats.Spirit:      104,
-		stats.Strength:    156,
-		stats.AttackPower: 240,
-		stats.Agility:     86,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.Health:      basehealth,
+		stats.Stamina:     121,
+		stats.Intellect:   82,
+		stats.Mana:        basemana,
+		stats.Spirit:      88,
+		stats.Strength:    131,
+		stats.AttackPower: baseap,
+		stats.Agility:     73,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 }

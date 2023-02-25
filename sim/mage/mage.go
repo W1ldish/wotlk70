@@ -214,65 +214,70 @@ func NewMage(character core.Character, options *proto.Player) *Mage {
 }
 
 func init() {
+	//const basecrit = 7.84 * core.CritRatingPerCritChance
+	const basespellcrit = 0.91 * core.CritRatingPerCritChance
+	const basehealth = 3393
+	const basemana = 2241
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3393,
+		stats.Health:    basehealth,
 		stats.Strength:  30,
 		stats.Agility:   41,
 		stats.Stamina:   51,
 		stats.Intellect: 154,
 		stats.Spirit:    143,
-		stats.Mana:      2241,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.Mana:      basemana,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3393,
+		stats.Health:    basehealth,
 		stats.Strength:  34,
 		stats.Agility:   36,
 		stats.Stamina:   51,
 		stats.Intellect: 151,
 		stats.Spirit:    147,
-		stats.Mana:      2241,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.Mana:      basemana,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceGnome, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3393,
+		stats.Health:    basehealth,
 		stats.Strength:  28,
 		stats.Agility:   41,
 		stats.Stamina:   51,
 		stats.Intellect: 154, // Gnomes start with 162 int, we assume this include racial so / 1.05
 		stats.Spirit:    145,
-		stats.Mana:      2241,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.Mana:      basemana,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3393,
+		stats.Health:    basehealth,
 		stats.Strength:  33,
 		stats.Agility:   39,
 		stats.Stamina:   51,
 		stats.Intellect: 151,
 		stats.Spirit:    145,
-		stats.Mana:      2241,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.Mana:      basemana,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3393,
+		stats.Health:    basehealth,
 		stats.Strength:  34,
 		stats.Agility:   41,
 		stats.Stamina:   51,
 		stats.Intellect: 147,
 		stats.Spirit:    146,
-		stats.Mana:      2241,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.Mana:      basemana,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceUndead, Class: proto.Class_ClassMage}] = stats.Stats{
-		stats.Health:    3393,
+		stats.Health:    basehealth,
 		stats.Strength:  32,
 		stats.Agility:   37,
 		stats.Stamina:   51,
 		stats.Intellect: 149,
 		stats.Spirit:    150,
-		stats.Mana:      2241,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.Mana:      basemana,
+		stats.SpellCrit: basespellcrit,
 	}
 }
 

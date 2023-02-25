@@ -9,7 +9,7 @@ character_stats_results: {
   final_stats: 531.3474
   final_stats: 49.2
   final_stats: 0
-  final_stats: 387.41344
+  final_stats: 424.94944
   final_stats: 160
   final_stats: 0
   final_stats: 1134.925
@@ -29,7 +29,7 @@ character_stats_results: {
   final_stats: 0
   final_stats: 0
   final_stats: 0
-  final_stats: 6391.6959
+  final_stats: 6275.3059
   final_stats: 35
   final_stats: 35
   final_stats: 35
@@ -46,105 +46,105 @@ character_stats_results: {
 dps_results: {
  key: "TestDemonology-AllItems-AshtongueTalismanofShadows-32493"
  value: {
-  dps: 2217.55094
-  tps: 1625.69438
+  dps: 2229.07488
+  tps: 1637.21831
  }
 }
 dps_results: {
  key: "TestDemonology-AllItems-CorruptorRaiment"
  value: {
-  dps: 2677.31735
-  tps: 2000.03279
+  dps: 2692.56645
+  tps: 2015.2819
  }
 }
 dps_results: {
  key: "TestDemonology-AllItems-Gladiator'sFelshroud"
  value: {
-  dps: 2544.16872
-  tps: 1916.46655
+  dps: 2556.82941
+  tps: 1929.12724
  }
 }
 dps_results: {
  key: "TestDemonology-AllItems-MaleficRaiment"
  value: {
-  dps: 3237.05776
-  tps: 2493.64074
+  dps: 3259.06576
+  tps: 2515.64874
  }
 }
 dps_results: {
  key: "TestDemonology-AllItems-OblivionRaiment"
  value: {
-  dps: 2449.89874
-  tps: 1809.54073
+  dps: 2465.36287
+  tps: 1825.00487
  }
 }
 dps_results: {
  key: "TestDemonology-AllItems-VoidStarTalisman-30449"
  value: {
-  dps: 2177.13996
-  tps: 1589.59137
+  dps: 2188.24694
+  tps: 1600.69835
  }
 }
 dps_results: {
  key: "TestDemonology-AllItems-VoidheartRaiment"
  value: {
-  dps: 2599.9961
-  tps: 1941.55097
+  dps: 2617.39723
+  tps: 1958.9521
  }
 }
 dps_results: {
  key: "TestDemonology-Average-Default"
  value: {
-  dps: 2159.45623
-  tps: 1574.53271
+  dps: 2173.77018
+  tps: 1588.84666
  }
 }
 dps_results: {
  key: "TestDemonology-Settings-Orc-P1-Demonology Warlock-FullBuffs-LongMultiTarget"
  value: {
-  dps: 3278.24808
-  tps: 4240.37781
+  dps: 3291.79433
+  tps: 4253.92406
  }
 }
 dps_results: {
  key: "TestDemonology-Settings-Orc-P1-Demonology Warlock-FullBuffs-LongSingleTarget"
  value: {
-  dps: 2134.48838
-  tps: 1553.08813
+  dps: 2146.14691
+  tps: 1564.74666
  }
 }
 dps_results: {
  key: "TestDemonology-Settings-Orc-P1-Demonology Warlock-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 2649.35966
-  tps: 1965.99764
+  dps: 2665.93775
+  tps: 1982.57573
  }
 }
 dps_results: {
  key: "TestDemonology-Settings-Orc-P1-Demonology Warlock-NoBuffs-LongMultiTarget"
  value: {
-  dps: 1687.97118
-  tps: 3085.60329
+  dps: 1693.04076
+  tps: 3090.67287
  }
 }
 dps_results: {
  key: "TestDemonology-Settings-Orc-P1-Demonology Warlock-NoBuffs-LongSingleTarget"
  value: {
-  dps: 947.99715
-  tps: 828.77174
+  dps: 955.5159
+  tps: 836.29049
  }
 }
 dps_results: {
  key: "TestDemonology-Settings-Orc-P1-Demonology Warlock-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 938.77323
-  tps: 793.38578
+  dps: 942.62304
+  tps: 797.23558
  }
 }
 dps_results: {
  key: "TestDemonology-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 2036.67749
-  tps: 1550.61993
+  dps: 2048.13188
+  tps: 1562.07432
  }
 }

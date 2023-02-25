@@ -309,101 +309,107 @@ func (rogue *Rogue) CanMutilate() bool {
 }
 
 func init() {
+	const basecrit = -0.29 * core.CritRatingPerCritChance
+	const basespellcrit = 0 * core.CritRatingPerCritChance
+	const basehealth = 3704
+	//const basemana = 2953
+	const baseap = core.CharacterLevel * 2
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  92,
 		stats.Agility:   160,
 		stats.Stamina:   89,
 		stats.Intellect: 42,
 		stats.Spirit:    56,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDwarf, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  100,
 		stats.Agility:   154,
 		stats.Stamina:   90,
 		stats.Intellect: 38,
 		stats.Spirit:    57,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceGnome, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  90,
 		stats.Agility:   160,
 		stats.Stamina:   89,
 		stats.Intellect: 42,
 		stats.Spirit:    58,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  95,
 		stats.Agility:   158,
 		stats.Stamina:   89,
 		stats.Intellect: 39,
 		stats.Spirit:    58,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceNightElf, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  91,
 		stats.Agility:   162,
 		stats.Stamina:   89,
 		stats.Intellect: 39,
 		stats.Spirit:    58,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceOrc, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  98,
 		stats.Agility:   155,
 		stats.Stamina:   90,
 		stats.Intellect: 36,
 		stats.Spirit:    60,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  96,
 		stats.Agility:   160,
 		stats.Stamina:   89,
 		stats.Intellect: 35,
 		stats.Spirit:    59,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceUndead, Class: proto.Class_ClassRogue}] = stats.Stats{
-		stats.Health:    3704,
+		stats.Health:    basehealth,
 		stats.Strength:  94,
 		stats.Agility:   156,
 		stats.Stamina:   89,
 		stats.Intellect: 37,
 		stats.Spirit:    63,
 
-		stats.AttackPower: 140,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
+		stats.SpellCrit:   basespellcrit,
 	}
 }
 

@@ -226,7 +226,7 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	if raidBuffs.WrathOfAirTotem {
 		character.PseudoStats.CastSpeedMultiplier *= 1.05
 	}
-	if raidBuffs.StrengthOfEarthTotem > 0 || raidBuffs.HornOfWinter {
+	if raidBuffs.StrengthOfEarthTotem > 0 {
 		val := MaxTristate(proto.TristateEffect_TristateEffectRegular, raidBuffs.StrengthOfEarthTotem)
 		bonus := GetTristateValueFloat(val, 86, 86*1.15)
 		character.AddStats(stats.Stats{

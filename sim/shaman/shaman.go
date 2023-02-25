@@ -373,52 +373,58 @@ func (shaman *Shaman) ElementalCritMultiplier(secondary float64) float64 {
 }
 
 func init() {
+	const basecrit = 2.93 * core.CritRatingPerCritChance
+	const basespellcrit = 2.2 * core.CritRatingPerCritChance
+	const basehealth = 3380
+	const basemana = 2620
+	const baseap = core.CharacterLevel * 2
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassShaman}] = stats.Stats{
-		stats.Health:      3380,
+		stats.Health:      basehealth,
 		stats.Strength:    103,
 		stats.Agility:     61,
 		stats.Stamina:     114,
 		stats.Intellect:   108,
 		stats.Spirit:      122,
-		stats.Mana:        2620,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
-		stats.AttackPower: 140, // TODO: confirm this.
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.Mana:        basemana,
+		stats.SpellCrit:   basespellcrit,
+		stats.AttackPower: baseap, // TODO: confirm this.
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceOrc, Class: proto.Class_ClassShaman}] = stats.Stats{
-		stats.Health:      3380,
+		stats.Health:      basehealth,
 		stats.Strength:    105,
 		stats.Agility:     61,
 		stats.Stamina:     115,
 		stats.Intellect:   105,
 		stats.Spirit:      122,
-		stats.Mana:        2620,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
-		stats.AttackPower: 140, // TODO: confirm this.
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.Mana:        basemana,
+		stats.SpellCrit:   basespellcrit,
+		stats.AttackPower: baseap, // TODO: confirm this.
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTauren, Class: proto.Class_ClassShaman}] = stats.Stats{
-		stats.Health:      3380,
+		stats.Health:      basehealth,
 		stats.Strength:    107,
 		stats.Agility:     60,
 		stats.Stamina:     115,
 		stats.Intellect:   104,
 		stats.Spirit:      122,
-		stats.Mana:        2620,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
-		stats.AttackPower: 140, // TODO: confirm this.
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.Mana:        basemana,
+		stats.SpellCrit:   basespellcrit,
+		stats.AttackPower: baseap, // TODO: confirm this.
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassShaman}] = stats.Stats{
-		stats.Health:      3380,
+		stats.Health:      basehealth,
 		stats.Strength:    103,
 		stats.Agility:     66,
 		stats.Stamina:     114,
 		stats.Intellect:   104,
 		stats.Spirit:      121,
-		stats.Mana:        2620,
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance,
-		stats.AttackPower: 140, // TODO: confirm this.
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.Mana:        basemana,
+		stats.SpellCrit:   basespellcrit,
+		stats.AttackPower: baseap, // TODO: confirm this.
+		stats.MeleeCrit:   basecrit,
 	}
 }

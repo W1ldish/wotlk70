@@ -9,7 +9,7 @@ character_stats_results: {
   final_stats: 391.032
   final_stats: 49.2
   final_stats: 0
-  final_stats: 110.4
+  final_stats: 137.7792
   final_stats: 0
   final_stats: 0
   final_stats: 849.2
@@ -18,7 +18,7 @@ character_stats_results: {
   final_stats: 0
   final_stats: 0
   final_stats: 0
-  final_stats: 5682.9
+  final_stats: 6015.9
   final_stats: 0
   final_stats: 0
   final_stats: 5660.8
@@ -46,630 +46,630 @@ character_stats_results: {
 dps_results: {
  key: "TestShadow-AllItems-AbsolutionRegalia"
  value: {
-  dps: 2247.98926
-  tps: 2188.83738
+  dps: 2241.53551
+  tps: 2187.59839
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-AshtongueTalismanofAcumen-32490"
  value: {
-  dps: 1000.54783
-  tps: 974.28539
+  dps: 927.00782
+  tps: 901.86364
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-AvatarRegalia"
  value: {
-  dps: 1843.94574
-  tps: 1799.07407
+  dps: 1716.67707
+  tps: 1673.75211
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-BandoftheEternalSage-29305"
  value: {
-  dps: 1051.07198
-  tps: 1026.16772
+  dps: 985.99777
+  tps: 962.06138
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-BlackenedNaaruSliver-34427"
  value: {
-  dps: 973.99854
-  tps: 951.18619
+  dps: 903.43716
+  tps: 881.24457
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-BlackoutTruncheon-27901"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
-  dps: 1406.94573
-  tps: 1375.03575
+  dps: 1353.56962
+  tps: 1325.28246
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-CloakofDarkness-33122"
  value: {
-  dps: 956.33279
-  tps: 931.59685
+  dps: 904.79405
+  tps: 882.41391
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-DeathKnight'sAnguish-38212"
  value: {
-  dps: 964.88462
-  tps: 940.04892
+  dps: 910.42084
+  tps: 888.21911
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Dragonmaw-28438"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-DragonspineTrophy-28830"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Dragonstrike-28439"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-DrakeFangTalisman-19406"
  value: {
-  dps: 975.31522
-  tps: 949.03383
+  dps: 913.46878
+  tps: 887.39246
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-DrakefistHammer-28437"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-EarringofSoulfulMeditation-30665"
  value: {
-  dps: 1001.31058
-  tps: 974.02444
+  dps: 943.75766
+  tps: 918.17735
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-EmpyreanDemolisher-17112"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-EyeofMagtheridon-28789"
  value: {
-  dps: 1094.49693
-  tps: 1057.80778
+  dps: 1006.43846
+  tps: 970.52223
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Gladiator'sInvestiture"
  value: {
-  dps: 1451.78053
-  tps: 1416.43756
+  dps: 1387.05685
+  tps: 1353.5381
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Gladiator'sRaiment"
  value: {
-  dps: 1455.93975
-  tps: 1418.10161
+  dps: 1381.97314
+  tps: 1347.66648
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-IncarnateRaiment"
  value: {
-  dps: 1654.78982
-  tps: 1612.94172
+  dps: 1542.63311
+  tps: 1504.26967
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-MadnessoftheBetrayer-32505"
  value: {
-  dps: 975.31522
-  tps: 949.03383
+  dps: 913.46878
+  tps: 887.39246
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Mana-EtchedRegalia"
  value: {
-  dps: 1391.9427
-  tps: 1358.16782
+  dps: 1327.64017
+  tps: 1296.49146
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Quagmirran'sEye-27683"
  value: {
-  dps: 998.78509
-  tps: 971.8743
+  dps: 934.93487
+  tps: 909.75479
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-RingoftheFallenGod-21709"
  value: {
-  dps: 1004.80279
-  tps: 978.86459
+  dps: 956.51616
+  tps: 931.49579
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-RobeoftheElderScribes-28602"
  value: {
-  dps: 1085.90135
-  tps: 1060.31469
+  dps: 1009.17131
+  tps: 984.53335
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-SextantofUnstableCurrents-30626"
  value: {
-  dps: 1007.79465
-  tps: 980.52144
+  dps: 946.08515
+  tps: 920.77339
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-ShardofContempt-34472"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
-  dps: 991.36204
-  tps: 963.86963
+  dps: 937.72218
+  tps: 913.32626
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-SpellstrikeInfusion"
  value: {
-  dps: 1174.46649
-  tps: 1137.39276
+  dps: 1092.13847
+  tps: 1056.31756
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-TsunamiTalisman-30627"
  value: {
-  dps: 973.38078
-  tps: 946.80212
+  dps: 922.56216
+  tps: 898.58643
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-VestmentsofAbsolution"
  value: {
-  dps: 2068.80274
-  tps: 2014.08086
+  dps: 2047.85269
+  tps: 1997.76432
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-Warp-SpringCoil-30450"
  value: {
-  dps: 972.97271
-  tps: 946.62796
+  dps: 913.97434
+  tps: 887.66257
  }
 }
 dps_results: {
  key: "TestShadow-AllItems-WrathofSpellfire"
  value: {
-  dps: 1220.02788
-  tps: 1186.19601
+  dps: 1147.57268
+  tps: 1116.31438
  }
 }
 dps_results: {
  key: "TestShadow-Average-Default"
  value: {
-  dps: 960.24961
-  tps: 934.79842
+  dps: 904.92595
+  tps: 881.44233
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Basic-FullBuffs-LongMultiTarget"
  value: {
-  dps: 992.25984
-  tps: 1691.86143
+  dps: 933.38811
+  tps: 1683.19387
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Basic-FullBuffs-LongSingleTarget"
  value: {
-  dps: 992.25984
-  tps: 965.9343
+  dps: 933.38811
+  tps: 910.6
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Basic-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1716.87099
-  tps: 1656.30745
+  dps: 1738.68663
+  tps: 1683.94751
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Basic-NoBuffs-LongMultiTarget"
  value: {
-  dps: 212.84909
-  tps: 468.64577
+  dps: 202.63927
+  tps: 470.08468
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Basic-NoBuffs-LongSingleTarget"
  value: {
-  dps: 212.84909
-  tps: 202.99822
+  dps: 202.63927
+  tps: 193.1346
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Basic-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 542.12438
-  tps: 511.64281
+  dps: 538.66078
+  tps: 511.68026
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Clipping-FullBuffs-LongMultiTarget"
  value: {
-  dps: 947.46297
-  tps: 1639.67854
+  dps: 891.48969
+  tps: 1627.5256
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Clipping-FullBuffs-LongSingleTarget"
  value: {
-  dps: 947.46297
-  tps: 921.66532
+  dps: 891.48969
+  tps: 867.1853
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Clipping-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1670.60613
-  tps: 1612.17591
+  dps: 1682.51233
+  tps: 1630.5018
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Clipping-NoBuffs-LongMultiTarget"
  value: {
-  dps: 207.91127
-  tps: 453.46193
+  dps: 197.64925
+  tps: 457.16302
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Clipping-NoBuffs-LongSingleTarget"
  value: {
-  dps: 207.91127
-  tps: 197.25073
+  dps: 197.64925
+  tps: 187.5819
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Clipping-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 531.71383
-  tps: 501.12887
+  dps: 498.92068
+  tps: 467.57562
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Ideal-FullBuffs-LongMultiTarget"
  value: {
-  dps: 980.24264
-  tps: 1687.79805
+  dps: 914.07402
+  tps: 1659.95593
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Ideal-FullBuffs-LongSingleTarget"
  value: {
-  dps: 980.24264
-  tps: 954.4186
+  dps: 914.07402
+  tps: 890.07327
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Ideal-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1772.04912
-  tps: 1713.0015
+  dps: 1794.01926
+  tps: 1735.12888
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Ideal-NoBuffs-LongMultiTarget"
  value: {
-  dps: 216.97834
-  tps: 467.80218
+  dps: 199.18555
+  tps: 461.3886
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Ideal-NoBuffs-LongSingleTarget"
  value: {
-  dps: 216.97834
-  tps: 206.44388
+  dps: 199.18555
+  tps: 189.04412
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Draenei-P1-Ideal-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 556.57375
-  tps: 528.73139
+  dps: 533.80729
+  tps: 508.52917
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Basic-FullBuffs-LongMultiTarget"
  value: {
-  dps: 961.08901
-  tps: 1653.0323
+  dps: 903.40859
+  tps: 1626.2935
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Basic-FullBuffs-LongSingleTarget"
  value: {
-  dps: 961.08901
-  tps: 936.68809
+  dps: 903.40859
+  tps: 880.99852
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Basic-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1700.91988
-  tps: 1642.89817
+  dps: 1718.36636
+  tps: 1665.76412
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Basic-NoBuffs-LongMultiTarget"
  value: {
-  dps: 210.63858
-  tps: 466.47204
+  dps: 199.72331
+  tps: 465.77079
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Basic-NoBuffs-LongSingleTarget"
  value: {
-  dps: 210.63858
-  tps: 201.68234
+  dps: 199.72331
+  tps: 191.04675
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Basic-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 538.05962
-  tps: 509.7076
+  dps: 528.94999
+  tps: 503.44883
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Clipping-FullBuffs-LongMultiTarget"
  value: {
-  dps: 931.37022
-  tps: 1618.79622
+  dps: 880.41593
+  tps: 1620.53964
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Clipping-FullBuffs-LongSingleTarget"
  value: {
-  dps: 931.37022
-  tps: 907.50195
+  dps: 880.41593
+  tps: 858.55
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Clipping-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1663.57636
-  tps: 1607.78158
+  dps: 1675.78514
+  tps: 1626.46234
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Clipping-NoBuffs-LongMultiTarget"
  value: {
-  dps: 205.64275
-  tps: 449.37547
+  dps: 196.75471
+  tps: 459.05331
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Clipping-NoBuffs-LongSingleTarget"
  value: {
-  dps: 205.64275
-  tps: 195.73782
+  dps: 196.75471
+  tps: 187.62995
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Clipping-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 526.22673
-  tps: 497.17631
+  dps: 494.89693
+  tps: 464.90166
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Ideal-FullBuffs-LongMultiTarget"
  value: {
-  dps: 947.83233
-  tps: 1649.59751
+  dps: 902.99696
+  tps: 1644.57208
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Ideal-FullBuffs-LongSingleTarget"
  value: {
-  dps: 947.83233
-  tps: 924.92203
+  dps: 902.99696
+  tps: 881.43734
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Ideal-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1745.95481
-  tps: 1692.6267
+  dps: 1773.08299
+  tps: 1717.97437
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Ideal-NoBuffs-LongMultiTarget"
  value: {
-  dps: 210.71214
-  tps: 462.3596
+  dps: 194.52092
+  tps: 456.72295
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Ideal-NoBuffs-LongSingleTarget"
  value: {
-  dps: 210.71214
-  tps: 201.0013
+  dps: 194.52092
+  tps: 185.29959
  }
 }
 dps_results: {
  key: "TestShadow-Settings-NightElf-P1-Ideal-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 549.04817
-  tps: 524.24139
+  dps: 510.68012
+  tps: 484.67574
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Basic-FullBuffs-LongMultiTarget"
  value: {
-  dps: 963.1231
-  tps: 1653.41736
+  dps: 912.57188
+  tps: 1647.40559
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Basic-FullBuffs-LongSingleTarget"
  value: {
-  dps: 963.1231
-  tps: 938.91805
+  dps: 912.57188
+  tps: 890.51093
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Basic-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1708.08422
-  tps: 1649.87402
+  dps: 1720.06924
+  tps: 1666.25579
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Basic-NoBuffs-LongMultiTarget"
  value: {
-  dps: 208.62382
-  tps: 457.07256
+  dps: 195.98033
+  tps: 457.58739
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Basic-NoBuffs-LongSingleTarget"
  value: {
-  dps: 208.62382
-  tps: 199.15516
+  dps: 195.98033
+  tps: 186.92821
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Basic-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 531.21698
-  tps: 502.02264
+  dps: 533.08198
+  tps: 509.30228
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Clipping-FullBuffs-LongMultiTarget"
  value: {
-  dps: 922.75709
-  tps: 1595.05134
+  dps: 872.12807
+  tps: 1600.05342
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Clipping-FullBuffs-LongSingleTarget"
  value: {
-  dps: 922.75709
-  tps: 897.92379
+  dps: 872.12807
+  tps: 849.82864
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Clipping-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1668.32019
-  tps: 1612.01983
+  dps: 1678.65826
+  tps: 1628.76616
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Clipping-NoBuffs-LongMultiTarget"
  value: {
-  dps: 207.19914
-  tps: 460.56742
+  dps: 195.92078
+  tps: 454.47725
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Clipping-NoBuffs-LongSingleTarget"
  value: {
-  dps: 207.19914
-  tps: 197.53712
+  dps: 195.92078
+  tps: 186.56433
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Clipping-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 531.26193
-  tps: 503.63872
+  dps: 493.67457
+  tps: 463.40708
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Ideal-FullBuffs-LongMultiTarget"
  value: {
-  dps: 949.59697
-  tps: 1636.63882
+  dps: 889.87672
+  tps: 1620.45456
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Ideal-FullBuffs-LongSingleTarget"
  value: {
-  dps: 949.59697
-  tps: 925.92976
+  dps: 889.87672
+  tps: 867.05904
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Ideal-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1749.2096
-  tps: 1695.47387
+  dps: 1776.28419
+  tps: 1720.59259
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Ideal-NoBuffs-LongMultiTarget"
  value: {
-  dps: 214.62324
-  tps: 467.12646
+  dps: 200.60675
+  tps: 481.23813
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Ideal-NoBuffs-LongSingleTarget"
  value: {
-  dps: 214.62324
-  tps: 204.94831
+  dps: 200.60675
+  tps: 192.27055
  }
 }
 dps_results: {
  key: "TestShadow-Settings-Undead-P1-Ideal-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 543.51995
-  tps: 516.83532
+  dps: 518.75823
+  tps: 493.91064
  }
 }
 dps_results: {
  key: "TestShadow-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 938.21429
-  tps: 925.92976
+  dps: 878.38118
+  tps: 867.05904
  }
 }

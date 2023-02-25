@@ -236,96 +236,102 @@ func NewHunter(character core.Character, options *proto.Player) *Hunter {
 }
 
 func init() {
+	const basecrit = -1.53 * core.CritRatingPerCritChance
+	//const basespellcrit =
+	const basehealth = 3568
+	const basemana = 3383
+	const baseap = core.CharacterLevel * 2
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  61,
 		stats.Agility:   153,
 		stats.Stamina:   108,
 		stats.Intellect: 80,
 		stats.Spirit:    81,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  65,
 		stats.Agility:   148,
 		stats.Stamina:   108,
 		stats.Intellect: 77,
 		stats.Spirit:    85,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDwarf, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  69,
 		stats.Agility:   147,
 		stats.Stamina:   109,
 		stats.Intellect: 76,
 		stats.Spirit:    82,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceNightElf, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  60,
 		stats.Agility:   155,
 		stats.Stamina:   108,
 		stats.Intellect: 77,
 		stats.Spirit:    83,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceOrc, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  67,
 		stats.Agility:   148,
 		stats.Stamina:   109,
 		stats.Intellect: 74,
 		stats.Spirit:    85,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTauren, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  69,
 		stats.Agility:   147,
 		stats.Stamina:   109,
 		stats.Intellect: 73,
 		stats.Spirit:    85,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassHunter}] = stats.Stats{
-		stats.Health:    3568,
+		stats.Health:    basehealth,
 		stats.Strength:  65,
 		stats.Agility:   153,
 		stats.Stamina:   108,
 		stats.Intellect: 73,
 		stats.Spirit:    84,
-		stats.Mana:      3383,
+		stats.Mana:      basemana,
 
-		stats.AttackPower:       140,
-		stats.RangedAttackPower: 140,
-		stats.MeleeCrit:         0 * core.CritRatingPerCritChance,
+		stats.AttackPower:       baseap,
+		stats.RangedAttackPower: baseap,
+		stats.MeleeCrit:         basecrit,
 	}
 }
 

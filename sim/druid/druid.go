@@ -289,28 +289,33 @@ func New(char core.Character, form DruidForm, selfBuffs SelfBuffs, talents strin
 }
 
 func init() {
+	const basecrit = 7.84 * core.CritRatingPerCritChance
+	const basespellcrit = 1.85 * core.CritRatingPerCritChance
+	const basehealth = 3614
+	const basemana = 2370
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTauren, Class: proto.Class_ClassDruid}] = stats.Stats{
-		stats.Health:      3614, // 8227 health shown on naked character (would include tauren bonus)
+		stats.Health:      basehealth, // 8227 health shown on naked character (would include tauren bonus)
 		stats.Strength:    81,
 		stats.Agility:     66,
 		stats.Stamina:     84,
 		stats.Intellect:   116,
 		stats.Spirit:      135,
-		stats.Mana:        2370,                             // 5301 mana shown on naked character
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance, // Class-specific constant
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance, // 8.41% chance to crit shown on naked character screen
+		stats.Mana:        basemana,      // 5301 mana shown on naked character
+		stats.SpellCrit:   basespellcrit, // Class-specific constant
+		stats.MeleeCrit:   basecrit,      // 8.41% chance to crit shown on naked character screen
 		stats.AttackPower: 0,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceNightElf, Class: proto.Class_ClassDruid}] = stats.Stats{
-		stats.Health:      3614, // 8217 health shown on naked character
+		stats.Health:      basehealth, // 8217 health shown on naked character
 		stats.Strength:    72,
 		stats.Agility:     74,
 		stats.Stamina:     83,
 		stats.Intellect:   120,
 		stats.Spirit:      133,
-		stats.Mana:        2370,                             // 5361 mana shown on naked character
-		stats.SpellCrit:   0 * core.CritRatingPerCritChance, // Class-specific constant
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance, // 8.51% chance to crit shown on naked character screen
+		stats.Mana:        basemana,      // 5361 mana shown on naked character
+		stats.SpellCrit:   basespellcrit, // Class-specific constant
+		stats.MeleeCrit:   basecrit,      // 8.51% chance to crit shown on naked character screen
 		stats.AttackPower: 0,
 	}
 }

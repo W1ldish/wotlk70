@@ -241,95 +241,101 @@ func (warrior *Warrior) intensifyRageCooldown(baseCd time.Duration) time.Duratio
 }
 
 func init() {
+	const basecrit = 3.48 * core.CritRatingPerCritChance
+	//const basespellcrit = 3.336 * core.CritRatingPerCritChance
+	const basehealth = 4444
+	//const basemana = 2953
+	const baseap = core.CharacterLevel * 3
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    146,
 		stats.Agility:     93,
 		stats.Stamina:     133,
 		stats.Intellect:   33,
 		stats.Spirit:      53,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDwarf, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    150,
 		stats.Agility:     92,
 		stats.Stamina:     134,
 		stats.Intellect:   32,
 		stats.Spirit:      50,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceGnome, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    140,
 		stats.Agility:     98,
 		stats.Stamina:     133,
 		stats.Intellect:   36,
 		stats.Spirit:      51,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    145,
 		stats.Agility:     96,
 		stats.Stamina:     133,
 		stats.Intellect:   33,
 		stats.Spirit:      51,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceNightElf, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    141,
 		stats.Agility:     100,
 		stats.Stamina:     133,
 		stats.Intellect:   33,
 		stats.Spirit:      51,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceOrc, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    148,
 		stats.Agility:     93,
 		stats.Stamina:     134,
 		stats.Intellect:   30,
 		stats.Spirit:      53,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTauren, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444 * 1.05,
+		stats.Health:      basehealth * 1.05,
 		stats.Strength:    150,
 		stats.Agility:     92,
 		stats.Stamina:     134,
 		stats.Intellect:   29,
 		stats.Spirit:      53,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    146,
 		stats.Agility:     98,
 		stats.Stamina:     133,
 		stats.Intellect:   29,
 		stats.Spirit:      52,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   0 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceUndead, Class: proto.Class_ClassWarrior}] = stats.Stats{
-		stats.Health:      4444,
+		stats.Health:      basehealth,
 		stats.Strength:    144,
 		stats.Agility:     94,
 		stats.Stamina:     133,
 		stats.Intellect:   31,
 		stats.Spirit:      56,
-		stats.AttackPower: 210,
-		stats.MeleeCrit:   3.188 * core.CritRatingPerCritChance,
+		stats.AttackPower: baseap,
+		stats.MeleeCrit:   basecrit,
 	}
 }
 

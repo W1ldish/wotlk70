@@ -197,75 +197,80 @@ func New(char core.Character, selfBuffs SelfBuffs, talents string) *Priest {
 }
 
 func init() {
+	//const basecrit = 3.29 * core.CritRatingPerCritChance
+	const basespellcrit = 1.24 * core.CritRatingPerCritChance
+	const basehealth = 3391
+	const basemana = 2953
+
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceHuman, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  39,
 		stats.Agility:   45,
 		stats.Stamina:   58,
 		stats.Intellect: 145,
 		stats.Spirit:    151,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDwarf, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  44,
 		stats.Agility:   41,
 		stats.Stamina:   59,
 		stats.Intellect: 144,
 		stats.Spirit:    150,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceNightElf, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  35,
 		stats.Agility:   49,
 		stats.Stamina:   58,
 		stats.Intellect: 145,
 		stats.Spirit:    151,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceDraenei, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  40,
 		stats.Agility:   42,
 		stats.Stamina:   58,
 		stats.Intellect: 145,
 		stats.Spirit:    153,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceUndead, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  38,
 		stats.Agility:   43,
 		stats.Stamina:   58,
 		stats.Intellect: 143,
 		stats.Spirit:    156,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceTroll, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  40,
 		stats.Agility:   47,
 		stats.Stamina:   58,
 		stats.Intellect: 141,
 		stats.Spirit:    152,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 	core.BaseStats[core.BaseStatsKey{Race: proto.Race_RaceBloodElf, Class: proto.Class_ClassPriest}] = stats.Stats{
-		stats.Health:    3391,
-		stats.Mana:      2620,
+		stats.Health:    basehealth,
+		stats.Mana:      basemana,
 		stats.Strength:  36,
 		stats.Agility:   47,
 		stats.Stamina:   58,
 		stats.Intellect: 148,
 		stats.Spirit:    149,
-		stats.SpellCrit: core.CritRatingPerCritChance * 0,
+		stats.SpellCrit: basespellcrit,
 	}
 }
 
