@@ -224,6 +224,53 @@ func init() {
 		})
 	})
 
+	core.NewItemEffect(31332, func(agent core.Agent) {
+		character := agent.GetCharacter()
+		mh, oh := character.GetWeaponHands(31193)
+		procMask := core.GetMeleeProcMaskForHands(mh, oh)
+
+		ppmm := character.AutoAttacks.NewPPMManager(1.0, procMask)
+		icd := core.Cooldown{
+			Timer:    character.NewTimer(),
+			Duration: time.Millisecond,
+		}
+
+		blinkStrikeSpell := character.GetOrRegisterSpell(core.SpellConfig{
+			ActionID:    core.ActionID{SpellID: 38308},
+			SpellSchool: core.SpellSchoolPhysical,
+			ProcMask:    procMask,
+			Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagNoOnCastComplete,
+
+			DamageMultiplier: character.AutoAttacks.MHConfig.DamageMultiplier,
+			CritMultiplier:   character.DefaultMeleeCritMultiplier(),
+			ThreatMultiplier: character.AutoAttacks.MHConfig.ThreatMultiplier,
+
+			ApplyEffects: character.AutoAttacks.MHConfig.ApplyEffects,
+		})
+
+		character.RegisterAura(core.Aura{
+			Label:    "Blinkstrike",
+			Duration: core.NeverExpires,
+			OnReset: func(aura *core.Aura, sim *core.Simulation) {
+				aura.Activate(sim)
+			},
+			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+				if !result.Landed() || !spell.ProcMask.Matches(procMask) {
+					return
+				}
+				if !icd.IsReady(sim) {
+					return
+				}
+				if !ppmm.Proc(sim, spell.ProcMask, "Blinkstrike") {
+					return
+				}
+				icd.Use(sim)
+				blinkStrikeSpell.Cast(sim, result.Target)
+			},
+		})
+
+	})
+
 	core.NewItemEffect(31193, func(agent core.Agent) {
 		character := agent.GetCharacter()
 		mh, oh := character.GetWeaponHands(31193)
