@@ -65,6 +65,7 @@ func (hunter *Hunter) NewHunterPet() *HunterPet {
 	hp.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] *= 1.05
 
 	hp.AddStatDependency(stats.Strength, stats.AttackPower, 2)
+	hp.AddStat(stats.AttackPower, -20)
 	hp.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance/33)
 	core.ApplyPetConsumeEffects(&hp.Character, hunter.Consumes)
 

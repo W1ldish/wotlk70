@@ -188,6 +188,7 @@ func NewWarrior(character core.Character, talents string, inputs WarriorInputs) 
 	warrior.AddStatDependency(stats.Agility, stats.MeleeCrit, core.CritRatingPerCritChance/33)
 	warrior.AddStatDependency(stats.Agility, stats.Dodge, core.DodgeRatingPerDodgeChance/30)
 	warrior.AddStatDependency(stats.Strength, stats.AttackPower, 2)
+	warrior.AddStat(stats.AttackPower, -20)
 	warrior.AddStatDependency(stats.Strength, stats.BlockValue, .5) // 50% block from str
 
 	// Base dodge unaffected by Diminishing Returns

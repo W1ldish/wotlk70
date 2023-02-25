@@ -77,7 +77,7 @@ func (priest *Priest) NewShadowfiend() *Shadowfiend {
 	})
 
 	shadowfiend.AddStatDependency(stats.Strength, stats.AttackPower, 1.0)
-
+	shadowfiend.AddStat(stats.AttackPower, -10)
 	core.ApplyPetConsumeEffects(&shadowfiend.Character, priest.Consumes)
 
 	priest.AddPet(shadowfiend)

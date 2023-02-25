@@ -29,7 +29,7 @@ character_stats_results: {
   final_stats: 0
   final_stats: 0
   final_stats: 0
-  final_stats: 5911.232
+  final_stats: 5731.232
   final_stats: 35
   final_stats: 35
   final_stats: 35
@@ -46,294 +46,294 @@ character_stats_results: {
 dps_results: {
  key: "TestSmite-AllItems-AbsolutionRegalia"
  value: {
-  dps: 999.07227
+  dps: 999.01517
   tps: 874.75373
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-AshtongueTalismanofAcumen-32490"
  value: {
-  dps: 446.09627
+  dps: 446.04239
   tps: 392.04334
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-AvatarRegalia"
  value: {
-  dps: 766.97545
+  dps: 766.91714
   tps: 674.35054
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BandoftheEternalSage-29305"
  value: {
-  dps: 471.77405
+  dps: 471.72027
   tps: 415.6784
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BlackenedNaaruSliver-34427"
  value: {
-  dps: 428.16786
+  dps: 428.1141
   tps: 378.20889
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BlackoutTruncheon-27901"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
-  dps: 596.57482
+  dps: 596.52129
   tps: 528.76362
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-CloakofDarkness-33122"
  value: {
-  dps: 435.01266
+  dps: 434.95868
   tps: 383.77328
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DeathKnight'sAnguish-38212"
  value: {
-  dps: 435.01266
+  dps: 434.95868
   tps: 383.77328
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Dragonmaw-28438"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DragonspineTrophy-28830"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Dragonstrike-28439"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DrakeFangTalisman-19406"
  value: {
-  dps: 443.87592
+  dps: 443.82183
   tps: 391.79323
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DrakefistHammer-28437"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-EarringofSoulfulMeditation-30665"
  value: {
-  dps: 464.39142
+  dps: 464.33767
   tps: 408.43571
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-EmpyreanDemolisher-17112"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-EyeofMagtheridon-28789"
  value: {
-  dps: 468.7991
+  dps: 468.74521
   tps: 409.11511
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Gladiator'sInvestiture"
  value: {
-  dps: 628.05248
+  dps: 627.99873
   tps: 555.15835
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Gladiator'sRaiment"
  value: {
-  dps: 616.81156
+  dps: 616.75777
   tps: 542.95633
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-IncarnateRaiment"
  value: {
-  dps: 708.35548
+  dps: 708.29426
   tps: 623.25018
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-MadnessoftheBetrayer-32505"
  value: {
-  dps: 443.87592
+  dps: 443.82183
   tps: 391.79323
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Mana-EtchedRegalia"
  value: {
-  dps: 590.75805
+  dps: 590.70311
   tps: 520.39211
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Quagmirran'sEye-27683"
  value: {
-  dps: 443.12668
+  dps: 443.07305
   tps: 391.00211
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-RingoftheFallenGod-21709"
  value: {
-  dps: 454.62043
+  dps: 454.56574
   tps: 400.28758
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-RobeoftheElderScribes-28602"
  value: {
-  dps: 483.74713
+  dps: 483.69335
   tps: 426.59
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-SextantofUnstableCurrents-30626"
  value: {
-  dps: 444.65374
+  dps: 444.59976
   tps: 390.29112
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-ShardofContempt-34472"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
-  dps: 440.89393
+  dps: 440.83995
   tps: 388.05068
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-SpellstrikeInfusion"
  value: {
-  dps: 506.42985
+  dps: 506.37454
   tps: 443.89202
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-TsunamiTalisman-30627"
  value: {
-  dps: 439.68346
+  dps: 439.6288
   tps: 387.62452
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-VestmentsofAbsolution"
  value: {
-  dps: 914.80927
+  dps: 914.75559
   tps: 803.37218
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Warp-SpringCoil-30450"
  value: {
-  dps: 444.01578
+  dps: 443.96143
   tps: 391.79323
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-WrathofSpellfire"
  value: {
-  dps: 527.20327
+  dps: 527.14988
   tps: 464.0895
  }
 }
 dps_results: {
  key: "TestSmite-Average-Default"
  value: {
-  dps: 432.56952
+  dps: 432.51735
   tps: 383.53984
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-FullBuffs-LongMultiTarget"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 777.60063
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-FullBuffs-LongSingleTarget"
  value: {
-  dps: 433.74272
+  dps: 433.68884
   tps: 382.81753
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1121.08266
+  dps: 1120.81323
   tps: 910.83519
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-NoBuffs-LongMultiTarget"
  value: {
-  dps: 89.2487
+  dps: 89.21847
   tps: 153.01849
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-NoBuffs-LongSingleTarget"
  value: {
-  dps: 89.2487
+  dps: 89.21847
   tps: 76.91161
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 358.81729
+  dps: 358.66612
   tps: 297.13185
  }
 }
 dps_results: {
  key: "TestSmite-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 428.40594
+  dps: 428.36141
   tps: 382.81753
  }
 }
