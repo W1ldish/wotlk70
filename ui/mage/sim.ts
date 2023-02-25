@@ -138,6 +138,7 @@ export class MageSimUI extends IndividualSimUI<Spec.SpecMage> {
 			rotationInputs: MageInputs.MageRotationConfig,
 			// Buff and Debuff inputs to include/exclude, overriding the EP-based defaults.
 			includeBuffDebuffInputs: [
+				IconInputs.StaminaBuff,
 				//Should add hymn of hope, revitalize, and 
 			],
 			excludeBuffDebuffInputs: [

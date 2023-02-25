@@ -34,6 +34,7 @@ export class BalanceDruidSimUI extends IndividualSimUI<Spec.SpecBalanceDruid> {
 			// Which stats to display in the Character Stats section, at the bottom of the left-hand sidebar.
 			displayStats: [
 				Stat.StatHealth,
+				Stat.StatMana,
 				Stat.StatStamina,
 				Stat.StatIntellect,
 				Stat.StatSpirit,
@@ -87,6 +88,7 @@ export class BalanceDruidSimUI extends IndividualSimUI<Spec.SpecBalanceDruid> {
 				IconInputs.MajorArmorDebuff,
 				IconInputs.MinorArmorDebuff,
 				IconInputs.PhysicalDamageDebuff,
+				IconInputs.StaminaBuff,
 			],
 			excludeBuffDebuffInputs: [
 			],

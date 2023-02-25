@@ -118,6 +118,7 @@ export class HunterSimUI extends IndividualSimUI<Spec.SpecHunter> {
 			// Which stats to display in the Character Stats section, at the bottom of the left-hand sidebar.
 			displayStats: [
 				Stat.StatHealth,
+				Stat.StatMana,
 				Stat.StatStamina,
 				Stat.StatAgility,
 				Stat.StatIntellect,
