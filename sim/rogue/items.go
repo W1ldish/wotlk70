@@ -196,7 +196,7 @@ var ItemSetDeathmantle = core.NewItemSet(core.ItemSet{
 
 			ppmm := rogue.AutoAttacks.NewPPMManager(1.0, core.ProcMaskMelee)
 
-			rogue.RegisterAura(core.Aura{
+			rogue.DeathmantleProcAura = rogue.RegisterAura(core.Aura{
 				Label:    "Deathmantle 4pc",
 				Duration: core.NeverExpires,
 				OnReset: func(aura *core.Aura, sim *core.Simulation) {
@@ -225,13 +225,6 @@ var ItemSetDeathmantle = core.NewItemSet(core.ItemSet{
 
 func (rogue *Rogue) deathmantleActive() bool {
 	return rogue.DeathmantleProcAura != nil && rogue.DeathmantleProcAura.IsActive()
-}
-
-func (rogue *Rogue) applyDeathmantle(sim *core.Simulation, _ *core.Spell, cast *core.Cast) {
-	if rogue.deathmantleActive() {
-		cast.Cost = 0
-		rogue.DeathmantleProcAura.Deactivate(sim)
-	}
 }
 
 var ItemSetNetherblade = core.NewItemSet(core.ItemSet{

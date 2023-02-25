@@ -47,7 +47,7 @@ func (rogue *Rogue) registerEnvenom() {
 			ModifyCast: func(sim *core.Simulation, spell *core.Spell, cast *core.Cast) {
 				spell.SetMetricsSplit(spell.Unit.ComboPoints())
 				if rogue.deathmantleActive() {
-					cast.Cost = 0
+					spell.CostMultiplier = 0
 					rogue.DeathmantleProcAura.Deactivate(sim)
 				}
 			},
@@ -63,6 +63,7 @@ func (rogue *Rogue) registerEnvenom() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+
 			comboPoints := rogue.ComboPoints()
 			// - the aura is active even if the attack fails to land
 			// - the aura is applied before the hit effect
@@ -81,6 +82,7 @@ func (rogue *Rogue) registerEnvenom() {
 			if result.Landed() {
 				rogue.ApplyFinisher(sim, spell)
 				rogue.ApplyCutToTheChase(sim)
+
 				if !sim.Proc(chanceToRetainStacks, "Master Poisoner") {
 					if newStacks := dp.GetStacks() - comboPoints; newStacks > 0 {
 						dp.SetStacks(sim, newStacks)

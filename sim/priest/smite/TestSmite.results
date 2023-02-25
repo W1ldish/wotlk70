@@ -58,6 +58,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-AvatarRegalia"
+ value: {
+  dps: 766.97545
+  tps: 674.35054
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-BandoftheEternalChampion-29301"
  value: {
   dps: 433.74272
@@ -174,6 +181,13 @@ dps_results: {
  value: {
   dps: 616.81156
   tps: 542.95633
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-IncarnateRaiment"
+ value: {
+  dps: 708.35548
+  tps: 623.25018
  }
 }
 dps_results: {

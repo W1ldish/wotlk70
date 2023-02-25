@@ -35,7 +35,7 @@ func (rogue *Rogue) registerEviscerate() {
 			ModifyCast: func(sim *core.Simulation, spell *core.Spell, cast *core.Cast) {
 				spell.SetMetricsSplit(spell.Unit.ComboPoints())
 				if rogue.deathmantleActive() {
-					cast.Cost = 0
+					spell.CostMultiplier = 0
 					rogue.DeathmantleProcAura.Deactivate(sim)
 				}
 			},

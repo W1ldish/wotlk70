@@ -60,6 +60,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-AvatarRegalia"
+ value: {
+  dps: 42.38006
+  tps: 22.23705
+  hps: 1070.03751
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-BandoftheEternalChampion-29301"
  value: {
   dps: 31.71528
@@ -193,6 +201,14 @@ dps_results: {
   dps: 39.31631
   tps: 20.24555
   hps: 930.12508
+ }
+}
+dps_results: {
+ key: "TestHoly-AllItems-IncarnateRaiment"
+ value: {
+  dps: 42.67807
+  tps: 22.63342
+  hps: 1044.17685
  }
 }
 dps_results: {

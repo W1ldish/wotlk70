@@ -51,6 +51,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestDestruction-AllItems-CorruptorRaiment"
+ value: {
+  dps: 1994.83913
+  tps: 1750.34591
+ }
+}
+dps_results: {
  key: "TestDestruction-AllItems-Gladiator'sFelshroud"
  value: {
   dps: 1946.2255
@@ -65,10 +72,24 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestDestruction-AllItems-OblivionRaiment"
+ value: {
+  dps: 1811.76914
+  tps: 1596.36621
+ }
+}
+dps_results: {
  key: "TestDestruction-AllItems-VoidStarTalisman-30449"
  value: {
   dps: 1592.24733
   tps: 1415.60293
+ }
+}
+dps_results: {
+ key: "TestDestruction-AllItems-VoidheartRaiment"
+ value: {
+  dps: 2040.58741
+  tps: 1793.97749
  }
 }
 dps_results: {

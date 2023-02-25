@@ -100,6 +100,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestAssassination-AllItems-Deathmantle"
+ value: {
+  dps: 1425.41165
+  tps: 1012.04227
+ }
+}
+dps_results: {
  key: "TestAssassination-AllItems-DragonspineTrophy-28830"
  value: {
   dps: 1073.59557
@@ -139,6 +146,13 @@ dps_results: {
  value: {
   dps: 1108.61156
   tps: 787.11421
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-Netherblade"
+ value: {
+  dps: 1412.20867
+  tps: 1002.66816
  }
 }
 dps_results: {

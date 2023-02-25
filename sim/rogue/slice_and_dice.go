@@ -59,6 +59,10 @@ func (rogue *Rogue) registerSliceAndDice() {
 			IgnoreHaste: true,
 			ModifyCast: func(sim *core.Simulation, spell *core.Spell, cast *core.Cast) {
 				spell.SetMetricsSplit(spell.Unit.ComboPoints())
+				if rogue.deathmantleActive() {
+					spell.CostMultiplier = 0
+					rogue.DeathmantleProcAura.Deactivate(sim)
+				}
 			},
 		},
 		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {

@@ -44,6 +44,13 @@ character_stats_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-AldorRegalia"
+ value: {
+  dps: 1492.64113
+  tps: 946.1807
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-AshtongueTalismanofInsight-32488"
  value: {
   dps: 960.56223
@@ -223,6 +230,13 @@ dps_results: {
  value: {
   dps: 2244.25635
   tps: 1411.94846
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-TirisfalRegalia"
+ value: {
+  dps: 1612.04603
+  tps: 1017.89362
  }
 }
 dps_results: {

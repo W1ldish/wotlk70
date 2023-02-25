@@ -40,6 +40,9 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 	// TODO: Test whether T8 Prot 2pc also affects Judgement, once available
 	// TODO: Verify whether these bonuses should indeed be additive with similar
 
+	justicarBattle2 := core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
+	justicarArmor2 := core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 0.1, 0)
+
 	dotSpell := paladin.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 31803},
 		SpellSchool: core.SpellSchoolHoly,
@@ -99,7 +102,7 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() +
 				paladin.getTalentSealsOfThePureBonus() + paladin.getMajorGlyphOfJudgementBonus() + paladin.getTalentTheArtOfWarBonus()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
-			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1),
+			(1 + justicarArmor2),
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
 
@@ -111,7 +114,7 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 
 			// i = i * (1 + (0.10 * stacks))
 			baseDamage *= 1 + .1*float64(dotSpell.Dot(target).GetStacks())
-			baseDamage += core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
+			baseDamage += justicarBattle2
 			// Secondary Judgements cannot miss if the Primary Judgement hit, only roll for crit.
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialCritOnly)
 		},

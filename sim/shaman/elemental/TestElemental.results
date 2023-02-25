@@ -145,10 +145,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestElemental-AllItems-CataclysmHarness"
+ value: {
+  dps: 838.06659
+  tps: 542.79306
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-CataclysmRegalia"
+ value: {
+  dps: 1142.70499
+  tps: 732.26858
+ }
+}
+dps_results: {
  key: "TestElemental-AllItems-CloakofDarkness-33122"
  value: {
   dps: 625.62974
   tps: 412.30991
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-CycloneHarness"
+ value: {
+  dps: 801.52882
+  tps: 521.20373
+ }
+}
+dps_results: {
+ key: "TestElemental-AllItems-CycloneRegalia"
+ value: {
+  dps: 1035.70909
+  tps: 666.65029
  }
 }
 dps_results: {

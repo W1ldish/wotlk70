@@ -27,6 +27,9 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 	numHits := core.MinInt32(3, paladin.Env.GetNumTargets()) // primary target + 2 others
 	results := make([]*core.SpellResult, numHits)
 
+	justicarBattle2 := core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
+	justicarArmor2 := core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 0.1, 0)
+
 	onJudgementProc := paladin.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 20467}, // Judgement of Command
 		SpellSchool: core.SpellSchoolHoly,
@@ -39,7 +42,8 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() +
 				paladin.getMajorGlyphOfJudgementBonus() + paladin.getTalentTheArtOfWarBonus()) *
-			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()),
+			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
+			(1 + core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 4), 0.1, 0)),
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
 
@@ -49,8 +53,7 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 				spell.BonusWeaponDamage()
 			baseDamage := 0.19*mhWeaponDamage +
 				0.08*spell.MeleeAttackPower() +
-				0.13*spell.SpellPower() +
-				core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
+				0.13*spell.SpellPower() + justicarBattle2
 
 			// Secondary Judgements cannot miss if the Primary Judgement hit, only roll for crit.
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialCritOnly)
@@ -67,7 +70,7 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
-			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1) *
+			(1 + justicarArmor2) *
 			0.36, // Only 36% of weapon damage.
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
@@ -100,7 +103,7 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
-			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1) *
+			(1 + justicarArmor2) *
 			0.36, // Only 36% of weapon damage.
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,

@@ -105,6 +105,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestDisc-AllItems-AvatarRegalia"
+ value: {
+  dps: 37.28137
+  tps: 33.71338
+  hps: 1453.54623
+ }
+}
+dps_results: {
  key: "TestDisc-AllItems-BandoftheEternalChampion-29301"
  value: {
   dps: 29.73855
@@ -238,6 +246,14 @@ dps_results: {
   dps: 36.91123
   tps: 30.19691
   hps: 1303.90191
+ }
+}
+dps_results: {
+ key: "TestDisc-AllItems-IncarnateRaiment"
+ value: {
+  dps: 37.56034
+  tps: 33.69486
+  hps: 1460.19454
  }
 }
 dps_results: {

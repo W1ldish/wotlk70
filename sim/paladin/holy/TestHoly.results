@@ -88,6 +88,14 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-CrystalforgeArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-CrystalforgeBattlegear"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-DeathKnight'sAnguish-38212"
  value: {}
 }
@@ -136,11 +144,23 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-JusticarArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-JusticarBattlegear"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-KhoriumChampion-23541"
  value: {}
 }
 dps_results: {
  key: "TestHoly-AllItems-LibramofFuriousBlows-37574"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-LightbringerArmor"
  value: {}
 }
 dps_results: {

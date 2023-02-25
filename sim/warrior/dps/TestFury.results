@@ -135,6 +135,20 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFury-AllItems-DestroyerArmor"
+ value: {
+  dps: 462.55905
+  tps: 345.37004
+ }
+}
+dps_results: {
+ key: "TestFury-AllItems-DestroyerBattlegear"
+ value: {
+  dps: 635.96699
+  tps: 471.70782
+ }
+}
+dps_results: {
  key: "TestFury-AllItems-DoomplateBattlegear"
  value: {
   dps: 487.20297
@@ -363,6 +377,20 @@ dps_results: {
  value: {
   dps: 434.86527
   tps: 325.28909
+ }
+}
+dps_results: {
+ key: "TestFury-AllItems-WarbringerArmor"
+ value: {
+  dps: 437.08424
+  tps: 326.38427
+ }
+}
+dps_results: {
+ key: "TestFury-AllItems-WarbringerBattlegear"
+ value: {
+  dps: 559.38391
+  tps: 418.38526
  }
 }
 dps_results: {

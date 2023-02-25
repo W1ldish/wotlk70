@@ -23,6 +23,8 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 	 *   - Deals hybrid AP/SP damage * current weapon speed.
 	 *   - CANNOT CRIT.
 	 */
+	justicarBattle2 := core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0) //damage to judge
+	justicarArmor2 := core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 0.1, 0)      //multiplier seal
 
 	onJudgementProc := paladin.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 20187}, // Judgement of Righteousness.
@@ -36,7 +38,8 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getTalentSealsOfThePureBonus() +
 				paladin.getMajorGlyphOfJudgementBonus() + paladin.getTalentTheArtOfWarBonus()) *
-			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()),
+			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
+			(1 + core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 4), 0.1, 0)),
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
 
@@ -45,7 +48,7 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 			baseDamage := 1 +
 				.20*spell.MeleeAttackPower() +
 				.32*spell.SpellPower() +
-				core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 2), 33, 0)
+				justicarBattle2
 
 			// Secondary Judgements cannot miss if the Primary Judgement hit, only roll for crit.
 			spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialCritOnly)
@@ -62,7 +65,7 @@ func (paladin *Paladin) registerSealOfRighteousnessSpellAndAura() {
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()) *
 			(1 + paladin.getMajorGlyphSealOfRighteousnessBonus()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
-			core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarArmor, 2), 1.1, 1),
+			(1 + justicarArmor2),
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {

@@ -121,6 +121,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestBM-AllItems-DemonStalkerArmor"
+ value: {
+  dps: 2468.60199
+  tps: 1374.94156
+ }
+}
+dps_results: {
  key: "TestBM-AllItems-DesolationBattlegear"
  value: {
   dps: 2464.83618
@@ -258,6 +265,13 @@ dps_results: {
  value: {
   dps: 2126.56863
   tps: 1120.12642
+ }
+}
+dps_results: {
+ key: "TestBM-AllItems-RiftStalkerArmor"
+ value: {
+  dps: 2636.48698
+  tps: 1461.88365
  }
 }
 dps_results: {

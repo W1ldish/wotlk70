@@ -76,7 +76,23 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-CataclysmHarness"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-CataclysmRegalia"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-CloakofDarkness-33122"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-CycloneHarness"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-CycloneRegalia"
  value: {}
 }
 dps_results: {

@@ -107,6 +107,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestCombat-AllItems-Deathmantle"
+ value: {
+  dps: 1427.26795
+  tps: 1013.36025
+ }
+}
+dps_results: {
  key: "TestCombat-AllItems-Dragonmaw-28438"
  value: {
   dps: 1132.03886
@@ -195,6 +202,13 @@ dps_results: {
  value: {
   dps: 1116.65569
   tps: 792.82554
+ }
+}
+dps_results: {
+ key: "TestCombat-AllItems-Netherblade"
+ value: {
+  dps: 1404.71746
+  tps: 997.3494
  }
 }
 dps_results: {
