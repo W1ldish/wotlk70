@@ -102,8 +102,8 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-AllItems-Deathmantle"
  value: {
-  dps: 1417.21437
-  tps: 1006.2222
+  dps: 1547.75202
+  tps: 1098.90393
  }
 }
 dps_results: {
