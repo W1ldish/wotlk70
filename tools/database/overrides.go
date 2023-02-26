@@ -282,6 +282,64 @@ var ItemOverrides = []*proto.UIItem{
 	{Id: 34809, Phase: 6}, //Sunrage Treads
 	{Id: 34810, Phase: 6}, //Cloak of Blade Turning
 
+	{Id: 34891, Phase: 6}, //The Blade of Harbingers
+	{Id: 34892, Phase: 6}, //Crossbow of Relentless Strikes
+	{Id: 34893, Phase: 6}, //Vanir's Right Fist of Brutality
+	{Id: 34894, Phase: 6}, //Blade of Serration
+	{Id: 34895, Phase: 6}, //Scryer's Blade of Focus
+	{Id: 34896, Phase: 6}, //Gavel of Naaru Blessings
+	{Id: 34898, Phase: 6}, //Staff of the Forest Lord
+	{Id: 34949, Phase: 6}, //Swift Blade of Uncertainty
+	{Id: 34950, Phase: 6}, //Vanir's Left Fist of Savagery
+	{Id: 34951, Phase: 6}, //Vanir's Left Fist of Brutality
+	{Id: 34952, Phase: 6}, //The Mutilator
+	{Id: 34887, Phase: 6}, //Angelista's Revenge
+	{Id: 34888, Phase: 6}, //Ring of the Stalwart Protector
+	{Id: 34889, Phase: 6}, //Fused Nethergon Band
+	{Id: 34890, Phase: 6}, //Anveena's Touch
+	{Id: 34900, Phase: 6}, //Shroud of Nature's Harmony
+	{Id: 34901, Phase: 6}, //Grovewalker's Leggings
+	{Id: 34902, Phase: 6}, //Oakleaf-Spun Handguards
+	{Id: 34903, Phase: 6}, //Embrace of Starlight
+	{Id: 34904, Phase: 6}, //Barbed Gloves of the Sage
+	{Id: 34905, Phase: 6}, //Crystalwind Leggings
+	{Id: 34906, Phase: 6}, //Embrace of Everlasting Prowess
+	{Id: 34910, Phase: 6}, //Tameless Breeches
+	{Id: 34911, Phase: 6}, //Handwraps of the Aggressor
+	{Id: 34912, Phase: 6}, //Scaled Drakeskin Chestguard
+	{Id: 34914, Phase: 6}, //Leggings of the Pursuit
+	{Id: 34916, Phase: 6}, //Gauntlets of Rapidity
+	{Id: 34917, Phase: 6}, //Shroud of the Lore`nial
+	{Id: 34918, Phase: 6}, //Legwraps of Sweltering Flame
+	{Id: 34919, Phase: 6}, //Boots of Incantations
+	{Id: 34921, Phase: 6}, //Ecclesiastical Cuirass
+	{Id: 34922, Phase: 6}, //Greaves of Pacification
+	{Id: 34923, Phase: 6}, //Waistguard of Reparation
+	{Id: 34924, Phase: 6}, //Gown of Spiritual Wonder
+	{Id: 34925, Phase: 6}, //Adorned Supernal Legwraps
+	{Id: 34926, Phase: 6}, //Slippers of Dutiful Mending
+	{Id: 34927, Phase: 6}, //Tunic of the Dark Hour
+	{Id: 34928, Phase: 6}, //Trousers of the Scryers' Retainer
+	{Id: 34929, Phase: 6}, //Belt of the Silent Path
+	{Id: 34930, Phase: 6}, //Wae of Life Chestguard
+	{Id: 34931, Phase: 6}, //Runed Scales of Antiquity
+	{Id: 34932, Phase: 6}, //Clutch of the Soothing Breeze
+	{Id: 34933, Phase: 6}, //Hauberk of Whirling Fury
+	{Id: 34934, Phase: 6}, //Rushing Storm Kilt
+	{Id: 34935, Phase: 6}, //Aftershock Waistguard
+	{Id: 34936, Phase: 6}, //Tormented Demonsoul Robes
+	{Id: 34937, Phase: 6}, //Corrupted Soulcloth Pantaloons
+	{Id: 34938, Phase: 6}, //Enslaved Doomguard Soulgrips
+	{Id: 34939, Phase: 6}, //Chestplate of Stoicism
+	{Id: 34940, Phase: 6}, //Sunguard Legplates
+	{Id: 34941, Phase: 6}, //Girdle of the Fearless
+	{Id: 34942, Phase: 6}, //Breastplate of Ire
+	{Id: 34943, Phase: 6}, //Legplates of Unending Fury
+	{Id: 34944, Phase: 6}, //Girdle of Seething Rage
+	{Id: 34945, Phase: 6}, //Shattrath Protectorate's Breastplate
+	{Id: 34946, Phase: 6}, //Inscribed Legplates of the Aldor
+	{Id: 34947, Phase: 6}, //Blue's Greaves of the Righteous Guardian
+
 }
 
 // Keep these sorted by item ID.
