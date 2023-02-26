@@ -61,8 +61,8 @@ export const DefaultConsumes = Consumes.create({
 	prepopPotion: Potions.IndestructiblePotion,
 	defaultPotion: Potions.IndestructiblePotion,
 	defaultConjured: Conjured.ConjuredHealthstone,
-	thermalSapper: true,
-	fillerExplosive: Explosive.ExplosiveSaroniteBomb,
+	superSapper: true,
+	fillerExplosive: Explosive.ExplosiveBiggerOne,
 });
 
 export const P1_PRESET = {

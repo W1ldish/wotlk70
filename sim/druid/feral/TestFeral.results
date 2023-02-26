@@ -53,8 +53,8 @@ dps_results: {
 dps_results: {
  key: "TestFeral-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 1289.71154
-  tps: 1478.9832
+  dps: 1298.49515
+  tps: 1488.67069
  }
 }
 dps_results: {

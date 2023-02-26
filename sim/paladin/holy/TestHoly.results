@@ -228,6 +228,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-TheTwinBladesofAzzinoth"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-TomeoftheLightbringer-32368"
  value: {}
 }

@@ -186,12 +186,6 @@ func NewHunter(character core.Character, options *proto.Player) *Hunter {
 
 	if hunter.HasRangedWeapon() && hunter.GetRangedWeapon().ID != ThoridalTheStarsFuryItemID {
 		switch hunter.Options.Ammo {
-		case proto.Hunter_Options_IcebladeArrow:
-			hunter.AmmoDPS = 91.5
-		case proto.Hunter_Options_SaroniteRazorheads:
-			hunter.AmmoDPS = 67.5
-		case proto.Hunter_Options_TerrorshaftArrow:
-			hunter.AmmoDPS = 46.5
 		case proto.Hunter_Options_TimelessArrow:
 			hunter.AmmoDPS = 53
 		case proto.Hunter_Options_MysteriousArrow:

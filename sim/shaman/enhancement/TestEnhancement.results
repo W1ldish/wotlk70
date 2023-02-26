@@ -53,8 +53,8 @@ dps_results: {
 dps_results: {
  key: "TestEnhancement-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 796.41365
-  tps: 328.80917
+  dps: 795.42767
+  tps: 329.28537
  }
 }
 dps_results: {

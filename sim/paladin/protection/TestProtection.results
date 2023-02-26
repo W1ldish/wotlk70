@@ -53,8 +53,8 @@ dps_results: {
 dps_results: {
  key: "TestProtection-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 586.00902
-  tps: 1275.76999
+  dps: 591.6725
+  tps: 1288.39654
  }
 }
 dps_results: {
@@ -363,6 +363,13 @@ dps_results: {
  value: {
   dps: 580.7717
   tps: 1265.5757
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-TheTwinBladesofAzzinoth"
+ value: {
+  dps: 648.98795
+  tps: 1409.49736
  }
 }
 dps_results: {

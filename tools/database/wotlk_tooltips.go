@@ -238,19 +238,46 @@ func (item WotlkItemResponse) GetItemLevel() int {
 }
 
 // WOTLK DB has no phase info
+
+//HC 1
+//T4 2
+//T5 3
+//T6 4
+//ZA 5
+//SWP 6
 func (item WotlkItemResponse) GetPhase() int {
 
+	item.GetStats()
+
 	ilvl := item.GetItemLevel()
-	if ilvl < 200 || ilvl == 200 || ilvl == 213 || ilvl == 226 {
+	quality := proto.ItemQuality(item.GetQuality())
+
+	if quality < proto.ItemQuality_ItemQualityEpic {
 		return 1
-	} else if ilvl == 219 || ilvl == 226 || ilvl == 239 {
+	}
+
+	if ilvl == 110 {
+		return 1
+	}
+
+	if ilvl == 115 || ilvl == 120 || ilvl == 125 || ilvl == 123 {
 		return 2
-	} else if ilvl == 232 || ilvl == 245 || ilvl == 258 {
+	}
+
+	if ilvl == 133 || ilvl == 128 || ilvl == 134 || ilvl == 138 || ilvl == 136 || ilvl == 127 {
 		return 3
-	} else if ilvl == 251 || ilvl == 258 || ilvl == 259 || ilvl == 264 || ilvl == 268 || ilvl == 270 || ilvl == 271 || ilvl == 272 {
+	}
+
+	if ilvl == 141 || ilvl == 151 || ilvl == 156 || ilvl == 146 {
 		return 4
-	} else if ilvl == 277 || ilvl == 284 {
-		return 5
+	}
+
+	if ilvl == 154 || ilvl == 159 || ilvl == 164 {
+		return 6
+	}
+
+	if quality == proto.ItemQuality_ItemQualityEpic {
+		return 4
 	}
 
 	// default to 1

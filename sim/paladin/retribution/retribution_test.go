@@ -151,7 +151,7 @@ var FullConsumes = &proto.Consumes{
 	DefaultPotion:   proto.Potions_HastePotion,
 	DefaultConjured: proto.Conjured_ConjuredDarkRune,
 	Food:            proto.Food_FoodRoastedClefthoof,
-	ThermalSapper:   true,
+	SuperSapper:     true,
 }
 
 var Phase1Gear = core.EquipmentSpecFromJsonString(`{"items": [

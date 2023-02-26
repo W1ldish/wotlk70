@@ -220,7 +220,7 @@ var aoeRotation = &proto.Hunter_Rotation{
 }
 
 var basicOptions = &proto.Hunter_Options{
-	Ammo:       proto.Hunter_Options_SaroniteRazorheads,
+	Ammo:       proto.Hunter_Options_AdamantiteStinger,
 	PetType:    proto.Hunter_Options_Wolf,
 	PetTalents: FerocityTalents,
 	PetUptime:  0.9,

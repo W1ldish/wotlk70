@@ -254,8 +254,9 @@ enum TristateEffect {
 
 enum Explosive {
 	ExplosiveUnknown = 0;
-	ExplosiveSaroniteBomb = 1;
-	ExplosiveCobaltFragBomb = 2;
+	ExplosiveBiggerOne = 1;
+	ExplosiveAdamantiteGrenade = 2;
+	ExplosiveFelIronBomb = 3;
 }
 
 enum Potions {
@@ -546,8 +547,7 @@ message Consumes {
 	Potions prepop_potion = 11;
 	Conjured default_conjured = 12;
 
-	bool thermal_sapper = 15;
-	bool explosive_decoy = 16;
+	bool super_sapper = 15;
 	Explosive filler_explosive = 17;
 }
 

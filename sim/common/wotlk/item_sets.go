@@ -42,7 +42,7 @@ var ItemSetNetherstrike = core.NewItemSet(core.ItemSet{
 var ItemSetRagesteel = core.NewItemSet(core.ItemSet{
 	Name: "Burning Rage",
 	Bonuses: map[int32]core.ApplyEffect{
-		3: func(agent core.Agent) {
+		2: func(agent core.Agent) {
 			agent.GetCharacter().AddStat(stats.MeleeHit, 20)
 			agent.GetCharacter().AddStat(stats.SpellHit, 20)
 		},

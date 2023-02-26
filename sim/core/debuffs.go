@@ -694,12 +694,12 @@ func ShatteringThrowAura(target *Unit) *Aura {
 const HuntersMarkAuraTag = "HuntersMark"
 
 func HuntersMarkAura(target *Unit, points int32, glyphed bool) *Aura {
-	bonus := 500.0 * (1 + 0.1*float64(points) + TernaryFloat64(glyphed, 0.2, 0))
+	bonus := 110.0 * (1 + 0.1*float64(points) + TernaryFloat64(glyphed, 0.2, 0))
 
 	aura := target.GetOrRegisterAura(Aura{
 		Label:    "HuntersMark-" + strconv.Itoa(int(bonus)),
 		Tag:      HuntersMarkAuraTag,
-		ActionID: ActionID{SpellID: 53338},
+		ActionID: ActionID{SpellID: 14325},
 		Duration: NeverExpires,
 	})
 

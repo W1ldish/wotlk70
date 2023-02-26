@@ -213,8 +213,8 @@ export const DefaultConsumes = Consumes.create({
 	defaultPotion: Potions.PotionOfSpeed,
 	petFood: PetFood.PetFoodSpicedMammothTreats,
 	prepopPotion: Potions.PotionOfSpeed,
-	thermalSapper: true,
-	fillerExplosive: Explosive.ExplosiveSaroniteBomb,
+	superSapper: true,
+	fillerExplosive: Explosive.ExplosiveBiggerOne,
 });
 
 export const P1_BLOOD_BIS_PRESET = {

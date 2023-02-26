@@ -88,8 +88,8 @@ export const DefaultConsumes = Consumes.create({
 	food: Food.FoodDragonfinFilet,
 	defaultPotion: Potions.IndestructiblePotion,
 	prepopPotion: Potions.IndestructiblePotion,
-	thermalSapper: true,
-	fillerExplosive: Explosive.ExplosiveSaroniteBomb,
+	superSapper: true,
+	fillerExplosive: Explosive.ExplosiveBiggerOne,
 });
 
 export const P1_PRERAID_BALANCED_PRESET = {

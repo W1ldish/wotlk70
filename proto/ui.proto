@@ -187,16 +187,15 @@ enum SourceFilterOption {
 enum RaidFilterOption {
 	RaidUnknown = 0;
 	RaidVanilla = 1;
-	RaidTbc = 2;
-	RaidNaxxramas = 3;
-	RaidEyeOfEternity = 4;
-	RaidObsidianSanctum = 5;
-	RaidVaultOfArchavon = 6;
-	RaidUlduar = 7;
-	RaidTrialOfTheCrusader = 8;
-	RaidOnyxiasLair = 9;
-	RaidIcecrownCitadel = 10;
-	RaidRubySanctum = 11;
+	RaidKarazhan = 2;
+	RaidGruul = 3;
+	RaidMagtheridon = 4;
+	RaidSerpentshrineCavern = 5;
+	RaidTempestKeep = 6;
+	RaidMountHyjal = 7;
+	RaidBlackTemple = 8;
+	RaidZulAman = 9;
+	RaidSunwellPlateau = 10;
 }
 
 message DatabaseFilters {

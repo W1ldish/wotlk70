@@ -264,8 +264,7 @@ export class ConsumesPicker extends Component {
 
     const tradeConsumesElem = this.rootElem.querySelector('.consumes-trade') as HTMLElement;
 
-		buildIconInput(tradeConsumesElem, this.simUI.player, IconInputs.ThermalSapper);
-		buildIconInput(tradeConsumesElem, this.simUI.player, IconInputs.ExplosiveDecoy);
+		buildIconInput(tradeConsumesElem, this.simUI.player, IconInputs.SuperSapper);
 		buildIconInput(tradeConsumesElem, this.simUI.player, IconInputs.FillerExplosiveInput);
 
 		const updateProfession = () => {

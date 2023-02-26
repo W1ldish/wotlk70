@@ -72,7 +72,7 @@ export const DefaultConsumes = Consumes.create({
     flask: Flask.FlaskOfBlindingLight,
     food: Food.FoodBlackenedBasilisk,
     prepopPotion: Potions.HastePotion,
-    thermalSapper: true,
+    superSapper: true,
 });
 
 export const DefaultRaidBuffs = RaidBuffs.create({

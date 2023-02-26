@@ -32,9 +32,6 @@ export const WeaponAmmo = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecHun
 	numColumns: 2,
 	values: [
 		{ value: Ammo.AmmoNone, tooltip: 'No Ammo' },
-		{ actionId: ActionId.fromItemId(52021), value: Ammo.IcebladeArrow },
-		{ actionId: ActionId.fromItemId(41165), value: Ammo.SaroniteRazorheads },
-		{ actionId: ActionId.fromItemId(41586), value: Ammo.TerrorshaftArrow },
 		{ actionId: ActionId.fromItemId(31737), value: Ammo.TimelessArrow },
 		{ actionId: ActionId.fromItemId(34581), value: Ammo.MysteriousArrow },
 		{ actionId: ActionId.fromItemId(33803), value: Ammo.AdamantiteStinger },
@@ -53,7 +50,7 @@ export const PetUptime = InputHelpers.makeSpecOptionsNumberInput<Spec.SpecHunter
 
 export const UseHuntersMark = InputHelpers.makeSpecOptionsBooleanIconInput<Spec.SpecHunter>({
 	fieldName: 'useHuntersMark',
-	id: ActionId.fromSpellId(53338),
+	id: ActionId.fromSpellId(14325),
 });
 
 export const SniperTrainingUptime = InputHelpers.makeSpecOptionsNumberInput<Spec.SpecHunter>({

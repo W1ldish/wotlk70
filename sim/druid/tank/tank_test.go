@@ -96,8 +96,8 @@ var FullConsumes = &proto.Consumes{
 	Food:            proto.Food_FoodBlackenedDragonfin,
 	DefaultPotion:   proto.Potions_IndestructiblePotion,
 	DefaultConjured: proto.Conjured_ConjuredHealthstone,
-	ThermalSapper:   true,
-	FillerExplosive: proto.Explosive_ExplosiveSaroniteBomb,
+	SuperSapper:     true,
+	FillerExplosive: proto.Explosive_ExplosiveBiggerOne,
 }
 
 var P1Gear = core.EquipmentSpecFromJsonString(`{"items": [

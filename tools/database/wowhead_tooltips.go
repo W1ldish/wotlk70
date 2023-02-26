@@ -314,34 +314,31 @@ func (item WowheadItemResponse) GetItemLevel() int {
 var phaseRegex = regexp.MustCompile(`Phase ([0-9])`)
 
 func (item WowheadItemResponse) GetPhase() int {
-	phase := item.GetIntValue(phaseRegex)
-	if phase != 0 {
-		return phase
-	}
 
 	ilvl := item.GetItemLevel()
-	if ilvl <= 164 { // TBC items
-		return 0
-	}
+	quality := proto.ItemQuality(item.GetQuality())
+	phase := 1
 
-	if ilvl < 200 || ilvl == 200 || ilvl == 213 || ilvl == 226 {
-		return 1
-	} else if ilvl == 219 || ilvl == 226 || ilvl == 239 {
-		return 2
-	} else if ilvl == 232 || ilvl == 245 || ilvl == 258 {
-		return 3
-	} else if ilvl == 251 || ilvl == 258 || ilvl == 259 || ilvl == 264 || ilvl == 268 || ilvl == 270 || ilvl == 271 || ilvl == 272 {
-		return 4
-	} else if ilvl == 277 || ilvl == 284 {
-		return 5
+	if ilvl == 110 {
+		phase = 1
+	} else if ilvl == 115 || ilvl == 120 || ilvl == 125 || ilvl == 123 {
+		phase = 2
+	} else if ilvl == 133 || ilvl == 128 || ilvl == 134 || ilvl == 138 || ilvl == 136 || ilvl == 127 {
+		phase = 3
+	} else if ilvl == 141 || ilvl == 151 || ilvl == 156 || ilvl == 146 {
+		phase = 4
+	} else if ilvl == 154 || ilvl == 159 || ilvl == 164 {
+		phase = 6
+	} else if quality == proto.ItemQuality_ItemQualityEpic {
+		phase = 4
 	}
-
+	fmt.Println(item.Name + " ID: " + strconv.Itoa(int(item.ID)) + " Phase: " + strconv.Itoa(phase) + " ilvl: " + strconv.Itoa(ilvl))
 	// default to 1
-	return 1
+	return phase
 }
 
 var uniqueRegex = regexp.MustCompile(`Unique`)
-var jcGemsRegex = regexp.MustCompile(`Jeweler's Gems`)
+var jcGemsRegex = regexp.MustCompile(`Soulbound`)
 
 func (item WowheadItemResponse) GetUnique() bool {
 	return uniqueRegex.MatchString(item.Tooltip) && !jcGemsRegex.MatchString(item.Tooltip)

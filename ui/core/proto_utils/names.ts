@@ -301,16 +301,15 @@ export const sourceNames: Record<SourceFilterOption, string> = {
 export const raidNames: Record<RaidFilterOption, string> = {
 	[RaidFilterOption.RaidUnknown]: 'Unknown',
 	[RaidFilterOption.RaidVanilla]: 'Vanilla',
-	[RaidFilterOption.RaidTbc]: 'TBC',
-	[RaidFilterOption.RaidNaxxramas]: 'Naxxramas',
-	[RaidFilterOption.RaidEyeOfEternity]: 'Eye of Eternity',
-	[RaidFilterOption.RaidObsidianSanctum]: 'Obsidian Sanctum',
-	[RaidFilterOption.RaidVaultOfArchavon]: 'Vault of Archavon',
-	[RaidFilterOption.RaidUlduar]: 'Ulduar',
-	[RaidFilterOption.RaidTrialOfTheCrusader]: 'Trial of the Crusader',
-	[RaidFilterOption.RaidOnyxiasLair]: 'Onyxia\'s Lair',
-	[RaidFilterOption.RaidIcecrownCitadel]: 'Icecrown Citadel',
-	[RaidFilterOption.RaidRubySanctum]: 'Ruby Sanctum',
+	[RaidFilterOption.RaidKarazhan]: 'Karazhan',
+	[RaidFilterOption.RaidGruul]: 'Gruul',
+	[RaidFilterOption.RaidMagtheridon]: 'Magtheridon',
+	[RaidFilterOption.RaidSerpentshrineCavern]: 'Serpentshrine Cavern',
+	[RaidFilterOption.RaidTempestKeep]: 'Tempest Keep',
+	[RaidFilterOption.RaidMountHyjal]: 'Mount Hyjal',
+	[RaidFilterOption.RaidBlackTemple]: 'Black Temple',
+	[RaidFilterOption.RaidZulAman]: 'Zul\'Aman',
+	[RaidFilterOption.RaidSunwellPlateau]: 'Sunwell Plateau',
 };
 
 export const difficultyNames: Record<DungeonDifficulty, string> = {

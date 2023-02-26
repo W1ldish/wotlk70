@@ -230,20 +230,16 @@ func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 		return true
 	}
 
+	if item.Ilvl > 164 {
+		return false
+	}
+
+	if item.Quality < proto.ItemQuality_ItemQualityEpic && item.Ilvl > 115 {
+		return false
+	}
+
 	if item.Quality < proto.ItemQuality_ItemQualityUncommon {
 		return false
-	} else if item.Quality > proto.ItemQuality_ItemQualityLegendary {
-		return false
-	} else if item.Name == "Warglaive of Azzinoth" || item.Name == "Thori'dal, the Stars' Fury" {
-		return true
-	} else if item.Quality == proto.ItemQuality_ItemQualityEpic {
-		if item.Ilvl > 164 {
-			return false
-		}
-	} else {
-		if item.Ilvl > 115 {
-			return false
-		}
 	}
 	if item.Ilvl == 0 {
 		fmt.Printf("Missing ilvl: %s\n", item.Name)
@@ -257,6 +253,10 @@ func simmableGemFilter(_ int32, gem *proto.UIGem) bool {
 	} else if strings.Contains(gem.Name, "Scarlet Ruby") || strings.Contains(gem.Name, "Bloodstone") || strings.Contains(gem.Name, "Sky Sapphire") || strings.Contains(gem.Name, "Chalcedony") || strings.Contains(gem.Name, "Autumn's Glow") || strings.Contains(gem.Name, "Sun Crystal") || strings.Contains(gem.Name, "Forest Emerald") || strings.Contains(gem.Name, "Dark Jade") || strings.Contains(gem.Name, "Monarch Topaz") || strings.Contains(gem.Name, "Huge Citrine") || strings.Contains(gem.Name, "Twilight Opal") || strings.Contains(gem.Name, "Shadow Crystal") || strings.Contains(gem.Name, "Earthsiege") || strings.Contains(gem.Name, "Skyflare") || strings.Contains(gem.Name, "Enchanted Tear") || strings.Contains(gem.Name, "Enchanted Pearl") || strings.Contains(gem.Name, "Dragon's Eye") {
 		return false
 	} else if strings.Contains(gem.Name, "Cardinal") || strings.Contains(gem.Name, "Majestic Zircon") || strings.Contains(gem.Name, "King's Amber") || strings.Contains(gem.Name, "Eye of Zul") || strings.Contains(gem.Name, "Ametrine") || strings.Contains(gem.Name, "Dreadstone") || strings.Contains(gem.Name, "Nightmare Tear") {
+		return false
+	} else if strings.Contains(gem.Name, "Stormjewel") {
+		return false
+	} else if gem.Id == 33132 {
 		return false
 	}
 	return true

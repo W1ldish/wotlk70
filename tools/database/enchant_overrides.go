@@ -195,7 +195,7 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 3002, ItemId: 29191, SpellId: 35447, Name: "Arcanum of Power", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.SpellPower: 22, stats.SpellHit: 14}.ToFloatArray(), Type: proto.ItemType_ItemTypeHead},
 	{EffectId: 3003, ItemId: 29192, SpellId: 35452, Name: "Arcanum of Ferocity", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.AttackPower: 34, stats.RangedAttackPower: 34, stats.MeleeHit: 16, stats.SpellHit: 16}.ToFloatArray(), Type: proto.ItemType_ItemTypeHead},
 	{EffectId: 3096, ItemId: 30846, SpellId: 37891, Name: "Arcanum of the Outcast", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Strength: 17, stats.Intellect: 16}.ToFloatArray(), Type: proto.ItemType_ItemTypeHead},
-	{EffectId: 3004, ItemId: 29193, SpellId: 35453, Name: "Arcanum of the Gladiator", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Stamina: 18, stats.Resilience: 20}.ToFloatArray(), Type: proto.ItemType_ItemTypeHead},
+	{EffectId: 3004, ItemId: 29193, SpellId: 35453, Name: "Arcanum of the Gladiator", Phase: 6, Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Stamina: 18, stats.Resilience: 20}.ToFloatArray(), Type: proto.ItemType_ItemTypeHead},
 
 	// ZG Head Enchants
 	{EffectId: 2583, ItemId: 19782, SpellId: 24149, Name: "Presence of Might", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.Stamina: 10, stats.Defense: 10, stats.BlockValue: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeHead, ClassAllowlist: []proto.Class{proto.Class_ClassWarrior}},
@@ -219,7 +219,7 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 368, SpellId: 34004, Name: "Enchant Cloak - Greater Agility", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Agility: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeBack},
 	{EffectId: 2938, ItemId: 28274, SpellId: 34003, Name: "Enchant Cloak - Spell Penetration", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.SpellPenetration: 20}.ToFloatArray(), Type: proto.ItemType_ItemTypeBack},
 	{EffectId: 1441, ItemId: 28277, SpellId: 34006, Name: "Enchant Cloak - Greater Shadow Resistance", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.ShadowResistance: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeBack},
-	{EffectId: 2648, ItemId: 35756, SpellId: 47051, Name: "Enchant Cloak - Steelweave", Phase: 5, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.Defense: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeBack},
+	{EffectId: 2648, ItemId: 35756, SpellId: 47051, Name: "Enchant Cloak - Steelweave", Phase: 6, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.Defense: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeBack},
 
 	// Chest
 	{EffectId: 2659, SpellId: 27957, Name: "Chest - Exceptional Health", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Health: 150}.ToFloatArray(), Type: proto.ItemType_ItemTypeChest},
@@ -227,7 +227,7 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 2933, ItemId: 28270, SpellId: 33992, Name: "Chest - Major Resilience", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Resilience: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeChest},
 	{EffectId: 1144, SpellId: 33990, Name: "Chest - Major Spirit", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Spirit: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeChest},
 	{EffectId: 3150, SpellId: 33991, Name: "Chest - Restore Mana Prime", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.MP5: 6}.ToFloatArray(), Type: proto.ItemType_ItemTypeChest},
-	{EffectId: 1950, ItemId: 35500, SpellId: 46594, Name: "Chest - Defense", Phase: 5, Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Defense: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeChest},
+	{EffectId: 1950, ItemId: 35500, SpellId: 46594, Name: "Chest - Defense", Phase: 6, Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Defense: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeChest},
 
 	// Wrist
 	{EffectId: 2649, ItemId: 22533, SpellId: 27914, Name: "Bracer - Fortitude", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Stamina: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeWrist},
@@ -258,7 +258,7 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 2649, ItemId: 22543, SpellId: 27950, Name: "Enchant Boots - Fortitude", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Stamina: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
 	{EffectId: 2657, ItemId: 22544, SpellId: 27951, Name: "Enchant Boots - Dexterity", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Agility: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
 	{EffectId: 2939, ItemId: 28279, SpellId: 34007, Name: "Enchant Boots - Cat's Swiftness", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.Agility: 6}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
-	{EffectId: 2658, ItemId: 22545, SpellId: 27954, Name: "Enchant Boots - Surefooted", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.MeleeHit: 10}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
+	{EffectId: 2658, ItemId: 22545, SpellId: 27954, Name: "Enchant Boots - Surefooted", Phase: 2, Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.MeleeHit: 10}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
 
 	// Weapon
 	{EffectId: 1897, ItemId: 16250, SpellId: 20031, Name: "Superior Striking", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
@@ -267,14 +267,14 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 2666, ItemId: 22551, SpellId: 27968, Name: "Major Intellect", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Intellect: 30}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
 	{EffectId: 2667, ItemId: 22554, SpellId: 27971, Name: "Savagery", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.AttackPower: 70, stats.RangedAttackPower: 70}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon, EnchantType: proto.EnchantType_EnchantTypeTwoHand},
 	{EffectId: 2669, ItemId: 22555, SpellId: 27975, Name: "Major Spellpower", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.SpellPower: 40}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
-	{EffectId: 2671, ItemId: 22560, SpellId: 27981, Name: "Sunfire", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
-	{EffectId: 2672, ItemId: 22561, SpellId: 27982, Name: "Soulfrost", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
-	{EffectId: 2673, ItemId: 22559, SpellId: 27984, Name: "Mongoose", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
+	{EffectId: 2671, ItemId: 22560, SpellId: 27981, Name: "Sunfire", Phase: 2, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
+	{EffectId: 2672, ItemId: 22561, SpellId: 27982, Name: "Soulfrost", Phase: 2, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
+	{EffectId: 2673, ItemId: 22559, SpellId: 27984, Name: "Mongoose", Phase: 2, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
 	{EffectId: 2564, ItemId: 19445, SpellId: 23800, Name: "Agility", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Agility: 15}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
-	{EffectId: 3222, ItemId: 33165, SpellId: 42620, Name: "Greater Agility", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Agility: 20}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
+	{EffectId: 3222, ItemId: 33165, SpellId: 42620, Name: "Greater Agility", Phase: 2, Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Agility: 20}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
 	{EffectId: 2670, ItemId: 22556, SpellId: 27977, Name: "2H Weapon - Major Agility", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Agility: 35}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon, EnchantType: proto.EnchantType_EnchantTypeTwoHand},
-	{EffectId: 3225, ItemId: 33307, SpellId: 42974, Name: "Executioner", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
-	{EffectId: 3273, ItemId: 35498, SpellId: 46578, Name: "Deathfrost", Phase: 5, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
+	{EffectId: 3225, ItemId: 33307, SpellId: 42974, Name: "Executioner", Phase: 5, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
+	{EffectId: 3273, ItemId: 35498, SpellId: 46578, Name: "Deathfrost", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
 	{EffectId: 3855, ItemId: 45060, SpellId: 62959, Name: "Staff - Spellpower", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.SpellPower: 69}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon, EnchantType: proto.EnchantType_EnchantTypeStaff},
 
 	// Shield
@@ -283,12 +283,12 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 3229, SpellId: 44383, Name: "Resilience", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Resilience: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon, EnchantType: proto.EnchantType_EnchantTypeShield},
 
 	// Ring
-	{EffectId: 2929, ItemId: 22535, SpellId: 27920, Name: "Striking", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeFinger, RequiredProfession: proto.Profession_Enchanting},
+	{EffectId: 2929, ItemId: 22535, SpellId: 27920, Name: "Striking", Phase: 2, Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeFinger, RequiredProfession: proto.Profession_Enchanting},
 	{EffectId: 2928, ItemId: 22536, SpellId: 27924, Name: "Spellpower", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.SpellPower: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeFinger, RequiredProfession: proto.Profession_Enchanting},
 	{EffectId: 2931, ItemId: 22538, SpellId: 27927, Name: "Stats", Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.Stamina: 4, stats.Intellect: 4, stats.Spirit: 4, stats.Strength: 4, stats.Agility: 4}.ToFloatArray(), Type: proto.ItemType_ItemTypeFinger, RequiredProfession: proto.Profession_Enchanting},
 
 	// Ranged
 	{EffectId: 2523, ItemId: 18283, SpellId: 22779, Name: "Biznicks 247x128 Accurascope", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeRanged},
 	{EffectId: 2723, ItemId: 23765, SpellId: 30252, Name: "Khorium Scope", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeRanged},
-	{EffectId: 2724, ItemId: 23766, SpellId: 30260, Name: "Stabilized Eternium Scope", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeRanged},
+	{EffectId: 2724, ItemId: 23766, SpellId: 30260, Name: "Stabilized Eternium Scope", Phase: 2, Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeRanged},
 }

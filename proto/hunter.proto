@@ -230,13 +230,10 @@ message Hunter {
 	message Options {
 		enum Ammo {
 			AmmoNone = 0;
-			IcebladeArrow = 1;
-			SaroniteRazorheads = 2;
-			TerrorshaftArrow = 3;
-			TimelessArrow = 4;
-			MysteriousArrow = 5;
-			AdamantiteStinger = 6;
-			BlackflightArrow = 7;
+			TimelessArrow = 1;
+			MysteriousArrow = 2;
+			AdamantiteStinger = 3;
+			BlackflightArrow = 4;
 		}
 		Ammo ammo = 1;
 

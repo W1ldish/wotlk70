@@ -60,8 +60,8 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 1087.15181
-  tps: 771.87778
+  dps: 1086.84973
+  tps: 771.66331
  }
 }
 dps_results: {

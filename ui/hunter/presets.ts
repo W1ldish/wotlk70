@@ -97,7 +97,7 @@ export const DefaultRotation = HunterRotation.create({
 });
 
 export const DefaultOptions = HunterOptions.create({
-	ammo: Ammo.SaroniteRazorheads,
+	ammo: Ammo.AdamantiteStinger,
 	useHuntersMark: true,
 	petType: PetType.Wolf,
 	petTalents: ferocityDefault,
@@ -106,7 +106,7 @@ export const DefaultOptions = HunterOptions.create({
 });
 
 export const BMDefaultOptions = HunterOptions.create({
-	ammo: Ammo.SaroniteRazorheads,
+	ammo: Ammo.AdamantiteStinger,
 	useHuntersMark: true,
 	petType: PetType.Wolf,
 	petTalents: ferocityBMDefault,

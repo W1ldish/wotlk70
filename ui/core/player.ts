@@ -747,15 +747,15 @@ export class Player<SpecType extends Spec> {
 	};
 
 	static readonly RAID_IDS: Partial<Record<RaidFilterOption, number>> = {
-		[RaidFilterOption.RaidNaxxramas]: 3456,
-		[RaidFilterOption.RaidEyeOfEternity]: 4500,
-		[RaidFilterOption.RaidObsidianSanctum]: 4493,
-		[RaidFilterOption.RaidVaultOfArchavon]: 4603,
-		[RaidFilterOption.RaidUlduar]: 4273,
-		[RaidFilterOption.RaidTrialOfTheCrusader]: 4722,
-		[RaidFilterOption.RaidOnyxiasLair]: 2159,
-		[RaidFilterOption.RaidIcecrownCitadel]: 4812,
-		[RaidFilterOption.RaidRubySanctum]: 4987,
+		[RaidFilterOption.RaidKarazhan]: 3457,
+		[RaidFilterOption.RaidGruul]: 3923,
+		[RaidFilterOption.RaidMagtheridon]: 3836,
+		[RaidFilterOption.RaidSerpentshrineCavern]: 3607,
+		[RaidFilterOption.RaidTempestKeep]: 3845,
+		[RaidFilterOption.RaidMountHyjal]: 3606,
+		[RaidFilterOption.RaidBlackTemple]: 3959,
+		[RaidFilterOption.RaidZulAman]: 3805,
+		[RaidFilterOption.RaidSunwellPlateau]: 4075,
 	};
 
 	filterItemData<T>(itemData: Array<T>, getItemFunc: (val: T) => Item, slot: ItemSlot): Array<T> {
@@ -790,9 +790,6 @@ export class Player<SpecType extends Spec> {
 
 		if (!filters.raids.includes(RaidFilterOption.RaidVanilla)) {
 			itemData = filterItems(itemData, item => item.expansion != Expansion.ExpansionVanilla);
-		}
-		if (!filters.raids.includes(RaidFilterOption.RaidTbc)) {
-			itemData = filterItems(itemData, item => item.expansion != Expansion.ExpansionTbc);
 		}
 		for (const [raidOptionStr, zoneId] of Object.entries(Player.RAID_IDS)) {
 			const raidOption = parseInt(raidOptionStr) as RaidFilterOption;

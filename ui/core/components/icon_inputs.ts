@@ -246,15 +246,14 @@ export const SpellDamageDebuff = InputHelpers.makeMultiIconInput([
 	makeBooleanDebuffInput(ActionId.fromSpellId(47865), 'curseOfElements'),
 ], 'Spell Dmg');
 
-export const HuntersMark = withLabel(makeQuadstateDebuffInput(ActionId.fromSpellId(53338), ActionId.fromSpellId(19423), ActionId.fromItemId(42907), 'huntersMark'), 'Mark');
+export const HuntersMark = withLabel(makeQuadstateDebuffInput(ActionId.fromSpellId(14325), ActionId.fromSpellId(19423), ActionId.fromItemId(42907), 'huntersMark'), 'Mark');
 export const JudgementOfWisdom = withLabel(makeBooleanDebuffInput(ActionId.fromSpellId(53408), 'judgementOfWisdom'), 'JoW');
 export const JudgementOfLight = makeBooleanDebuffInput(ActionId.fromSpellId(20271), 'judgementOfLight');
 export const ShatteringThrow = makeMultistateIndividualBuffInput(ActionId.fromSpellId(64382), 20, 'shatteringThrows');
 export const GiftOfArthas = makeBooleanDebuffInput(ActionId.fromSpellId(11374), 'giftOfArthas');
 
 // Consumes
-export const ThermalSapper = makeBooleanConsumeInput(ActionId.fromItemId(42641), 'thermalSapper');
-export const ExplosiveDecoy = makeBooleanConsumeInput(ActionId.fromItemId(40536), 'explosiveDecoy');
+export const SuperSapper = makeBooleanConsumeInput(ActionId.fromItemId(23827), 'superSapper');
 
 export const SpicedMammothTreats = makeBooleanConsumeInput(ActionId.fromItemId(33874), 'petFood', PetFood.PetFoodKiblersBits);
 export const PetScrollOfAgilityV = makeBooleanConsumeInput(ActionId.fromItemId(27498), 'petScrollOfAgility', 5);
@@ -532,8 +531,9 @@ export const makeFoodInput = makeConsumeInputFactory({
 });
 
 export const FillerExplosiveInput = makeConsumeInput('fillerExplosive', [
-	{ actionId: ActionId.fromItemId(41119), value: Explosive.ExplosiveSaroniteBomb },
-	{ actionId: ActionId.fromItemId(40771), value: Explosive.ExplosiveCobaltFragBomb },
+	{ actionId: ActionId.fromItemId(23826), value: Explosive.ExplosiveBiggerOne },
+	{ actionId: ActionId.fromItemId(23737), value: Explosive.ExplosiveAdamantiteGrenade },
+	{ actionId: ActionId.fromItemId(23736), value: Explosive.ExplosiveFelIronBomb },
 ] as Array<IconEnumValueConfig<Player<any>, Explosive>>);
 
 export interface ConsumeInputFactoryArgs<T extends number> {

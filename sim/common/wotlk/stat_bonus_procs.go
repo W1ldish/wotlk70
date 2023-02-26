@@ -210,7 +210,7 @@ func init() {
 		Bonus:      stats.Stats{stats.AttackPower: 160, stats.RangedAttackPower: 160},
 		Duration:   time.Second * 10,
 		Callback:   core.CallbackOnSpellHitDealt,
-		ProcMask:   core.ProcMaskSpellDamage,
+		ProcMask:   core.ProcMaskMeleeOrRanged,
 		Outcome:    core.OutcomeLanded,
 		ProcChance: 1,
 		ICD:        time.Second * 60,

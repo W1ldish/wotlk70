@@ -233,6 +233,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-TheTwinBladesofAzzinoth"
+ value: {
+  dps: 965.51259
+  tps: 617.96506
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-TirisfalRegalia"
  value: {
   dps: 1622.46008

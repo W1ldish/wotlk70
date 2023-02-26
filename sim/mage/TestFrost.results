@@ -233,6 +233,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFrost-AllItems-TheTwinBladesofAzzinoth"
+ value: {
+  dps: 993.19827
+  tps: 717.76248
+ }
+}
+dps_results: {
  key: "TestFrost-AllItems-TirisfalRegalia"
  value: {
   dps: 1368.41993
