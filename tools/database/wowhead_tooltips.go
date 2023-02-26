@@ -332,8 +332,7 @@ func (item WowheadItemResponse) GetPhase() int {
 	} else if quality == proto.ItemQuality_ItemQualityEpic {
 		phase = 4
 	}
-	fmt.Println(item.Name + " ID: " + strconv.Itoa(int(item.ID)) + " Phase: " + strconv.Itoa(phase) + " ilvl: " + strconv.Itoa(ilvl))
-	// default to 1
+
 	return phase
 }
 
