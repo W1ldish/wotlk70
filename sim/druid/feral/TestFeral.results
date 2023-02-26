@@ -282,6 +282,20 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeral-AllItems-ShatteredSunPendantofAcumen-34678"
+ value: {
+  dps: 1255.61448
+  tps: 1436.27322
+ }
+}
+dps_results: {
+ key: "TestFeral-AllItems-ShatteredSunPendantofMight-34679"
+ value: {
+  dps: 1288.48005
+  tps: 1475.23238
+ }
+}
+dps_results: {
  key: "TestFeral-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
   dps: 1267.59401

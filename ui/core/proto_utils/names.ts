@@ -6,6 +6,7 @@ import {
 	PseudoStat,
 	Race,
 	RangedWeaponType,
+	ShattrathFaction,
 	Stat,
 	WeaponType,
 } from '../proto/common.js';
@@ -100,6 +101,24 @@ export function nameToClass(name: string): Class {
 	}
 
 	return Class.ClassUnknown;
+}
+
+export const shattFactionNames: Record<ShattrathFaction, string> = {
+	[ShattrathFaction.None]: 'None',
+	[ShattrathFaction.Aldor]: 'Aldor',
+	[ShattrathFaction.Scryer]: 'Scryer',
+}
+
+export function nameToShattFaction(name: string): ShattrathFaction {
+	const lower = name.toLowerCase();
+	for (const key in shattFactionNames) {
+		const faction = parseInt(key) as ShattrathFaction;
+		if (shattFactionNames[faction].toLowerCase() == lower) {
+			return faction;
+		}
+	}
+
+	return ShattrathFaction.None;
 }
 
 export const professionNames: Record<Profession, string> = {

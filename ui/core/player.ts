@@ -15,6 +15,7 @@ import {
 	Race,
 	RaidTarget,
 	RangedWeaponType,
+	ShattrathFaction,
 	SimDatabase,
 	Spec,
 	Stat,
@@ -97,6 +98,7 @@ export class Player<SpecType extends Spec> {
 	private gear: Gear = new Gear({});
 	private itemSwapGear: ItemSwapGear = new ItemSwapGear();
 	private race: Race;
+	private shattFaction: ShattrathFaction;
 	private profession1: Profession = 0;
 	private profession2: Profession = 0;
 	private rotation: SpecRotation<SpecType>;
@@ -148,6 +150,7 @@ export class Player<SpecType extends Spec> {
 
 		this.spec = spec;
 		this.race = specToEligibleRaces[this.spec][0];
+		this.shattFaction = 0;
 		this.specTypeFunctions = specTypeFunctions[this.spec] as SpecTypeFunctions<SpecType>;
 		this.rotation = this.specTypeFunctions.rotationCreate();
 		this.specOptions = this.specTypeFunctions.optionsCreate();
@@ -263,6 +266,16 @@ export class Player<SpecType extends Spec> {
 		this.itemEPCache = new Map();
 		this.enchantEPCache = new Map();
 	}
+	getShattFaction(): ShattrathFaction {
+		return this.shattFaction;
+	}
+	setShattFaction(eventID: EventID, newFaction: ShattrathFaction) {
+		if (newFaction != this.shattFaction) {
+			this.shattFaction = newFaction;
+			this.raceChangeEmitter.emit(eventID);
+		}
+	}
+
 
 	async computeStatWeights(eventID: EventID, epStats: Array<Stat>, epPseudoStats: Array<PseudoStat>, epReferenceStat: Stat, onProgress: Function): Promise<StatWeightsResult> {
 		const result = await this.sim.statWeights(this, epStats, epPseudoStats, epReferenceStat, onProgress);
@@ -910,6 +923,7 @@ export class Player<SpecType extends Spec> {
 				name: this.getName(),
 				race: this.getRace(),
 				class: this.getClass(),
+				shattFaction: this.getShattFaction(),
 				equipment: gear.asSpec(),
 				consumes: this.getConsumes(),
 				bonusStats: this.getBonusStats().toProto(),

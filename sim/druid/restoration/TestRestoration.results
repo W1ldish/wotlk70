@@ -180,6 +180,14 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-ShatteredSunPendantofAcumen-34678"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-ShatteredSunPendantofMight-34679"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-Shiffar'sNexus-Horn-28418"
  value: {}
 }

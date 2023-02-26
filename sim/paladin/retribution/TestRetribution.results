@@ -212,14 +212,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestRetribution-AllItems-EnigmaticStarflareDiamond"
- value: {
-  dps: 3454.03211
-  tps: 3527.03694
-  dtps: 4.82979
- }
-}
-dps_results: {
  key: "TestRetribution-AllItems-EyeofMagtheridon-28789"
  value: {
   dps: 3375.955
@@ -236,27 +228,11 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestRetribution-AllItems-ForlornStarflareDiamond"
- value: {
-  dps: 3440.77296
-  tps: 3513.77779
-  dtps: 4.82979
- }
-}
-dps_results: {
  key: "TestRetribution-AllItems-Gladiator'sVindication"
  value: {
   dps: 3270.21519
   tps: 3342.33526
   dtps: 5.02886
- }
-}
-dps_results: {
- key: "TestRetribution-AllItems-ImpassiveStarflareDiamond"
- value: {
-  dps: 3454.03211
-  tps: 3527.03694
-  dtps: 4.82979
  }
 }
 dps_results: {
@@ -340,22 +316,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestRetribution-AllItems-PersistentEarthshatterDiamond"
- value: {
-  dps: 3460.79042
-  tps: 3533.79525
-  dtps: 4.82979
- }
-}
-dps_results: {
- key: "TestRetribution-AllItems-PowerfulEarthshatterDiamond"
- value: {
-  dps: 3435.64768
-  tps: 3508.65251
-  dtps: 4.82979
- }
-}
-dps_results: {
  key: "TestRetribution-AllItems-PrimalIntent"
  value: {
   dps: 3302.15765
@@ -404,6 +364,22 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-ShatteredSunPendantofAcumen-34678"
+ value: {
+  dps: 3367.39036
+  tps: 3440.28391
+  dtps: 4.82979
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-ShatteredSunPendantofMight-34679"
+ value: {
+  dps: 3419.82787
+  tps: 3492.8327
+  dtps: 4.68716
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
   dps: 3394.95214
@@ -436,14 +412,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestRetribution-AllItems-SwiftStarflareDiamond"
- value: {
-  dps: 3460.79042
-  tps: 3533.79525
-  dtps: 4.82979
- }
-}
-dps_results: {
  key: "TestRetribution-AllItems-SwiftWindfireDiamond"
  value: {
   dps: 3450.43753
@@ -460,26 +428,10 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestRetribution-AllItems-TirelessStarflareDiamond"
- value: {
-  dps: 3440.77296
-  tps: 3513.77779
-  dtps: 4.82979
- }
-}
-dps_results: {
  key: "TestRetribution-AllItems-TomeoftheLightbringer-32368"
  value: {
   dps: 3409.58026
   tps: 3482.58509
-  dtps: 4.82979
- }
-}
-dps_results: {
- key: "TestRetribution-AllItems-TrenchantEarthshatterDiamond"
- value: {
-  dps: 3440.77296
-  tps: 3513.77779
   dtps: 4.82979
  }
 }

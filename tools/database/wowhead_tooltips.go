@@ -317,19 +317,20 @@ func (item WowheadItemResponse) GetPhase() int {
 
 	ilvl := item.GetItemLevel()
 	phase := 1
-
-	if ilvl == 110 {
-		phase = 1
-	} else if ilvl == 115 || ilvl == 120 || ilvl == 125 || ilvl == 123 {
-		phase = 2
-	} else if ilvl == 133 || ilvl == 128 || ilvl == 134 || ilvl == 138 || ilvl == 136 || ilvl == 127 {
-		phase = 3
-	} else if ilvl == 141 || ilvl == 151 || ilvl == 156 || ilvl == 146 {
-		phase = 4
-	} else if ilvl == 154 || ilvl == 159 || ilvl == 164 {
-		phase = 6
-	} else if strings.Contains(item.Name, "Crimson Spinel") || strings.Contains(item.Name, "Empyrean Sapphire") || strings.Contains(item.Name, "Lionseye") || strings.Contains(item.Name, "Seaspray Emerald") || strings.Contains(item.Name, "Pyrestone") || strings.Contains(item.Name, "Shadowsong Amethyst") {
-		phase = 4
+	if item.Quality > int(proto.ItemQuality_ItemQualityRare) {
+		if ilvl == 110 {
+			phase = 1
+		} else if ilvl == 115 || ilvl == 120 || ilvl == 125 || ilvl == 123 {
+			phase = 2
+		} else if ilvl == 133 || ilvl == 128 || ilvl == 134 || ilvl == 138 || ilvl == 136 || ilvl == 127 {
+			phase = 3
+		} else if ilvl == 141 || ilvl == 151 || ilvl == 156 || ilvl == 146 {
+			phase = 4
+		} else if ilvl == 154 || ilvl == 159 || ilvl == 164 {
+			phase = 6
+		} else if strings.Contains(item.Name, "Crimson Spinel") || strings.Contains(item.Name, "Empyrean Sapphire") || strings.Contains(item.Name, "Lionseye") || strings.Contains(item.Name, "Seaspray Emerald") || strings.Contains(item.Name, "Pyrestone") || strings.Contains(item.Name, "Shadowsong Amethyst") {
+			phase = 4
+		}
 	}
 
 	return phase

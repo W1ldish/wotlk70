@@ -4,6 +4,7 @@ import {
 	Cooldowns,
 	Debuffs,
 	IndividualBuffs,
+	ItemSlot,
 	PartyBuffs,
 	Profession,
 	RaidBuffs,
@@ -11,7 +12,7 @@ import {
 	Stat
 } from "../../proto/common";
 import { ActionId } from "../../proto_utils/action_id";
-import { professionNames, raceNames } from "../../proto_utils/names";
+import { nameToShattFaction, professionNames, raceNames } from "../../proto_utils/names";
 import { specToEligibleRaces } from "../../proto_utils/utils";
 import { Encounter } from '../../encounter';
 import { SavedEncounter, SavedSettings } from "../../proto/ui";
@@ -193,7 +194,22 @@ export class SettingsTab extends SimTab {
 			getValue: sim => sim.getProfession2(),
 			setValue: (eventID, sim, newValue) => sim.setProfession2(eventID, newValue),
 		});
+
+		const shattFactionPicker = new EnumPicker(contentBlock.bodyElement, this.simUI.player, {
+			values: ["Scryer", "Aldor"].map(faction => {
+				return {
+					name: faction,
+					value: nameToShattFaction(faction),
+				};
+			}),
+			changedEvent: sim => sim.gearChangeEmitter,
+			getValue: sim => sim.getShattFaction(),
+			setValue: (eventID, sim, newValue) => sim.setShattFaction(eventID, newValue),
+			showWhen: (player: Player<any>) => this.simUI.player.getEquippedItem(ItemSlot.ItemSlotNeck)?.item.id == 34678 || this.simUI.player.getEquippedItem(ItemSlot.ItemSlotNeck)?.item.id == 34679,
+		});
 	}
+
+	
 
 	private buildCustomSettingsSections() {
 		(this.simUI.individualConfig.customSections || []).forEach(customSection => {

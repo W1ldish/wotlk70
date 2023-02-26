@@ -282,6 +282,20 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestBalance-AllItems-ShatteredSunPendantofAcumen-34678"
+ value: {
+  dps: 1149.6803
+  tps: 1063.24338
+ }
+}
+dps_results: {
+ key: "TestBalance-AllItems-ShatteredSunPendantofMight-34679"
+ value: {
+  dps: 1069.06267
+  tps: 981.52917
+ }
+}
+dps_results: {
  key: "TestBalance-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
   dps: 1111.45082

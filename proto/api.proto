@@ -23,6 +23,8 @@ message Player {
 	Race race = 1;
 	Class class = 2;
 
+	ShattrathFaction shatt_faction = 24;
+
 	EquipmentSpec equipment = 3;
 	Consumes consumes = 4;
 	UnitStats bonus_stats = 36;

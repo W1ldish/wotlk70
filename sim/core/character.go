@@ -35,10 +35,10 @@ const CharacterBuildPhaseAll = CharacterBuildPhaseBase | CharacterBuildPhaseGear
 type Character struct {
 	Unit
 
-	Name  string // Different from Label, needed for returned results.
-	Race  proto.Race
-	Class proto.Class
-
+	Name         string // Different from Label, needed for returned results.
+	Race         proto.Race
+	Class        proto.Class
+	ShattFaction proto.ShattrathFaction
 	// Current gear.
 	Equip Equipment
 	//Item Swap Handler
@@ -88,10 +88,11 @@ func NewCharacter(party *Party, partyIndex int, player *proto.Player) Character 
 			DistanceFromTarget: player.DistanceFromTarget,
 		},
 
-		Name:  player.Name,
-		Race:  player.Race,
-		Class: player.Class,
-		Equip: ProtoToEquipment(player.Equipment),
+		Name:         player.Name,
+		Race:         player.Race,
+		Class:        player.Class,
+		ShattFaction: player.ShattFaction,
+		Equip:        ProtoToEquipment(player.Equipment),
 		professions: [2]proto.Profession{
 			player.Profession1,
 			player.Profession2,
