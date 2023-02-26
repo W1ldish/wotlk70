@@ -286,6 +286,17 @@ enum Conjured {
 	ConjuredRogueThistleTea = 4;
 }
 
+enum WeaponEnchant {
+	EnchantUnknown = 0;
+	EnchantBrilliantWizardOil = 1;
+	EnchantBrilliantManaOil = 2;
+	EnchantSuperiorWizardOil = 3;
+	EnchantSuperiorManaOil = 4;
+	EnchantAdamantiteSharpeningStone = 5;
+	EnchantAdamantiteWeightStone = 6;
+	EnchantElementalSharpeningStone = 7;
+}
+
 enum Flask {
 	FlaskUnknown = 0;
 	FlaskOfTheFrostWyrm = 1;
@@ -376,6 +387,7 @@ enum Food {
 	FoodSkullfishSoup = 18;
 	FoodSpicyHotTalbuk = 19;
 	FoodFishermansFeast = 20;
+	FoodSpicyCrawDad = 21;
 }
 
 enum PetFood {
@@ -522,6 +534,8 @@ message Consumes {
 	BattleElixir battle_elixir = 2;
 	GuardianElixir guardian_elixir = 3;
 
+	WeaponEnchant weapon_main = 4;
+	WeaponEnchant weapon_off = 5;
 	Food food = 6;
 	PetFood pet_food = 7;
 

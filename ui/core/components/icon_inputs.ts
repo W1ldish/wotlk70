@@ -1,5 +1,6 @@
 import { ActionId } from '../proto_utils/action_id.js';
-import { BattleElixir } from '../proto/common.js';
+import { BattleElixir} from '../proto/common.js';
+import { WeaponEnchant } from '../proto/common.js';
 import { Explosive } from '../proto/common.js';
 import { Flask } from '../proto/common.js';
 import { Food } from '../proto/common.js';
@@ -48,7 +49,6 @@ export const buildIconInput = (parent: HTMLElement, player: Player<Spec>, inputC
 
 export const AllStatsBuff = InputHelpers.makeMultiIconInput([
 	makeTristateRaidBuffInput(ActionId.fromSpellId(26991), ActionId.fromSpellId(17051), 'giftOfTheWild'),
-	makeBooleanRaidBuffInput(ActionId.fromItemId(49634), 'drumsOfTheWild'),
 ], 'Stats');
 
 export const AllStatsPercentBuff = InputHelpers.makeMultiIconInput([
@@ -256,7 +256,7 @@ export const GiftOfArthas = makeBooleanDebuffInput(ActionId.fromSpellId(11374), 
 export const ThermalSapper = makeBooleanConsumeInput(ActionId.fromItemId(42641), 'thermalSapper');
 export const ExplosiveDecoy = makeBooleanConsumeInput(ActionId.fromItemId(40536), 'explosiveDecoy');
 
-export const SpicedMammothTreats = makeBooleanConsumeInput(ActionId.fromItemId(43005), 'petFood', PetFood.PetFoodSpicedMammothTreats);
+export const SpicedMammothTreats = makeBooleanConsumeInput(ActionId.fromItemId(33874), 'petFood', PetFood.PetFoodKiblersBits);
 export const PetScrollOfAgilityV = makeBooleanConsumeInput(ActionId.fromItemId(27498), 'petScrollOfAgility', 5);
 export const PetScrollOfStrengthV = makeBooleanConsumeInput(ActionId.fromItemId(27503), 'petScrollOfStrength', 5);
 
@@ -412,6 +412,24 @@ export const makeConjuredInput = makeConsumeInputFactory({
 	] as Array<IconEnumValueConfig<Player<any>, Conjured>>
 });
 
+function makeWeaponEnchantFactory(consumesFieldName: keyof Consumes): (options: Array<WeaponEnchant>, tooltip?: string) => InputHelpers.TypedIconEnumPickerConfig<Player<any>, WeaponEnchant> {
+	return makeConsumeInputFactory({
+		consumesFieldName: consumesFieldName,
+		allOptions: [
+			{actionId: ActionId.fromItemId(20749), value: WeaponEnchant.EnchantBrilliantWizardOil},
+			{actionId: ActionId.fromItemId(20748), value: WeaponEnchant.EnchantBrilliantManaOil},
+			{actionId: ActionId.fromItemId(22522), value: WeaponEnchant.EnchantSuperiorWizardOil},
+			{actionId: ActionId.fromItemId(22521), value: WeaponEnchant.EnchantSuperiorManaOil},
+			{actionId: ActionId.fromItemId(23529), value: WeaponEnchant.EnchantAdamantiteSharpeningStone},
+			{actionId: ActionId.fromItemId(28421), value: WeaponEnchant.EnchantAdamantiteWeightStone},
+			{actionId: ActionId.fromItemId(18262), value: WeaponEnchant.EnchantElementalSharpeningStone},
+		] as Array<IconEnumValueConfig<Player<any>, WeaponEnchant>>,
+	});
+}
+
+export const makeMainWeaponEnchantInput = makeWeaponEnchantFactory('weaponMain');
+export const makeOffWeaponEnchantInput = makeWeaponEnchantFactory('weaponOff');
+
 export const makeFlasksInput = makeConsumeInputFactory({
 	consumesFieldName: 'flask',
 	allOptions: [
@@ -503,20 +521,6 @@ export const makeGuardianElixirsInput = makeConsumeInputFactory({
 export const makeFoodInput = makeConsumeInputFactory({
 	consumesFieldName: 'food',
 	allOptions: [
-		{ actionId: ActionId.fromItemId(43015), value: Food.FoodFishFeast },
-		{ actionId: ActionId.fromItemId(34753), value: Food.FoodGreatFeast },
-		{ actionId: ActionId.fromItemId(42999), value: Food.FoodBlackenedDragonfin },
-		{ actionId: ActionId.fromItemId(42995), value: Food.FoodHeartyRhino },
-		{ actionId: ActionId.fromItemId(34754), value: Food.FoodMegaMammothMeal },
-		{ actionId: ActionId.fromItemId(34756), value: Food.FoodSpicedWormBurger },
-		{ actionId: ActionId.fromItemId(42994), value: Food.FoodRhinoliciousWormsteak },
-		{ actionId: ActionId.fromItemId(34769), value: Food.FoodImperialMantaSteak },
-		{ actionId: ActionId.fromItemId(42996), value: Food.FoodSnapperExtreme },
-		{ actionId: ActionId.fromItemId(34758), value: Food.FoodMightyRhinoDogs },
-		{ actionId: ActionId.fromItemId(34767), value: Food.FoodFirecrackerSalmon },
-		{ actionId: ActionId.fromItemId(42998), value: Food.FoodCuttlesteak },
-		{ actionId: ActionId.fromItemId(43000), value: Food.FoodDragonfinFilet },
-
 		{ actionId: ActionId.fromItemId(27657), value: Food.FoodBlackenedBasilisk },
 		{ actionId: ActionId.fromItemId(27664), value: Food.FoodGrilledMudfish },
 		{ actionId: ActionId.fromItemId(27655), value: Food.FoodRavagerDog },

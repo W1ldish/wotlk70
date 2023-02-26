@@ -10,7 +10,8 @@ import {
 	Potions,
 	RaidBuffs,
 	RaidTarget,
-	TristateEffect
+	TristateEffect,
+	WeaponEnchant
 } from '../core/proto/common.js';
 import {SavedTalents} from '../core/proto/ui.js';
 
@@ -67,10 +68,10 @@ export const DefaultOptions = BalanceDruidOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-    defaultPotion: Potions.PotionOfSpeed,
-    flask: Flask.FlaskOfTheFrostWyrm,
-    food: Food.FoodFishFeast,
-    prepopPotion: Potions.PotionOfWildMagic,
+    defaultPotion: Potions.HastePotion,
+    flask: Flask.FlaskOfBlindingLight,
+    food: Food.FoodBlackenedBasilisk,
+    prepopPotion: Potions.HastePotion,
     thermalSapper: true,
 });
 

@@ -9,7 +9,8 @@ import {
   Potions,
   Profession,
   Spec,
-  Stat
+  Stat,
+  WeaponEnchant
 } from "../../proto/common";
 import { Component } from "../component";
 import { IconEnumPicker } from "../icon_enum_picker";
@@ -30,6 +31,9 @@ export class ConsumesPicker extends Component {
     this.buildPotionsPicker();
     this.buildElixirsPicker();
     this.buildFoodPicker();
+    if (!((this.simUI.player.getClass() == Class.ClassRogue) || (this.simUI.player.getClass() == Class.ClassShaman) || (this.simUI.player.getClass() == Class.ClassWarlock))) {
+      this.buildWeaponEnchantPicker();
+    }
     this.buildEngPicker();
     this.buildPetPicker();
   }
@@ -53,8 +57,10 @@ export class ConsumesPicker extends Component {
 			// This list is smaller because some potions don't make sense to use as prepot.
 			// E.g. healing/mana potions.
 			{ item: Potions.DestructionPotion, stats: [Stat.StatSpellCrit,Stat.StatSpellPower] },
-			{ item: Potions.HeroicPotion, stats: [Stat.StatStamina,Stat.StatStrength] },
+			{ item: Potions.HeroicPotion, stats: [Stat.StatStrength] },
 			{ item: Potions.HastePotion, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
+      { item: Potions.IronshieldPotion, stats: [Stat.StatArmor] },
+      { item: Potions.InsaneStrengthPotion, stats: [Stat.StatStrength] },
 		]);
 		if (prepopPotionOptions.length) {
 			const elem = this.rootElem.querySelector('.consumes-prepot') as HTMLElement;
@@ -66,11 +72,13 @@ export class ConsumesPicker extends Component {
     }
 
 		const potionOptions = this.simUI.splitRelevantOptions([
-			{ item: Potions.SuperManaPotion, stats: [Stat.StatStamina] },
+			{ item: Potions.SuperManaPotion, stats: [Stat.StatIntellect] },
 			{ item: Potions.IronshieldPotion, stats: [Stat.StatArmor] },
-			{ item: Potions.HeroicPotion, stats: [Stat.StatStamina,Stat.StatStrength] },
+			{ item: Potions.HeroicPotion, stats: [Stat.StatStrength] },
 			{ item: Potions.HastePotion, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
-			{ item: Potions.DestructionPotion, stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit, Stat.StatSpellPower] },
+			{ item: Potions.DestructionPotion, stats: [Stat.StatSpellCrit, Stat.StatSpellPower] },
+      { item: Potions.InsaneStrengthPotion, stats: [Stat.StatStrength] },
+      { item: Potions.FelManaPotion, stats: [Stat.StatIntellect]},
 		]);
 		if (potionOptions.length) {
 			const elem = this.rootElem.querySelector('.consumes-potions') as HTMLElement;
@@ -111,11 +119,11 @@ export class ConsumesPicker extends Component {
 
     const flaskOptions = this.simUI.splitRelevantOptions([
 			{ item: Flask.FlaskOfSupremePower, stats: [Stat.StatSpellPower] },
-			{ item: Flask.FlaskOfPureDeath, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower] },
+			{ item: Flask.FlaskOfRelentlessAssault, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower] },
 			{ item: Flask.FlaskOfMightyRestoration, stats: [Stat.StatMP5] },
 			{ item: Flask.FlaskOfFortification, stats: [Stat.StatStamina, Stat.StatDefense] },
-			{ item: Flask.FlaskOfPureDeath, stats: [] },
-      { item: Flask.FlaskOfBlindingLight, stats: [] },
+			{ item: Flask.FlaskOfPureDeath, stats: [Stat.StatSpellPower] },
+      { item: Flask.FlaskOfBlindingLight, stats: [Stat.StatSpellPower] },
       { item: Flask.FlaskOfDistilledWisdom, stats: [Stat.StatIntellect] },
 			{ item: Flask.FlaskOfChromaticWonder, stats: [Stat.StatAgility,Stat.StatStrength,Stat.StatIntellect,Stat.StatStamina,Stat.StatSpirit,Stat.StatArcaneResistance, Stat.StatFireResistance, Stat.StatFrostResistance, Stat.StatNatureResistance, Stat.StatShadowResistance] },
 		]);
@@ -129,8 +137,8 @@ export class ConsumesPicker extends Component {
 		}
 
 		const battleElixirOptions = this.simUI.splitRelevantOptions([
-			{ item: BattleElixir.ElixirOfMajorShadowPower, stats: [] },
-			{ item: BattleElixir.ElixirOfMajorFirePower, stats: [] },
+			{ item: BattleElixir.ElixirOfMajorShadowPower, stats: [Stat.StatSpellPower] },
+			{ item: BattleElixir.ElixirOfMajorFirePower, stats: [Stat.StatSpellPower] },
 			{ item: BattleElixir.FelStrengthElixir, stats: [Stat.StatAttackPower,Stat.StatRangedAttackPower] },
 			{ item: BattleElixir.ElixirOfMajorAgility, stats: [Stat.StatAgility,Stat.StatMeleeCrit] },
 			{ item: BattleElixir.ElixirOfMastery, stats: [Stat.StatAgility,Stat.StatStrength,Stat.StatIntellect,Stat.StatStamina,Stat.StatSpirit] },
@@ -185,17 +193,62 @@ export class ConsumesPicker extends Component {
     this.rootElem.appendChild(fragment.children[0] as HTMLElement);
 
     const foodOptions = this.simUI.splitRelevantOptions([
-			{ item: Food.FoodBlackenedBasilisk, stats: [Stat.StatSpellPower,Stat.StatSpirit] },
-			{ item: Food.FoodRoastedClefthoof, stats: [Stat.StatStrength,Stat.StatSpirit] },
-      { item: Food.FoodGrilledMudfish, stats: [Stat.StatAgility,Stat.StatSpirit]},
-			{ item: Food.FoodRavagerDog, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower,Stat.StatSpirit] },
-			{ item: Food.FoodRhinoliciousWormsteak, stats: [Stat.StatExpertise,Stat.StatSpirit] },
-			{ item: Food.FoodSpicyHotTalbuk, stats: [Stat.StatMeleeHit, Stat.StatSpellHit,Stat.StatSpirit] },
+			{ item: Food.FoodBlackenedBasilisk, stats: [Stat.StatSpellPower] },
+			{ item: Food.FoodRoastedClefthoof, stats: [Stat.StatStrength] },
+      { item: Food.FoodGrilledMudfish, stats: [Stat.StatAgility]},
+			{ item: Food.FoodRavagerDog, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower] },
+			{ item: Food.FoodSpicyHotTalbuk, stats: [Stat.StatMeleeHit, Stat.StatSpellHit] },
+      { item: Food.FoodFishermansFeast, stats: [Stat.StatStamina] },
+      { item: Food.FoodSkullfishSoup, stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit]},
 		]);
 		if (foodOptions.length) {
 			const elem = this.rootElem.querySelector('.consumes-food') as HTMLElement;
 			new IconEnumPicker(elem, this.simUI.player, IconInputs.makeFoodInput(foodOptions));
 		}
+  }
+
+  private buildWeaponEnchantPicker() {
+    let fragment = document.createElement('fragment');
+    fragment.innerHTML = `
+      <div class="consumes-row input-root input-inline">
+        <label class="form-label">Weapon Enchant</label>
+        <div class="consumes-row-inputs">
+          <div class="consumes-weapon-main"></div>
+          <div class="consumes-weapon-off"></div>
+        </div>
+      </div>
+    `;
+
+    this.rootElem.appendChild(fragment.children[0] as HTMLElement);
+
+    const weaponOptions = this.simUI.splitRelevantOptions([
+			{ item: WeaponEnchant.EnchantBrilliantWizardOil, stats: [Stat.StatSpellPower,Stat.StatSpellCrit] },
+      { item: WeaponEnchant.EnchantBrilliantManaOil, stats: [Stat.StatSpellPower,Stat.StatMP5]},
+      { item: WeaponEnchant.EnchantSuperiorWizardOil, stats: [Stat.StatSpellPower]},
+      { item: WeaponEnchant.EnchantSuperiorManaOil, stats: [Stat.StatMP5]},
+      { item: WeaponEnchant.EnchantAdamantiteSharpeningStone, stats: [Stat.StatAttackPower, Stat.StatMeleeCrit]},
+      { item: WeaponEnchant.EnchantAdamantiteWeightStone, stats: [Stat.StatAttackPower, Stat.StatMeleeCrit]},
+      { item: WeaponEnchant.EnchantElementalSharpeningStone, stats: [Stat.StatMeleeCrit]},
+		]);
+    const main = this.rootElem.querySelector('.consumes-weapon-main') as HTMLElement;
+    const off = this.rootElem.querySelector('.consumes-weapon-off') as HTMLElement;
+
+		if (weaponOptions.length) {
+			new IconEnumPicker(main, this.simUI.player, IconInputs.makeMainWeaponEnchantInput(weaponOptions));
+      new IconEnumPicker(off, this.simUI.player, IconInputs.makeOffWeaponEnchantInput(weaponOptions));
+		}
+    
+    const updateGear = () => {
+      if (this.simUI.player.getGear().hasSharpOHWeapon() || this.simUI.player.getGear().hasBluntOHWeapon())
+				off.classList.remove('hide');
+			else
+        off.classList.add('hide');
+      
+    }
+
+    this.simUI.player.gearChangeEmitter.on(updateGear);
+    updateGear();
+
   }
 
   private buildEngPicker() {
