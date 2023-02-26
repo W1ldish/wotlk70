@@ -316,7 +316,6 @@ var phaseRegex = regexp.MustCompile(`Phase ([0-9])`)
 func (item WowheadItemResponse) GetPhase() int {
 
 	ilvl := item.GetItemLevel()
-	quality := proto.ItemQuality(item.GetQuality())
 	phase := 1
 
 	if ilvl == 110 {
@@ -329,7 +328,7 @@ func (item WowheadItemResponse) GetPhase() int {
 		phase = 4
 	} else if ilvl == 154 || ilvl == 159 || ilvl == 164 {
 		phase = 6
-	} else if quality == proto.ItemQuality_ItemQualityEpic {
+	} else if strings.Contains(item.Name, "Crimson Spinel") || strings.Contains(item.Name, "Empyrean Sapphire") || strings.Contains(item.Name, "Lionseye") || strings.Contains(item.Name, "Seaspray Emerald") || strings.Contains(item.Name, "Pyrestone") || strings.Contains(item.Name, "Shadowsong Amethyst") {
 		phase = 4
 	}
 

@@ -692,11 +692,18 @@ var DenyListNameRegexes = []*regexp.Regexp{
 // Allows manual overriding for Gem fields in case WowHead is wrong.
 var GemOverrides = []*proto.UIGem{
 	{Id: 33131, Stats: stats.Stats{stats.AttackPower: 32, stats.RangedAttackPower: 32}.ToFloatArray()},
-	{Id: 35707, Phase: 6},
-	{Id: 35503, Phase: 6},
-	{Id: 35501, Phase: 6},
+	{Id: 35707, Phase: 6}, //Regal Nightseye
+	{Id: 35503, Phase: 6}, //Ember Skyfire Diamond
+	{Id: 35501, Phase: 6}, //Eternal Earthstorm Diamond
 	{Id: 25896, Phase: 2},
 	{Id: 25897, Phase: 2},
+	{Id: 47055, Phase: 6}, //Reckless Pyrestone
+	{Id: 35761, Phase: 6}, //Quick Lionseye
+	{Id: 35315, Phase: 6}, //Quick Dawnstone
+	{Id: 35759, Phase: 6}, //Forceful Seaspray Emerald
+	{Id: 37503, Phase: 6}, //Purified Shadowsong Amethyst
+	{Id: 35316, Phase: 6}, //Reckless Noble Topaz
+	{Id: 35318, Phase: 6}, //Forceful Talasite
 }
 var GemDenyList = map[int32]struct{}{
 	// pvp non-unique gems not in game currently.
