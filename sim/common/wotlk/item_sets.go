@@ -49,6 +49,15 @@ var ItemSetRagesteel = core.NewItemSet(core.ItemSet{
 	},
 })
 
+var ItemSetTwinStars = core.NewItemSet(core.ItemSet{
+	Name: "The Twin Stars",
+	Bonuses: map[int32]core.ApplyEffect{
+		2: func(agent core.Agent) {
+			agent.GetCharacter().AddStat(stats.SpellPower, 15)
+		},
+	},
+})
+
 var ItemSetSpellstrike = core.NewItemSet(core.ItemSet{
 	Name: "Spellstrike Infusion",
 	Bonuses: map[int32]core.ApplyEffect{
