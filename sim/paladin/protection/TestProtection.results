@@ -387,6 +387,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-TheTwinStars"
+ value: {
+  dps: 585.43924
+  tps: 1282.21679
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-TomeoftheLightbringer-32368"
  value: {
   dps: 569.26502

@@ -172,8 +172,6 @@ export const ManaTideTotem = makeMultistatePartyBuffInput(ActionId.fromSpellId(1
 export const Innervate = makeMultistateIndividualBuffInput(ActionId.fromSpellId(29166), 11, 'innervates');
 export const PowerInfusion = makeMultistateIndividualBuffInput(ActionId.fromSpellId(10060), 11, 'powerInfusions');
 export const FocusMagic = makeBooleanIndividualBuffInput(ActionId.fromSpellId(54648), 'focusMagic');
-export const TricksOfTheTrade = makeMultistateIndividualBuffInput(ActionId.fromSpellId(57933), 20, 'tricksOfTheTrades');
-export const UnholyFrenzy = makeMultistateIndividualBuffInput(ActionId.fromSpellId(49016), 11, 'unholyFrenzy');
 export const RevitalizeRejuvination = makeMultistateMultiplierIndividualBuffInput(ActionId.fromSpellId(26982), 101, 10, 'revitalizeRejuvination');
 export const RevitalizeWildGrowth = makeMultistateMultiplierIndividualBuffInput(ActionId.fromSpellId(53251), 101, 10, 'revitalizeWildGrowth');
 

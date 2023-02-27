@@ -319,8 +319,6 @@ export class SettingsTab extends SimTab {
 			{ item: IconInputs.ManaTideTotem, stats: [Stat.StatMP5] },
 			{ item: IconInputs.Innervate, stats: [Stat.StatMP5] },
 			{ item: IconInputs.PowerInfusion, stats: [Stat.StatMP5, Stat.StatSpellPower] },
-			{ item: IconInputs.TricksOfTheTrade, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower, Stat.StatSpellPower] },
-			{ item: IconInputs.UnholyFrenzy, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower] },
 		] as Array<StatOption<IconPickerConfig<Player<any>, any>>>);
 		if (miscBuffOptions.length > 0) {
 			new MultiIconPicker(contentBlock.bodyElement, this.simUI.player, {

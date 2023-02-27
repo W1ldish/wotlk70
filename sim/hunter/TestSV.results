@@ -366,6 +366,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSV-AllItems-TheTwinStars"
+ value: {
+  dps: 1768.20853
+  tps: 1340.87068
+ }
+}
+dps_results: {
  key: "TestSV-AllItems-TsunamiTalisman-30627"
  value: {
   dps: 1808.21824

@@ -103,14 +103,14 @@ func (we *WaterElemental) OnGCDReady(sim *core.Simulation) {
 
 // These numbers are just rough guesses based on looking at some logs.
 var waterElementalBaseStats = stats.Stats{
-	stats.Mana:      600,
-	stats.Intellect: 250,
+	stats.Mana:      2489,
+	stats.Intellect: 293,
 }
 
 var waterElementalStatInheritance = func(ownerStats stats.Stats) stats.Stats {
 	// These numbers are just rough guesses based on looking at some logs.
 	return ownerStats.DotProduct(stats.Stats{
-		stats.Stamina:    0.2,
+		stats.Stamina:    0.3,
 		stats.Intellect:  0.3,
 		stats.SpellPower: 0.333,
 	})

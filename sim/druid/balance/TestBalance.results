@@ -317,6 +317,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestBalance-AllItems-TheTwinStars"
+ value: {
+  dps: 1202.78361
+  tps: 1116.25005
+ }
+}
+dps_results: {
  key: "TestBalance-AllItems-ThunderheartHarness"
  value: {
   dps: 1262.5388

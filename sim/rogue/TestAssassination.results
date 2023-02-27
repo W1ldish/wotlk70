@@ -46,274 +46,281 @@ character_stats_results: {
 dps_results: {
  key: "TestAssassination-AllItems-AshtongueTalismanofLethality-32492"
  value: {
-  dps: 1040.30388
-  tps: 738.61576
+  dps: 1043.33451
+  tps: 740.7675
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-AssassinationArmor"
  value: {
-  dps: 1313.96506
-  tps: 932.91519
+  dps: 1325.48436
+  tps: 941.09389
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 1086.84973
-  tps: 771.66331
+  dps: 1095.42121
+  tps: 777.74906
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-BandoftheEternalSage-29305"
  value: {
-  dps: 1045.46512
-  tps: 742.28023
+  dps: 1054.5724
+  tps: 748.74641
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-BlackenedNaaruSliver-34427"
  value: {
-  dps: 1103.36161
-  tps: 783.38675
+  dps: 1120.91859
+  tps: 795.8522
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
-  dps: 1058.28666
-  tps: 751.38353
+  dps: 1081.74817
+  tps: 768.0412
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-CloakofDarkness-33122"
  value: {
-  dps: 1062.55198
-  tps: 754.41191
+  dps: 1064.18408
+  tps: 755.5707
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-DeathKnight'sAnguish-38212"
  value: {
-  dps: 1078.13226
-  tps: 765.4739
+  dps: 1080.64555
+  tps: 767.25834
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Deathmantle"
  value: {
-  dps: 1547.75202
-  tps: 1098.90393
+  dps: 1553.50302
+  tps: 1102.98715
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-DragonspineTrophy-28830"
  value: {
-  dps: 1060.49215
-  tps: 752.94942
+  dps: 1082.27027
+  tps: 768.41189
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-DrakeFangTalisman-19406"
  value: {
-  dps: 1084.84117
-  tps: 770.23723
+  dps: 1093.01336
+  tps: 776.03949
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-EyeofMagtheridon-28789"
  value: {
-  dps: 1037.02649
-  tps: 736.28881
+  dps: 1040.55505
+  tps: 738.79409
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Gladiator'sVestments"
  value: {
-  dps: 1314.74404
-  tps: 933.46827
+  dps: 1319.45833
+  tps: 936.81542
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-MadnessoftheBetrayer-32505"
  value: {
-  dps: 1097.03181
-  tps: 778.89258
+  dps: 1105.29481
+  tps: 784.75931
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Mana-EtchedRegalia"
  value: {
-  dps: 1097.8346
-  tps: 779.46257
+  dps: 1099.31366
+  tps: 780.5127
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Netherblade"
  value: {
-  dps: 1398.72251
-  tps: 993.09298
+  dps: 1403.86415
+  tps: 996.74355
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-PrimalIntent"
  value: {
-  dps: 1211.9809
-  tps: 860.50644
+  dps: 1220.63738
+  tps: 866.65254
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Quagmirran'sEye-27683"
  value: {
-  dps: 1037.02649
-  tps: 736.28881
+  dps: 1040.55505
+  tps: 738.79409
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-RingoftheFallenGod-21709"
  value: {
-  dps: 1046.56985
-  tps: 743.06459
+  dps: 1051.59245
+  tps: 746.63064
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-RobeoftheElderScribes-28602"
  value: {
-  dps: 1045.46512
-  tps: 742.28023
+  dps: 1054.5724
+  tps: 748.74641
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-SextantofUnstableCurrents-30626"
  value: {
-  dps: 1051.89297
-  tps: 746.84401
+  dps: 1057.80236
+  tps: 751.03968
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-ShardofContempt-34472"
  value: {
-  dps: 1066.31011
-  tps: 757.08018
+  dps: 1068.48629
+  tps: 758.62527
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-ShatteredSunPendantofAcumen-34678"
  value: {
-  dps: 1037.02649
-  tps: 736.28881
+  dps: 1040.55505
+  tps: 738.79409
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-ShatteredSunPendantofMight-34679"
  value: {
-  dps: 1075.66879
-  tps: 763.72484
+  dps: 1079.80494
+  tps: 766.66151
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
-  dps: 1051.65634
-  tps: 746.676
+  dps: 1057.52669
+  tps: 750.84395
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Slayer'sArmor"
  value: {
-  dps: 1804.22454
-  tps: 1280.99942
+  dps: 1828.07223
+  tps: 1297.93128
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-SpellstrikeInfusion"
  value: {
-  dps: 1109.22434
-  tps: 787.54928
+  dps: 1116.46755
+  tps: 792.69196
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-StormshroudArmor"
  value: {
-  dps: 1102.40403
-  tps: 782.70686
+  dps: 1117.16911
+  tps: 793.19007
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-TheBladefist-29348"
  value: {
-  dps: 960.47085
-  tps: 681.93431
+  dps: 972.69862
+  tps: 690.61602
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-TheFistsofFury"
  value: {
-  dps: 1327.63607
-  tps: 942.62161
+  dps: 1342.91628
+  tps: 953.47056
+ }
+}
+dps_results: {
+ key: "TestAssassination-AllItems-TheTwinStars"
+ value: {
+  dps: 1040.55505
+  tps: 738.79409
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-TsunamiTalisman-30627"
  value: {
-  dps: 1091.51537
-  tps: 774.97591
+  dps: 1100.3176
+  tps: 781.2255
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
-  dps: 1225.38517
-  tps: 870.02347
+  dps: 1254.30401
+  tps: 890.55585
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-Warp-SpringCoil-30450"
  value: {
-  dps: 1071.10119
-  tps: 760.48185
+  dps: 1081.49002
+  tps: 767.85791
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-WastewalkerArmor"
  value: {
-  dps: 1325.21183
-  tps: 940.9004
+  dps: 1328.7532
+  tps: 943.41477
  }
 }
 dps_results: {
  key: "TestAssassination-AllItems-WrathofSpellfire"
  value: {
-  dps: 1068.81593
-  tps: 758.85931
+  dps: 1071.40258
+  tps: 760.69583
  }
 }
 dps_results: {
  key: "TestAssassination-Average-Default"
  value: {
-  dps: 1033.94775
-  tps: 734.1029
+  dps: 1039.71192
+  tps: 738.19546
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-Assassination-FullBuffs-LongMultiTarget"
  value: {
-  dps: 2271.92833
-  tps: 1613.06912
+  dps: 2272.98044
+  tps: 1613.81611
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-Assassination-FullBuffs-LongSingleTarget"
  value: {
-  dps: 1037.02649
-  tps: 736.28881
+  dps: 1040.55505
+  tps: 738.79409
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-Assassination-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1097.93503
-  tps: 779.53387
+  dps: 1130.76194
+  tps: 802.84098
  }
 }
 dps_results: {
@@ -340,22 +347,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Deadly OH Deadly-FullBuffs-LongMultiTarget"
  value: {
-  dps: 707.35221
-  tps: 502.22007
+  dps: 711.00138
+  tps: 504.81098
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Deadly OH Deadly-FullBuffs-LongSingleTarget"
  value: {
-  dps: 388.47695
-  tps: 275.81863
+  dps: 391.55487
+  tps: 278.00396
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Deadly OH Deadly-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 458.91591
-  tps: 325.8303
+  dps: 471.78737
+  tps: 334.96903
  }
 }
 dps_results: {
@@ -382,22 +389,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Instant OH Deadly-FullBuffs-LongMultiTarget"
  value: {
-  dps: 2271.92833
-  tps: 1613.06912
+  dps: 2272.98044
+  tps: 1613.81611
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Instant OH Deadly-FullBuffs-LongSingleTarget"
  value: {
-  dps: 1037.02649
-  tps: 736.28881
+  dps: 1040.55505
+  tps: 738.79409
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Instant OH Deadly-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1097.93503
-  tps: 779.53387
+  dps: 1130.76194
+  tps: 802.84098
  }
 }
 dps_results: {
@@ -424,22 +431,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Instant OH Instant-FullBuffs-LongMultiTarget"
  value: {
-  dps: 3403.22736
-  tps: 2416.29142
+  dps: 3413.35525
+  tps: 2423.48223
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Instant OH Instant-FullBuffs-LongSingleTarget"
  value: {
-  dps: 578.58467
-  tps: 410.79511
+  dps: 577.74974
+  tps: 410.20231
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Human-P1 Assassination-MH Instant OH Instant-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 600.52747
-  tps: 426.37451
+  dps: 610.58351
+  tps: 433.5143
  }
 }
 dps_results: {
@@ -466,22 +473,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-Assassination-FullBuffs-LongMultiTarget"
  value: {
-  dps: 2300.13851
-  tps: 1633.09834
+  dps: 2291.55421
+  tps: 1627.00349
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-Assassination-FullBuffs-LongSingleTarget"
  value: {
-  dps: 1055.72498
-  tps: 749.56473
+  dps: 1059.84208
+  tps: 752.48788
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-Assassination-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1135.59937
-  tps: 806.27556
+  dps: 1169.46215
+  tps: 830.31813
  }
 }
 dps_results: {
@@ -508,22 +515,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Deadly OH Deadly-FullBuffs-LongMultiTarget"
  value: {
-  dps: 720.17336
-  tps: 511.32308
+  dps: 724.03918
+  tps: 514.06782
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Deadly OH Deadly-FullBuffs-LongSingleTarget"
  value: {
-  dps: 396.21178
-  tps: 281.31036
+  dps: 399.64912
+  tps: 283.75087
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Deadly OH Deadly-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 474.89032
-  tps: 337.17213
+  dps: 490.09356
+  tps: 347.96643
  }
 }
 dps_results: {
@@ -550,22 +557,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Instant OH Deadly-FullBuffs-LongMultiTarget"
  value: {
-  dps: 2300.13851
-  tps: 1633.09834
+  dps: 2291.55421
+  tps: 1627.00349
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Instant OH Deadly-FullBuffs-LongSingleTarget"
  value: {
-  dps: 1055.72498
-  tps: 749.56473
+  dps: 1059.84208
+  tps: 752.48788
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Instant OH Deadly-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1135.59937
-  tps: 806.27556
+  dps: 1169.46215
+  tps: 830.31813
  }
 }
 dps_results: {
@@ -592,22 +599,22 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Instant OH Instant-FullBuffs-LongMultiTarget"
  value: {
-  dps: 3446.11294
-  tps: 2446.74019
+  dps: 3456.32151
+  tps: 2453.98827
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Instant OH Instant-FullBuffs-LongSingleTarget"
  value: {
-  dps: 590.62492
-  tps: 419.34369
+  dps: 589.78227
+  tps: 418.74541
  }
 }
 dps_results: {
  key: "TestAssassination-Settings-Orc-P1 Assassination-MH Instant OH Instant-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 622.17736
-  tps: 441.74593
+  dps: 632.09143
+  tps: 448.78492
  }
 }
 dps_results: {
@@ -634,7 +641,7 @@ dps_results: {
 dps_results: {
  key: "TestAssassination-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 904.43928
-  tps: 642.15189
+  dps: 906.40159
+  tps: 643.54513
  }
 }

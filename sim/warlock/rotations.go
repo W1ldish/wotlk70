@@ -360,7 +360,7 @@ func (warlock *Warlock) tryUseGCD(sim *core.Simulation) {
 
 		newDmg := (142 + 0.429*warlock.GetStat(stats.SpellPower)) * (4.0 + 0.04*float64(warlock.Talents.DeathsEmbrace)) / (1 + 0.04*float64(warlock.Talents.DeathsEmbrace)) * warlock.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexShadow] *
 			warlock.PseudoStats.DamageDealtMultiplier
-		newTickSpeed := 3 / (warlock.PseudoStats.CastSpeedMultiplier * (1 + warlock.GetStat(stats.SpellHaste)/32.79/100))
+		newTickSpeed := 3 / (warlock.PseudoStats.CastSpeedMultiplier * (1 + warlock.GetStat(stats.SpellHaste)/core.HasteRatingPerHastePercent/100))
 		newDrainSoulRolloverPower := newDmg / newTickSpeed
 
 		if allCDs[0]-warlock.ApplyCastSpeed(warlock.DrainSoul.CurDot().TickLength)-humanReactionTime < time.Millisecond*1000 && sim.GetRemainingDuration().Seconds()-8 > 0 {
@@ -619,9 +619,9 @@ func (warlock *Warlock) tryUseGCD(sim *core.Simulation) {
 	// ------------------------------------------
 
 	if spell == warlock.DrainSoul {
-		baseDmg := (142 + 0.429*warlock.GetStat(stats.SpellPower)) * (4.0 + 0.04*float64(warlock.Talents.DeathsEmbrace)) / (1 + 0.04*float64(warlock.Talents.DeathsEmbrace)) * warlock.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexShadow] *
+		baseDmg := (124 + 0.429*warlock.GetStat(stats.SpellPower)) * (4.0 + 0.04*float64(warlock.Talents.DeathsEmbrace)) / (1 + 0.04*float64(warlock.Talents.DeathsEmbrace)) * warlock.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexShadow] *
 			warlock.PseudoStats.DamageDealtMultiplier
-		baseTickSpeed := 3 / (warlock.PseudoStats.CastSpeedMultiplier * (1 + warlock.GetStat(stats.SpellHaste)/32.79/100))
+		baseTickSpeed := 3 / (warlock.PseudoStats.CastSpeedMultiplier * (1 + warlock.GetStat(stats.SpellHaste)/core.HasteRatingPerHastePercent/100))
 		warlock.DrainSoulRolloverPower = baseDmg / baseTickSpeed
 	}
 

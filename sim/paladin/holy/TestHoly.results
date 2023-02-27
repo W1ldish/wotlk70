@@ -240,6 +240,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-TheTwinStars"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-TomeoftheLightbringer-32368"
  value: {}
 }

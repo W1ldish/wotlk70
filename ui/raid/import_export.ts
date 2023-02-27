@@ -704,16 +704,6 @@ const externalCDSpells: Array<{id: number, name: string, class: Class, applyFunc
 		options.powerInfusionTarget = raidTarget;
 		return options;
 	}},
-	{id: 57933, name: 'Tricks of the Trade', class: Class.ClassRogue, applyFunc: (player: Player<any>, raidTarget: RaidTarget) => {
-		const options = player.getSpecOptions() as SpecOptions<RogueSpecs>;
-		options.tricksOfTheTradeTarget = raidTarget;
-		return options;
-	}},
-	{id: 49016, name: 'Unholy Frenzy', class: Class.ClassDeathknight, applyFunc: (player: Player<any>, raidTarget: RaidTarget) => {
-		const options = player.getSpecOptions() as SpecOptions<DeathknightSpecs>;
-		options.unholyFrenzyTarget = raidTarget;
-		return options;
-	}},
 ];
 
 // Healing spells which only affect the caster's party.

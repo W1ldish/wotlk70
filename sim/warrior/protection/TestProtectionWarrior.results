@@ -119,36 +119,36 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-BlackenedNaaruSliver-34427"
  value: {
-  dps: 192.50236
-  tps: 464.01727
+  dps: 196.52315
+  tps: 471.45604
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-BlackoutTruncheon-27901"
  value: {
-  dps: 282.48589
-  tps: 716.74285
+  dps: 284.84081
+  tps: 720.19775
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-BlessedBattlegearofUndeadSlaying"
  value: {
-  dps: 241.79601
-  tps: 579.71591
+  dps: 247.57602
+  tps: 597.17803
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-BlessedGarboftheUndeadSlayer"
  value: {
-  dps: 233.67773
-  tps: 557.98806
+  dps: 237.26225
+  tps: 566.77691
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
-  dps: 184.37461
-  tps: 440.7878
+  dps: 192.14411
+  tps: 458.95409
  }
 }
 dps_results: {
@@ -203,22 +203,22 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-Dragonmaw-28438"
  value: {
-  dps: 302.52282
-  tps: 740.54946
+  dps: 307.5771
+  tps: 753.41354
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-DragonspineTrophy-28830"
  value: {
-  dps: 185.94187
-  tps: 446.41828
+  dps: 185.83933
+  tps: 445.58247
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-Dragonstrike-28439"
  value: {
-  dps: 312.49552
-  tps: 762.71911
+  dps: 313.69566
+  tps: 767.39488
  }
 }
 dps_results: {
@@ -231,15 +231,15 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-DrakefistHammer-28437"
  value: {
-  dps: 294.71185
-  tps: 724.08367
+  dps: 304.16431
+  tps: 745.49756
  }
 }
 dps_results: {
  key: "TestProtectionWarrior-AllItems-EmpyreanDemolisher-17112"
  value: {
-  dps: 258.20253
-  tps: 642.91481
+  dps: 263.47637
+  tps: 658.31476
  }
 }
 dps_results: {
@@ -322,8 +322,8 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-OnslaughtBattlegear"
  value: {
-  dps: 430.28998
-  tps: 1035.22337
+  dps: 436.49792
+  tps: 1043.99671
  }
 }
 dps_results: {
@@ -392,8 +392,8 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-SingingCrystalAxe-31318"
  value: {
-  dps: 305.51254
-  tps: 740.4837
+  dps: 325.24573
+  tps: 787.37905
  }
 }
 dps_results: {
@@ -413,8 +413,8 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-TheBladefist-29348"
  value: {
-  dps: 305.6716
-  tps: 751.11826
+  dps: 309.44126
+  tps: 760.45053
  }
 }
 dps_results: {
@@ -427,8 +427,15 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-TheTwinBladesofAzzinoth"
  value: {
-  dps: 507.21393
-  tps: 1219.98445
+  dps: 517.86559
+  tps: 1244.18986
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-TheTwinStars"
+ value: {
+  dps: 178.47033
+  tps: 428.97241
  }
 }
 dps_results: {
@@ -441,8 +448,8 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-UndeadSlayer'sBlessedArmor"
  value: {
-  dps: 233.41906
-  tps: 560.03955
+  dps: 239.64769
+  tps: 573.08566
  }
 }
 dps_results: {

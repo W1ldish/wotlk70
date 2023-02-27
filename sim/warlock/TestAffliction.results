@@ -46,105 +46,105 @@ character_stats_results: {
 dps_results: {
  key: "TestAffliction-AllItems-AshtongueTalismanofShadows-32493"
  value: {
-  dps: 1923.55612
-  tps: 1604.54264
+  dps: 1908.31617
+  tps: 1595.36435
  }
 }
 dps_results: {
  key: "TestAffliction-AllItems-CorruptorRaiment"
  value: {
-  dps: 2310.44549
-  tps: 1942.19723
+  dps: 2299.79738
+  tps: 1938.69003
  }
 }
 dps_results: {
  key: "TestAffliction-AllItems-Gladiator'sFelshroud"
  value: {
-  dps: 2270.11362
-  tps: 1927.81958
+  dps: 2255.08941
+  tps: 1920.46893
  }
 }
 dps_results: {
  key: "TestAffliction-AllItems-MaleficRaiment"
  value: {
-  dps: 2841.86685
-  tps: 2426.54665
+  dps: 2818.617
+  tps: 2412.60821
  }
 }
 dps_results: {
  key: "TestAffliction-AllItems-OblivionRaiment"
  value: {
-  dps: 2105.09697
-  tps: 1759.64807
+  dps: 2086.95418
+  tps: 1750.04892
  }
 }
 dps_results: {
  key: "TestAffliction-AllItems-VoidStarTalisman-30449"
  value: {
-  dps: 1876.85119
-  tps: 1559.74571
+  dps: 1861.90453
+  tps: 1552.23451
  }
 }
 dps_results: {
  key: "TestAffliction-AllItems-VoidheartRaiment"
  value: {
-  dps: 2259.56827
-  tps: 1904.82474
+  dps: 2247.39435
+  tps: 1899.14968
  }
 }
 dps_results: {
  key: "TestAffliction-Average-Default"
  value: {
-  dps: 1826.92902
-  tps: 1513.42175
+  dps: 1811.83166
+  tps: 1506.09537
  }
 }
 dps_results: {
  key: "TestAffliction-Settings-Orc-P1-Affliction Warlock-FullBuffs-LongMultiTarget"
  value: {
-  dps: 1807.25039
-  tps: 2893.00155
+  dps: 1796.36148
+  tps: 2945.72294
  }
 }
 dps_results: {
  key: "TestAffliction-Settings-Orc-P1-Affliction Warlock-FullBuffs-LongSingleTarget"
  value: {
-  dps: 1807.25039
-  tps: 1496.71052
+  dps: 1796.36148
+  tps: 1493.27715
  }
 }
 dps_results: {
  key: "TestAffliction-Settings-Orc-P1-Affliction Warlock-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 2041.48946
-  tps: 1687.24395
+  dps: 2018.59907
+  tps: 1672.09562
  }
 }
 dps_results: {
  key: "TestAffliction-Settings-Orc-P1-Affliction Warlock-NoBuffs-LongMultiTarget"
  value: {
-  dps: 842.57065
-  tps: 2093.58618
+  dps: 832.01606
+  tps: 2156.44462
  }
 }
 dps_results: {
  key: "TestAffliction-Settings-Orc-P1-Affliction Warlock-NoBuffs-LongSingleTarget"
  value: {
-  dps: 842.57065
-  tps: 767.27099
+  dps: 832.01606
+  tps: 761.60673
  }
 }
 dps_results: {
  key: "TestAffliction-Settings-Orc-P1-Affliction Warlock-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 828.43145
-  tps: 726.32441
+  dps: 811.3342
+  tps: 716.59321
  }
 }
 dps_results: {
  key: "TestAffliction-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 1778.80055
-  tps: 1498.11195
+  dps: 1755.03351
+  tps: 1481.8302
  }
 }

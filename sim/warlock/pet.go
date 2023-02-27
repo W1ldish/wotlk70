@@ -40,14 +40,14 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 			stats.Stamina:   280,
 			stats.Intellect: 133,
 			stats.Spirit:    122,
-			stats.Mana:      2848,
+			stats.Mana:      4170,
 			stats.MeleeCrit: 3.2685 * core.CritRatingPerCritChance,
 			stats.SpellCrit: 3.3355 * core.CritRatingPerCritChance,
 		}
 		cfg.AutoAttacks = core.AutoAttackOptions{
 			MainHand: core.Weapon{
-				BaseDamageMin:  266.42,
-				BaseDamageMax:  391.42,
+				BaseDamageMin:  279,
+				BaseDamageMax:  402,
 				SwingSpeed:     2,
 				SwingDuration:  time.Second * 2,
 				CritMultiplier: 2,
@@ -82,8 +82,8 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 		}
 		cfg.AutoAttacks = core.AutoAttackOptions{
 			MainHand: core.Weapon{
-				BaseDamageMin:  267.14,
-				BaseDamageMax:  398.14,
+				BaseDamageMin:  274,
+				BaseDamageMax:  401,
 				SwingSpeed:     2,
 				SwingDuration:  time.Second * 2,
 				CritMultiplier: 2,
@@ -99,14 +99,14 @@ func (warlock *Warlock) NewWarlockPet() *WarlockPet {
 			stats.Stamina:   280,
 			stats.Intellect: 133,
 			stats.Spirit:    122,
-			stats.Mana:      1559,
+			stats.Mana:      2420,
 			stats.MeleeCrit: 3.2685 * core.CritRatingPerCritChance,
 			stats.SpellCrit: 3.3355 * core.CritRatingPerCritChance,
 		}
 		cfg.AutoAttacks = core.AutoAttackOptions{
 			MainHand: core.Weapon{
-				BaseDamageMin:  194.14,
-				BaseDamageMax:  294.14,
+				BaseDamageMin:  187,
+				BaseDamageMax:  284,
 				SwingSpeed:     2,
 				SwingDuration:  time.Second * 2,
 				CritMultiplier: 2,

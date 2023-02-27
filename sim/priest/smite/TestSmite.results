@@ -46,308 +46,315 @@ character_stats_results: {
 dps_results: {
  key: "TestSmite-AllItems-AbsolutionRegalia"
  value: {
-  dps: 923.53271
+  dps: 909.75212
   tps: 811.57992
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-AshtongueTalismanofAcumen-32490"
  value: {
-  dps: 404.84013
+  dps: 396.30816
   tps: 358.82231
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-AvatarRegalia"
  value: {
-  dps: 706.85515
+  dps: 695.03258
   tps: 623.77463
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BandoftheEternalSage-29305"
  value: {
-  dps: 430.6837
+  dps: 422.40205
   tps: 381.22827
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BlackenedNaaruSliver-34427"
  value: {
-  dps: 394.61513
+  dps: 386.80305
   tps: 351.67236
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BlackoutTruncheon-27901"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
-  dps: 554.65082
+  dps: 544.97131
   tps: 492.07248
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-CloakofDarkness-33122"
  value: {
-  dps: 394.70084
+  dps: 386.98449
   tps: 351.59224
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DeathKnight'sAnguish-38212"
  value: {
-  dps: 395.44739
+  dps: 387.73812
   tps: 352.2619
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Dragonmaw-28438"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DragonspineTrophy-28830"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Dragonstrike-28439"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DrakeFangTalisman-19406"
  value: {
-  dps: 402.11252
+  dps: 394.34264
   tps: 357.80229
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-DrakefistHammer-28437"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-EarringofSoulfulMeditation-30665"
  value: {
-  dps: 426.7414
+  dps: 417.98648
   tps: 376.59493
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-EmpyreanDemolisher-17112"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-EyeofMagtheridon-28789"
  value: {
-  dps: 424.75498
+  dps: 414.76141
   tps: 373.51928
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Gladiator'sInvestiture"
  value: {
-  dps: 582.31608
+  dps: 571.80208
   tps: 515.15063
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Gladiator'sRaiment"
  value: {
-  dps: 576.26404
+  dps: 565.38731
   tps: 507.53026
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-IncarnateRaiment"
  value: {
-  dps: 652.2295
+  dps: 640.53691
   tps: 576.01238
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-MadnessoftheBetrayer-32505"
  value: {
-  dps: 402.11252
+  dps: 394.34264
   tps: 357.80229
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Mana-EtchedRegalia"
  value: {
-  dps: 550.79829
+  dps: 541.18671
   tps: 486.24488
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Quagmirran'sEye-27683"
  value: {
-  dps: 404.98672
+  dps: 396.80901
   tps: 359.52223
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-RingoftheFallenGod-21709"
  value: {
-  dps: 409.16201
+  dps: 400.81287
   tps: 362.8907
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-RobeoftheElderScribes-28602"
  value: {
-  dps: 445.33161
+  dps: 436.93273
   tps: 393.0217
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-SextantofUnstableCurrents-30626"
  value: {
-  dps: 405.22824
+  dps: 396.55806
   tps: 359.09423
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-ShardofContempt-34472"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-ShatteredSunPendantofAcumen-34678"
  value: {
-  dps: 417.64022
+  dps: 409.4903
   tps: 370.94699
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-ShatteredSunPendantofMight-34679"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
-  dps: 400.55933
+  dps: 392.40401
   tps: 355.85586
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-SpellstrikeInfusion"
  value: {
-  dps: 463.26439
+  dps: 453.78918
   tps: 407.998
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-TheTwinStars"
+ value: {
+  dps: 442.00688
+  tps: 397.37729
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-TsunamiTalisman-30627"
  value: {
-  dps: 398.17486
+  dps: 390.31984
   tps: 354.51136
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-VestmentsofAbsolution"
  value: {
-  dps: 851.72171
+  dps: 838.36468
   tps: 750.94081
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-Warp-SpringCoil-30450"
  value: {
-  dps: 402.25212
+  dps: 394.43691
   tps: 357.80229
  }
 }
 dps_results: {
  key: "TestSmite-AllItems-WrathofSpellfire"
  value: {
-  dps: 485.72502
+  dps: 476.29727
   tps: 427.6354
  }
 }
 dps_results: {
  key: "TestSmite-Average-Default"
  value: {
-  dps: 396.53914
+  dps: 389.00326
   tps: 354.5443
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-FullBuffs-LongMultiTarget"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 755.20933
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-FullBuffs-LongSingleTarget"
  value: {
-  dps: 393.3454
+  dps: 385.62905
   tps: 350.2813
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 1069.44719
+  dps: 1030.86544
   tps: 860.05178
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-NoBuffs-LongMultiTarget"
  value: {
-  dps: 84.02438
+  dps: 82.35022
   tps: 153.78685
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-NoBuffs-LongSingleTarget"
  value: {
-  dps: 84.02438
+  dps: 82.35022
   tps: 72.40748
  }
 }
 dps_results: {
  key: "TestSmite-Settings-Undead-P1-Basic-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 344.93202
+  dps: 336.56121
   tps: 286.8475
  }
 }
 dps_results: {
  key: "TestSmite-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 387.96813
+  dps: 381.65646
   tps: 350.2813
  }
 }

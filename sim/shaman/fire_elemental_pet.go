@@ -150,10 +150,10 @@ func (shaman *Shaman) fireElementalStatInheritance() core.PetStatInheritance {
 		ownerHitChance := ownerStats[stats.MeleeHit] / core.MeleeHitRatingPerHitChance
 		hitRatingFromOwner := math.Floor(ownerHitChance) * core.MeleeHitRatingPerHitChance
 		return stats.Stats{
-			stats.Stamina:     ownerStats[stats.Stamina] * 0.75,
+			stats.Stamina:     ownerStats[stats.Stamina] * 0.3,
 			stats.Intellect:   ownerStats[stats.Intellect] * 0.30,
-			stats.SpellPower:  ownerStats[stats.SpellPower] * 0.5218,
-			stats.AttackPower: ownerStats[stats.SpellPower] * 4.45,
+			stats.SpellPower:  ownerStats[stats.SpellPower] * 1,
+			stats.AttackPower: ownerStats[stats.SpellPower] * 3,
 
 			// TODO tested useing pre-patch lvl 70 stats need to confirm in WOTLK at 80.
 			stats.MeleeHit: hitRatingFromOwner,

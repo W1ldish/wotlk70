@@ -254,6 +254,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFire-AllItems-TheTwinStars"
+ value: {
+  dps: 729.20209
+  tps: 614.45602
+ }
+}
+dps_results: {
  key: "TestFire-AllItems-TirisfalRegalia"
  value: {
   dps: 1162.56023

@@ -200,6 +200,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-TheTwinStars"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-ThunderheartHarness"
  value: {}
 }

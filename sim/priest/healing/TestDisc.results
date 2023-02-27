@@ -51,7 +51,7 @@ stat_weights_results: {
   weights: 0
   weights: 0
   weights: 0
-  weights: 0.02811
+  weights: 0.01568
   weights: 0
   weights: 0
   weights: 0
@@ -91,7 +91,7 @@ stat_weights_results: {
 dps_results: {
  key: "TestDisc-AllItems-AbsolutionRegalia"
  value: {
-  dps: 41.80796
+  dps: 29.24844
   tps: 37.98496
   hps: 1789.28698
  }
@@ -99,7 +99,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-AshtongueTalismanofAcumen-32490"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -107,7 +107,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-AvatarRegalia"
  value: {
-  dps: 38.35994
+  dps: 27.42145
   tps: 34.46671
   hps: 1352.50787
  }
@@ -115,7 +115,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-BandoftheEternalChampion-29301"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -123,7 +123,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-BandoftheEternalSage-29305"
  value: {
-  dps: 30.66362
+  dps: 22.66785
   tps: 26.58193
   hps: 861.58701
  }
@@ -131,7 +131,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-BlackenedNaaruSliver-34427"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 776.51793
  }
@@ -139,7 +139,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-BlackoutTruncheon-27901"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -147,7 +147,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-BlessedRegaliaofUndeadCleansing"
  value: {
-  dps: 33.92134
+  dps: 24.48543
   tps: 30.55861
   hps: 1130.6457
  }
@@ -155,7 +155,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-CloakofDarkness-33122"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 809.43591
  }
@@ -163,7 +163,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-DeathKnight'sAnguish-38212"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 811.65685
  }
@@ -171,7 +171,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Dragonmaw-28438"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -179,7 +179,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-DragonspineTrophy-28830"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -187,7 +187,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Dragonstrike-28439"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -195,7 +195,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-DrakeFangTalisman-19406"
  value: {
-  dps: 29.84889
+  dps: 22.22303
   tps: 25.38413
   hps: 805.8881
  }
@@ -203,7 +203,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-DrakefistHammer-28437"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -211,7 +211,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-EarringofSoulfulMeditation-30665"
  value: {
-  dps: 30.69241
+  dps: 22.6839
   tps: 25.38413
   hps: 845.36508
  }
@@ -219,7 +219,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-EmpyreanDemolisher-17112"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -227,7 +227,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-EyeofMagtheridon-28789"
  value: {
-  dps: 31.23927
+  dps: 22.98902
   tps: 25.38413
   hps: 830.89304
  }
@@ -235,7 +235,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Gladiator'sInvestiture"
  value: {
-  dps: 36.54054
+  dps: 25.94676
   tps: 31.22938
   hps: 1215.07291
  }
@@ -243,7 +243,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Gladiator'sRaiment"
  value: {
-  dps: 37.28888
+  dps: 26.36429
   tps: 31.03773
   hps: 1149.45811
  }
@@ -251,7 +251,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-IncarnateRaiment"
  value: {
-  dps: 37.99665
+  dps: 27.53839
   tps: 34.59118
   hps: 1316.11631
  }
@@ -259,7 +259,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-MadnessoftheBetrayer-32505"
  value: {
-  dps: 29.84889
+  dps: 22.22303
   tps: 25.38413
   hps: 805.8881
  }
@@ -267,7 +267,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Mana-EtchedRegalia"
  value: {
-  dps: 34.46866
+  dps: 24.8749
   tps: 30.70235
   hps: 1060.33722
  }
@@ -275,7 +275,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Quagmirran'sEye-27683"
  value: {
-  dps: 30.74997
+  dps: 22.71602
   tps: 25.38413
   hps: 823.02112
  }
@@ -283,7 +283,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-RingoftheFallenGod-21709"
  value: {
-  dps: 31.22605
+  dps: 23.03697
   tps: 25.6716
   hps: 829.77976
  }
@@ -291,7 +291,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-RobeoftheElderScribes-28602"
  value: {
-  dps: 30.60606
+  dps: 22.63573
   tps: 26.77358
   hps: 868.02814
  }
@@ -299,7 +299,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-SextantofUnstableCurrents-30626"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 814.30433
  }
@@ -307,7 +307,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-ShardofContempt-34472"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -315,7 +315,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-ShatteredSunPendantofAcumen-34678"
  value: {
-  dps: 30.74997
+  dps: 22.71602
   tps: 26.24655
   hps: 841.95472
  }
@@ -323,7 +323,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-ShatteredSunPendantofMight-34679"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -331,7 +331,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Shiffar'sNexus-Horn-28418"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 811.45097
  }
@@ -339,15 +339,23 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-SpellstrikeInfusion"
  value: {
-  dps: 33.88231
+  dps: 24.5805
   tps: 26.34237
   hps: 892.57442
  }
 }
 dps_results: {
+ key: "TestDisc-AllItems-TheTwinStars"
+ value: {
+  dps: 23.19778
+  tps: 26.96522
+  hps: 891.45831
+ }
+}
+dps_results: {
  key: "TestDisc-AllItems-TsunamiTalisman-30627"
  value: {
-  dps: 30.0838
+  dps: 22.39462
   tps: 25.38413
   hps: 813.81562
  }
@@ -355,7 +363,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-VestmentsofAbsolution"
  value: {
-  dps: 39.29529
+  dps: 27.48373
   tps: 36.83507
   hps: 1858.77346
  }
@@ -363,7 +371,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-Warp-SpringCoil-30450"
  value: {
-  dps: 29.99496
+  dps: 22.32296
   tps: 25.38413
   hps: 805.8881
  }
@@ -371,7 +379,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-AllItems-WrathofSpellfire"
  value: {
-  dps: 34.34561
+  dps: 24.72214
   tps: 27.54017
   hps: 934.6191
  }
@@ -379,7 +387,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Average-Default"
  value: {
-  dps: 28.88834
+  dps: 21.5634
   tps: 25.27947
   hps: 815.20875
  }
@@ -387,7 +395,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Settings-Undead-P1-Disc-FullBuffs-LongMultiTarget"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 507.68264
   hps: 805.8881
  }
@@ -395,7 +403,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Settings-Undead-P1-Disc-FullBuffs-LongSingleTarget"
  value: {
-  dps: 29.68502
+  dps: 22.12185
   tps: 25.38413
   hps: 805.8881
  }
@@ -403,7 +411,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Settings-Undead-P1-Disc-FullBuffs-ShortSingleTarget"
  value: {
-  dps: 148.42512
+  dps: 110.60927
   tps: 55.12579
   hps: 1607.70071
  }
@@ -411,7 +419,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Settings-Undead-P1-Disc-NoBuffs-LongMultiTarget"
  value: {
-  dps: 9.13718
+  dps: 7.88176
   tps: 192.74063
   hps: 250.81102
  }
@@ -419,7 +427,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Settings-Undead-P1-Disc-NoBuffs-LongSingleTarget"
  value: {
-  dps: 9.13718
+  dps: 7.88176
   tps: 9.63703
   hps: 250.81102
  }
@@ -427,7 +435,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-Settings-Undead-P1-Disc-NoBuffs-ShortSingleTarget"
  value: {
-  dps: 45.68592
+  dps: 39.40878
   tps: 26.76953
   hps: 684.67722
  }
@@ -435,7 +443,7 @@ dps_results: {
 dps_results: {
  key: "TestDisc-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 24.36613
+  dps: 18.19352
   tps: 25.38413
   hps: 805.8881
  }

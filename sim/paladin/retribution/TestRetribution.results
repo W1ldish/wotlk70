@@ -428,6 +428,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-TheTwinStars"
+ value: {
+  dps: 3304.72973
+  tps: 3376.93295
+  dtps: 4.82979
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-TomeoftheLightbringer-32368"
  value: {
   dps: 3409.58026

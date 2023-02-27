@@ -254,6 +254,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-TheTwinStars"
+ value: {
+  dps: 1055.67183
+  tps: 674.48113
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-TirisfalRegalia"
  value: {
   dps: 1622.46008

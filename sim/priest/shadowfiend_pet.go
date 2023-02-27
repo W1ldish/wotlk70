@@ -17,10 +17,10 @@ type Shadowfiend struct {
 }
 
 var baseStats = stats.Stats{
-	stats.Strength:  314,
-	stats.Agility:   90,
-	stats.Stamina:   348,
-	stats.Intellect: 201,
+	stats.Strength:  173,
+	stats.Agility:   119,
+	stats.Stamina:   80,
+	stats.Intellect: 291,
 }
 
 func (priest *Priest) NewShadowfiend() *Shadowfiend {
@@ -65,8 +65,8 @@ func (priest *Priest) NewShadowfiend() *Shadowfiend {
 
 	shadowfiend.EnableAutoAttacks(shadowfiend, core.AutoAttackOptions{
 		MainHand: core.Weapon{
-			BaseDamageMin:        176,
-			BaseDamageMax:        210,
+			BaseDamageMin:        125,
+			BaseDamageMax:        287,
 			SwingSpeed:           1.5,
 			NormalizedSwingSpeed: 1.5,
 			SwingDuration:        time.Millisecond * 1500,
@@ -90,7 +90,8 @@ func (priest *Priest) shadowfiendStatInheritance() core.PetStatInheritance {
 		hitPercentage := ownerStats[stats.SpellHit] / core.SpellHitRatingPerHitChance
 
 		return stats.Stats{ //still need to nail down shadow fiend crit scaling, but removing owner crit scaling after further investigation
-			stats.AttackPower: ownerStats[stats.SpellPower] * 5.377,
+			stats.AttackPower: ownerStats[stats.SpellPower] * 3,
+			stats.SpellPower:  ownerStats[stats.SpellPower] * 0.3,
 			stats.MeleeHit:    hitPercentage * core.MeleeHitRatingPerHitChance,
 			stats.SpellHit:    ownerStats[stats.SpellHit],
 			//stats.MeleeCrit:   ownerStats[stats.SpellCrit],
