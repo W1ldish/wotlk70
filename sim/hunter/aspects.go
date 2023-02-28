@@ -82,16 +82,11 @@ func (hunter *Hunter) registerAspectOfTheViperSpell() {
 	manaPerOHHitMultiplier := baseManaRegenMultiplier * hunter.AutoAttacks.OH.SwingSpeed
 	var tickPA *core.PendingAction
 
-	hasCryptstalker4pc := hunter.HasSetBonus(ItemSetCryptstalkerBattlegear, 4)
-
 	auraConfig := core.Aura{
 		Label:    "Aspect of the Viper",
 		ActionID: actionID,
 		OnGain: func(aura *core.Aura, sim *core.Simulation) {
 			aura.Unit.PseudoStats.DamageDealtMultiplier *= damagePenalty
-			if hasCryptstalker4pc {
-				aura.Unit.PseudoStats.RangedSpeedMultiplier *= 1.2
-			}
 
 			tickPA = core.StartPeriodicAction(sim, core.PeriodicActionOptions{
 				Period: time.Second * 3,
@@ -102,9 +97,6 @@ func (hunter *Hunter) registerAspectOfTheViperSpell() {
 		},
 		OnExpire: func(aura *core.Aura, sim *core.Simulation) {
 			aura.Unit.PseudoStats.DamageDealtMultiplier /= damagePenalty
-			if hasCryptstalker4pc {
-				aura.Unit.PseudoStats.RangedSpeedMultiplier /= 1.2
-			}
 			tickPA.Cancel(sim)
 			tickPA = nil
 		},

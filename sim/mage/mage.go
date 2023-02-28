@@ -189,17 +189,11 @@ func NewMage(character core.Character, options *proto.Player) *Mage {
 		if mage.HasMajorGlyph(proto.MageMajorGlyph_GlyphOfMageArmor) {
 			mage.PseudoStats.SpiritRegenRateCasting += .2
 		}
-		if mage.HasSetBonus(ItemSetKhadgarsRegalia, 2) {
-			mage.PseudoStats.SpiritRegenRateCasting += .1
-		}
 	} else if mage.Options.Armor == proto.Mage_Options_MoltenArmor {
 		//Need to switch to spirit crit calc
 		multi := 0.35
 		if mage.HasMajorGlyph(proto.MageMajorGlyph_GlyphOfMoltenArmor) {
 			multi += .2
-		}
-		if mage.HasSetBonus(ItemSetKhadgarsRegalia, 2) {
-			multi += .15
 		}
 		mage.Character.AddStatDependency(stats.Spirit, stats.SpellCrit, multi)
 	}

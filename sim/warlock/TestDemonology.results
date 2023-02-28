@@ -58,13 +58,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestDemonology-AllItems-Gladiator'sFelshroud"
- value: {
-  dps: 2565.04542
-  tps: 1929.12724
- }
-}
-dps_results: {
  key: "TestDemonology-AllItems-MaleficRaiment"
  value: {
   dps: 3268.28765

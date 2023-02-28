@@ -93,24 +93,10 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestShadow-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 1329.20017
-  tps: 1325.28246
- }
-}
-dps_results: {
  key: "TestShadow-AllItems-CloakofDarkness-33122"
  value: {
   dps: 887.8303
   tps: 882.41391
- }
-}
-dps_results: {
- key: "TestShadow-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 893.45059
-  tps: 888.21911
  }
 }
 dps_results: {
@@ -167,20 +153,6 @@ dps_results: {
  value: {
   dps: 983.82046
   tps: 970.52223
- }
-}
-dps_results: {
- key: "TestShadow-AllItems-Gladiator'sInvestiture"
- value: {
-  dps: 1361.00992
-  tps: 1353.5381
- }
-}
-dps_results: {
- key: "TestShadow-AllItems-Gladiator'sRaiment"
- value: {
-  dps: 1355.15078
-  tps: 1347.66648
  }
 }
 dps_results: {

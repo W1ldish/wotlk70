@@ -237,31 +237,6 @@ func (warrior *Warrior) applyBloodsurge() {
 		},
 	})
 
-	ymirjar4Set := warrior.HasSetBonus(ItemSetYmirjarLordsBattlegear, 4)
-
-	if ymirjar4Set {
-		warrior.Ymirjar4pcProcAura = warrior.RegisterAura(core.Aura{
-			Label:     "Ymirjar 4pc (Bloodsurge) Proc",
-			ActionID:  core.ActionID{SpellID: 70847},
-			Duration:  time.Second * 10,
-			MaxStacks: 2,
-			OnGain: func(aura *core.Aura, sim *core.Simulation) {
-				aura.SetStacks(sim, aura.MaxStacks)
-				warrior.Slam.DefaultCast.CastTime = 0
-				warrior.Slam.DefaultCast.GCD = core.GCDMin
-			},
-			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-				warrior.Slam.DefaultCast.CastTime = 1500 * time.Millisecond
-				warrior.Slam.DefaultCast.GCD = core.GCDDefault
-			},
-			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
-				if spell == warrior.Slam {
-					aura.RemoveStack(sim)
-				}
-			},
-		})
-	}
-
 	warrior.RegisterAura(core.Aura{
 		Label:    "Bloodsurge",
 		Duration: core.NeverExpires,
@@ -282,13 +257,6 @@ func (warrior *Warrior) applyBloodsurge() {
 			}
 
 			warrior.lastBloodsurgeProc = sim.CurrentTime
-
-			// as per https://www.wowhead.com/wotlk/spell=70847/item-warrior-t10-melee-4p-bonus#comments,
-			//  the improved aura is not overwritten by the regular one, but simply refreshed
-			if ymirjar4Set && (warrior.Ymirjar4pcProcAura.IsActive() || sim.RandomFloat("Ymirjar 4pc") < 0.2) {
-				warrior.Ymirjar4pcProcAura.Activate(sim)
-				return
-			}
 
 			warrior.BloodsurgeAura.Activate(sim)
 		},
@@ -592,33 +560,6 @@ func (warrior *Warrior) applySuddenDeath() {
 		},
 	})
 
-	ymirjar4Set := warrior.HasSetBonus(ItemSetYmirjarLordsBattlegear, 4)
-
-	if ymirjar4Set {
-		warrior.Ymirjar4pcProcAura = warrior.RegisterAura(core.Aura{
-			Label:     "Ymirjar 4pc (Sudden Death) Proc",
-			ActionID:  core.ActionID{SpellID: 70847},
-			Duration:  time.Second * 20,
-			MaxStacks: 2,
-			OnGain: func(aura *core.Aura, sim *core.Simulation) {
-				aura.SetStacks(sim, aura.MaxStacks)
-				warrior.Execute.DefaultCast.GCD = core.GCDMin
-			},
-			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-				warrior.Execute.DefaultCast.GCD = core.GCDDefault
-			},
-			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
-				if !result.Landed() || spell != warrior.Execute {
-					return
-				}
-				if rageRefund := minRageKept - warrior.CurrentRage(); rageRefund > 0 {
-					warrior.AddRage(sim, rageRefund, rageMetrics)
-				}
-				aura.RemoveStack(sim)
-			},
-		})
-	}
-
 	warrior.RegisterAura(core.Aura{
 		Label:    "Sudden Death",
 		Duration: core.NeverExpires,
@@ -631,13 +572,6 @@ func (warrior *Warrior) applySuddenDeath() {
 			}
 
 			if sim.RandomFloat("Sudden Death") > procChance {
-				return
-			}
-
-			// as per https://www.wowhead.com/wotlk/spell=70847/item-warrior-t10-melee-4p-bonus#comments,
-			//  the improved aura is not overwritten by the regular one, but simply refreshed
-			if ymirjar4Set && (warrior.Ymirjar4pcProcAura.IsActive() || sim.RandomFloat("Ymirjar 4pc") < 0.2) {
-				warrior.Ymirjar4pcProcAura.Activate(sim)
 				return
 			}
 

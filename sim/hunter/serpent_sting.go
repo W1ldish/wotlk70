@@ -8,7 +8,6 @@ import (
 )
 
 func (hunter *Hunter) registerSerpentStingSpell() {
-	canCrit := hunter.HasSetBonus(ItemSetWindrunnersPursuit, 2)
 	noxiousStingsMultiplier := 1 + 0.01*float64(hunter.Talents.NoxiousStings)
 	huntersWithGlyphOfSteadyShot := hunter.GetAllHuntersWithGlyphOfSteadyShot()
 
@@ -30,8 +29,7 @@ func (hunter *Hunter) registerSerpentStingSpell() {
 		},
 
 		DamageMultiplierAdditive: 1 +
-			0.1*float64(hunter.Talents.ImprovedStings) +
-			core.TernaryFloat64(hunter.HasSetBonus(ItemSetScourgestalkerBattlegear, 2), .1, 0),
+			0.1*float64(hunter.Talents.ImprovedStings),
 		CritMultiplier:   hunter.critMultiplier(false, false),
 		ThreatMultiplier: 1,
 
@@ -69,11 +67,7 @@ func (hunter *Hunter) registerSerpentStingSpell() {
 				}
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				if canCrit {
-					dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeSnapshotCrit)
-				} else {
-					dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeTick)
-				}
+				dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeTick)
 			},
 		},
 

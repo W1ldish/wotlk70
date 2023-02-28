@@ -86,27 +86,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestProtection-AllItems-BlessedBattlegearofUndeadSlaying"
- value: {
-  dps: 676.12682
-  tps: 1473.73546
- }
-}
-dps_results: {
- key: "TestProtection-AllItems-BlessedGarboftheUndeadSlayer"
- value: {
-  dps: 683.35686
-  tps: 1494.8993
- }
-}
-dps_results: {
- key: "TestProtection-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 641.92916
-  tps: 1418.89102
- }
-}
-dps_results: {
  key: "TestProtection-AllItems-BurningRage"
  value: {
   dps: 691.7609
@@ -132,13 +111,6 @@ dps_results: {
  value: {
   dps: 805.00233
   tps: 1773.49926
- }
-}
-dps_results: {
- key: "TestProtection-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 579.53537
-  tps: 1260.16406
  }
 }
 dps_results: {
@@ -212,13 +184,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestProtection-AllItems-Gladiator'sVindication"
- value: {
-  dps: 771.65051
-  tps: 1698.12107
- }
-}
-dps_results: {
  key: "TestProtection-AllItems-JusticarArmor"
  value: {
   dps: 690.35231
@@ -237,13 +202,6 @@ dps_results: {
  value: {
   dps: 569.26502
   tps: 1240.77168
- }
-}
-dps_results: {
- key: "TestProtection-AllItems-LibramofFuriousBlows-37574"
- value: {
-  dps: 570.79795
-  tps: 1243.5448
  }
 }
 dps_results: {
@@ -405,13 +363,6 @@ dps_results: {
  value: {
   dps: 593.32354
   tps: 1292.82449
- }
-}
-dps_results: {
- key: "TestProtection-AllItems-UndeadSlayer'sBlessedArmor"
- value: {
-  dps: 665.60974
-  tps: 1442.78287
  }
 }
 dps_results: {

@@ -259,26 +259,8 @@ func (druid *Druid) applyRendAndTear(aura core.Aura) core.Aura {
 
 func (druid *Druid) applyOmenOfClarity() {
 	// Feral 2p needs clearcasting aura
-	if !druid.Talents.OmenOfClarity && !druid.HasSetBonus(ItemSetNightsongBattlegear, 2) {
+	if !druid.Talents.OmenOfClarity {
 		return
-	}
-
-	// T10-2P
-	var lasherweave2P *core.Aura
-	if druid.HasSetBonus(ItemSetLasherweaveRegalia, 2) {
-		lasherweave2P = druid.RegisterAura(core.Aura{
-			Label:    "T10-2P proc",
-			ActionID: core.ActionID{SpellID: 70718},
-			Duration: time.Second * 6,
-			OnGain: func(aura *core.Aura, sim *core.Simulation) {
-				druid.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexArcane] *= 1.15
-				druid.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexNature] *= 1.15
-			},
-			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-				druid.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexArcane] /= 1.15
-				druid.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexNature] /= 1.15
-			},
-		})
 	}
 
 	var affectedSpells []*core.Spell
@@ -343,9 +325,6 @@ func (druid *Druid) applyOmenOfClarity() {
 
 	druid.ProcOoc = func(sim *core.Simulation) {
 		druid.ClearcastingAura.Activate(sim)
-		if lasherweave2P != nil {
-			lasherweave2P.Activate(sim)
-		}
 	}
 
 	druid.RegisterAura(core.Aura{
@@ -417,7 +396,7 @@ func (druid *Druid) applyEclipse() {
 
 	// Solar
 	solarProcChance := (1.0 / 3.0) * float64(druid.Talents.Eclipse)
-	solarProcMultiplier := 1.4 + core.TernaryFloat64(druid.HasSetBonus(ItemSetNightsongGarb, 2), 0.07, 0)
+	solarProcMultiplier := 1.4
 	druid.SolarICD.Duration = time.Millisecond * 30000
 	druid.SolarEclipseProcAura = druid.RegisterAura(core.Aura{
 		Label:    "Solar Eclipse proc",
@@ -459,7 +438,7 @@ func (druid *Druid) applyEclipse() {
 
 	// Lunar
 	lunarProcChance := 0.2 * float64(druid.Talents.Eclipse)
-	lunarBonusCrit := (40 + core.TernaryFloat64(druid.HasSetBonus(ItemSetNightsongGarb, 2), 7, 0)) * core.CritRatingPerCritChance
+	lunarBonusCrit := 40 * core.CritRatingPerCritChance
 	druid.LunarICD.Duration = time.Millisecond * 30000
 	druid.LunarEclipseProcAura = druid.RegisterAura(core.Aura{
 		Label:    "Lunar Eclipse proc",

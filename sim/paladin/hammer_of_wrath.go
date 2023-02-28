@@ -31,8 +31,7 @@ func (paladin *Paladin) registerHammerOfWrathSpell() {
 
 		BonusCritRating: 25 * float64(paladin.Talents.SanctifiedWrath) * core.CritRatingPerCritChance,
 		DamageMultiplierAdditive: 1 +
-			paladin.getItemSetLightbringerBattlegearBonus4() +
-			paladin.getItemSetAegisBattlegearBonus2(),
+			paladin.getItemSetLightbringerBattlegearBonus4(),
 		DamageMultiplier: 1,
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,

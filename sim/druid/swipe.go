@@ -12,7 +12,6 @@ func (druid *Druid) registerSwipeBearSpell() {
 		flatBaseDamage += 24
 	}
 
-	lbdm := core.TernaryFloat64(druid.HasSetBonus(ItemSetLasherweaveBattlegear, 2), 1.2, 1.0)
 	thdm := core.TernaryFloat64(druid.HasSetBonus(ItemSetThunderheartHarness, 4), 1.15, 1.0)
 	fidm := 1.0 + 0.1*float64(druid.Talents.FeralInstinct)
 
@@ -35,7 +34,7 @@ func (druid *Druid) registerSwipeBearSpell() {
 			return druid.InForm(Bear)
 		},
 
-		DamageMultiplier: lbdm * thdm * fidm,
+		DamageMultiplier: thdm * fidm,
 		CritMultiplier:   druid.MeleeCritMultiplier(Bear),
 		ThreatMultiplier: 1,
 

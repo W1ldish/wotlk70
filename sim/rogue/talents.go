@@ -1,7 +1,6 @@
 package rogue
 
 import (
-	"math"
 	"time"
 
 	"github.com/Tereneckla/wotlk/sim/core"
@@ -92,11 +91,6 @@ func (rogue *Rogue) makeFinishingMoveEffectApplier() func(sim *core.Simulation, 
 }
 
 func (rogue *Rogue) makeCostModifier() func(baseCost float64) float64 {
-	if rogue.HasSetBonus(ItemSetBonescythe, 4) {
-		return func(baseCost float64) float64 {
-			return math.RoundToEven(0.95 * baseCost)
-		}
-	}
 	return func(baseCost float64) float64 {
 		return baseCost
 	}

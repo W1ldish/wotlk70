@@ -8,9 +8,6 @@ import (
 )
 
 func (druid *Druid) registerRakeSpell() {
-	numTicks := 3 + core.TernaryInt32(druid.HasSetBonus(ItemSetMalfurionsBattlegear, 2), 1, 0)
-	dotCanCrit := druid.HasSetBonus(ItemSetLasherweaveBattlegear, 4)
-
 	druid.Rake = druid.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 48574},
 		SpellSchool: core.SpellSchoolPhysical,
@@ -40,7 +37,7 @@ func (druid *Druid) registerRakeSpell() {
 				Label:    "Rake",
 				Duration: time.Second * 9,
 			}),
-			NumberOfTicks: numTicks,
+			NumberOfTicks: 3,
 			TickLength:    time.Second * 3,
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
 				dot.SnapshotBaseDamage = 138 + 0.06*dot.Spell.MeleeAttackPower()
@@ -49,11 +46,7 @@ func (druid *Druid) registerRakeSpell() {
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				if dotCanCrit {
-					dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeSnapshotCrit)
-				} else {
-					dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.Spell.OutcomeAlwaysHit)
-				}
+				dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.Spell.OutcomeAlwaysHit)
 			},
 		},
 
@@ -75,7 +68,7 @@ func (druid *Druid) registerRakeSpell() {
 
 		ExpectedDamage: func(sim *core.Simulation, target *core.Unit, spell *core.Spell, _ bool) *core.SpellResult {
 			baseDamage := 90 + 0.01*spell.MeleeAttackPower()
-			tickBase := (138 + 0.06*spell.MeleeAttackPower()) * float64(numTicks)
+			tickBase := (138 + 0.06*spell.MeleeAttackPower()) * float64(3)
 			if druid.BleedCategories.Get(target).AnyActive() {
 				baseDamage *= 1.3
 				tickBase *= 1.3
@@ -87,10 +80,6 @@ func (druid *Druid) registerRakeSpell() {
 			critRating := druid.GetStat(stats.MeleeCrit) + spell.BonusCritRating
 			critChance := critRating / (core.CritRatingPerCritChance * 100)
 			critMod := (critChance * (spell.FinalCritMultiplier() - 1))
-
-			if dotCanCrit {
-				ticks.Damage *= critChance * (1 + critMod)
-			}
 
 			ticks.Damage += initial.Damage * (critChance * (1 + critMod))
 			return ticks

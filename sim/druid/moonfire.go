@@ -11,7 +11,6 @@ func (druid *Druid) registerMoonfireSpell() {
 	numTicks := druid.moonfireTicks()
 
 	starfireBonusCrit := float64(druid.Talents.ImprovedInsectSwarm) * core.CritRatingPerCritChance
-	dotCanCrit := druid.HasSetBonus(ItemSetMalfurionsRegalia, 2)
 
 	baseDamageMultiplier := 1 +
 		0.05*float64(druid.Talents.ImprovedMoonfire) +
@@ -67,11 +66,7 @@ func (druid *Druid) registerMoonfireSpell() {
 				dot.Spell.DamageMultiplier = baseDamageMultiplier - malusInitialDamageMultiplier
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				if dotCanCrit {
-					dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeSnapshotCrit)
-				} else {
-					dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeTick)
-				}
+				dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeTick)
 			},
 		},
 

@@ -30,8 +30,7 @@ func (priest *Priest) registerPrayerOfHealingSpell() {
 		},
 
 		BonusCritRating: 0 +
-			1*float64(priest.Talents.HolySpecialization)*core.CritRatingPerCritChance +
-			core.TernaryFloat64(priest.HasSetBonus(ItemSetSanctificationRegalia, 2), 10*core.CritRatingPerCritChance, 0),
+			1*float64(priest.Talents.HolySpecialization)*core.CritRatingPerCritChance,
 		DamageMultiplier: 1 *
 			(1 + .02*float64(priest.Talents.SpiritualHealing)) *
 			(1 + .01*float64(priest.Talents.BlessedResilience)) *

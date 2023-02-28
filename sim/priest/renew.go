@@ -22,8 +22,7 @@ func (priest *Priest) registerRenewSpell() {
 			DamageMultiplier: 1 *
 				float64(priest.renewTicks()) *
 				priest.renewHealingMultiplier() *
-				.05 * float64(priest.Talents.EmpoweredRenew) *
-				core.TernaryFloat64(priest.HasSetBonus(ItemSetZabrasRaiment, 4), 1.1, 1),
+				.05 * float64(priest.Talents.EmpoweredRenew),
 			CritMultiplier:   priest.DefaultHealingCritMultiplier(),
 			ThreatMultiplier: 1 - []float64{0, .07, .14, .20}[priest.Talents.SilentResolve],
 

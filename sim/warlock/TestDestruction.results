@@ -58,13 +58,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestDestruction-AllItems-Gladiator'sFelshroud"
- value: {
-  dps: 1963.44021
-  tps: 1735.91502
- }
-}
-dps_results: {
  key: "TestDestruction-AllItems-MaleficRaiment"
  value: {
   dps: 2556.10779

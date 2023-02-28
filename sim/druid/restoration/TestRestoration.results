@@ -64,19 +64,11 @@ dps_results: {
  value: {}
 }
 dps_results: {
- key: "TestRestoration-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {}
-}
-dps_results: {
  key: "TestRestoration-AllItems-BrutalGladiator'sIdolofResolve-35019"
  value: {}
 }
 dps_results: {
  key: "TestRestoration-AllItems-CloakofDarkness-33122"
- value: {}
-}
-dps_results: {
- key: "TestRestoration-AllItems-DeathKnight'sAnguish-38212"
  value: {}
 }
 dps_results: {
@@ -105,10 +97,6 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-EyeofMagtheridon-28789"
- value: {}
-}
-dps_results: {
- key: "TestRestoration-AllItems-Gladiator'sSanctuary"
  value: {}
 }
 dps_results: {
@@ -213,10 +201,6 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-TsunamiTalisman-30627"
- value: {}
-}
-dps_results: {
- key: "TestRestoration-AllItems-UndeadSlayer'sBlessedArmor"
  value: {}
 }
 dps_results: {

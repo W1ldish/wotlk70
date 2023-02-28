@@ -29,9 +29,7 @@ func (warlock *Warlock) registerIncinerateSpell() {
 
 		BonusCritRating: 0 +
 			warlock.masterDemonologistFireCrit +
-			core.TernaryFloat64(warlock.Talents.Devastation, 5*core.CritRatingPerCritChance, 0) +
-			core.TernaryFloat64(warlock.HasSetBonus(ItemSetDeathbringerGarb, 4), 5*core.CritRatingPerCritChance, 0) +
-			core.TernaryFloat64(warlock.HasSetBonus(ItemSetDarkCovensRegalia, 2), 5*core.CritRatingPerCritChance, 0),
+			core.TernaryFloat64(warlock.Talents.Devastation, 5*core.CritRatingPerCritChance, 0),
 		DamageMultiplierAdditive: 1 +
 			warlock.GrandFirestoneBonus() +
 			0.03*float64(warlock.Talents.Emberstorm) +

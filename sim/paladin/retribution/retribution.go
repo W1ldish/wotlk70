@@ -39,11 +39,10 @@ func NewRetributionPaladin(character core.Character, options *proto.Player) *Ret
 		AvoidClippingConsecration:           retOptions.Rotation.AvoidClippingConsecration,
 		HoldLastAvengingWrathUntilExecution: retOptions.Rotation.HoldLastAvengingWrathUntilExecution,
 		//DivinePleaPercentage:                retOptions.Rotation.DivinePleaPercentage,
-		ExoSlack:                   retOptions.Rotation.ExoSlack,
-		ConsSlack:                  retOptions.Rotation.ConsSlack,
-		HolyWrathThreshold:         retOptions.Rotation.HolyWrathThreshold,
-		MaxSoVTargets:              retOptions.Rotation.SovTargets,
-		HasLightswornBattlegear2Pc: character.HasSetBonus(paladin.ItemSetLightswornBattlegear, 2),
+		ExoSlack:           retOptions.Rotation.ExoSlack,
+		ConsSlack:          retOptions.Rotation.ConsSlack,
+		HolyWrathThreshold: retOptions.Rotation.HolyWrathThreshold,
+		MaxSoVTargets:      retOptions.Rotation.SovTargets,
 	}
 
 	pal.AvoidClippingConsecration = retOptions.Rotation.AvoidClippingConsecration

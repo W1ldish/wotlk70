@@ -31,9 +31,6 @@ func (rogue *Rogue) registerPoisonAuras() {
 
 func (rogue *Rogue) registerDeadlyPoisonSpell() {
 	var energyMetrics *core.ResourceMetrics
-	if rogue.HasSetBonus(ItemSetTerrorblade, 2) {
-		energyMetrics = rogue.NewEnergyMetrics(core.ActionID{SpellID: 64914})
-	}
 
 	rogue.DeadlyPoison = rogue.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 57973},

@@ -32,8 +32,7 @@ func (mage *Mage) registerFireballSpell() {
 
 		BonusCritRating: 0 +
 			2*float64(mage.Talents.CriticalMass)*core.CritRatingPerCritChance +
-			float64(mage.Talents.ImprovedScorch)*core.CritRatingPerCritChance +
-			core.TernaryFloat64(mage.HasSetBonus(ItemSetKhadgarsRegalia, 4), 5*core.CritRatingPerCritChance, 0),
+			float64(mage.Talents.ImprovedScorch)*core.CritRatingPerCritChance,
 		DamageMultiplier: 1 *
 			(1 + .04*float64(mage.Talents.TormentTheWeak)),
 		DamageMultiplierAdditive: 1 +

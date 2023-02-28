@@ -9,8 +9,7 @@ import (
 
 func (druid *Druid) registerRipSpell() {
 	ripBaseNumTicks := 6 +
-		core.TernaryInt32(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfRip), 2, 0) +
-		core.TernaryInt32(druid.HasSetBonus(ItemSetDreamwalkerBattlegear, 2), 2, 0)
+		core.TernaryInt32(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfRip), 2, 0)
 
 	comboPointCoeff := 47.0
 	if druid.Equip[core.ItemSlotRanged].ID == 28372 { // Idol of Feral Shadows
@@ -26,7 +25,7 @@ func (druid *Druid) registerRipSpell() {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		EnergyCost: core.EnergyCostOptions{
-			Cost:          30 - core.TernaryFloat64(druid.HasSetBonus(ItemSetLasherweaveBattlegear, 2), 10, 0),
+			Cost:          30,
 			Refund:        0.4 * float64(druid.Talents.PrimalPrecision),
 			RefundMetrics: druid.PrimalPrecisionRecoveryMetrics,
 		},
@@ -40,7 +39,6 @@ func (druid *Druid) registerRipSpell() {
 			return druid.InForm(Cat) && druid.ComboPoints() > 0
 		},
 
-		BonusCritRating:  core.TernaryFloat64(druid.HasSetBonus(ItemSetMalfurionsBattlegear, 4), 5*core.CritRatingPerCritChance, 0.0),
 		DamageMultiplier: 1 + core.TernaryFloat64(druid.HasSetBonus(ItemSetThunderheartHarness, 4), 0.15, 0),
 		CritMultiplier:   druid.MeleeCritMultiplier(Cat),
 		ThreatMultiplier: 1,
@@ -90,10 +88,9 @@ func (druid *Druid) registerRipSpell() {
 
 func (druid *Druid) MaxRipTicks() int32 {
 	base := int32(6)
-	t7bonus := core.TernaryInt32(druid.HasSetBonus(ItemSetDreamwalkerBattlegear, 2), 2, 0)
 	ripGlyphBonus := core.TernaryInt32(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfRip), 2, 0)
 	shredGlyphBonus := core.TernaryInt32(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfShred), 3, 0)
-	return base + ripGlyphBonus + shredGlyphBonus + t7bonus
+	return base + ripGlyphBonus + shredGlyphBonus
 }
 
 func (druid *Druid) CurrentRipCost() float64 {

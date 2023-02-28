@@ -282,13 +282,6 @@ func init() {
 			},
 		})
 	})
-
-	registerSpellPVPTotem("Savage Gladiator's Totem of Survival", 42594, 52, 6)
-	registerSpellPVPTotem("Hateful Gladiator's Totem of Survival", 42601, 62, 6)
-	registerSpellPVPTotem("Deadly Gladiator's Totem of Survival", 42602, 70, 10)
-	registerSpellPVPTotem("Furious Gladiator's Totem of Survival", 42603, 84, 10)
-	registerSpellPVPTotem("Relentless Gladiator's Totem of Survival", 42604, 101, 10)
-	registerSpellPVPTotem("Wrathful Gladiator's Totem of Survival", 51513, 119, 10)
 }
 
 func registerSpellPVPTotem(name string, id int32, sp float64, seconds float64) {

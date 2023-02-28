@@ -7,7 +7,7 @@ import (
 )
 
 func (paladin *Paladin) registerDivineProtectionSpell() {
-	duration := time.Second*12 + core.TernaryDuration(paladin.HasSetBonus(ItemSetRedemptionPlate, 4), time.Second*3, 0)
+	duration := time.Second * 12
 
 	actionID := core.ActionID{SpellID: 498}
 	paladin.DivineProtectionAura = paladin.RegisterAura(core.Aura{
@@ -23,8 +23,7 @@ func (paladin *Paladin) registerDivineProtectionSpell() {
 	})
 
 	cooldownDur := time.Minute*3 -
-		30*time.Second*time.Duration(paladin.Talents.SacredDuty) -
-		core.TernaryDuration(paladin.HasSetBonus(ItemSetTuralyonsPlate, 4), 30*time.Second, 0)
+		30*time.Second*time.Duration(paladin.Talents.SacredDuty)
 
 	paladin.DivineProtection = paladin.RegisterSpell(core.SpellConfig{
 		ActionID: actionID,
@@ -62,7 +61,7 @@ func (paladin *Paladin) registerDivineProtectionSpell() {
 
 func (paladin *Paladin) registerForbearanceDebuff() {
 	actionID := core.ActionID{SpellID: 25771}
-	duration := core.TernaryDuration(paladin.HasSetBonus(ItemSetTuralyonsPlate, 4), 90*time.Second, 120*time.Second)
+	duration := 120 * time.Second
 	paladin.ForbearanceAura = paladin.RegisterAura(core.Aura{
 		Label:    "Forbearance",
 		ActionID: actionID,

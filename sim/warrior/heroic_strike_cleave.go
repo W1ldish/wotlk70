@@ -23,7 +23,7 @@ func (warrior *Warrior) registerHeroicStrikeSpell() {
 			Refund: 0.8,
 		},
 
-		BonusCritRating:  (5*float64(warrior.Talents.Incite) + core.TernaryFloat64(warrior.HasSetBonus(ItemSetWrynnsBattlegear, 4), 5, 0)) * core.CritRatingPerCritChance,
+		BonusCritRating:  5 * float64(warrior.Talents.Incite),
 		DamageMultiplier: 1,
 		CritMultiplier:   warrior.critMultiplier(mh),
 		ThreatMultiplier: 1,

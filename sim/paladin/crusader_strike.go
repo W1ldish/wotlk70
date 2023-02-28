@@ -34,7 +34,6 @@ func (paladin *Paladin) registerCrusaderStrikeSpell() {
 			},
 		},
 
-		BonusCritRating: core.TernaryFloat64(paladin.HasSetBonus(ItemSetAegisBattlegear, 4), 10, 0) * core.CritRatingPerCritChance,
 		DamageMultiplierAdditive: 1 +
 			paladin.getTalentSanctityOfBattleBonus() +
 			paladin.getTalentTheArtOfWarBonus() +

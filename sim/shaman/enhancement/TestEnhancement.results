@@ -44,13 +44,6 @@ character_stats_results: {
  }
 }
 dps_results: {
- key: "TestEnhancement-AllItems-AshtongueTalismanofVision-32491"
- value: {
-  dps: 823.75384
-  tps: 344.6492
- }
-}
-dps_results: {
  key: "TestEnhancement-AllItems-BandoftheEternalChampion-29301"
  value: {
   dps: 795.42767
@@ -86,20 +79,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestEnhancement-AllItems-BlessedGarboftheUndeadSlayer"
- value: {
-  dps: 971.30716
-  tps: 421.7646
- }
-}
-dps_results: {
- key: "TestEnhancement-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 917.24099
-  tps: 396.85267
- }
-}
-dps_results: {
  key: "TestEnhancement-AllItems-CataclysmHarness"
  value: {
   dps: 1116.25335
@@ -132,13 +111,6 @@ dps_results: {
  value: {
   dps: 1028.67042
   tps: 445.24855
- }
-}
-dps_results: {
- key: "TestEnhancement-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 792.48344
-  tps: 327.06677
  }
 }
 dps_results: {
@@ -195,13 +167,6 @@ dps_results: {
  value: {
   dps: 778.25259
   tps: 321.95846
- }
-}
-dps_results: {
- key: "TestEnhancement-AllItems-Fathom-BroochoftheTidewalker-30663"
- value: {
-  dps: 1072.02304
-  tps: 566.58043
  }
 }
 dps_results: {
@@ -324,13 +289,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestEnhancement-AllItems-SkycallTotem-33506"
- value: {
-  dps: 759.29253
-  tps: 311.66921
- }
-}
-dps_results: {
  key: "TestEnhancement-AllItems-SkyshatterHarness"
  value: {
   dps: 1418.83245
@@ -349,13 +307,6 @@ dps_results: {
  value: {
   dps: 856.92261
   tps: 356.03529
- }
-}
-dps_results: {
- key: "TestEnhancement-AllItems-Stonebreaker'sTotem-33507"
- value: {
-  dps: 779.57396
-  tps: 322.1353
  }
 }
 dps_results: {
@@ -398,13 +349,6 @@ dps_results: {
  value: {
   dps: 802.97087
   tps: 332.71491
- }
-}
-dps_results: {
- key: "TestEnhancement-AllItems-UndeadSlayer'sBlessedArmor"
- value: {
-  dps: 913.75915
-  tps: 391.12286
  }
 }
 dps_results: {

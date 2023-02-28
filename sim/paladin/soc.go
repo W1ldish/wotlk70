@@ -36,12 +36,10 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		ProcMask:    core.ProcMaskMeleeOrRangedSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | SpellFlagSecondaryJudgement,
 
-		BonusCritRating: (6 * float64(paladin.Talents.Fanaticism) * core.CritRatingPerCritChance) +
-			(core.TernaryFloat64(paladin.HasSetBonus(ItemSetTuralyonsBattlegear, 4), 5, 0) * core.CritRatingPerCritChance),
+		BonusCritRating: (6 * float64(paladin.Talents.Fanaticism) * core.CritRatingPerCritChance),
 
 		DamageMultiplier: 1 *
-			(1 + paladin.getItemSetLightswornBattlegearBonus4() +
-				paladin.getMajorGlyphOfJudgementBonus() + paladin.getTalentTheArtOfWarBonus()) *
+			(1 + paladin.getMajorGlyphOfJudgementBonus() + paladin.getTalentTheArtOfWarBonus()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
 			(1 + core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 4), 0.1, 0)),
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
@@ -68,7 +66,6 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		DamageMultiplier: 1 *
-			(1 + paladin.getItemSetLightswornBattlegearBonus4()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
 			(1 + justicarArmor2) *
 			0.36, // Only 36% of weapon damage.
@@ -101,7 +98,6 @@ func (paladin *Paladin) registerSealOfCommandSpellAndAura() {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		DamageMultiplier: 1 *
-			(1 + paladin.getItemSetLightswornBattlegearBonus4()) *
 			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) *
 			(1 + justicarArmor2) *
 			0.36, // Only 36% of weapon damage.

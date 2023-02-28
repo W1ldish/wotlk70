@@ -28,13 +28,11 @@ func (priest *Priest) registerDevouringPlagueSpell() {
 
 		BonusHitRating: float64(priest.Talents.ShadowFocus) * 1 * core.SpellHitRatingPerHitChance,
 		BonusCritRating: 0 +
-			3*float64(priest.Talents.MindMelt)*core.CritRatingPerCritChance +
-			core.TernaryFloat64(priest.HasSetBonus(ItemSetCrimsonAcolyte, 2), 5, 0)*core.CritRatingPerCritChance,
+			3*float64(priest.Talents.MindMelt)*core.CritRatingPerCritChance,
 		DamageMultiplier: 1 +
 			0.02*float64(priest.Talents.Darkness) +
 			0.01*float64(priest.Talents.TwinDisciplines) +
-			0.05*float64(priest.Talents.ImprovedDevouringPlague) +
-			core.TernaryFloat64(priest.HasSetBonus(ItemSetConquerorSanct, 2), 0.15, 0),
+			0.05*float64(priest.Talents.ImprovedDevouringPlague),
 		CritMultiplier:   priest.DefaultSpellCritMultiplier(),
 		ThreatMultiplier: 1 - 0.05*float64(priest.Talents.ShadowAffinity),
 
@@ -47,13 +45,11 @@ func (priest *Priest) registerDevouringPlagueSpell() {
 
 				BonusHitRating: float64(priest.Talents.ShadowFocus) * 1 * core.SpellHitRatingPerHitChance,
 				BonusCritRating: 0 +
-					3*float64(priest.Talents.MindMelt)*core.CritRatingPerCritChance +
-					core.TernaryFloat64(priest.HasSetBonus(ItemSetCrimsonAcolyte, 2), 5, 0)*core.CritRatingPerCritChance,
+					3*float64(priest.Talents.MindMelt)*core.CritRatingPerCritChance,
 				DamageMultiplier: 1 +
 					float64(priest.Talents.Darkness)*0.02 +
 					float64(priest.Talents.TwinDisciplines)*0.01 +
-					float64(priest.Talents.ImprovedDevouringPlague)*0.05 +
-					core.TernaryFloat64(priest.HasSetBonus(ItemSetConquerorSanct, 2), 0.15, 0),
+					float64(priest.Talents.ImprovedDevouringPlague)*0.05,
 				CritMultiplier:   priest.SpellCritMultiplier(1, 1),
 				ThreatMultiplier: 1 - 0.05*float64(priest.Talents.ShadowAffinity),
 			}),

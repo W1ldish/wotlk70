@@ -24,7 +24,7 @@ func (druid *Druid) registerSurvivalInstinctsCD() {
 	druid.SurvivalInstinctsAura = druid.RegisterAura(core.Aura{
 		Label:    "Survival Instincts",
 		ActionID: actionID,
-		Duration: time.Second*20 + core.TernaryDuration(druid.HasSetBonus(ItemSetNightsongBattlegear, 4), 8*time.Second, 0),
+		Duration: time.Second * 20,
 		OnGain: func(aura *core.Aura, sim *core.Simulation) {
 			bonusHealth = druid.MaxHealth() * healthFac
 			druid.AddStatsDynamic(sim, stats.Stats{stats.Health: bonusHealth})

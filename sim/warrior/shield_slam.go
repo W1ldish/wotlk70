@@ -51,9 +51,7 @@ func (warrior *Warrior) registerShieldSlamSpell() {
 		BonusCritRating: 5 * core.CritRatingPerCritChance * float64(warrior.Talents.CriticalBlock),
 		DamageMultiplier: 1 +
 			.05*float64(warrior.Talents.GagOrder) +
-			core.TernaryFloat64(warrior.HasSetBonus(ItemSetOnslaughtArmor, 4), .10, 0) +
-			core.TernaryFloat64(warrior.HasSetBonus(ItemSetDreadnaughtPlate, 2), .10, 0) +
-			core.TernaryFloat64(warrior.HasSetBonus(ItemSetYmirjarLordsPlate, 2), .20, 0), // TODO: All additive multipliers?
+			core.TernaryFloat64(warrior.HasSetBonus(ItemSetOnslaughtArmor, 4), .10, 0),
 		CritMultiplier:   warrior.critMultiplier(mh),
 		ThreatMultiplier: 1.3,
 		FlatThreatBonus:  770,

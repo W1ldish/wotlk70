@@ -79,13 +79,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestBalance-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 1412.57915
-  tps: 1324.26455
- }
-}
-dps_results: {
  key: "TestBalance-AllItems-BrutalGladiator'sIdolofResolve-35019"
  value: {
   dps: 1069.06267
@@ -97,13 +90,6 @@ dps_results: {
  value: {
   dps: 1069.89459
   tps: 982.50801
- }
-}
-dps_results: {
- key: "TestBalance-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 1076.64406
-  tps: 989.36966
  }
 }
 dps_results: {
@@ -153,13 +139,6 @@ dps_results: {
  value: {
   dps: 1190.48183
   tps: 1100.89833
- }
-}
-dps_results: {
- key: "TestBalance-AllItems-Gladiator'sSanctuary"
- value: {
-  dps: 1242.23724
-  tps: 1159.15593
  }
 }
 dps_results: {
@@ -342,13 +321,6 @@ dps_results: {
  value: {
   dps: 1097.91937
   tps: 1010.85712
- }
-}
-dps_results: {
- key: "TestBalance-AllItems-UndeadSlayer'sBlessedArmor"
- value: {
-  dps: 1069.57316
-  tps: 982.07709
  }
 }
 dps_results: {

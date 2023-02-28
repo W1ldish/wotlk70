@@ -57,8 +57,7 @@ func (rogue *Rogue) registerHemorrhageSpell() {
 			IgnoreHaste: true,
 		},
 
-		BonusCritRating: core.TernaryFloat64(rogue.HasSetBonus(ItemSetVanCleefs, 4), 5*core.CritRatingPerCritChance, 0) +
-			[]float64{0, 2, 4, 6}[rogue.Talents.TurnTheTables]*core.CritRatingPerCritChance,
+		BonusCritRating: []float64{0, 2, 4, 6}[rogue.Talents.TurnTheTables] * core.CritRatingPerCritChance,
 
 		DamageMultiplier: core.TernaryFloat64(daggerMH, 1.6, 1.1) * (1 +
 			0.02*float64(rogue.Talents.FindWeakness) +

@@ -85,8 +85,7 @@ func (priest *Priest) applyDivineAegis() {
 		Flags:       core.SpellFlagNoOnCastComplete | core.SpellFlagHelpful,
 
 		DamageMultiplier: 1 *
-			(0.1 * float64(priest.Talents.DivineAegis)) *
-			core.TernaryFloat64(priest.HasSetBonus(ItemSetZabrasRaiment, 4), 1.1, 1),
+			(0.1 * float64(priest.Talents.DivineAegis)),
 		ThreatMultiplier: 1,
 	})
 

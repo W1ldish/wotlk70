@@ -181,7 +181,6 @@ func (rogue *Rogue) Initialize() {
 	rogue.registerSinisterStrikeSpell()
 	rogue.registerSliceAndDice()
 	rogue.registerThistleTeaCD()
-	rogue.registerTricksOfTheTradeSpell()
 	rogue.registerAmbushSpell()
 	rogue.registerEnvenom()
 

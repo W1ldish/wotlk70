@@ -16,25 +16,6 @@ func (druid *Druid) registerInsectSwarmSpell() {
 
 	impISMultiplier := 1 + 0.01*float64(druid.Talents.ImprovedInsectSwarm)
 
-	if druid.HasSetBonus(ItemSetNightsongGarb, 4) {
-		druid.MoonkinT84PCAura = druid.RegisterAura(core.Aura{
-			Label:    "Elune's Wrath",
-			ActionID: core.ActionID{SpellID: 64823},
-			Duration: time.Second * 10,
-			OnGain: func(aura *core.Aura, sim *core.Simulation) {
-				druid.Starfire.CastTimeMultiplier -= 1
-			},
-			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-				druid.Starfire.CastTimeMultiplier += 1
-			},
-			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
-				if spell == druid.Starfire && (druid.Starfire.CurCast.CastTime < (10*time.Second - aura.RemainingDuration(sim))) {
-					aura.Deactivate(sim)
-				}
-			},
-		})
-	}
-
 	druid.InsectSwarm = druid.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 48468},
 		SpellSchool: core.SpellSchoolNature,
@@ -53,7 +34,6 @@ func (druid *Druid) registerInsectSwarmSpell() {
 
 		DamageMultiplier: 1 +
 			0.01*float64(druid.Talents.Genesis) +
-			core.TernaryFloat64(druid.HasSetBonus(ItemSetDreamwalkerGarb, 2), 0.1, 0) +
 			core.TernaryFloat64(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfInsectSwarm), 0.3, 0),
 		ThreatMultiplier: 1,
 

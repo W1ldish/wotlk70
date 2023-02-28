@@ -86,27 +86,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestFury-AllItems-BlessedBattlegearofUndeadSlaying"
- value: {
-  dps: 495.60336
-  tps: 369.71741
- }
-}
-dps_results: {
- key: "TestFury-AllItems-BlessedGarboftheUndeadSlayer"
- value: {
-  dps: 470.0693
-  tps: 351.52111
- }
-}
-dps_results: {
- key: "TestFury-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 391.38384
-  tps: 294.19088
- }
-}
-dps_results: {
  key: "TestFury-AllItems-BurningRage"
  value: {
   dps: 522.44807
@@ -118,13 +97,6 @@ dps_results: {
  value: {
   dps: 390.52269
   tps: 293.48812
- }
-}
-dps_results: {
- key: "TestFury-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 386.71025
-  tps: 290.59386
  }
 }
 dps_results: {
@@ -209,13 +181,6 @@ dps_results: {
  value: {
   dps: 419.40598
   tps: 314.06918
- }
-}
-dps_results: {
- key: "TestFury-AllItems-Gladiator'sBattlegear"
- value: {
-  dps: 581.70617
-  tps: 432.84287
  }
 }
 dps_results: {
@@ -398,13 +363,6 @@ dps_results: {
  value: {
   dps: 391.15917
   tps: 293.82655
- }
-}
-dps_results: {
- key: "TestFury-AllItems-UndeadSlayer'sBlessedArmor"
- value: {
-  dps: 473.96542
-  tps: 354.07834
  }
 }
 dps_results: {

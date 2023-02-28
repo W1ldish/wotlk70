@@ -13,9 +13,7 @@ import (
 
 func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
 	var mfReducTime time.Duration
-	if priest.HasSetBonus(ItemSetCrimsonAcolyte, 4) {
-		mfReducTime = time.Millisecond * 170
-	}
+
 	tickLength := time.Second - mfReducTime
 	channelTime := tickLength * time.Duration(numTicks)
 
@@ -53,8 +51,7 @@ func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
 
 		BonusHitRating: float64(priest.Talents.ShadowFocus) * 1 * core.SpellHitRatingPerHitChance,
 		BonusCritRating: 0 +
-			float64(priest.Talents.MindMelt)*2*core.CritRatingPerCritChance +
-			core.TernaryFloat64(priest.HasSetBonus(ItemSetZabras, 4), 5, 0)*core.CritRatingPerCritChance,
+			float64(priest.Talents.MindMelt)*2*core.CritRatingPerCritChance,
 		DamageMultiplier: 1 +
 			0.02*float64(priest.Talents.Darkness) +
 			0.01*float64(priest.Talents.TwinDisciplines) +
@@ -118,7 +115,7 @@ func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
 }
 
 func (priest *Priest) MindFlayTickDuration() time.Duration {
-	return priest.ApplyCastSpeed(time.Second - core.TernaryDuration(priest.T10FourSetBonus, time.Millisecond*170, 0))
+	return priest.ApplyCastSpeed(time.Second)
 }
 
 func (priest *Priest) AverageMindFlayLatencyDelay(numTicks int, gcd time.Duration) time.Duration {

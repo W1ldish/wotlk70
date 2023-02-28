@@ -131,20 +131,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestElemental-AllItems-BlessedGarboftheUndeadSlayer"
- value: {
-  dps: 740.07173
-  tps: 487.14207
- }
-}
-dps_results: {
- key: "TestElemental-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 872.32106
-  tps: 570.03813
- }
-}
-dps_results: {
  key: "TestElemental-AllItems-CataclysmHarness"
  value: {
   dps: 862.32822
@@ -177,13 +163,6 @@ dps_results: {
  value: {
   dps: 1062.9053
   tps: 682.54679
- }
-}
-dps_results: {
- key: "TestElemental-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 641.19516
-  tps: 421.39738
  }
 }
 dps_results: {
@@ -443,13 +422,6 @@ dps_results: {
  value: {
   dps: 657.78452
   tps: 432.09272
- }
-}
-dps_results: {
- key: "TestElemental-AllItems-UndeadSlayer'sBlessedArmor"
- value: {
-  dps: 638.10518
-  tps: 420.68765
  }
 }
 dps_results: {

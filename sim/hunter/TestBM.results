@@ -44,13 +44,6 @@ character_stats_results: {
  }
 }
 dps_results: {
- key: "TestBM-AllItems-AshtongueTalismanofSwiftness-32487"
- value: {
-  dps: 1998.06422
-  tps: 992.20826
- }
-}
-dps_results: {
  key: "TestBM-AllItems-BandoftheEternalChampion-29301"
  value: {
   dps: 2009.36506
@@ -93,31 +86,10 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestBM-AllItems-BlessedGarboftheUndeadSlayer"
- value: {
-  dps: 2177.85298
-  tps: 1143.3563
- }
-}
-dps_results: {
- key: "TestBM-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 2057.3916
-  tps: 1046.57892
- }
-}
-dps_results: {
  key: "TestBM-AllItems-CloakofDarkness-33122"
  value: {
   dps: 1985.60804
   tps: 987.83713
- }
-}
-dps_results: {
- key: "TestBM-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 1998.54181
-  tps: 1002.24254
  }
 }
 dps_results: {
@@ -188,13 +160,6 @@ dps_results: {
  value: {
   dps: 2113.03626
   tps: 1073.2144
- }
-}
-dps_results: {
- key: "TestBM-AllItems-Gladiator'sPursuit"
- value: {
-  dps: 2245.44718
-  tps: 1186.88404
  }
 }
 dps_results: {
@@ -377,13 +342,6 @@ dps_results: {
  value: {
   dps: 2020.43033
   tps: 1008.15677
- }
-}
-dps_results: {
- key: "TestBM-AllItems-UndeadSlayer'sBlessedArmor"
- value: {
-  dps: 2149.5543
-  tps: 1112.54665
  }
 }
 dps_results: {

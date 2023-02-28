@@ -24,8 +24,7 @@ func (priest *Priest) registerMindBlastSpell() {
 		ManaCost: core.ManaCostOptions{
 			BaseCost: 0.17,
 			Multiplier: 1 *
-				(1 - 0.05*float64(priest.Talents.FocusedMind)) *
-				core.TernaryFloat64(priest.HasSetBonus(ItemSetValorous, 2), 0.9, 1),
+				(1 - 0.05*float64(priest.Talents.FocusedMind)),
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

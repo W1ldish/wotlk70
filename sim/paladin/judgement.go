@@ -34,9 +34,7 @@ func (paladin *Paladin) registerJudgementOfWisdomSpell(cdTimer *core.Timer) {
 			CD: core.Cooldown{
 				Timer: cdTimer,
 				Duration: (time.Second * 10) -
-					(time.Second * time.Duration(paladin.Talents.ImprovedJudgements)) -
-					core.TernaryDuration(paladin.HasSetBonus(ItemSetRedemptionBattlegear, 4), 1*time.Second, 0) -
-					core.TernaryDuration(paladin.HasSetBonus(ItemSetGladiatorsVindication, 4), 1*time.Second, 0),
+					(time.Second * time.Duration(paladin.Talents.ImprovedJudgements)),
 			},
 		},
 		DamageMultiplier: 1 + core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 4), 0.1, 0),
@@ -73,9 +71,7 @@ func (paladin *Paladin) registerJudgementOfLightSpell(cdTimer *core.Timer) {
 			CD: core.Cooldown{
 				Timer: cdTimer,
 				Duration: (time.Second * 10) -
-					(time.Second * time.Duration(paladin.Talents.ImprovedJudgements)) -
-					core.TernaryDuration(paladin.HasSetBonus(ItemSetRedemptionBattlegear, 4), 1*time.Second, 0) -
-					core.TernaryDuration(paladin.HasSetBonus(ItemSetGladiatorsVindication, 4), 1*time.Second, 0),
+					(time.Second * time.Duration(paladin.Talents.ImprovedJudgements)),
 			},
 		},
 		DamageMultiplier: 1 + core.TernaryFloat64(paladin.HasSetBonus(ItemSetJusticarBattlegear, 4), 0.1, 0),

@@ -18,8 +18,7 @@ func (priest *Priest) registerGreaterHealSpell() {
 		ManaCost: core.ManaCostOptions{
 			BaseCost: 0.32,
 			Multiplier: 1 *
-				(1 - .05*float64(priest.Talents.ImprovedHealing)) *
-				core.TernaryFloat64(priest.HasSetBonus(ItemSetRegaliaOfFaith, 4), .95, 1),
+				(1 - .05*float64(priest.Talents.ImprovedHealing)),
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

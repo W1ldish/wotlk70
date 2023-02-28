@@ -172,9 +172,6 @@ func NewPaladin(character core.Character, talentsStr string) *Paladin {
 	}
 	core.FillTalentsProto(paladin.Talents.ProtoReflect(), talentsStr, TalentTreeSizes)
 
-	// This is used to cache its effect in talents.go
-	paladin.HasTuralyonsOrLiadrinsBattlegear2Pc = paladin.HasSetBonus(ItemSetTuralyonsBattlegear, 2)
-
 	paladin.PseudoStats.CanParry = true
 
 	paladin.EnableManaBar()

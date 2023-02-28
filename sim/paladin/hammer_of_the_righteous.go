@@ -32,9 +32,8 @@ func (paladin *Paladin) registerHammerOfTheRighteousSpell() {
 			},
 		},
 
-		DamageMultiplierAdditive: 1 + paladin.getItemSetRedemptionPlateBonus2() + paladin.getItemSetT9PlateBonus2() + paladin.getItemSetLightswornPlateBonus2(),
-		CritMultiplier:           paladin.MeleeCritMultiplier(),
-		ThreatMultiplier:         1,
+		CritMultiplier:   paladin.MeleeCritMultiplier(),
+		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			avgWeaponDamage := spell.Unit.AutoAttacks.MH.CalculateAverageWeaponDamage(spell.MeleeAttackPower())

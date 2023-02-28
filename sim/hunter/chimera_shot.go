@@ -70,8 +70,7 @@ func (hunter *Hunter) chimeraShotSerpentStingSpell() *core.Spell {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		DamageMultiplierAdditive: 1 +
-			0.1*float64(hunter.Talents.ImprovedStings) +
-			core.TernaryFloat64(hunter.HasSetBonus(ItemSetScourgestalkerBattlegear, 2), .1, 0),
+			0.1*float64(hunter.Talents.ImprovedStings),
 		DamageMultiplier: 1 *
 			(2.0 + core.TernaryFloat64(hunter.HasMajorGlyph(proto.HunterMajorGlyph_GlyphOfSerpentSting), 0.8, 0)) *
 			hunter.markedForDeathMultiplier(),

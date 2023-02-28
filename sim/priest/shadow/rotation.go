@@ -183,9 +183,6 @@ func (spriest *ShadowPriest) chooseSpellIdeal(sim *core.Simulation) (*core.Spell
 	mbDamage = 0
 	impDamage := 0
 	if spriest.options.UseMindBlast {
-		if spriest.T8FourSetBonus { //include benefit of 240 haste rating for 4 seconds. This isnt perfect because 1.6 dps per haste is an average and varies throughout the fight
-			impDamage = 1.6 * 240 * 4
-		}
 		mbDamage = spriest.MindBlast.ExpectedDamage(sim, spriest.CurrentTarget) + float64(impDamage)
 	}
 	if sim.Log != nil {
@@ -250,7 +247,7 @@ func (spriest *ShadowPriest) chooseSpellIdeal(sim *core.Simulation) (*core.Spell
 		dpInitCurr := dpDotCurr * spriest.DpInitMultiplier
 
 		cdDamage := mbDamage
-		if spriest.T10FourSetBonus || cdDamage == 0 {
+		if cdDamage == 0 {
 			cdDamage = mfDamage / 3 * 2
 		}
 

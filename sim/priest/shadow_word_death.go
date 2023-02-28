@@ -41,8 +41,7 @@ func (priest *Priest) registerShadowWordDeathSpell() {
 
 		BonusHitRating: float64(priest.Talents.ShadowFocus) * 1 * core.SpellHitRatingPerHitChance,
 		BonusCritRating: 0 +
-			float64(priest.Talents.MindMelt)*2*core.CritRatingPerCritChance +
-			core.TernaryFloat64(priest.HasSetBonus(ItemSetValorous, 4), 10, 0)*core.CritRatingPerCritChance, // might be 0.1?
+			float64(priest.Talents.MindMelt)*2*core.CritRatingPerCritChance,
 		DamageMultiplier: 1 +
 			0.02*float64(priest.Talents.Darkness) +
 			0.01*float64(priest.Talents.TwinDisciplines),

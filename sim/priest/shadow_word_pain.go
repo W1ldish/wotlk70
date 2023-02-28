@@ -33,7 +33,7 @@ func (priest *Priest) registerShadowWordPainSpell() {
 		},
 
 		BonusHitRating:  float64(priest.Talents.ShadowFocus) * 1 * core.SpellHitRatingPerHitChance,
-		BonusCritRating: float64(priest.Talents.MindMelt)*3*core.CritRatingPerCritChance + core.TernaryFloat64(priest.HasSetBonus(ItemSetCrimsonAcolyte, 2), 5, 0)*core.CritRatingPerCritChance,
+		BonusCritRating: float64(priest.Talents.MindMelt) * 3 * core.CritRatingPerCritChance,
 		DamageMultiplier: 1 +
 			float64(priest.Talents.Darkness)*0.02 +
 			float64(priest.Talents.TwinDisciplines)*0.01 +

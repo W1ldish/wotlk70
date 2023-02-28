@@ -9,8 +9,6 @@ import (
 
 func (mage *Mage) registerArcaneMissilesSpell() {
 	spellCoeff := 1/3.5 + 0.03*float64(mage.Talents.ArcaneEmpowerment)
-	t10ProcAura := mage.BloodmagesRegalia2pcAura()
-	hasT8_4pc := mage.HasSetBonus(ItemSetKirinTorGarb, 4)
 
 	mage.ArcaneMissiles = mage.RegisterSpell(core.SpellConfig{
 		ActionID:     core.ActionID{SpellID: 42846},
@@ -28,17 +26,9 @@ func (mage *Mage) registerArcaneMissilesSpell() {
 				GCD:         core.GCDDefault,
 				ChannelTime: time.Second * 5,
 			},
-			ModifyCast: func(sim *core.Simulation, spell *core.Spell, cast *core.Cast) {
-				if mage.MissileBarrageAura.IsActive() {
-					if t10ProcAura != nil {
-						t10ProcAura.Activate(sim)
-					}
-				}
-			},
 		},
 
 		BonusHitRating:   float64(mage.Talents.ArcaneFocus) * core.SpellHitRatingPerHitChance,
-		BonusCritRating:  core.TernaryFloat64(mage.HasSetBonus(ItemSetKhadgarsRegalia, 4), 5*core.CritRatingPerCritChance, 0),
 		DamageMultiplier: 1 + .04*float64(mage.Talents.TormentTheWeak),
 		DamageMultiplierAdditive: 1 +
 			core.TernaryFloat64(mage.HasSetBonus(ItemSetTempestRegalia, 4), .05, 0),
@@ -49,12 +39,6 @@ func (mage *Mage) registerArcaneMissilesSpell() {
 			Aura: core.Aura{
 				Label: "ArcaneMissiles",
 				OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-					if mage.MissileBarrageAura.IsActive() {
-						if !hasT8_4pc || sim.RandomFloat("MageT84PC") > T84PcProcChance {
-							mage.MissileBarrageAura.Deactivate(sim)
-						}
-					}
-
 					// TODO: This check is necessary to ensure the final tick occurs before
 					// Arcane Blast stacks are dropped. To fix this, ticks need to reliably
 					// occur before aura expirations.

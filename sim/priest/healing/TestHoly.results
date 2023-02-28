@@ -52,14 +52,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestHoly-AllItems-AshtongueTalismanofAcumen-32490"
- value: {
-  dps: 23.22473
-  tps: 17.85145
-  hps: 636.88135
- }
-}
-dps_results: {
  key: "TestHoly-AllItems-AvatarRegalia"
  value: {
   dps: 29.75869
@@ -100,27 +92,11 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestHoly-AllItems-BlessedRegaliaofUndeadCleansing"
- value: {
-  dps: 26.1067
-  tps: 20.49475
-  hps: 852.17026
- }
-}
-dps_results: {
  key: "TestHoly-AllItems-CloakofDarkness-33122"
  value: {
   dps: 23.22473
   tps: 17.85145
   hps: 639.29231
- }
-}
-dps_results: {
- key: "TestHoly-AllItems-DeathKnight'sAnguish-38212"
- value: {
-  dps: 23.22473
-  tps: 17.85145
-  hps: 639.30593
  }
 }
 dps_results: {
@@ -164,14 +140,6 @@ dps_results: {
  }
 }
 dps_results: {
- key: "TestHoly-AllItems-EarringofSoulfulMeditation-30665"
- value: {
-  dps: 24.98655
-  tps: 17.85145
-  hps: 677.17535
- }
-}
-dps_results: {
  key: "TestHoly-AllItems-EmpyreanDemolisher-17112"
  value: {
   dps: 23.22473
@@ -185,22 +153,6 @@ dps_results: {
   dps: 24.0919
   tps: 17.85145
   hps: 655.28276
- }
-}
-dps_results: {
- key: "TestHoly-AllItems-Gladiator'sInvestiture"
- value: {
-  dps: 27.04807
-  tps: 20.8374
-  hps: 883.17181
- }
-}
-dps_results: {
- key: "TestHoly-AllItems-Gladiator'sRaiment"
- value: {
-  dps: 27.46559
-  tps: 20.7395
-  hps: 853.41479
  }
 }
 dps_results: {

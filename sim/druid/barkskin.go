@@ -14,13 +14,12 @@ func (druid *Druid) registerBarkskinCD() {
 
 	actionId := core.ActionID{SpellID: 22812}
 
-	setBonus := core.TernaryDuration(druid.HasSetBonus(ItemSetDreamwalkerBattlegear, 4), time.Second*3.0, 0.0)
 	hasGlyph := druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfBarkskin)
 
 	druid.BarkskinAura = druid.RegisterAura(core.Aura{
 		Label:    "Barkskin",
 		ActionID: actionId,
-		Duration: (time.Second * 12) + setBonus,
+		Duration: (time.Second * 12),
 		OnGain: func(aura *core.Aura, sim *core.Simulation) {
 			druid.PseudoStats.DamageTakenMultiplier *= 0.8
 			if hasGlyph {

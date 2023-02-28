@@ -1,8 +1,6 @@
 package warrior
 
 import (
-	"time"
-
 	"github.com/Tereneckla/wotlk/sim/core"
 	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
@@ -11,9 +9,6 @@ func (warrior *Warrior) registerExecuteSpell() {
 	const maxRage = 30
 
 	gcd := core.GCDDefault
-	if warrior.HasSetBonus(ItemSetYmirjarLordsBattlegear, 4) {
-		gcd = time.Second
-	}
 
 	var extraRageBonus float64
 	if warrior.HasMajorGlyph(proto.WarriorMajorGlyph_GlyphOfExecution) {

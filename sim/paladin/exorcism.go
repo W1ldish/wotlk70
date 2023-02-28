@@ -39,8 +39,7 @@ func (paladin *Paladin) registerExorcismSpell() {
 
 		DamageMultiplierAdditive: 1 +
 			paladin.getTalentSanctityOfBattleBonus() +
-			paladin.getMajorGlyphOfExorcismBonus() +
-			paladin.getItemSetAegisBattlegearBonus2(),
+			paladin.getMajorGlyphOfExorcismBonus(),
 		DamageMultiplier: 1,
 		ThreatMultiplier: 1,
 		CritMultiplier:   paladin.SpellCritMultiplier(),

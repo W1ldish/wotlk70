@@ -38,8 +38,6 @@ func (warlock *Warlock) registerImmolateSpell() {
 			warlock.GrandFirestoneBonus() +
 			0.03*float64(warlock.Talents.Emberstorm) +
 			0.1*float64(warlock.Talents.ImprovedImmolate) +
-			core.TernaryFloat64(warlock.HasSetBonus(ItemSetDeathbringerGarb, 2), 0.1, 0) +
-			core.TernaryFloat64(warlock.HasSetBonus(ItemSetGuldansRegalia, 4), 0.1, 0) +
 			core.TernaryFloat64(warlock.HasSetBonus(ItemSetCorruptorRaiment, 4), 0.05, 0),
 		CritMultiplier:   warlock.SpellCritMultiplier(1, float64(warlock.Talents.Ruin)/5),
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
