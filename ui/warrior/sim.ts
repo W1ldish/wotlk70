@@ -64,6 +64,7 @@ export class WarriorSimUI extends IndividualSimUI<Spec.SpecWarrior> {
 				Stat.StatExpertise,
 				Stat.StatMeleeHit,
 				Stat.StatMeleeCrit,
+				Stat.StatSpellCrit,
 				Stat.StatMeleeHaste,
 				Stat.StatArmorPenetration,
 				Stat.StatArmor,
