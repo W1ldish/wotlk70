@@ -258,19 +258,7 @@ export class SimHeader extends Component {
 		container.classList.add('sim-toolbar-socials')
 		this.simToolbar.appendChild(container);
 
-		this.addDiscordLink(container);
 		this.addGitHubLink(container);
-		this.addPatreonLink(container);
-	}
-
-	private addDiscordLink(container: HTMLElement) {
-		this.addToolbarLink({
-			href: "https://discord.gg/p3DgvmnDCS",
-			parent: container,
-			icon: "fab fa-discord fa-lg",
-			tooltip: "Join us on Discord",
-			classes: "discord-link link-alt"
-		})
 	}
 
 	private addGitHubLink(container: HTMLElement) {
@@ -280,16 +268,6 @@ export class SimHeader extends Component {
 			icon: "fab fa-github fa-lg",
 			tooltip: "Contribute on GitHub",
 			classes: "github-link link-alt"
-		})
-	}
-
-	private addPatreonLink(container: HTMLElement) {
-		this.addToolbarLink({
-			href: "https://patreon.com/wowsims",
-			parent: container,
-			text: "Support our devs",
-			icon: "fab fa-patreon fa-lg",
-			classes: "patreon-link link-alt"
 		})
 	}
 

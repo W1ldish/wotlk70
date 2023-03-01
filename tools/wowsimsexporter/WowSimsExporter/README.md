@@ -1,10 +1,6 @@
 # wowsimsexporter
 An exporter addon for World Of Warcraft: WOTLK Classic Sim at  https://wowsims.github.io/wotlk
 
-There is a channel on the wowsims discord
-
-Invite is located here https://discord.gg/N9ZgAMXQ3p
-
 
 **THIS IS IN TESTING, THE ADDON MAY NOT WORK**
 If this is the case, don't open a ticket on the wowsims github, open it here <https://github.com/generalwrex/wowsimsexporter/issues>
