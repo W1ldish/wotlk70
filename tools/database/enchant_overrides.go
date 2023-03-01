@@ -77,7 +77,8 @@ var EnchantOverrides = []*proto.UIEnchant{
 	{EffectId: 2649, ItemId: 22543, SpellId: 27950, Name: "Enchant Boots - Fortitude", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Stamina: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
 	{EffectId: 2657, ItemId: 22544, SpellId: 27951, Name: "Enchant Boots - Dexterity", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.Agility: 12}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
 	{EffectId: 2939, ItemId: 28279, SpellId: 34007, Name: "Enchant Boots - Cat's Swiftness", Quality: proto.ItemQuality_ItemQualityRare, Stats: stats.Stats{stats.Agility: 6}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
-	{EffectId: 2658, ItemId: 22545, SpellId: 27954, Name: "Enchant Boots - Surefooted", Phase: 2, Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.MeleeHit: 10}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
+	{EffectId: 2658, ItemId: 22545, SpellId: 27954, Name: "Enchant Boots - Surefooted", Phase: 2, Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{stats.MeleeHit: 10, stats.SpellHit: 5}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
+	{EffectId: 3858, SpellId: 63746, Name: "Enchant Boots - Lesser Accuracy", Phase: 1, Quality: proto.ItemQuality_ItemQualityCommon, Stats: stats.Stats{stats.MeleeHit: 5, stats.SpellHit: 5}.ToFloatArray(), Type: proto.ItemType_ItemTypeFeet},
 
 	// Weapon
 	{EffectId: 1897, ItemId: 16250, SpellId: 20031, Name: "Superior Striking", Quality: proto.ItemQuality_ItemQualityUncommon, Stats: stats.Stats{}.ToFloatArray(), Type: proto.ItemType_ItemTypeWeapon},
