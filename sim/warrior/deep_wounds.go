@@ -50,9 +50,9 @@ func (warrior *Warrior) applyDeepWounds() {
 		OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 			if result.Outcome.Matches(core.OutcomeCrit) {
 				if warrior.WarriorInputs.Munch {
-					warrior.procMunchedDeepWounds(sim, result.Target, spell.IsMH())
+					warrior.procMunchedDeepWounds(sim, result.Target, spell.IsOH())
 				} else {
-					warrior.procDeepWounds(sim, result.Target, spell.IsMH())
+					warrior.procDeepWounds(sim, result.Target, spell.IsOH())
 				}
 				warrior.procBloodFrenzy(sim, result, time.Second*6)
 			}
@@ -60,30 +60,30 @@ func (warrior *Warrior) applyDeepWounds() {
 	})
 }
 
-func (warrior *Warrior) procDeepWounds(sim *core.Simulation, target *core.Unit, isMh bool) {
+func (warrior *Warrior) procDeepWounds(sim *core.Simulation, target *core.Unit, isOh bool) {
 	dot := warrior.DeepWounds.Dot(target)
 
 	outstandingDamage := core.TernaryFloat64(dot.IsActive(), dot.SnapshotBaseDamage*float64(dot.NumberOfTicks-dot.TickCount), 0)
 
 	attackTable := warrior.AttackTables[target.UnitIndex]
 	var awd float64
-	if isMh {
-		adm := warrior.AutoAttacks.MHAuto.AttackerDamageMultiplier(attackTable)
-		tdm := warrior.AutoAttacks.MHAuto.TargetDamageMultiplier(attackTable, false)
-		awd = (warrior.AutoAttacks.MH.CalculateAverageWeaponDamage(dot.Spell.MeleeAttackPower()) + dot.Spell.BonusWeaponDamage()) * adm * tdm
-	} else {
+	if isOh {
 		adm := warrior.AutoAttacks.OHAuto.AttackerDamageMultiplier(attackTable)
 		tdm := warrior.AutoAttacks.OHAuto.TargetDamageMultiplier(attackTable, false)
 		awd = ((warrior.AutoAttacks.OH.CalculateAverageWeaponDamage(dot.Spell.MeleeAttackPower()) * 0.5) + dot.Spell.BonusWeaponDamage()) * adm * tdm
+	} else {
+		adm := warrior.AutoAttacks.MHAuto.AttackerDamageMultiplier(attackTable)
+		tdm := warrior.AutoAttacks.MHAuto.TargetDamageMultiplier(attackTable, false)
+		awd = (warrior.AutoAttacks.MH.CalculateAverageWeaponDamage(dot.Spell.MeleeAttackPower()) + dot.Spell.BonusWeaponDamage()) * adm * tdm
+
 	}
 	newDamage := awd * 0.16 * float64(warrior.Talents.DeepWounds)
-
 	dot.SnapshotBaseDamage = (outstandingDamage + newDamage) / float64(dot.NumberOfTicks)
 	dot.SnapshotAttackerMultiplier = 1
 	warrior.DeepWounds.Cast(sim, target)
 }
 
-func (warrior *Warrior) procMunchedDeepWounds(sim *core.Simulation, target *core.Unit, isMh bool) {
+func (warrior *Warrior) procMunchedDeepWounds(sim *core.Simulation, target *core.Unit, isOh bool) {
 	procAt := sim.CurrentTime + munchingWindow
 	i := target.Index
 	if warrior.munchedDeepWoundsProcs[i] != nil {
@@ -94,7 +94,7 @@ func (warrior *Warrior) procMunchedDeepWounds(sim *core.Simulation, target *core
 		DoAt:     procAt,
 		Priority: core.ActionPriorityAuto,
 		OnAction: func(s *core.Simulation) {
-			warrior.procDeepWounds(s, target, isMh)
+			warrior.procDeepWounds(s, target, isOh)
 			warrior.munchedDeepWoundsProcs[i] = nil
 		},
 		CleanUp: func(s *core.Simulation) {
