@@ -28,11 +28,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const CombatTalents = {
 	name: 'Combat',
 	data: SavedTalents.create({
-		talentsString: '00532000523-0252051050035010223100501251',
+		talentsString: '00532-0252051050035010223100501251',
 		glyphs: Glyphs.create({
 			major1: RogueMajorGlyph.GlyphOfKillingSpree,
-			major2: RogueMajorGlyph.GlyphOfTricksOfTheTrade,
-			major3: RogueMajorGlyph.GlyphOfRupture,
+			major2: RogueMajorGlyph.GlyphOfRupture,
+			major3: RogueMajorGlyph.RogueMajorGlyphNone,
 		})
 	}),
 };
@@ -40,11 +40,11 @@ export const CombatTalents = {
 export const AssassinationTalents = {
 	name: 'Assassination',
 	data: SavedTalents.create({
-		talentsString: '005303104352100520103331051-005005003-502',
+		talentsString: '005303104352100520103331051-005005',
 		glyphs: Glyphs.create({
 			major1: RogueMajorGlyph.GlyphOfMutilate,
-			major2: RogueMajorGlyph.GlyphOfTricksOfTheTrade,
-			major3: RogueMajorGlyph.GlyphOfHungerForBlood,
+			major2: RogueMajorGlyph.GlyphOfHungerForBlood,
+			major3: RogueMajorGlyph.RogueMajorGlyphNone,
 		})
 	}),
 };
@@ -52,23 +52,11 @@ export const AssassinationTalents = {
 export const SubtletyTalents = {
 	name: 'Subtlety',
 	data: SavedTalents.create({
-		talentsString: '30522300014--5020032030321121350115031151',
+		talentsString: '305002--5020032030321121350115031151',
 		glyphs: Glyphs.create({
 			major1: RogueMajorGlyph.GlyphOfBackstab,
-			major2: RogueMajorGlyph.GlyphOfEviscerate,
-			major3: RogueMajorGlyph.GlyphOfShadowDance,
-		})
-	}),
-}
-
-export const HemoSubtletyTalents = {
-	name: 'Hemo Sub',
-	data: SavedTalents.create({
-		talentsString: '30532000235--502003203032112135011503113',
-		glyphs: Glyphs.create({
-			major1: RogueMajorGlyph.GlyphOfHemorrhage,
-			major2: RogueMajorGlyph.GlyphOfEviscerate,
-			major3: RogueMajorGlyph.GlyphOfFeint,
+			major2: RogueMajorGlyph.GlyphOfShadowDance,
+			major3: RogueMajorGlyph.RogueMajorGlyphNone,
 		})
 	}),
 }
@@ -97,11 +85,11 @@ export const DefaultOptions = RogueOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	defaultPotion: Potions.PotionOfSpeed,
-	prepopPotion: Potions.PotionOfSpeed,
+	defaultPotion: Potions.HastePotion,
+	prepopPotion: Potions.HastePotion,
 	defaultConjured: Conjured.ConjuredRogueThistleTea,
-	flask: Flask.FlaskOfEndlessRage,
-	food: Food.FoodMegaMammothMeal,
+	flask: Flask.FlaskOfRelentlessAssault,
+	food: Food.FoodGrilledMudfish,
 });
 
 export const P2_PRESET_ASSASSINATION = {

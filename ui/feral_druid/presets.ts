@@ -1,4 +1,4 @@
-import { Consumes } from '../core/proto/common.js';
+import { Consumes, WeaponEnchant } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Potions } from '../core/proto/common.js';
@@ -23,14 +23,29 @@ import * as Tooltips from '../core/constants/tooltips.js';
 
 // Default talents. Uses the wowhead calculator format, make the talents on
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
-export const StandardTalents = {
-	name: 'Standard',
+export const OmenTalents = {
+	name: 'Omen',
 	data: SavedTalents.create({
-		talentsString: '-503202132322010053120230310511-205503012',
+		talentsString: '-5032021323220100531202303104-20350001',
 		glyphs: Glyphs.create({
 			major1: DruidMajorGlyph.GlyphOfRip,
-			major2: DruidMajorGlyph.GlyphOfSavageRoar,
-			major3: DruidMajorGlyph.GlyphOfShred,
+			major2: DruidMajorGlyph.GlyphOfShred,
+			major3: DruidMajorGlyph.DruidMajorGlyphNone,
+			minor1: DruidMinorGlyph.GlyphOfDash,
+			minor2: DruidMinorGlyph.GlyphOfTheWild,
+			minor3: DruidMinorGlyph.GlyphOfUnburdenedRebirth,
+		}),
+	}),
+};
+
+export const BerserkTalents = {
+	name: 'Berserk',
+	data: SavedTalents.create({
+		talentsString: '-503202132322010053120230310511-1043',
+		glyphs: Glyphs.create({
+			major1: DruidMajorGlyph.GlyphOfRip,
+			major2: DruidMajorGlyph.GlyphOfShred,
+			major3: DruidMajorGlyph.DruidMajorGlyphNone,
 			minor1: DruidMinorGlyph.GlyphOfDash,
 			minor2: DruidMinorGlyph.GlyphOfTheWild,
 			minor3: DruidMinorGlyph.GlyphOfUnburdenedRebirth,
@@ -65,9 +80,10 @@ export const DefaultOptions = FeralDruidOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	flask: Flask.FlaskOfEndlessRage,
-	food: Food.FoodDragonfinFilet,
+	flask: Flask.FlaskOfRelentlessAssault,
+	food: Food.FoodGrilledMudfish,
 	defaultPotion: Potions.PotionOfSpeed,
+	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
 });
 
 export const PreRaid_PRESET = {

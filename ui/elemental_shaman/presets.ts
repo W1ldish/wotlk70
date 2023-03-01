@@ -30,11 +30,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const StandardTalents = {
 	name: 'Standard',
 	data: SavedTalents.create({
-		talentsString: '0532001523212351322301351-005052031',
+		talentsString: '0532001523212351322301051-00504',
 		glyphs: Glyphs.create({
-			major1: ShamanMajorGlyph.GlyphOfLava,
+			major1: ShamanMajorGlyph.GlyphOfLightningBolt,
 			major2: ShamanMajorGlyph.GlyphOfTotemOfWrath,
-			major3: ShamanMajorGlyph.GlyphOfLightningBolt,
+			major3: ShamanMajorGlyph.ShamanMajorGlyphNone,
 			minor1: ShamanMinorGlyph.GlyphOfThunderstorm,
 			minor2: ShamanMinorGlyph.GlyphOfWaterShield,
 			minor3: ShamanMinorGlyph.GlyphOfGhostWolf,
@@ -63,9 +63,9 @@ export const DefaultOptions = ElementalShamanOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	defaultPotion: Potions.RunicManaInjector,
-	flask: Flask.FlaskOfTheFrostWyrm,
-	food: Food.FoodFishFeast,
+	defaultPotion: Potions.SuperManaPotion,
+	flask: Flask.FlaskOfBlindingLight,
+	food: Food.FoodBlackenedBasilisk,
 });
 
 export const PRE_RAID_PRESET = {

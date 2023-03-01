@@ -38,11 +38,11 @@ import * as WarlockTooltips from './tooltips.js';
 export const AfflictionTalents = {
 	name: 'Affliction',
 	data: SavedTalents.create({
-		talentsString: '2350002030023510253500331151--550000051',
+		talentsString: '2350222031123510253500331151--',
 		glyphs: Glyphs.create({
-			major1: MajorGlyph.GlyphOfQuickDecay,
+			major1: MajorGlyph.GlyphOfHaunt,
 			major2: MajorGlyph.GlyphOfLifeTap,
-			major3: MajorGlyph.GlyphOfHaunt,
+			major3: MajorGlyph.WarlockMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfSouls,
 			minor2: MinorGlyph.GlyphOfDrainSoul,
 			minor3: MinorGlyph.GlyphOfSubjugateDemon,
@@ -53,11 +53,11 @@ export const AfflictionTalents = {
 export const DemonologyTalents = {
 	name: 'Demonology',
 	data: SavedTalents.create({
-		talentsString: '-203203301035012530135201351-550000052',
+		talentsString: '03-003203301135112530135201251-05',
 		glyphs: Glyphs.create({
 			major1: MajorGlyph.GlyphOfLifeTap,
-			major2: MajorGlyph.GlyphOfQuickDecay,
-			major3: MajorGlyph.GlyphOfFelguard,
+			major2: MajorGlyph.GlyphOfFelguard,
+			major3: MajorGlyph.WarlockMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfSouls,
 			minor2: MinorGlyph.GlyphOfDrainSoul,
 			minor3: MinorGlyph.GlyphOfSubjugateDemon,
@@ -68,11 +68,11 @@ export const DemonologyTalents = {
 export const DestructionTalents = {
 	name: 'Destruction',
 	data: SavedTalents.create({
-		talentsString: '-03310030003-05203205210331051335230351',
+		talentsString: '03-03-05203205220331051035031351',
 		glyphs: Glyphs.create({
 			major1: MajorGlyph.GlyphOfConflagrate,
 			major2: MajorGlyph.GlyphOfLifeTap,
-			major3: MajorGlyph.GlyphOfIncinerate,
+			major3: MajorGlyph.WarlockMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfSouls,
 			minor2: MinorGlyph.GlyphOfDrainSoul,
 			minor3: MinorGlyph.GlyphOfSubjugateDemon,
@@ -129,11 +129,11 @@ export const DestructionOptions = WarlockOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	flask: Flask.FlaskOfTheFrostWyrm,
-	food: Food.FoodFishFeast,
-	petFood: PetFood.PetFoodSpicedMammothTreats,
-	defaultPotion: Potions.PotionOfWildMagic,
-	prepopPotion: Potions.PotionOfWildMagic,
+	flask: Flask.FlaskOfPureDeath,
+	food: Food.FoodBlackenedBasilisk,
+	petFood: PetFood.PetFoodKiblersBits,
+	defaultPotion: Potions.DestructionPotion,
+	prepopPotion: Potions.DestructionPotion,
 });
 
 export const DefaultRaidBuffs = RaidBuffs.create({
@@ -301,674 +301,100 @@ export const P1_PreBiS_11 = {
 	enableWhen: (player: Player<Spec.SpecWarlock>) => player.getRotation().type == RotationType.Affliction,
 	gear: EquipmentSpec.fromJsonString(`{"items": [
 		{
-			"id": 44910,
-			"enchant": 3820,
+			"id": 24266,
+			"enchant": 3002,
 			"gems": [
-				41285,
-				39998
+			  31867,
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 42647,
+		  },
+		  {
+			"id": 31338
+		  },
+		  {
+			"id": 27775,
+			"enchant": 2982,
 			"gems": [
-				39998
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 34210,
-			"enchant": 3810,
-			"gems": [
-				39998,
-				40051
-			]
-		},
-		{
-			"id": 41610,
-			"enchant": 3722
-		},
-		{
-			"id": 39497,
-			"enchant": 3832,
-			"gems": [
-				39998,
-				40051
-			]
-		},
-		{
-			"id": 37361,
-			"enchant": 2332,
-			"gems": [
-				0
-			]
-		},
-		{
-			"id": 42113,
-			"enchant": 3604,
-			"gems": [
-				0
-			]
-		},
-		{
-			"id": 40696,
-			"gems": [
-				40051,
-				39998
-			]
-		},
-		{
-			"id": 34181,
-			"enchant": 3719,
-			"gems": [
-				39998,
-				39998,
-				40051
-			]
-		},
-		{
-			"id": 44202,
-			"enchant": 3606,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 43253,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 37694
-		},
-		{
-			"id": 40682
-		},
-		{
-			"id": 37873
-		},
-		{
-			"id": 45085,
-			"enchant": 3834
-		},
-		{
-			"id": 40698
-		},
-		{
-			"id": 34348,
-			"gems": [
-				39998
-			]
-		}
-  ]}`),
-}
-export const P1_Preset_Demo_Destro = {
-	name: 'P1 Demo / Destro',
-	tooltip: WarlockTooltips.BIS_TOOLTIP,
-	enableWhen: (player: Player<Spec.SpecWarlock>) => player.getRotation().type == RotationType.Demonology || player.getRotation().type == RotationType.Destruction,
-	gear: EquipmentSpec.fromJsonString(`{"items": [
-		{
-			"id": 40421,
-			"enchant": 3820,
-			"gems": [
-				41285,
-				40014
-			]
-		},
-		{
-			"id": 44661,
-			"gems": [
-				40099
-			]
-		},
-		{
-			"id": 40424,
-			"enchant": 3810,
-			"gems": [
-				40049
-			]
-		},
-		{
-			"id": 44005,
-			"enchant": 3722,
-			"gems": [
-				40099
-			]
-		},
-		{
-			"id": 40423,
-			"enchant": 3832,
-			"gems": [
-				40049,
-				40014
-			]
-		},
-		{
-			"id": 44008,
-			"enchant": 2332,
-			"gems": [
-				39998,
-				0
-			]
-		},
-		{
-			"id": 40420,
-			"enchant": 3604,
-			"gems": [
-				39998,
-				0
-			]
-		},
-		{
-			"id": 40561,
-			"gems": [
-				40014
-			]
-		},
-		{
-			"id": 40560,
-			"enchant": 3719
-		},
-		{
-			"id": 40558,
-			"enchant": 3606
-		},
-		{
-			"id": 40399
-		},
-		{
-			"id": 40719
-		},
-		{
-			"id": 40432
-		},
-		{
-			"id": 40255
-		},
-		{
-			"id": 40396,
-			"enchant": 3834
-		},
-		{
-			"id": 39766
-		},
-		{
-			"id": 39712
-		}
-  ]}`),
-}
-
-
-// will have only rare gems, but a Lightweave Embroidery on cloak.
-export const P1_Preset_Affliction = {
-	name: 'P1 Affliction',
-	tooltip: WarlockTooltips.BIS_TOOLTIP,
-	enableWhen: (player: Player<Spec.SpecWarlock>) => player.getRotation().type == RotationType.Affliction,
-	gear: EquipmentSpec.fromJsonString(`{"items": [
-		{
-			"id": 40421,
-			"enchant": 3820,
-			"gems": [
-				41285,
-				40051
-			]
-		},
-		{
-			"id": 44661,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 40424,
-			"enchant": 3810,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 44005,
-			"enchant": 3722,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 40423,
-			"enchant": 3832,
-			"gems": [
-				39998,
-				40051
-			]
-		},
-		{
-			"id": 44008,
-			"enchant": 2332,
-			"gems": [
-				39998,
-				0
-			]
-		},
-		{
-			"id": 40420,
-			"enchant": 3604,
-			"gems": [
-				39998,
-				0
-			]
-		},
-		{
-			"id": 40561,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 40560,
-			"enchant": 3719
-		},
-		{
-			"id": 40558,
-			"enchant": 3606
-		},
-		{
-			"id": 40399
-		},
-		{
-			"id": 40719
-		},
-		{
-			"id": 40432
-		},
-		{
-			"id": 40255
-		},
-		{
-			"id": 40396,
-			"enchant": 3834
-		},
-		{
-			"id": 39766
-		},
-		{
-			"id": 39712
-		}
-  ]}`),
-}
-
-
-export const P1_PreBiS_14 = {
-	name: 'Pre-Raid',
-	tooltip: WarlockTooltips.BIS_TOOLTIP,
-	enableWhen: (player: Player<Spec.SpecWarlock>) => player.getRotation().type == RotationType.Demonology || player.getRotation().type == RotationType.Destruction,
-	gear: EquipmentSpec.fromJsonString(`{"items": [
-		{
-			"id": 44910,
-			"enchant": 3820,
-			"gems": [
-				41285,
-				39998
-			]
-		},
-		{
-			"id": 42647,
-			"gems": [
-				40049
-			]
-		},
-		{
-			"id": 34210,
-			"enchant": 3810,
-			"gems": [
-				39998,
-				40014
-			]
-		},
-		{
-			"id": 41610,
-			"enchant": 3722
-		},
-		{
-			"id": 39497,
-			"enchant": 3832,
-			"gems": [
-				39998,
-				40014
-			]
-		},
-		{
-			"id": 37361,
-			"enchant": 2332,
-			"gems": [
-				0
-			]
-		},
-		{
-			"id": 42113,
-			"enchant": 3604,
-			"gems": [
-				0
-			]
-		},
-		{
-			"id": 40696,
-			"gems": [
-				40014,
-				39998
-			]
-		},
-		{
-			"id": 34181,
-			"enchant": 3719,
-			"gems": [
-				39998,
-				39998,
-				40014
-			]
-		},
-		{
-			"id": 44202,
-			"enchant": 3606,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 43253,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 37694
-		},
-		{
-			"id": 40682
-		},
-		{
-			"id": 37873
-		},
-		{
-			"id": 45085,
-			"enchant": 3834
-		},
-		{
-			"id": 40698
-		},
-		{
-			"id": 34348,
-			"gems": [
-				39998
-			]
-		}
-  ]}`),
-}
-
-export const P2_Preset_Affliction = {
-	name: 'P2 Affliction',
-	tooltip: WarlockTooltips.BIS_TOOLTIP,
-	enableWhen: (player: Player<Spec.SpecWarlock>) => player.getRotation().type == RotationType.Affliction,
-		gear: EquipmentSpec.fromJsonString(`{"items": [
-		{
-			"id": 45497,
-			"enchant": 3820,
-			"gems": [
-				41285,
-				45883
-			]
-		},
-		{
-			"id": 45133,
-			"gems": [
-				40051
-			]
-		},
-		{
-			"id": 46068,
-			"enchant": 3810,
-			"gems": [
-				39998,
-				40049
-			]
-		},
-		{
-			"id": 45618,
-			"enchant": 3722,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 46137,
+		  },
+		  {
+			"id": 25777,
+			"enchant": 2621
+		  },
+		  {
+			"id": 21848,
 			"enchant": 1144,
 			"gems": [
-				39998,
-				45987
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 45446,
-			"enchant": 2332,
+		  },
+		  {
+			"id": 32655,
+			"enchant": 2650,
 			"gems": [
-				39998,
-				0
+			  24030,
+			  0
 			]
-		},
-		{
-			"id": 45665,
-			"enchant": 3604,
+		  },
+		  {
+			"id": 21847,
+			"enchant": 2937,
 			"gems": [
-				39998,
-				39998,
-				0
+			  31867,
+			  31867,
+			  0
 			]
-		},
-		{
-			"id": 45619,
-			"enchant": 3601,
+		  },
+		  {
+			"id": 21846,
 			"gems": [
-				40051,
-				40051,
-				39998
+			  31867,
+			  31867,
+			  0
 			]
-		},
-		{
-			"id": 46139,
-			"enchant": 3872,
+		  },
+		  {
+			"id": 24262,
+			"enchant": 2748,
 			"gems": [
-				39998,
-				39998
+			  31867,
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 45135,
-			"enchant": 3606,
+		  },
+		  {
+			"id": 28179,
 			"gems": [
-				39998,
-				40051
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 45495,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 46046,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 45518
-		},
-		{
-			"id": 45466
-		},
-		{
-			"id": 45620,
-			"enchant": 3834,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 45617
-		},
-		{
-			"id": 45294,
-			"gems": [
-				40051
-			]
-		}
-	]}`),
-}
-
-export const P2_Preset_Demo_Destro = {
-	name: 'P2 Demo / Destro',
-	tooltip: WarlockTooltips.BIS_TOOLTIP,
-	enableWhen: (player: Player<Spec.SpecWarlock>) => player.getRotation().type == RotationType.Demonology || player.getRotation().type == RotationType.Destruction,
-		gear: EquipmentSpec.fromJsonString(`{"items": [
-		{
-			"id": 45497,
-			"enchant": 3820,
-			"gems": [
-				41285,
-				45883
-			]
-		},
-		{
-			"id": 45243,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 46068,
-			"enchant": 3810,
-			"gems": [
-				39998,
-				40051
-			]
-		},
-		{
-			"id": 45618,
-			"enchant": 3722,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 46137,
-			"enchant": 1144,
-			"gems": [
-				39998,
-				40051
-			]
-		},
-		{
-			"id": 45446,
-			"enchant": 2332,
-			"gems": [
-				39998,
-				0
-			]
-		},
-		{
-			"id": 45520,
-			"enchant": 3604,
-			"gems": [
-				39998,
-				39998,
-				0
-			]
-		},
-		{
-			"id": 45619,
-			"enchant": 3601,
-			"gems": [
-				39998,
-				39998,
-				39998
-			]
-		},
-		{
-			"id": 46139,
-			"enchant": 3872,
-			"gems": [
-				39998,
-				39998
-			]
-		},
-		{
-			"id": 45135,
-			"enchant": 3606,
-			"gems": [
-				39998,
-				39998
-			]
-		},
-		{
-			"id": 45495,
-			"gems": [
-				40026
-			]
-		},
-		{
-			"id": 45297,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 45518
-		},
-		{
-			"id": 45148
-		},
-		{
-			"id": 45620,
-			"enchant": 3834,
-			"gems": [
-				39998
-			]
-		},
-		{
-			"id": 45617
-		},
-		{
-			"id": 45294,
-			"gems": [
-				39998
-			]
-		}
-	]}`),
-}
-
-export const Naked = {
-	name: 'The Naked Bolt',
-	gear: EquipmentSpec.fromJsonString(`
-    {"items":
-      [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ]
-    }
-  `),
+		  },
+		  {
+			"id": 28227
+		  },
+		  {
+			"id": 31339
+		  },
+		  {
+			"id": 31856
+		  },
+		  {
+			"id": 29370
+		  },
+		  {
+			"id": 23554,
+			"enchant": 2669
+		  },
+		  {
+			"id": 29269
+		  },
+		  {
+			"id": 29350
+		  }
+  ]}`),
 }
 

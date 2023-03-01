@@ -1,4 +1,4 @@
-import { Consumes } from '../core/proto/common.js';
+import { Consumes, WeaponEnchant } from '../core/proto/common.js';
 import { BattleElixir } from '../core/proto/common.js';
 import { GuardianElixir } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
@@ -29,11 +29,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const StandardTalents = {
 	name: 'Standard',
 	data: SavedTalents.create({
-		talentsString: '-503232132322010353120300313511-20350001',
+		talentsString: '-501232130322010353120303313511-2',
 		glyphs: Glyphs.create({
 			major1: DruidMajorGlyph.GlyphOfMaul,
 			major2: DruidMajorGlyph.GlyphOfSurvivalInstincts,
-			major3: DruidMajorGlyph.GlyphOfFrenziedRegeneration,
+			major3: DruidMajorGlyph.DruidMajorGlyphNone,
 			minor1: DruidMinorGlyph.GlyphOfChallengingRoar,
 			minor2: DruidMinorGlyph.GlyphOfThorns,
 			minor3: DruidMinorGlyph.GlyphOfUnburdenedRebirth,
@@ -55,14 +55,15 @@ export const DefaultOptions = DruidOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	battleElixir: BattleElixir.GurusElixir,
-	guardianElixir: GuardianElixir.GiftOfArthas,
-	food: Food.FoodBlackenedDragonfin,
-	prepopPotion: Potions.IndestructiblePotion,
-	defaultPotion: Potions.IndestructiblePotion,
+	battleElixir: BattleElixir.ElixirOfMastery,
+	guardianElixir: GuardianElixir.ElixirOfMajorFortitude,
+	food: Food.FoodGrilledMudfish,
+	prepopPotion: Potions.IronshieldPotion,
+	defaultPotion: Potions.IronshieldPotion,
 	defaultConjured: Conjured.ConjuredHealthstone,
 	superSapper: true,
 	fillerExplosive: Explosive.ExplosiveBiggerOne,
+	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
 });
 
 export const P1_PRESET = {

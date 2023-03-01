@@ -1,4 +1,4 @@
-import { Consumes } from '../core/proto/common.js';
+import { Consumes, WeaponEnchant } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
@@ -33,11 +33,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const StandardTalents = {
 	name: 'Standard',
 	data: SavedTalents.create({
-		talentsString: '05032031--325023051223010323151301351',
+		talentsString: '--325323051223010323152301351',
 		glyphs: Glyphs.create({
 			major1: MajorGlyph.GlyphOfShadow,
 			major2: MajorGlyph.GlyphOfMindFlay,
-			major3: MajorGlyph.GlyphOfDispersion,
+			major3: MajorGlyph.PriestMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfFortitude,
 			minor2: MinorGlyph.GlyphOfShadowProtection,
 			minor3: MinorGlyph.GlyphOfShadowfiend,
@@ -56,10 +56,11 @@ export const DefaultOptions = Options.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	flask: Flask.FlaskOfTheFrostWyrm,
-	food: Food.FoodFishFeast,
-	defaultPotion: Potions.PotionOfWildMagic,
-	prepopPotion: Potions.PotionOfWildMagic,
+	flask: Flask.FlaskOfPureDeath,
+	food: Food.FoodBlackenedBasilisk,
+	defaultPotion: Potions.SuperManaPotion,
+	prepopPotion: Potions.DestructionPotion,
+	weaponMain: WeaponEnchant.EnchantBrilliantWizardOil,
 });
 
 export const DefaultRaidBuffs = RaidBuffs.create({
@@ -99,91 +100,100 @@ export const PreBis_PRESET = {
 	tooltip: Tooltips.BASIC_BIS_DISCLAIMER,
 	gear: EquipmentSpec.fromJsonString(`{"items": [
 		{
-			"id": 42553,
-			"enchant": 3820,
+			"id": 24266,
+			"enchant": 3002,
 			"gems": [
-				41285,
-				40049
+			  31867,
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 40680
-		},
-		{
-			"id": 34210,
-			"enchant": 3810,
+		  },
+		  {
+			"id": 28134
+		  },
+		  {
+			"id": 27796,
+			"enchant": 2982,
 			"gems": [
-				39998,
-				40026
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 41610,
-			"enchant": 3722
-		},
-		{
-			"id": 43792,
+		  },
+		  {
+			"id": 25777,
+			"enchant": 2621
+		  },
+		  {
+			"id": 21848,
 			"enchant": 1144,
 			"gems": [
-				39998,
-				40051
+			  31867,
+			  31867
 			]
-		},
-		{
-			"id": 37361,
-			"enchant": 2332,
+		  },
+		  {
+			"id": 32655,
+			"enchant": 2650,
 			"gems": [
-				0
+			  31867,
+			  0
 			]
-		},
-		{
-			"id": 39530,
-			"enchant": 3604,
+		  },
+		  {
+			"id": 21847,
+			"enchant": 2937,
 			"gems": [
-				40049,
-				0
+			  31867,
+			  31867,
+			  0
 			]
-		},
-		{
-			"id": 40696,
+		  },
+		  {
+			"id": 21846,
 			"gems": [
-				40049,
-				39998
+			  31867,
+			  31867,
+			  0
 			]
-		},
-		{
-			"id": 37854,
-			"enchant": 3719
-		},
-		{
-			"id": 44202,
-			"enchant": 3826,
+		  },
+		  {
+			"id": 24262,
+			"enchant": 2748,
 			"gems": [
-				40026
+			  24030,
+			  24030,
+			  24030
 			]
-		},
-		{
-			"id": 40585
-		},
-		{
-			"id": 37694
-		},
-		{
-			"id": 37835
-		},
-		{
-			"id": 37873
-		},
-		{
-			"id": 41384,
-			"enchant": 3834
-		},
-		{
-			"id": 40698
-		},
-		{
-			"id": 37177
-		}
+		  },
+		  {
+			"id": 28406,
+			"gems": [
+			  31867,
+			  31867
+			]
+		  },
+		  {
+			"id": 28227
+		  },
+		  {
+			"id": 32779
+		  },
+		  {
+			"id": 31856
+		  },
+		  {
+			"id": 29370
+		  },
+		  {
+			"id": 23554,
+			"enchant": 2669
+		  },
+		  {
+			"id": 28412
+		  },
+		  {
+			"id": 29350
+		  }
   ]}`),
 };
 export const P1_PRESET = {

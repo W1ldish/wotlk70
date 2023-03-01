@@ -1,4 +1,4 @@
-import { Consumes } from '../core/proto/common.js';
+import { Consumes, WeaponEnchant } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
@@ -35,11 +35,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const ArmsTalents = {
 	name: 'Arms',
 	data: SavedTalents.create({
-		talentsString: '3022032023335100102012213231251-305-2033',
+		talentsString: '3022032023335100102012213231251-105',
 		glyphs: Glyphs.create({
 			major1: WarriorMajorGlyph.GlyphOfRending,
 			major2: WarriorMajorGlyph.GlyphOfMortalStrike,
-			major3: WarriorMajorGlyph.GlyphOfExecution,
+			major3: WarriorMajorGlyph.WarriorMajorGlyphNone,
 			minor1: WarriorMinorGlyph.GlyphOfThunderClap,
 			minor2: WarriorMinorGlyph.GlyphOfCommand,
 			minor3: WarriorMinorGlyph.GlyphOfCharge,
@@ -50,11 +50,11 @@ export const ArmsTalents = {
 export const FuryTalents = {
 	name: 'Fury',
 	data: SavedTalents.create({
-		talentsString: '32002301233-305053000520310053120500351',
+		talentsString: '302-305053000520310253120500351-2',
 		glyphs: Glyphs.create({
 			major1: WarriorMajorGlyph.GlyphOfWhirlwind,
 			major2: WarriorMajorGlyph.GlyphOfHeroicStrike,
-			major3: WarriorMajorGlyph.GlyphOfExecution,
+			major3: WarriorMajorGlyph.WarriorMajorGlyphNone,
 			minor1: WarriorMinorGlyph.GlyphOfBattle,
 			minor2: WarriorMinorGlyph.GlyphOfBloodrage,
 			minor3: WarriorMinorGlyph.GlyphOfCharge,
@@ -107,10 +107,12 @@ export const DefaultOptions = WarriorOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	flask: Flask.FlaskOfEndlessRage,
-	food: Food.FoodSpicedWormBurger,
-	defaultPotion: Potions.IndestructiblePotion,
-	prepopPotion: Potions.PotionOfSpeed,
+	flask: Flask.FlaskOfRelentlessAssault,
+	food: Food.FoodRoastedClefthoof,
+	defaultPotion: Potions.IronshieldPotion,
+	prepopPotion: Potions.HastePotion,
+	weaponMain: WeaponEnchant.EnchantAdamantiteSharpeningStone,
+	weaponOff: WeaponEnchant.EnchantAdamantiteSharpeningStone,
 });
 
 export const P1_PRERAID_FURY_PRESET = {

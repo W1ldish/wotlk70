@@ -1,4 +1,4 @@
-import { Conjured, Consumes } from '../core/proto/common.js';
+import { Conjured, Consumes, WeaponEnchant } from '../core/proto/common.js';
 import { CustomRotation, CustomSpell } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -34,11 +34,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const GenericAoeTalents = {
 	name: 'Baseline Example',
 	data: SavedTalents.create({
-		talentsString: '-05005135200132311333312321-511302012003',
+		talentsString: '-05005135200132311333312321-5003',
 		glyphs: {
 			major1: PaladinMajorGlyph.GlyphOfSealOfVengeance,
 			major2: PaladinMajorGlyph.GlyphOfRighteousDefense,
-			major3: PaladinMajorGlyph.GlyphOfDivinePlea,
+			major3: PaladinMajorGlyph.PaladinMajorGlyphNone,
 			minor1: PaladinMinorGlyph.GlyphOfSenseUndead,
 			minor2: PaladinMinorGlyph.GlyphOfLayOnHands,
 			minor3: PaladinMinorGlyph.GlyphOfBlessingOfKings
@@ -71,10 +71,11 @@ export const DefaultOptions = ProtectionPaladinOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	flask: Flask.FlaskOfStoneblood,
-	food: Food.FoodDragonfinFilet,
-	defaultPotion: Potions.IndestructiblePotion,
-	prepopPotion:  Potions.IndestructiblePotion,
+	flask: Flask.FlaskOfFortification,
+	food: Food.FoodFishermansFeast,
+	defaultPotion: Potions.IronshieldPotion,
+	prepopPotion:  Potions.IronshieldPotion,
+	weaponMain: WeaponEnchant.EnchantSuperiorWizardOil,
 });
 
 export const PRERAID_PRESET = {

@@ -29,11 +29,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const StandardTalents = {
 	name: 'Standard',
 	data: SavedTalents.create({
-		talentsString: '2500030023-302-053351225000012521030113321',
+		talentsString: '25-3-053351225000012521030113321',
 		glyphs: Glyphs.create({
 			major1: WarriorMajorGlyph.GlyphOfBlocking,
 			major2: WarriorMajorGlyph.GlyphOfVigilance,
-			major3: WarriorMajorGlyph.GlyphOfDevastate,
+			major3: WarriorMajorGlyph.WarriorMajorGlyphNone,
 			minor1: WarriorMinorGlyph.GlyphOfCharge,
 			minor2: WarriorMinorGlyph.GlyphOfThunderClap,
 			minor3: WarriorMinorGlyph.GlyphOfCommand,
@@ -44,11 +44,11 @@ export const StandardTalents = {
 export const UATalents = {
 	name: 'UA',
 	data: SavedTalents.create({
-		talentsString: '35023301230051002020120002-2-05035122500000252',
+		talentsString: '35023301230051002020120002--0503512250001',
 		glyphs: Glyphs.create({
 			major1: WarriorMajorGlyph.GlyphOfRevenge,
 			major2: WarriorMajorGlyph.GlyphOfHeroicStrike,
-			major3: WarriorMajorGlyph.GlyphOfSweepingStrikes,
+			major3: WarriorMajorGlyph.WarriorMajorGlyphNone,
 			minor1: WarriorMinorGlyph.GlyphOfCharge,
 			minor2: WarriorMinorGlyph.GlyphOfThunderClap,
 			minor3: WarriorMinorGlyph.GlyphOfCommand,
@@ -83,11 +83,10 @@ export const DefaultOptions = ProtectionWarriorOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	battleElixir: BattleElixir.ElixirOfExpertise,
-	guardianElixir: GuardianElixir.ElixirOfProtection,
-	food: Food.FoodDragonfinFilet,
-	defaultPotion: Potions.IndestructiblePotion,
-	prepopPotion: Potions.IndestructiblePotion,
+	flask: Flask.FlaskOfFortification,
+	food: Food.FoodFishermansFeast,
+	defaultPotion: Potions.IronshieldPotion,
+	prepopPotion: Potions.IronshieldPotion,
 	superSapper: true,
 	fillerExplosive: Explosive.ExplosiveBiggerOne,
 });

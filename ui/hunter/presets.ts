@@ -1,4 +1,4 @@
-import { CustomRotation, CustomSpell } from '../core/proto/common.js';
+import { CustomRotation, CustomSpell, WeaponEnchant } from '../core/proto/common.js';
 import { Consumes } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -33,11 +33,11 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const BeastMasteryTalents = {
 	name: 'Beast Mastery',
 	data: SavedTalents.create({
-		talentsString: '51200201505112243120531251-025305101',
+		talentsString: '51200201505112243120531251-025',
 		glyphs: Glyphs.create({
 			major1: MajorGlyph.GlyphOfBestialWrath,
 			major2: MajorGlyph.GlyphOfSteadyShot,
-			major3: MajorGlyph.GlyphOfSerpentSting,
+			major3: MajorGlyph.HunterMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfFeignDeath,
 			minor2: MinorGlyph.GlyphOfRevivePet,
 			minor3: MinorGlyph.GlyphOfMendPet,
@@ -48,11 +48,11 @@ export const BeastMasteryTalents = {
 export const MarksmanTalents = {
 	name: 'Marksman',
 	data: SavedTalents.create({
-		talentsString: '502-035335131030013233035031051-5000002',
+		talentsString: '-035335131030013233035031051-4',
 		glyphs: Glyphs.create({
 			major1: MajorGlyph.GlyphOfSerpentSting,
 			major2: MajorGlyph.GlyphOfSteadyShot,
-			major3: MajorGlyph.GlyphOfChimeraShot,
+			major3: MajorGlyph.HunterMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfFeignDeath,
 			minor2: MinorGlyph.GlyphOfRevivePet,
 			minor3: MinorGlyph.GlyphOfMendPet,
@@ -63,11 +63,11 @@ export const MarksmanTalents = {
 export const SurvivalTalents = {
 	name: 'Survival',
 	data: SavedTalents.create({
-		talentsString: '-015305101-5000032500033330532135301311',
+		talentsString: '-015-5000032500033330532135301311',
 		glyphs: Glyphs.create({
 			major1: MajorGlyph.GlyphOfSerpentSting,
 			major2: MajorGlyph.GlyphOfExplosiveShot,
-			major3: MajorGlyph.GlyphOfKillShot,
+			major3: MajorGlyph.HunterMajorGlyphNone,
 			minor1: MinorGlyph.GlyphOfFeignDeath,
 			minor2: MinorGlyph.GlyphOfRevivePet,
 			minor3: MinorGlyph.GlyphOfMendPet,
@@ -115,10 +115,11 @@ export const BMDefaultOptions = HunterOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	defaultPotion: Potions.PotionOfSpeed,
-	flask: Flask.FlaskOfEndlessRage,
-	food: Food.FoodFishFeast,
-	petFood: PetFood.PetFoodSpicedMammothTreats,
+	defaultPotion: Potions.HastePotion,
+	flask: Flask.FlaskOfRelentlessAssault,
+	food: Food.FoodGrilledMudfish,
+	petFood: PetFood.PetFoodKiblersBits,
+	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
 });
 
 export const MM_PRERAID_PRESET = {

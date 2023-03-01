@@ -1,4 +1,4 @@
-import { Conjured, Consumes } from '../core/proto/common.js';
+import { Conjured, Consumes, WeaponEnchant } from '../core/proto/common.js';
 import { CustomRotation, CustomSpell } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -31,30 +31,14 @@ import * as Tooltips from '../core/constants/tooltips.js';
 
 // Default talents. Uses the wowhead calculator format, make the talents on
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
-export const AuraMasteryTalents = {
-	name: 'Basic w/Aura Mastery+LoH buff',
+export const BasicTalents = {
+	name: 'Basic',
 	data: SavedTalents.create({
-		talentsString: '050501-05-05232051203331302133231331',
+		talentsString: '01-05-05232051203331302133231331',
 		glyphs: Glyphs.create({
 			major1: PaladinMajorGlyph.GlyphOfSealOfVengeance,
 			major2: PaladinMajorGlyph.GlyphOfJudgement,
-			major3: PaladinMajorGlyph.GlyphOfConsecration,
-			minor1: PaladinMinorGlyph.GlyphOfSenseUndead,
-			minor2: PaladinMinorGlyph.GlyphOfLayOnHands,
-			minor3: PaladinMinorGlyph.GlyphOfBlessingOfKings
-		})
-	}),
-};
-
-
-export const DivineSacTalents = {
-	name: 'Basic w/Dsac',
-	data: SavedTalents.create({
-		talentsString: '03-453201002-05222051203331302133201331',
-		glyphs: Glyphs.create({
-			major1: PaladinMajorGlyph.GlyphOfSealOfVengeance,
-			major2: PaladinMajorGlyph.GlyphOfJudgement,
-			major3: PaladinMajorGlyph.GlyphOfConsecration,
+			major3: PaladinMajorGlyph.PaladinMajorGlyphNone,
 			minor1: PaladinMinorGlyph.GlyphOfSenseUndead,
 			minor2: PaladinMinorGlyph.GlyphOfLayOnHands,
 			minor3: PaladinMinorGlyph.GlyphOfBlessingOfKings
@@ -105,10 +89,11 @@ export const DefaultOptions = RetributionPaladinOptions.create({
 });
 
 export const DefaultConsumes = Consumes.create({
-	defaultPotion: Potions.PotionOfSpeed,
+	defaultPotion: Potions.HastePotion,
 	defaultConjured: Conjured.ConjuredDarkRune,
-	flask: Flask.FlaskOfEndlessRage,
-	food: Food.FoodFishFeast,
+	flask: Flask.FlaskOfRelentlessAssault,
+	food: Food.FoodRoastedClefthoof,
+	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
 });
 
 // Maybe use this later if I can figure out the interactive tooltips from tippy
