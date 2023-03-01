@@ -123,6 +123,33 @@ func applyConsumeEffects(agent Agent) {
 		}
 	} else {
 		switch consumes.BattleElixir {
+		case proto.BattleElixir_ElixirOfMajorShadowPower:
+			character.OnSpellRegistered(func(spell *Spell) {
+				if spell.SpellSchool.Matches(SpellSchoolShadow) {
+					spell.BonusSpellPower += 55
+					if character.HasProfession(proto.Profession_Alchemy) {
+						spell.BonusSpellPower += 16
+					}
+				}
+			})
+		case proto.BattleElixir_ElixirOfMajorFirePower:
+			character.OnSpellRegistered(func(spell *Spell) {
+				if spell.SpellSchool.Matches(SpellSchoolFire) {
+					spell.BonusSpellPower += 55
+					if character.HasProfession(proto.Profession_Alchemy) {
+						spell.BonusSpellPower += 16
+					}
+				}
+			})
+		case proto.BattleElixir_ElixirOfMajorFrostPower:
+			character.OnSpellRegistered(func(spell *Spell) {
+				if spell.SpellSchool.Matches(SpellSchoolFrost) {
+					spell.BonusSpellPower += 55
+					if character.HasProfession(proto.Profession_Alchemy) {
+						spell.BonusSpellPower += 16
+					}
+				}
+			})
 		case proto.BattleElixir_AdeptsElixir:
 			character.AddStats(stats.Stats{
 				stats.SpellCrit:  24,
