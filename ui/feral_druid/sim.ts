@@ -78,7 +78,7 @@ export class FeralDruidSimUI extends IndividualSimUI<Spec.SpecFeralDruid> {
 				// Default rotation settings.
 				rotation: Presets.DefaultRotation,
 				// Default talents.
-				talents: Presets.StandardTalents.data,
+				talents: Presets.OmenTalents.data,
 				// Default spec-specific settings.
 				specOptions: Presets.DefaultOptions,
 				// Default raid/party buffs settings.
@@ -144,7 +144,8 @@ export class FeralDruidSimUI extends IndividualSimUI<Spec.SpecFeralDruid> {
 			presets: {
 				// Preset talents that the user can quickly select.
 				talents: [
-					Presets.StandardTalents,
+					Presets.OmenTalents,
+					Presets.BerserkTalents,
 				],
 				// Preset gear configurations that the user can quickly select.
 				gear: [

@@ -120,12 +120,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: BalanceDruidPresets.P1_PRESET.gear,
-				2: BalanceDruidPresets.P2_PRESET.gear,
+				1: BalanceDruidPresets.PRE_RAID_PRESET.gear,
 			},
 			[Faction.Horde]: {
-				1: BalanceDruidPresets.P1_PRESET.gear,
-				2: BalanceDruidPresets.P2_PRESET.gear,
+				1: BalanceDruidPresets.PRE_RAID_PRESET.gear,
 			},
 		},
 		tooltip: specNames[Spec.SpecBalanceDruid],
@@ -134,7 +132,7 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 	{
 		spec: Spec.SpecFeralDruid,
 		rotation: FeralDruidPresets.DefaultRotation,
-		talents: FeralDruidPresets.StandardTalents.data,
+		talents: FeralDruidPresets.OmenTalents.data,
 		specOptions: FeralDruidPresets.DefaultOptions,
 		consumes: FeralDruidPresets.DefaultConsumes,
 		defaultName: 'Cat',
@@ -303,12 +301,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: MagePresets.ARCANE_P1_PRESET.gear,
-				2: MagePresets.ARCANE_P2_PRESET.gear,
+				1: MagePresets.ARCANE_PRERAID_PRESET.gear,
 			},
 			[Faction.Horde]: {
-				1: MagePresets.ARCANE_P1_PRESET.gear,
-				2: MagePresets.ARCANE_P2_PRESET.gear,
+				1: MagePresets.ARCANE_PRERAID_PRESET.gear,
 			},
 		},
 		tooltip: 'Arcane Mage',
@@ -330,12 +326,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: MagePresets.FIRE_P1_PRESET.gear,
-				2: MagePresets.FIRE_P2_PRESET.gear,
+				1: MagePresets.ARCANE_PRERAID_PRESET.gear,
 			},
 			[Faction.Horde]: {
-				1: MagePresets.FIRE_P1_PRESET.gear,
-				2: MagePresets.FIRE_P2_PRESET.gear,
+				1: MagePresets.ARCANE_PRERAID_PRESET.gear,
 			},
 		},
 		tooltip: 'Fire Mage',
@@ -357,12 +351,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: MagePresets.FROST_P1_PRESET.gear,
-				2: MagePresets.FROST_P2_PRESET.gear,
+				1: MagePresets.ARCANE_PRERAID_PRESET.gear,
 			},
 			[Faction.Horde]: {
-				1: MagePresets.FROST_P1_PRESET.gear,
-				2: MagePresets.FROST_P2_PRESET.gear,
+				1: MagePresets.ARCANE_PRERAID_PRESET.gear,
 			},
 		},
 		tooltip: 'Frost Mage',
@@ -461,12 +453,11 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: EnhancementShamanPresets.P1_PRESET.gear,
-				2: EnhancementShamanPresets.P2_PRESET_FT.gear,
+				1: EnhancementShamanPresets.PreRaid_PRESET.gear,
+				2: EnhancementShamanPresets.PreRaid_PRESET.gear,
 			},
 			[Faction.Horde]: {
-				1: EnhancementShamanPresets.P1_PRESET.gear,
-				2: EnhancementShamanPresets.P2_PRESET_FT.gear,
+				1: EnhancementShamanPresets.PreRaid_PRESET.gear,
 			},
 		},
 		tooltip: specNames[Spec.SpecEnhancementShaman],
@@ -735,7 +726,7 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 	{
 		spec: Spec.SpecRetributionPaladin,
 		rotation: RetributionPaladinPresets.DefaultRotation,
-		talents: RetributionPaladinPresets.AuraMasteryTalents.data,
+		talents: RetributionPaladinPresets.BasicTalents.data,
 		specOptions: RetributionPaladinPresets.DefaultOptions,
 		consumes: RetributionPaladinPresets.DefaultConsumes,
 		defaultName: 'Retribution',
@@ -779,12 +770,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: WarlockPresets.P1_Preset_Affliction.gear,
-				2: WarlockPresets.P2_Preset_Affliction.gear,
+				1: WarlockPresets.P1_PreBiS_11.gear,
 			},
 			[Faction.Horde]: {
-				1: WarlockPresets.P1_Preset_Affliction.gear,
-				2: WarlockPresets.P2_Preset_Affliction.gear,
+				1: WarlockPresets.P1_PreBiS_11.gear,
 			},
 		},
 		otherDefaults: WarlockPresets.OtherDefaults,
@@ -806,12 +795,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: WarlockPresets.P1_Preset_Demo_Destro.gear,
-				2: WarlockPresets.P2_Preset_Demo_Destro.gear,
+				1: WarlockPresets.P1_PreBiS_11.gear,
 			},
 			[Faction.Horde]: {
-				1: WarlockPresets.P1_Preset_Demo_Destro.gear,
-				2: WarlockPresets.P2_Preset_Demo_Destro.gear,
+				1: WarlockPresets.P1_PreBiS_11.gear,
 			},
 		},
 		otherDefaults: WarlockPresets.OtherDefaults,
@@ -833,12 +820,10 @@ export const playerPresets: Array<PresetSpecSettings<any>> = [
 		defaultGear: {
 			[Faction.Unknown]: {},
 			[Faction.Alliance]: {
-				1: WarlockPresets.P1_Preset_Demo_Destro.gear,
-				2: WarlockPresets.P2_Preset_Demo_Destro.gear,
+				1: WarlockPresets.P1_PreBiS_11.gear,
 			},
 			[Faction.Horde]: {
-				1: WarlockPresets.P1_Preset_Demo_Destro.gear,
-				2: WarlockPresets.P2_Preset_Demo_Destro.gear,
+				1: WarlockPresets.P1_PreBiS_11.gear,
 			},
 		},
 		otherDefaults: WarlockPresets.OtherDefaults,

@@ -110,7 +110,7 @@ export class RetributionPaladinSimUI extends IndividualSimUI<Spec.SpecRetributio
 				// Default rotation settings.
 				rotation: Presets.DefaultRotation,
 				// Default talents.
-				talents: Presets.AuraMasteryTalents.data,
+				talents: Presets.BasicTalents.data,
 				// Default spec-specific settings.
 				specOptions: Presets.DefaultOptions,
 				// Default raid/party buffs settings.
@@ -197,8 +197,7 @@ export class RetributionPaladinSimUI extends IndividualSimUI<Spec.SpecRetributio
 			presets: {
 				// Preset talents that the user can quickly select.
 				talents: [
-					Presets.AuraMasteryTalents,
-					Presets.DivineSacTalents,
+					Presets.BasicTalents,
 				],
 				// Preset gear configurations that the user can quickly select.
 				gear: [

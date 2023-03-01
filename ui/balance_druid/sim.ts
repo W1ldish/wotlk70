@@ -47,7 +47,7 @@ export class BalanceDruidSimUI extends IndividualSimUI<Spec.SpecBalanceDruid> {
 
 			defaults: {
 				// Default equipped gear.
-				gear: Presets.P1_PRESET.gear,
+				gear: Presets.PRE_RAID_PRESET.gear,
 				// Default EP weights for sorting gear in the gear picker.
 				epWeights: Stats.fromMap({
 					[Stat.StatIntellect]: 0.38,
@@ -112,8 +112,6 @@ export class BalanceDruidSimUI extends IndividualSimUI<Spec.SpecBalanceDruid> {
 				// Preset gear configurations that the user can quickly select.
 				gear: [
 					Presets.PRE_RAID_PRESET,
-					Presets.P1_PRESET,
-					Presets.P2_PRESET,
 				],
 			},
 		});

@@ -79,7 +79,7 @@ export class MageSimUI extends IndividualSimUI<Spec.SpecMage> {
 
 			defaults: {
 				// Default equipped gear.
-				gear: Presets.ARCANE_P1_PRESET.gear,
+				gear: Presets.ARCANE_PRERAID_PRESET.gear,
 				// Default EP weights for sorting gear in the gear picker.
 				epWeights: Stats.fromMap({
 					[Stat.StatIntellect]: 0.48,
@@ -164,19 +164,11 @@ export class MageSimUI extends IndividualSimUI<Spec.SpecMage> {
 				talents: [
 					Presets.ArcaneTalents,
 					Presets.FireTalents,
-					Presets.FrostfireTalents,
 					Presets.FrostTalents,
 				],
 				// Preset gear configurations that the user can quickly select.
 				gear: [
 					Presets.ARCANE_PRERAID_PRESET,
-					Presets.ARCANE_P1_PRESET,
-					Presets.ARCANE_P2_PRESET,
-					Presets.FIRE_PRERAID_PRESET,
-					Presets.FIRE_P1_PRESET,
-					Presets.FIRE_P2_PRESET,
-					Presets.FROST_P1_PRESET,
-					Presets.FROST_P2_PRESET,
 				],
 			},
 		});
