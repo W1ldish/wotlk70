@@ -34,7 +34,7 @@ export const ArmorInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecWar
 	values: [
 		{ value: Armor.NoArmor, tooltip: 'No Armor' },
 		{ actionId: ActionId.fromSpellId(28189), value: Armor.FelArmor },
-		{ actionId: ActionId.fromSpellId(23260), value: Armor.DemonArmor },
+		{ actionId: ActionId.fromSpellId(27260), value: Armor.DemonArmor },
 	],
 });
 
