@@ -17,53 +17,6 @@ func applyConsumeEffects(agent Agent) {
 
 	if consumes.Flask != proto.Flask_FlaskUnknown {
 		switch consumes.Flask {
-		case proto.Flask_FlaskOfTheFrostWyrm:
-			character.AddStats(stats.Stats{
-				stats.SpellPower: 125,
-			})
-			if character.HasProfession(proto.Profession_Alchemy) {
-				character.AddStats(stats.Stats{
-					stats.SpellPower: 47,
-				})
-			}
-		case proto.Flask_FlaskOfEndlessRage:
-			character.AddStats(stats.Stats{
-				stats.AttackPower:       180,
-				stats.RangedAttackPower: 180,
-			})
-			if character.HasProfession(proto.Profession_Alchemy) {
-				character.AddStats(stats.Stats{
-					stats.AttackPower:       80,
-					stats.RangedAttackPower: 80,
-				})
-			}
-		case proto.Flask_FlaskOfPureMojo:
-			character.AddStats(stats.Stats{
-				stats.MP5: 45,
-			})
-			if character.HasProfession(proto.Profession_Alchemy) {
-				character.AddStats(stats.Stats{
-					stats.MP5: 20,
-				})
-			}
-		case proto.Flask_FlaskOfStoneblood:
-			character.AddStats(stats.Stats{
-				stats.Health: 1300,
-			})
-			if character.HasProfession(proto.Profession_Alchemy) {
-				character.AddStats(stats.Stats{
-					stats.Health: 650,
-				})
-			}
-		case proto.Flask_LesserFlaskOfToughness:
-			character.AddStats(stats.Stats{
-				stats.Resilience: 50,
-			})
-			if character.HasProfession(proto.Profession_Alchemy) {
-				character.AddStats(stats.Stats{
-					stats.Resilience: 82,
-				})
-			}
 		case proto.Flask_LesserFlaskOfResistance:
 			character.AddStats(stats.Stats{
 				stats.ArcaneResistance: 50,
@@ -72,29 +25,31 @@ func applyConsumeEffects(agent Agent) {
 				stats.NatureResistance: 50,
 				stats.ShadowResistance: 50,
 			})
-			if character.HasProfession(proto.Profession_Alchemy) {
-				character.AddStats(stats.Stats{
-					stats.ArcaneResistance: 40,
-					stats.FireResistance:   40,
-					stats.FrostResistance:  40,
-					stats.NatureResistance: 40,
-					stats.ShadowResistance: 40,
-				})
-			}
 		case proto.Flask_FlaskOfBlindingLight:
 			character.OnSpellRegistered(func(spell *Spell) {
 				if spell.SpellSchool.Matches(SpellSchoolArcane | SpellSchoolHoly | SpellSchoolNature) {
 					spell.BonusSpellPower += 80
+					if character.HasProfession(proto.Profession_Alchemy) {
+						spell.BonusSpellPower += 24
+					}
 				}
 			})
 		case proto.Flask_FlaskOfMightyRestoration:
 			character.AddStats(stats.Stats{
 				stats.MP5: 25,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.MP5: 15,
+				})
+			}
 		case proto.Flask_FlaskOfPureDeath:
 			character.OnSpellRegistered(func(spell *Spell) {
 				if spell.SpellSchool.Matches(SpellSchoolFire | SpellSchoolFrost | SpellSchoolShadow) {
 					spell.BonusSpellPower += 80
+					if character.HasProfession(proto.Profession_Alchemy) {
+						spell.BonusSpellPower += 24
+					}
 				}
 			})
 		case proto.Flask_FlaskOfRelentlessAssault:
@@ -102,15 +57,33 @@ func applyConsumeEffects(agent Agent) {
 				stats.AttackPower:       120,
 				stats.RangedAttackPower: 120,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.AttackPower:       36,
+					stats.RangedAttackPower: 36,
+				})
+			}
+
 		case proto.Flask_FlaskOfSupremePower:
 			character.AddStats(stats.Stats{
 				stats.SpellPower: 70,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.SpellPower: 21,
+				})
+			}
 		case proto.Flask_FlaskOfFortification:
 			character.AddStats(stats.Stats{
 				stats.Health:  500,
 				stats.Defense: 10,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Health:  150,
+					stats.Defense: 3,
+				})
+			}
 		case proto.Flask_FlaskOfChromaticWonder:
 			character.AddStats(stats.Stats{
 				stats.Stamina:          18,
@@ -124,84 +97,82 @@ func applyConsumeEffects(agent Agent) {
 				stats.NatureResistance: 35,
 				stats.ShadowResistance: 35,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Stamina:          5,
+					stats.Strength:         5,
+					stats.Agility:          5,
+					stats.Intellect:        5,
+					stats.Spirit:           5,
+					stats.ArcaneResistance: 10,
+					stats.FireResistance:   10,
+					stats.FrostResistance:  10,
+					stats.NatureResistance: 10,
+					stats.ShadowResistance: 10,
+				})
+			}
 		case proto.Flask_FlaskOfDistilledWisdom:
 			character.AddStats(stats.Stats{
 				stats.Intellect: 65,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Intellect: 19,
+				})
+			}
 		}
 	} else {
 		switch consumes.BattleElixir {
-		case proto.BattleElixir_ElixirOfAccuracy:
-			character.AddStats(stats.Stats{
-				stats.MeleeHit: 45,
-				stats.SpellHit: 45,
-			})
-		case proto.BattleElixir_ElixirOfArmorPiercing:
-			character.AddStats(stats.Stats{
-				stats.ArmorPenetration: 45,
-			})
-		case proto.BattleElixir_ElixirOfDeadlyStrikes:
-			character.AddStats(stats.Stats{
-				stats.MeleeCrit: 45,
-				stats.SpellCrit: 45,
-			})
-		case proto.BattleElixir_ElixirOfExpertise:
-			character.AddStats(stats.Stats{
-				stats.Expertise: 45,
-			})
-		case proto.BattleElixir_ElixirOfLightningSpeed:
-			character.AddStats(stats.Stats{
-				stats.MeleeHaste: 45,
-				stats.SpellHaste: 45,
-			})
-		case proto.BattleElixir_ElixirOfMightyAgility:
-			character.AddStats(stats.Stats{
-				stats.Agility: 45,
-			})
-		case proto.BattleElixir_ElixirOfMightyStrength:
-			character.AddStats(stats.Stats{
-				stats.Strength: 45,
-			})
-		case proto.BattleElixir_GurusElixir:
-			character.AddStats(stats.Stats{
-				stats.Agility:   20,
-				stats.Strength:  20,
-				stats.Stamina:   20,
-				stats.Intellect: 20,
-				stats.Spirit:    20,
-			})
-		case proto.BattleElixir_SpellpowerElixir:
-			character.AddStats(stats.Stats{
-				stats.SpellPower: 58,
-			})
-		case proto.BattleElixir_WrathElixir:
-			character.AddStats(stats.Stats{
-				stats.AttackPower:       90,
-				stats.RangedAttackPower: 90,
-			})
 		case proto.BattleElixir_AdeptsElixir:
 			character.AddStats(stats.Stats{
 				stats.SpellCrit:  24,
 				stats.SpellPower: 24,
+				stats.MeleeCrit:  24,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.SpellCrit:  7,
+					stats.SpellPower: 7,
+					stats.MeleeCrit:  7,
+				})
+			}
 		case proto.BattleElixir_ElixirOfHealingPower:
 			character.AddStats(stats.Stats{
 				stats.SpellPower: 24,
 				stats.Spirit:     24,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.SpellPower: 7,
+					stats.Spirit:     7,
+				})
+			}
 		case proto.BattleElixir_ElixirOfDemonslaying:
 			if character.CurrentTarget.MobType == proto.MobType_MobTypeDemon {
-				character.PseudoStats.MobTypeAttackPower += 265
+				character.PseudoStats.MobTypeAttackPower += 105
 			}
 		case proto.BattleElixir_ElixirOfMajorAgility:
 			character.AddStats(stats.Stats{
-				stats.Agility:   35,
-				stats.MeleeCrit: 20,
+				stats.Agility:   30,
+				stats.MeleeCrit: 12,
+				stats.SpellCrit: 12,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Agility:   9,
+					stats.MeleeCrit: 3,
+					stats.SpellCrit: 3,
+				})
+			}
 		case proto.BattleElixir_ElixirOfMajorStrength:
 			character.AddStats(stats.Stats{
 				stats.Strength: 35,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Strength: 45,
+				})
+			}
 		case proto.BattleElixir_ElixirOfMastery:
 			character.AddStats(stats.Stats{
 				stats.Stamina:   15,
@@ -210,69 +181,104 @@ func applyConsumeEffects(agent Agent) {
 				stats.Intellect: 15,
 				stats.Spirit:    15,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Stamina:   4,
+					stats.Strength:  4,
+					stats.Agility:   4,
+					stats.Intellect: 4,
+					stats.Spirit:    4,
+				})
+			}
 		case proto.BattleElixir_ElixirOfTheMongoose:
 			character.AddStats(stats.Stats{
 				stats.Agility:   25,
-				stats.MeleeCrit: 28,
+				stats.MeleeCrit: 10,
+				stats.SpellCrit: 10,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Agility:   7,
+					stats.MeleeCrit: 3,
+					stats.SpellCrit: 3,
+				})
+			}
 		case proto.BattleElixir_FelStrengthElixir:
 			character.AddStats(stats.Stats{
 				stats.AttackPower:       90,
 				stats.RangedAttackPower: 90,
 				stats.Stamina:           -10,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.AttackPower:       27,
+					stats.RangedAttackPower: 27,
+					stats.Stamina:           -3,
+				})
+			}
 		case proto.BattleElixir_GreaterArcaneElixir:
 			character.AddStats(stats.Stats{
 				stats.SpellPower: 35,
+				stats.SpellCrit:  10,
+				stats.MeleeCrit:  10,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.SpellPower: 10,
+					stats.SpellCrit:  3,
+					stats.MeleeCrit:  3,
+				})
+			}
 		}
 
 		switch consumes.GuardianElixir {
-		case proto.GuardianElixir_ElixirOfMightyDefense:
-			character.AddStats(stats.Stats{
-				stats.Defense: 45,
-			})
-		case proto.GuardianElixir_ElixirOfMightyFortitude:
-			character.AddStats(stats.Stats{
-				stats.Health: 350,
-			})
-		case proto.GuardianElixir_ElixirOfMightyMageblood:
-			character.AddStats(stats.Stats{
-				stats.MP5: 30,
-			})
-		case proto.GuardianElixir_ElixirOfMightyThoughts:
-			character.AddStats(stats.Stats{
-				stats.Intellect: 45,
-			})
-		case proto.GuardianElixir_ElixirOfProtection:
-			character.AddStats(stats.Stats{
-				stats.Armor: 800,
-			})
-		case proto.GuardianElixir_ElixirOfSpirit:
-			character.AddStats(stats.Stats{
-				stats.Spirit: 50,
-			})
 		case proto.GuardianElixir_ElixirOfDraenicWisdom:
 			character.AddStats(stats.Stats{
 				stats.Intellect: 30,
 				stats.Spirit:    30,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Intellect: 9,
+					stats.Spirit:    9,
+				})
+			}
 		case proto.GuardianElixir_ElixirOfIronskin:
 			character.AddStats(stats.Stats{
 				stats.Resilience: 30,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Resilience: 9,
+				})
+			}
 		case proto.GuardianElixir_ElixirOfMajorDefense:
 			character.AddStats(stats.Stats{
 				stats.Armor: 550,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Armor: 165,
+				})
+			}
 		case proto.GuardianElixir_ElixirOfMajorFortitude:
 			character.AddStats(stats.Stats{
 				stats.Health: 250,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.Health: 75,
+				})
+			}
 		case proto.GuardianElixir_ElixirOfMajorMageblood:
 			character.AddStats(stats.Stats{
-				stats.MP5: 16,
+				stats.MP5: 20,
 			})
+			if character.HasProfession(proto.Profession_Alchemy) {
+				character.AddStats(stats.Stats{
+					stats.MP5: 6,
+				})
+			}
 		case proto.GuardianElixir_GiftOfArthas:
 			character.AddStats(stats.Stats{
 				stats.ShadowResistance: 10,
@@ -316,84 +322,6 @@ func applyConsumeEffects(agent Agent) {
 	}
 
 	switch consumes.Food {
-	case proto.Food_FoodFishFeast:
-		character.AddStats(stats.Stats{
-			stats.AttackPower:       80,
-			stats.RangedAttackPower: 80,
-			stats.SpellPower:        46,
-			stats.Stamina:           40,
-		})
-	case proto.Food_FoodGreatFeast:
-		character.AddStats(stats.Stats{
-			stats.AttackPower:       60,
-			stats.RangedAttackPower: 60,
-			stats.SpellPower:        35,
-			stats.Stamina:           30,
-		})
-	case proto.Food_FoodBlackenedDragonfin:
-		character.AddStats(stats.Stats{
-			stats.Agility: 40,
-			stats.Stamina: 40,
-		})
-	case proto.Food_FoodHeartyRhino:
-		character.AddStats(stats.Stats{
-			stats.ArmorPenetration: 40,
-			stats.Stamina:          40,
-		})
-	case proto.Food_FoodMegaMammothMeal:
-		character.AddStats(stats.Stats{
-			stats.AttackPower:       80,
-			stats.RangedAttackPower: 80,
-			stats.Stamina:           40,
-		})
-	case proto.Food_FoodSpicedWormBurger:
-		character.AddStats(stats.Stats{
-			stats.MeleeCrit: 40,
-			stats.SpellCrit: 40,
-			stats.Stamina:   40,
-		})
-	case proto.Food_FoodRhinoliciousWormsteak:
-		character.AddStats(stats.Stats{
-			stats.Expertise: 40,
-			stats.Stamina:   40,
-		})
-	case proto.Food_FoodImperialMantaSteak:
-		character.AddStats(stats.Stats{
-			stats.MeleeHaste: 40,
-			stats.SpellHaste: 40,
-			stats.Stamina:    40,
-		})
-	case proto.Food_FoodSnapperExtreme:
-		character.AddStats(stats.Stats{
-			stats.MeleeHit: 40,
-			stats.SpellHit: 40,
-			stats.Stamina:  40,
-		})
-	case proto.Food_FoodMightyRhinoDogs:
-		character.AddStats(stats.Stats{
-			stats.MP5:     16,
-			stats.Stamina: 40,
-		})
-	case proto.Food_FoodFirecrackerSalmon:
-		character.AddStats(stats.Stats{
-			stats.SpellPower: 46,
-			stats.Stamina:    40,
-		})
-	case proto.Food_FoodCuttlesteak:
-		character.AddStats(stats.Stats{
-			stats.Spirit:  40,
-			stats.Stamina: 40,
-		})
-	case proto.Food_FoodDragonfinFilet:
-		character.AddStats(stats.Stats{
-			stats.Strength: 40,
-			stats.Stamina:  40,
-		})
-	case proto.Food_FoodBlackenedBasilisk:
-		character.AddStats(stats.Stats{
-			stats.SpellPower: 23,
-			stats.Spirit:     20,
-		})
 	case proto.Food_FoodGrilledMudfish:
 		character.AddStats(stats.Stats{
 			stats.Agility: 20,
@@ -454,6 +382,7 @@ func applyConsumeEffects(agent Agent) {
 	case proto.WeaponEnchant_EnchantBrilliantWizardOil:
 		character.AddStats(stats.Stats{
 			stats.SpellCrit:  14,
+			stats.MeleeCrit:  14,
 			stats.SpellPower: 36,
 		})
 
@@ -471,11 +400,6 @@ func applyConsumeEffects(agent Agent) {
 
 func ApplyPetConsumeEffects(pet *Character, ownerConsumes *proto.Consumes) {
 	switch ownerConsumes.PetFood {
-	case proto.PetFood_PetFoodSpicedMammothTreats:
-		pet.AddStats(stats.Stats{
-			stats.Strength: 30,
-			stats.Stamina:  30,
-		})
 	case proto.PetFood_PetFoodKiblersBits:
 		pet.AddStats(stats.Stats{
 			stats.Strength: 20,
@@ -531,7 +455,6 @@ func (character *Character) HasAlchStone() bool {
 
 func makePotionActivation(potionType proto.Potions, character *Character, potionCD *Timer) MajorCooldown {
 	alchStoneEquipped := character.HasAlchStone()
-	hasEngi := character.HasProfession(proto.Profession_Engineering)
 
 	potionCast := CastConfig{
 		CD: Cooldown{
@@ -540,48 +463,17 @@ func makePotionActivation(potionType proto.Potions, character *Character, potion
 		},
 	}
 
-	if potionType == proto.Potions_RunicHealingPotion || potionType == proto.Potions_RunicHealingInjector {
-		itemId := map[proto.Potions]int32{
-			proto.Potions_RunicHealingPotion:   33447,
-			proto.Potions_RunicHealingInjector: 41166,
-		}[potionType]
-		actionID := ActionID{ItemID: itemId}
-		healthMetrics := character.NewHealthMetrics(actionID)
-		return MajorCooldown{
-			Type: CooldownTypeSurvival,
-			Spell: character.RegisterSpell(SpellConfig{
-				ActionID: actionID,
-				Flags:    SpellFlagNoOnCastComplete,
-				Cast:     potionCast,
-				ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
-					healthGain := sim.RollWithLabel(2700, 4500, "RunicHealingPotion")
-
-					if alchStoneEquipped && potionType == proto.Potions_RunicHealingPotion {
-						healthGain *= 1.40
-					} else if hasEngi && potionType == proto.Potions_RunicHealingInjector {
-						healthGain *= 1.25
-					}
-					character.GainHealth(sim, healthGain, healthMetrics)
-				},
-			}),
-		}
-	} else if potionType == proto.Potions_RunicManaPotion || potionType == proto.Potions_RunicManaInjector {
-		itemId := map[proto.Potions]int32{
-			proto.Potions_RunicManaPotion:   33448,
-			proto.Potions_RunicManaInjector: 42545,
-		}[potionType]
-		actionID := ActionID{ItemID: itemId}
+	if potionType == proto.Potions_SuperManaPotion {
+		actionID := ActionID{ItemID: 22832}
 		manaMetrics := character.NewManaMetrics(actionID)
 		return MajorCooldown{
 			Type: CooldownTypeMana,
 			ShouldActivate: func(sim *Simulation, character *Character) bool {
 				// Only pop if we have less than the max mana provided by the potion minus 1mp5 tick.
 				totalRegen := character.ManaRegenPerSecondWhileCasting() * 5
-				manaGain := 4400.0
+				manaGain := 3000.0
 				if alchStoneEquipped && potionType == proto.Potions_RunicManaPotion {
 					manaGain *= 1.4
-				} else if hasEngi && potionType == proto.Potions_RunicManaInjector {
-					manaGain *= 1.25
 				}
 				return character.MaxMana()-(character.CurrentMana()+totalRegen) >= manaGain
 			},
@@ -590,55 +482,11 @@ func makePotionActivation(potionType proto.Potions, character *Character, potion
 				Flags:    SpellFlagNoOnCastComplete,
 				Cast:     potionCast,
 				ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
-					manaGain := sim.RollWithLabel(4200, 4400, "RunicManaPotion")
+					manaGain := sim.RollWithLabel(1800, 3000, "RunicManaPotion")
 					if alchStoneEquipped && potionType == proto.Potions_RunicManaPotion {
 						manaGain *= 1.4
-					} else if hasEngi && potionType == proto.Potions_RunicManaInjector {
-						manaGain *= 1.25
 					}
 					character.AddMana(sim, manaGain, manaMetrics)
-				},
-			}),
-		}
-	} else if potionType == proto.Potions_IndestructiblePotion {
-		actionID := ActionID{ItemID: 40093}
-		aura := character.NewTemporaryStatsAura("Indestructible Potion", actionID, stats.Stats{stats.Armor: 3500}, time.Minute*2)
-		return MajorCooldown{
-			Type: CooldownTypeDPS,
-			Spell: character.RegisterSpell(SpellConfig{
-				ActionID: actionID,
-				Flags:    SpellFlagNoOnCastComplete,
-				Cast:     potionCast,
-				ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
-					aura.Activate(sim)
-				},
-			}),
-		}
-	} else if potionType == proto.Potions_PotionOfSpeed {
-		actionID := ActionID{ItemID: 40211}
-		aura := character.NewTemporaryStatsAura("Potion of Speed", actionID, stats.Stats{stats.MeleeHaste: 500, stats.SpellHaste: 500}, time.Second*15)
-		return MajorCooldown{
-			Type: CooldownTypeDPS,
-			Spell: character.RegisterSpell(SpellConfig{
-				ActionID: actionID,
-				Flags:    SpellFlagNoOnCastComplete,
-				Cast:     potionCast,
-				ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
-					aura.Activate(sim)
-				},
-			}),
-		}
-	} else if potionType == proto.Potions_PotionOfWildMagic {
-		actionID := ActionID{ItemID: 40212}
-		aura := character.NewTemporaryStatsAura("Potion of Wild Magic", actionID, stats.Stats{stats.SpellPower: 200, stats.SpellCrit: 200, stats.MeleeCrit: 200}, time.Second*15)
-		return MajorCooldown{
-			Type: CooldownTypeDPS,
-			Spell: character.RegisterSpell(SpellConfig{
-				ActionID: actionID,
-				Flags:    SpellFlagNoOnCastComplete,
-				Cast:     potionCast,
-				ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
-					aura.Activate(sim)
 				},
 			}),
 		}
@@ -725,7 +573,6 @@ func makePotionActivation(potionType proto.Potions, character *Character, potion
 
 		// Restores 3200 mana over 24 seconds.
 		manaGain := 3200.0
-		alchStoneEquipped := character.HasAlchStone()
 		if alchStoneEquipped {
 			manaGain *= 1.4
 		}
@@ -923,7 +770,7 @@ func registerConjuredCD(agent Agent, consumes *proto.Consumes) {
 				},
 			},
 			ApplyEffects: func(sim *Simulation, _ *Unit, _ *Spell) {
-				character.GainHealth(sim, 4280*character.PseudoStats.HealingTakenMultiplier, healthMetrics)
+				character.GainHealth(sim, 2080*character.PseudoStats.HealingTakenMultiplier, healthMetrics)
 			},
 		})
 		character.AddMajorCooldown(MajorCooldown{
