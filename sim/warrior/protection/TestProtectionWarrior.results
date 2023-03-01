@@ -378,8 +378,8 @@ dps_results: {
 dps_results: {
  key: "TestProtectionWarrior-AllItems-TheFistsofFury"
  value: {
-  dps: 366.98906
-  tps: 907.19384
+  dps: 367.83207
+  tps: 908.94183
  }
 }
 dps_results: {

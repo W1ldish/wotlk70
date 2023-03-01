@@ -326,8 +326,8 @@ dps_results: {
 dps_results: {
  key: "TestArms-AllItems-StormshroudArmor"
  value: {
-  dps: 393.02059
-  tps: 330.5879
+  dps: 393.04218
+  tps: 330.60396
  }
 }
 dps_results: {
@@ -340,8 +340,8 @@ dps_results: {
 dps_results: {
  key: "TestArms-AllItems-TheFistsofFury"
  value: {
-  dps: 1179.95357
-  tps: 985.13307
+  dps: 1181.67932
+  tps: 986.51194
  }
 }
 dps_results: {
