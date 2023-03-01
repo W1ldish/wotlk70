@@ -8,7 +8,7 @@ import (
 
 func TestSunderArmorStacks(t *testing.T) {
 	sim := Simulation{}
-	baseArmor := 10643.0
+	baseArmor := 6300.0
 	target := Unit{
 		Type:         EnemyUnit,
 		Index:        0,
@@ -21,7 +21,7 @@ func TestSunderArmorStacks(t *testing.T) {
 	target.stats = target.initialStats
 	expectedArmor := baseArmor
 	if target.Armor() != expectedArmor {
-		t.Fatalf("Armor value for target should be %f but found %f", 10643.0, target.Armor())
+		t.Fatalf("Armor value for target should be %f but found %f", 6300.0, target.Armor())
 	}
 	stacks := int32(1)
 	sunderAura := SunderArmorAura(&target)
@@ -40,7 +40,7 @@ func TestSunderArmorStacks(t *testing.T) {
 
 func TestAcidSpitStacks(t *testing.T) {
 	sim := Simulation{}
-	baseArmor := 10643.0
+	baseArmor := 6300.0
 	target := Unit{
 		Type:         EnemyUnit,
 		Index:        0,
@@ -53,7 +53,7 @@ func TestAcidSpitStacks(t *testing.T) {
 	target.stats = target.initialStats
 	expectedArmor := baseArmor
 	if target.Armor() != expectedArmor {
-		t.Fatalf("Armor value for target should be %f but found %f", 10643.0, target.Armor())
+		t.Fatalf("Armor value for target should be %f but found %f", 6300.0, target.Armor())
 	}
 	stacks := int32(1)
 	acidSpitAura := AcidSpitAura(&target)
@@ -72,7 +72,7 @@ func TestAcidSpitStacks(t *testing.T) {
 
 func TestExposeArmor(t *testing.T) {
 	sim := Simulation{}
-	baseArmor := 10643.0
+	baseArmor := 6300.0
 	target := Unit{
 		Type:         EnemyUnit,
 		Index:        0,
@@ -85,7 +85,7 @@ func TestExposeArmor(t *testing.T) {
 	target.stats = target.initialStats
 	expectedArmor := baseArmor
 	if target.Armor() != expectedArmor {
-		t.Fatalf("Armor value for target should be %f but found %f", 10643.0, target.Armor())
+		t.Fatalf("Armor value for target should be %f but found %f", 6300.0, target.Armor())
 	}
 	exposeAura := ExposeArmorAura(&target, false)
 	exposeAura.Activate(&sim)
@@ -98,7 +98,7 @@ func TestExposeArmor(t *testing.T) {
 
 func TestMajorArmorReductionAurasDoNotStack(t *testing.T) {
 	sim := Simulation{}
-	baseArmor := 10643.0
+	baseArmor := 6300.0
 	target := Unit{
 		Type:         EnemyUnit,
 		Index:        0,
@@ -111,7 +111,7 @@ func TestMajorArmorReductionAurasDoNotStack(t *testing.T) {
 	target.stats = target.initialStats
 	expectedArmor := baseArmor
 	if target.Armor() != expectedArmor {
-		t.Fatalf("Armor value for target should be %f but found %f", 10643.0, target.Armor())
+		t.Fatalf("Armor value for target should be %f but found %f", 6300.0, target.Armor())
 	}
 	stacks := int32(1)
 	acidSpitAura := AcidSpitAura(&target)
@@ -132,7 +132,7 @@ func TestMajorArmorReductionAurasDoNotStack(t *testing.T) {
 
 func TestMajorAndMinorArmorReductionsApplyMultiplicatively(t *testing.T) {
 	sim := Simulation{}
-	baseArmor := 10643.0
+	baseArmor := 6300.0
 	target := Unit{
 		Type:         EnemyUnit,
 		Index:        0,
@@ -145,7 +145,7 @@ func TestMajorAndMinorArmorReductionsApplyMultiplicatively(t *testing.T) {
 	target.stats = target.initialStats
 	expectedArmor := baseArmor
 	if target.Armor() != expectedArmor {
-		t.Fatalf("Armor value for target should be %f but found %f", 10643.0, target.Armor())
+		t.Fatalf("Armor value for target should be %f but found %f", 6300.0, target.Armor())
 	}
 	stacks := int32(2)
 	acidSpitAura := AcidSpitAura(&target)
@@ -181,7 +181,7 @@ func TestMajorAndMinorArmorReductionsApplyMultiplicatively(t *testing.T) {
 
 func TestDamageReductionFromArmor(t *testing.T) {
 	sim := Simulation{}
-	baseArmor := 10643.0
+	baseArmor := 6300.0
 	target := Unit{
 		Type:         EnemyUnit,
 		Index:        0,

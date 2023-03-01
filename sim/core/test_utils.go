@@ -34,7 +34,7 @@ const LongDuration = 300
 var DefaultTargetProto = &proto.Target{
 	Level: CharacterLevel + 3,
 	Stats: stats.Stats{
-		stats.Armor:       10643,
+		stats.Armor:       6300,
 		stats.AttackPower: 320,
 		stats.BlockValue:  54,
 	}.ToFloatArray(),
