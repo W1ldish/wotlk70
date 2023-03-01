@@ -382,17 +382,6 @@ var ItemAllowList = map[int32]struct{}{
 	33831: {}, // Berserkers Call
 	34472: {}, // Shard of Contempt
 	34473: {}, // Commendation of Kael'thas
-	37032: {}, // Edge of the Tuskarr
-	37574: {}, // Libram of Furious Blows
-	38072: {}, // Thunder Capacitor
-	38212: {}, // Death Knight's Anguish
-	38287: {}, // Empty Mug of Direbrew
-	38289: {}, // Coren's Lucky Coin
-	39208: {}, // Sigil of the Dark Rider
-	41752: {}, // Brunnhildar Axe
-	6360:  {}, // Steelscale Crushfish
-	8345:  {}, // Wolfshead Helm
-	9449:  {}, // Manual Crowd Pummeler
 
 	// Sets
 	27510: {}, // Tidefury Gauntlets
@@ -426,8 +415,6 @@ var ItemDenyList = map[int32]struct{}{
 	34578: {}, // Battlemaster's Determination
 	34579: {}, // Battlemaster's Audacity
 	34580: {}, // Battlemaster's Perseverence
-	50251: {}, // 'one hand shadows edge'
-	53500: {}, // Tectonic Plate
 }
 
 // Item icons to include in the DB, so they don't need to be separately loaded in the UI.

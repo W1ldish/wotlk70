@@ -25,7 +25,7 @@ import (
 // go run ./tools/database/gen_db -outDir=assets -gen=db
 
 var minId = flag.Int("minid", 1, "Minimum ID to scan for")
-var maxId = flag.Int("maxid", 57000, "Maximum ID to scan for")
+var maxId = flag.Int("maxid", 38000, "Maximum ID to scan for")
 var outDir = flag.String("outDir", "assets", "Path to output directory for writing generated .go files.")
 var genAsset = flag.String("gen", "", "Asset to generate. Valid values are 'db', 'atlasloot', 'wowhead-items', 'wowhead-spells', 'wowhead-itemdb', and 'wotlk-items'")
 
@@ -228,6 +228,9 @@ func tbcEnchantsFilter(_ database.EnchantDBKey, enchant *proto.UIEnchant) bool {
 func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 	if _, ok := database.ItemAllowList[item.Id]; ok {
 		return true
+	}
+	if item.Id > 38000 {
+		return false
 	}
 
 	if item.Ilvl > 164 {
