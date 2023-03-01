@@ -34,7 +34,7 @@ func (druid *Druid) registerLacerateSpell() {
 			},
 			IgnoreHaste: true,
 		},
-
+		DamageMultiplier: 1,
 		CritMultiplier:   druid.MeleeCritMultiplier(Bear),
 		ThreatMultiplier: 0.5,
 		// FlatThreatBonus:  515.5, // Handled below
@@ -54,6 +54,7 @@ func (druid *Druid) registerLacerateSpell() {
 
 				if !isRollover {
 					attackTable := dot.Spell.Unit.AttackTables[target.UnitIndex]
+					dot.Spell.DamageMultiplier = 1
 					dot.SnapshotCritChance = dot.Spell.PhysicalCritChance(target, attackTable)
 					dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable)
 				}
@@ -77,6 +78,7 @@ func (druid *Druid) registerLacerateSpell() {
 			spell.FlatThreatBonus = 515.5
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 			spell.FlatThreatBonus = 0
+			spell.DamageMultiplier = 1
 
 			if result.Landed() {
 				dot := spell.Dot(target)
