@@ -419,6 +419,43 @@ func applyConsumeEffects(agent Agent) {
 	case proto.WeaponImbue_ImbueSuperiorManaOil:
 		character.AddStat(stats.MP5, 14)
 	}
+	switch consumes.WeaponOff {
+	case proto.WeaponImbue_ImbueAdamantiteSharpeningStone:
+		character.PseudoStats.BonusDamage += 12
+		if character.Class != proto.Class_ClassHunter {
+			character.AddStats(stats.Stats{
+				stats.MeleeCrit: 14,
+			})
+		}
+
+	case proto.WeaponImbue_ImbueAdamantiteWeightStone:
+		character.PseudoStats.BonusDamage += 12
+		character.AddStats(stats.Stats{
+			stats.MeleeCrit: 14,
+		})
+
+	case proto.WeaponImbue_ImbueElementalSharpeningStone:
+		character.AddStat(stats.MeleeCrit, 28)
+
+	case proto.WeaponImbue_ImbueBrilliantManaOil:
+		character.AddStats(stats.Stats{
+			stats.MP5:        12,
+			stats.SpellPower: 13,
+		})
+
+	case proto.WeaponImbue_ImbueBrilliantWizardOil:
+		character.AddStats(stats.Stats{
+			stats.SpellCrit:  14,
+			stats.MeleeCrit:  14,
+			stats.SpellPower: 36,
+		})
+
+	case proto.WeaponImbue_ImbueSuperiorWizardOil:
+		character.AddStat(stats.SpellPower, 42)
+
+	case proto.WeaponImbue_ImbueSuperiorManaOil:
+		character.AddStat(stats.MP5, 14)
+	}
 
 	registerPotionCD(agent, consumes)
 	registerConjuredCD(agent, consumes)
