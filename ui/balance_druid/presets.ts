@@ -12,7 +12,7 @@ import {
 	RaidBuffs,
 	RaidTarget,
 	TristateEffect,
-	WeaponEnchant
+	WeaponImbue
 } from '../core/proto/common.js';
 import {SavedTalents} from '../core/proto/ui.js';
 
@@ -75,7 +75,7 @@ export const DefaultConsumes = Consumes.create({
     prepopPotion: Potions.HastePotion,
 	defaultConjured: Conjured.ConjuredDarkRune,
     superSapper: true,
-	weaponMain: WeaponEnchant.EnchantBrilliantWizardOil,
+	weaponMain: WeaponImbue.ImbueBrilliantWizardOil,
 });
 
 export const DefaultRaidBuffs = RaidBuffs.create({

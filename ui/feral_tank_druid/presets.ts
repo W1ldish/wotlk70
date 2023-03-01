@@ -1,4 +1,4 @@
-import { Consumes, WeaponEnchant } from '../core/proto/common.js';
+import { Consumes, WeaponImbue } from '../core/proto/common.js';
 import { BattleElixir } from '../core/proto/common.js';
 import { GuardianElixir } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
@@ -63,7 +63,7 @@ export const DefaultConsumes = Consumes.create({
 	defaultConjured: Conjured.ConjuredHealthstone,
 	superSapper: true,
 	fillerExplosive: Explosive.ExplosiveBiggerOne,
-	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
+	weaponMain: WeaponImbue.ImbueAdamantiteWeightStone,
 });
 
 export const P1_PRESET = {

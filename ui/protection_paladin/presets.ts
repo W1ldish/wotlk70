@@ -1,4 +1,4 @@
-import { Conjured, Consumes, WeaponEnchant } from '../core/proto/common.js';
+import { Conjured, Consumes, WeaponImbue } from '../core/proto/common.js';
 import { CustomRotation, CustomSpell } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -75,7 +75,7 @@ export const DefaultConsumes = Consumes.create({
 	food: Food.FoodFishermansFeast,
 	defaultPotion: Potions.IronshieldPotion,
 	prepopPotion:  Potions.IronshieldPotion,
-	weaponMain: WeaponEnchant.EnchantSuperiorWizardOil,
+	weaponMain: WeaponImbue.ImbueSuperiorWizardOil,
 });
 
 export const PRERAID_PRESET = {

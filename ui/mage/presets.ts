@@ -1,4 +1,4 @@
-import { Conjured, WeaponEnchant } from '../core/proto/common.js';
+import { Conjured, WeaponImbue } from '../core/proto/common.js';
 import { Consumes } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -99,7 +99,7 @@ export const DefaultFireConsumes = Consumes.create({
 	food: Food.FoodBlackenedBasilisk,
 	defaultPotion: Potions.HastePotion,
 	defaultConjured: Conjured.ConjuredFlameCap,
-	weaponMain: WeaponEnchant.EnchantBrilliantWizardOil,
+	weaponMain: WeaponImbue.ImbueBrilliantWizardOil,
 });
 
 export const DefaultFrostRotation = MageRotation.create({
@@ -119,7 +119,7 @@ export const DefaultFrostConsumes = Consumes.create({
 	defaultPotion: Potions.PotionOfSpeed,
 	flask: Flask.FlaskOfPureDeath,
 	food: Food.FoodBlackenedBasilisk,
-	weaponMain: WeaponEnchant.EnchantBrilliantWizardOil,
+	weaponMain: WeaponImbue.ImbueBrilliantWizardOil,
 });
 
 export const DefaultArcaneRotation = MageRotation.create({
@@ -145,7 +145,7 @@ export const DefaultArcaneConsumes = Consumes.create({
 	defaultConjured: Conjured.ConjuredDarkRune,
 	flask: Flask.FlaskOfBlindingLight,
 	food: Food.FoodBlackenedBasilisk,
-	weaponMain: WeaponEnchant.EnchantBrilliantWizardOil,
+	weaponMain: WeaponImbue.ImbueBrilliantWizardOil,
 });
 
 export const OtherDefaults = {

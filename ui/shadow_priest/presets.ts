@@ -1,4 +1,4 @@
-import { Consumes, WeaponEnchant } from '../core/proto/common.js';
+import { Consumes, WeaponImbue } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
@@ -60,7 +60,7 @@ export const DefaultConsumes = Consumes.create({
 	food: Food.FoodBlackenedBasilisk,
 	defaultPotion: Potions.SuperManaPotion,
 	prepopPotion: Potions.DestructionPotion,
-	weaponMain: WeaponEnchant.EnchantBrilliantWizardOil,
+	weaponMain: WeaponImbue.ImbueBrilliantWizardOil,
 });
 
 export const DefaultRaidBuffs = RaidBuffs.create({

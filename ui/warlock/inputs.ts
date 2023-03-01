@@ -6,7 +6,6 @@ import {
 	Warlock_Rotation_SecondaryDot as SecondaryDot,
 	Warlock_Rotation_SpecSpell as SpecSpell,
 	Warlock_Rotation_Curse as Curse,
-	Warlock_Options_WeaponImbue as WeaponImbue,
 	Warlock_Options_Armor as Armor,
 	Warlock_Options_Summon as Summon,
 } from '../core/proto/warlock.js';
@@ -38,14 +37,6 @@ export const ArmorInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecWar
 	],
 });
 
-export const WeaponImbueInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecWarlock, WeaponImbue>({
-	fieldName: 'weaponImbue',
-	values: [
-		{ value: WeaponImbue.NoWeaponImbue, tooltip: 'No Weapon Stone' },
-		{ actionId: ActionId.fromItemId(40773), value: WeaponImbue.GrandFirestone },
-		{ actionId: ActionId.fromItemId(41194), value: WeaponImbue.GrandSpellstone },
-	],
-});
 
 export const PetInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecWarlock, Summon>({
 	fieldName: 'summon',

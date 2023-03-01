@@ -1,4 +1,4 @@
-import { Consumes, WeaponEnchant } from '../core/proto/common.js';
+import { Consumes, WeaponImbue } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Potions } from '../core/proto/common.js';
@@ -83,7 +83,7 @@ export const DefaultConsumes = Consumes.create({
 	flask: Flask.FlaskOfRelentlessAssault,
 	food: Food.FoodGrilledMudfish,
 	defaultPotion: Potions.PotionOfSpeed,
-	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
+	weaponMain: WeaponImbue.ImbueAdamantiteWeightStone,
 });
 
 export const PreRaid_PRESET = {

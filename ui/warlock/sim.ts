@@ -21,7 +21,6 @@ import {
 	Warlock_Options as WarlockOptions,
 	Warlock_Options_Armor as Armor,
 	Warlock_Options_Summon as Summon,
-	Warlock_Options_WeaponImbue as WeaponImbue,
 } from '../core/proto/warlock.js';
 
 import * as IconInputs from '../core/components/icon_inputs.js';
@@ -108,7 +107,6 @@ export class WarlockSimUI extends IndividualSimUI<Spec.SpecWarlock> {
 			playerIconInputs: [
 				WarlockInputs.PetInput,
 				WarlockInputs.ArmorInput,
-				WarlockInputs.WeaponImbueInput,
 			],
 			// Inputs to include in the 'Rotation' section on the settings tab.
 			rotationIconInputs: [

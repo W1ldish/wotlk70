@@ -1,4 +1,4 @@
-import { Conjured, Consumes, WeaponEnchant } from '../core/proto/common.js';
+import { Conjured, Consumes, WeaponImbue } from '../core/proto/common.js';
 import { CustomRotation, CustomSpell } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -93,7 +93,7 @@ export const DefaultConsumes = Consumes.create({
 	defaultConjured: Conjured.ConjuredDarkRune,
 	flask: Flask.FlaskOfRelentlessAssault,
 	food: Food.FoodRoastedClefthoof,
-	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
+	weaponMain: WeaponImbue.ImbueAdamantiteWeightStone,
 });
 
 // Maybe use this later if I can figure out the interactive tooltips from tippy

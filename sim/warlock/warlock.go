@@ -99,10 +99,10 @@ func (warlock *Warlock) GetWarlock() *Warlock {
 }
 
 func (warlock *Warlock) GrandSpellstoneBonus() float64 {
-	return core.TernaryFloat64(warlock.Options.WeaponImbue == proto.Warlock_Options_GrandSpellstone, 0.01, 0)
+	return core.TernaryFloat64(warlock.Consumes.WeaponMain == proto.WeaponImbue_ImbueSpellStone, 0.01, 0)
 }
 func (warlock *Warlock) GrandFirestoneBonus() float64 {
-	return core.TernaryFloat64(warlock.Options.WeaponImbue == proto.Warlock_Options_GrandFirestone, 0.01, 0)
+	return core.TernaryFloat64(warlock.Consumes.WeaponMain == proto.WeaponImbue_ImbueFireStone, 0.01, 0)
 }
 
 func (warlock *Warlock) Initialize() {

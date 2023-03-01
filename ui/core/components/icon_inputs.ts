@@ -1,6 +1,6 @@
 import { ActionId } from '../proto_utils/action_id.js';
 import { BattleElixir} from '../proto/common.js';
-import { WeaponEnchant } from '../proto/common.js';
+import { WeaponImbue } from '../proto/common.js';
 import { Explosive } from '../proto/common.js';
 import { Flask } from '../proto/common.js';
 import { Food } from '../proto/common.js';
@@ -409,23 +409,25 @@ export const makeConjuredInput = makeConsumeInputFactory({
 	] as Array<IconEnumValueConfig<Player<any>, Conjured>>
 });
 
-function makeWeaponEnchantFactory(consumesFieldName: keyof Consumes): (options: Array<WeaponEnchant>, tooltip?: string) => InputHelpers.TypedIconEnumPickerConfig<Player<any>, WeaponEnchant> {
+function makeWeaponImbueFactory(consumesFieldName: keyof Consumes): (options: Array<WeaponImbue>, tooltip?: string) => InputHelpers.TypedIconEnumPickerConfig<Player<any>, WeaponImbue> {
 	return makeConsumeInputFactory({
 		consumesFieldName: consumesFieldName,
 		allOptions: [
-			{actionId: ActionId.fromItemId(20749), value: WeaponEnchant.EnchantBrilliantWizardOil},
-			{actionId: ActionId.fromItemId(20748), value: WeaponEnchant.EnchantBrilliantManaOil},
-			{actionId: ActionId.fromItemId(22522), value: WeaponEnchant.EnchantSuperiorWizardOil},
-			{actionId: ActionId.fromItemId(22521), value: WeaponEnchant.EnchantSuperiorManaOil},
-			{actionId: ActionId.fromItemId(23529), value: WeaponEnchant.EnchantAdamantiteSharpeningStone},
-			{actionId: ActionId.fromItemId(28421), value: WeaponEnchant.EnchantAdamantiteWeightStone},
-			{actionId: ActionId.fromItemId(18262), value: WeaponEnchant.EnchantElementalSharpeningStone},
-		] as Array<IconEnumValueConfig<Player<any>, WeaponEnchant>>,
+			{actionId: ActionId.fromItemId(20749), value: WeaponImbue.ImbueBrilliantWizardOil},
+			{actionId: ActionId.fromItemId(20748), value: WeaponImbue.ImbueBrilliantManaOil},
+			{actionId: ActionId.fromItemId(22522), value: WeaponImbue.ImbueSuperiorWizardOil},
+			{actionId: ActionId.fromItemId(22521), value: WeaponImbue.ImbueSuperiorManaOil},
+			{actionId: ActionId.fromItemId(23529), value: WeaponImbue.ImbueAdamantiteSharpeningStone},
+			{actionId: ActionId.fromItemId(28421), value: WeaponImbue.ImbueAdamantiteWeightStone},
+			{actionId: ActionId.fromItemId(18262), value: WeaponImbue.ImbueElementalSharpeningStone},
+			{actionId: ActionId.fromItemId(41194), value: WeaponImbue.ImbueSpellStone},
+			{actionId: ActionId.fromItemId(40773), value: WeaponImbue.ImbueFireStone},
+		] as Array<IconEnumValueConfig<Player<any>, WeaponImbue>>,
 	});
 }
 
-export const makeMainWeaponEnchantInput = makeWeaponEnchantFactory('weaponMain');
-export const makeOffWeaponEnchantInput = makeWeaponEnchantFactory('weaponOff');
+export const makeMainWeaponImbueInput = makeWeaponImbueFactory('weaponMain');
+export const makeOffWeaponImbueInput = makeWeaponImbueFactory('weaponOff');
 
 export const makeFlasksInput = makeConsumeInputFactory({
 	consumesFieldName: 'flask',

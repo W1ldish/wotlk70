@@ -1,4 +1,4 @@
-import { CustomRotation, CustomSpell, WeaponEnchant } from '../core/proto/common.js';
+import { CustomRotation, CustomSpell, WeaponImbue } from '../core/proto/common.js';
 import { Consumes } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
@@ -119,7 +119,7 @@ export const DefaultConsumes = Consumes.create({
 	flask: Flask.FlaskOfRelentlessAssault,
 	food: Food.FoodGrilledMudfish,
 	petFood: PetFood.PetFoodKiblersBits,
-	weaponMain: WeaponEnchant.EnchantAdamantiteWeightStone,
+	weaponMain: WeaponImbue.ImbueAdamantiteWeightStone,
 });
 
 export const MM_PRERAID_PRESET = {

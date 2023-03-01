@@ -10,7 +10,7 @@ import {
   Profession,
   Spec,
   Stat,
-  WeaponEnchant
+  WeaponImbue
 } from "../../proto/common";
 import { Component } from "../component";
 import { IconEnumPicker } from "../icon_enum_picker";
@@ -31,8 +31,8 @@ export class ConsumesPicker extends Component {
     this.buildPotionsPicker();
     this.buildElixirsPicker();
     this.buildFoodPicker();
-    if (!((this.simUI.player.getClass() == Class.ClassRogue) || (this.simUI.player.getClass() == Class.ClassShaman) || (this.simUI.player.getClass() == Class.ClassWarlock))) {
-      this.buildWeaponEnchantPicker();
+    if (!((this.simUI.player.getClass() == Class.ClassRogue) || (this.simUI.player.getClass() == Class.ClassShaman))) {
+      this.buildWeaponImbuePicker();
     }
     this.buildEngPicker();
     this.buildPetPicker();
@@ -207,11 +207,11 @@ export class ConsumesPicker extends Component {
 		}
   }
 
-  private buildWeaponEnchantPicker() {
+  private buildWeaponImbuePicker() {
     let fragment = document.createElement('fragment');
     fragment.innerHTML = `
       <div class="consumes-row input-root input-inline">
-        <label class="form-label">Weapon Enchant</label>
+        <label class="form-label">Weapon Imbue</label>
         <div class="consumes-row-inputs">
           <div class="consumes-weapon-main"></div>
           <div class="consumes-weapon-off"></div>
@@ -222,20 +222,23 @@ export class ConsumesPicker extends Component {
     this.rootElem.appendChild(fragment.children[0] as HTMLElement);
 
     const weaponOptions = this.simUI.splitRelevantOptions([
-			{ item: WeaponEnchant.EnchantBrilliantWizardOil, stats: [Stat.StatSpellPower,Stat.StatSpellCrit] },
-      { item: WeaponEnchant.EnchantBrilliantManaOil, stats: [Stat.StatSpellPower,Stat.StatMP5]},
-      { item: WeaponEnchant.EnchantSuperiorWizardOil, stats: [Stat.StatSpellPower]},
-      { item: WeaponEnchant.EnchantSuperiorManaOil, stats: [Stat.StatMP5]},
-      { item: WeaponEnchant.EnchantAdamantiteSharpeningStone, stats: [Stat.StatAttackPower, Stat.StatMeleeCrit]},
-      { item: WeaponEnchant.EnchantAdamantiteWeightStone, stats: [Stat.StatAttackPower, Stat.StatMeleeCrit]},
-      { item: WeaponEnchant.EnchantElementalSharpeningStone, stats: [Stat.StatMeleeCrit]},
+      this.simUI.player.getClass() == Class.ClassWarlock ? { item: WeaponImbue.ImbueSpellStone, stats: [] } : null,
+      this.simUI.player.getClass() == Class.ClassWarlock ? { item: WeaponImbue.ImbueFireStone, stats: [] } : null,
+			{ item: WeaponImbue.ImbueBrilliantWizardOil, stats: [Stat.StatSpellPower,Stat.StatSpellCrit] },
+      { item: WeaponImbue.ImbueBrilliantManaOil, stats: [Stat.StatSpellPower,Stat.StatMP5]},
+      { item: WeaponImbue.ImbueSuperiorWizardOil, stats: [Stat.StatSpellPower]},
+      { item: WeaponImbue.ImbueSuperiorManaOil, stats: [Stat.StatMP5]},
+      { item: WeaponImbue.ImbueAdamantiteSharpeningStone, stats: [Stat.StatAttackPower, Stat.StatMeleeCrit]},
+      { item: WeaponImbue.ImbueAdamantiteWeightStone, stats: [Stat.StatAttackPower, Stat.StatMeleeCrit]},
+      { item: WeaponImbue.ImbueElementalSharpeningStone, stats: [Stat.StatMeleeCrit]},
+
 		]);
     const main = this.rootElem.querySelector('.consumes-weapon-main') as HTMLElement;
     const off = this.rootElem.querySelector('.consumes-weapon-off') as HTMLElement;
 
 		if (weaponOptions.length) {
-			new IconEnumPicker(main, this.simUI.player, IconInputs.makeMainWeaponEnchantInput(weaponOptions));
-      new IconEnumPicker(off, this.simUI.player, IconInputs.makeOffWeaponEnchantInput(weaponOptions));
+			new IconEnumPicker(main, this.simUI.player, IconInputs.makeMainWeaponImbueInput(weaponOptions));
+      new IconEnumPicker(off, this.simUI.player, IconInputs.makeOffWeaponImbueInput(weaponOptions));
 		}
     
     const updateGear = () => {

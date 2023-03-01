@@ -1,4 +1,4 @@
-import { Consumes, WeaponEnchant } from '../core/proto/common.js';
+import { Consumes, WeaponImbue } from '../core/proto/common.js';
 import { EquipmentSpec } from '../core/proto/common.js';
 import { Flask } from '../core/proto/common.js';
 import { Food } from '../core/proto/common.js';
@@ -111,8 +111,8 @@ export const DefaultConsumes = Consumes.create({
 	food: Food.FoodRoastedClefthoof,
 	defaultPotion: Potions.IronshieldPotion,
 	prepopPotion: Potions.HastePotion,
-	weaponMain: WeaponEnchant.EnchantAdamantiteSharpeningStone,
-	weaponOff: WeaponEnchant.EnchantAdamantiteSharpeningStone,
+	weaponMain: WeaponImbue.ImbueAdamantiteSharpeningStone,
+	weaponOff: WeaponImbue.ImbueAdamantiteSharpeningStone,
 });
 
 export const P1_PRERAID_FURY_PRESET = {

@@ -113,10 +113,10 @@ func (warlock *Warlock) applyDeathsEmbrace() {
 }
 
 func (warlock *Warlock) applyWeaponImbue() {
-	if warlock.Options.WeaponImbue == proto.Warlock_Options_GrandFirestone {
+	if warlock.Consumes.WeaponMain == proto.WeaponImbue_ImbueFireStone {
 		warlock.AddStat(stats.SpellCrit, 35*(1+1.5*float64(warlock.Talents.MasterConjuror)))
 	}
-	if warlock.Options.WeaponImbue == proto.Warlock_Options_GrandSpellstone {
+	if warlock.Consumes.WeaponMain == proto.WeaponImbue_ImbueSpellStone {
 		warlock.AddStat(stats.SpellHaste, 40*(1+1.5*float64(warlock.Talents.MasterConjuror)))
 	}
 }
