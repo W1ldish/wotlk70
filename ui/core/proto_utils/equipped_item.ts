@@ -37,7 +37,7 @@ export class EquippedItem {
 		this._enchant = enchant || null;
 		this._gems = gems || [];
 
-		this.numPossibleSockets = this.numSockets(true);
+		this.numPossibleSockets = this.numSockets();
 
 		// Fill gems with null so we always have the same number of gems as gem slots.
 		if (this._gems.length < this.numPossibleSockets) {
@@ -103,11 +103,6 @@ export class EquippedItem {
 				newGems[firstEligibleIndex] = gem;
 			}
 		});
-
-		// Copy the extra socket gem directly.
-		if (this.couldHaveExtraSocket()) {
-			newGems.push(this._gems[this._gems.length - 1]);
-		}
 
 		return new EquippedItem(item, newEnchant, newGems);
 	}
@@ -183,24 +178,10 @@ export class EquippedItem {
 		}
 	}
 
-	// Whether this item could have an extra socket, assuming Blacksmithing.
-	couldHaveExtraSocket(): boolean {
-		return [ItemType.ItemTypeWaist, ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(this.item.type);
-	}
 
-	requiresExtraSocket(): boolean {
-		return [ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(this.item.type)
-			&& this.hasExtraGem()
-			&& this._gems[this._gems.length - 1] != null;
-	}
 
-	hasExtraSocket(isBlacksmithing: boolean): boolean {
-		return this.item.type == ItemType.ItemTypeWaist ||
-			(isBlacksmithing && [ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(this.item.type));
-	}
-
-	numSockets(isBlacksmithing: boolean): number {
-		return this._item.gemSockets.length + (this.hasExtraSocket(isBlacksmithing) ? 1 : 0);
+	numSockets(): number {
+		return this._item.gemSockets.length;
 	}
 
 	hasExtraGem(): boolean {
@@ -208,14 +189,14 @@ export class EquippedItem {
 	}
 
 	allSocketColors(): Array<GemColor> {
-		return this.couldHaveExtraSocket() ? this._item.gemSockets.concat([GemColor.GemColorPrismatic]) : this._item.gemSockets;
+		return this._item.gemSockets;
 	}
-	curSocketColors(isBlacksmithing: boolean): Array<GemColor> {
-		return this.hasExtraSocket(isBlacksmithing) ? this._item.gemSockets.concat([GemColor.GemColorPrismatic]) : this._item.gemSockets;
+	curSocketColors(): Array<GemColor> {
+		return this._item.gemSockets;
 	}
 
-	curGems(isBlacksmithing: boolean): Array<Gem> {
-		return (this._gems.filter(g => g != null) as Array<Gem>).slice(0, this.numSockets(isBlacksmithing));
+	curGems(): Array<Gem> {
+		return (this._gems.filter(g => g != null) as Array<Gem>).slice(0, this.numSockets());
 	}
 
 	getProfessionRequirements(): Array<Profession> {
@@ -231,9 +212,6 @@ export class EquippedItem {
 				profs.push(gem.requiredProfession);
 			}
 		});
-		if (this.requiresExtraSocket()) {
-			profs.push(Profession.Blacksmithing);
-		}
 		return distinct(profs);
 	}
 	getFailedProfessionRequirements(professions: Array<Profession>): Array<Item | Gem | Enchant> {

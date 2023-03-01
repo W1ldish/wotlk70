@@ -256,18 +256,6 @@ class ItemPicker extends Component {
 				}
 
 				this.socketsContainerElem.appendChild(gemContainer);
-
-				if (gemIdx == newItem.numPossibleSockets - 1 && [ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(newItem.item.type)) {
-					const updateProfession = () => {
-						if (this.player.isBlacksmithing()) {
-							gemContainer.classList.remove('hide');
-						} else {
-							gemContainer.classList.add('hide');
-						}
-					};
-					this.player.professionChangeEmitter.on(updateProfession);
-					updateProfession();
-				}
 			});
 		}
 		this._equippedItem = newItem;
@@ -557,7 +545,7 @@ class SelectorModal extends BaseModal {
 		}
 
 		const socketBonusEP = this.player.computeStatsEP(new Stats(equippedItem.item.socketBonus)) / (equippedItem.item.gemSockets.length || 1);
-		equippedItem.curSocketColors(this.player.isBlacksmithing()).forEach((socketColor, socketIdx) => {
+		equippedItem.curSocketColors().forEach((socketColor, socketIdx) => {
 			this.addTab(
 				'Gem ' + (socketIdx + 1),
 				this.player.getGems(socketColor).map((gem: Gem) => {

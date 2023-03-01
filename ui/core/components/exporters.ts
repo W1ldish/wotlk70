@@ -170,7 +170,6 @@ export class IndividualWowheadGearPlannerExporter<SpecType extends Spec> extends
 		};
 
 		const gear = player.getGear();
-		const isBlacksmithing = player.isBlacksmithing();
 		gear.getItemSlots()
 				.sort((slot1, slot2) => IndividualWowheadGearPlannerImporter.slotIDs[slot1] - IndividualWowheadGearPlannerImporter.slotIDs[slot2])
 				.forEach(itemSlot => {
@@ -184,7 +183,7 @@ export class IndividualWowheadGearPlannerExporter<SpecType extends Spec> extends
 				slotId = slotId | 0b10000000;
 			}
 			bytes.push(slotId);
-			bytes.push(item.curGems(isBlacksmithing).length << 5);
+			bytes.push(item.curGems().length << 5);
 			bytes = bytes.concat(to2Bytes(item.item.id));
 
 			if (item.enchant) {
@@ -192,7 +191,7 @@ export class IndividualWowheadGearPlannerExporter<SpecType extends Spec> extends
 				bytes = bytes.concat(to2Bytes(item.enchant.spellId));
 			}
 
-			item.gems.slice(0, item.numSockets(isBlacksmithing)).forEach((gem, i) => {
+			item.gems.slice(0, item.numSockets()).forEach((gem, i) => {
 				if (gem) {
 					bytes.push(i << 5);
 					bytes = bytes.concat(to2Bytes(gem.id));

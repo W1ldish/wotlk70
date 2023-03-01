@@ -712,18 +712,13 @@ export class Player<SpecType extends Spec> {
 		const langPrefix = lang ? lang + '.' : '';
 		parts.push(`domain=${langPrefix}wotlk`);
 
-		const isBlacksmithing = this.hasProfession(Profession.Blacksmithing);
 		if (equippedItem.gems.length > 0) {
-			parts.push('gems=' + equippedItem.curGems(isBlacksmithing).map(gem => gem ? gem.id : 0).join(':'));
+			parts.push('gems=' + equippedItem.curGems().map(gem => gem ? gem.id : 0).join(':'));
 		}
 		if (equippedItem.enchant != null) {
 			parts.push('ench=' + equippedItem.enchant.effectId);
 		}
 		parts.push('pcs=' + this.gear.asArray().filter(ei => ei != null).map(ei => ei!.item.id).join(':'));
-
-		if (equippedItem.hasExtraSocket(isBlacksmithing)) {
-			parts.push('sock');
-		}
 
 		elem.setAttribute('data-wowhead', parts.join('&'));
 	}

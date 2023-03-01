@@ -371,14 +371,13 @@ class EpWeightsMenu extends BaseModal {
 		const gear = this.simUI.player.getGear();
 		const allGems = this.simUI.sim.db.getGems();
 		const phase = this.simUI.sim.getPhase();
-		const isBlacksmithing = this.simUI.player.isBlacksmithing();
 		const isJewelcrafting = this.simUI.player.hasProfession(Profession.Jewelcrafting);
 
-		const optimizedGear = EpWeightsMenu.optimizeGemsForWeights(epWeights, gear, allGems, phase, isBlacksmithing, isJewelcrafting);
+		const optimizedGear = EpWeightsMenu.optimizeGemsForWeights(epWeights, gear, allGems, phase, isJewelcrafting);
 		this.simUI.player.setGear(eventID, optimizedGear);
 	}
 
-	private static optimizeGemsForWeights(epWeights: Stats, gear: Gear, allGems: Array<Gem>, phase: number, isBlacksmithing: boolean, isJewelcrafting: boolean): Gear {
+	private static optimizeGemsForWeights(epWeights: Stats, gear: Gear, allGems: Array<Gem>, phase: number, isJewelcrafting: boolean): Gear {
 		const unrestrictedGems = allGems.filter(gem => Gems.isUnrestrictedGem(gem, phase));
 
 		const {
@@ -399,7 +398,7 @@ class EpWeightsMenu extends BaseModal {
 				return;
 			}
 			const item = equippedItem.item;
-			const socketColors = equippedItem.curSocketColors(isBlacksmithing);
+			const socketColors = equippedItem.curSocketColors();
 
 			// Compare whether its better to match sockets + get socket bonus, or just use best gems.
 			const bestGemEPNotMatchingSockets = sum(socketColors.map(socketColor => socketColor == GemColor.GemColorMeta ? 0 : bestGemEP));
@@ -430,7 +429,7 @@ class EpWeightsMenu extends BaseModal {
 				return [];
 			}
 
-			const numSockets = item.numSockets(isBlacksmithing);
+			const numSockets = item.numSockets();
 			return [...Array(numSockets).keys()]
 				.filter(socketIdx => item.item.gemSockets[socketIdx] != GemColor.GemColorMeta)
 				.map(socketIdx => {
@@ -441,7 +440,7 @@ class EpWeightsMenu extends BaseModal {
 				});
 		}).flat();
 		const threeSocketCombos = permutations(allSockets, 3);
-		const calculateGearGemsEP = (gear: Gear): number => gear.statsFromGems(isBlacksmithing).computeEP(epWeights);
+		const calculateGearGemsEP = (gear: Gear): number => gear.statsFromGems().computeEP(epWeights);
 
 		// Now make adjustments to satisfy meta condition.
 		// Use a wrapper function so we can return for readability.
@@ -458,7 +457,7 @@ class EpWeightsMenu extends BaseModal {
 			}
 
 			// If there are very few non-meta gem slots, just skip because it's annoying to deal with.
-			if (gear.getAllGems(isBlacksmithing).length - 1 < 3) {
+			if (gear.getAllGems().length - 1 < 3) {
 				return gear;
 			}
 
@@ -481,7 +480,7 @@ class EpWeightsMenu extends BaseModal {
 						curItems[itemSlot] = curItems[itemSlot]!.withGem(bestGemForColor[gemColor], socketIdx);
 					}
 					const curGear = new Gear(curItems);
-					if (curGear.hasActiveMetaGem(isBlacksmithing)) {
+					if (curGear.hasActiveMetaGem()) {
 						const curGearEP = calculateGearGemsEP(curGear);
 						if (curGearEP > bestGearEP) {
 							bestGear = curGear;
@@ -525,7 +524,7 @@ class EpWeightsMenu extends BaseModal {
 				}
 
 				const curGear = new Gear(curItems);
-				if (curGear.hasActiveMetaGem(isBlacksmithing)) {
+				if (curGear.hasActiveMetaGem()) {
 					const curGearEP = calculateGearGemsEP(curGear);
 					if (curGearEP > bestGearEP) {
 						bestGear = curGear;
