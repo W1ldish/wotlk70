@@ -28,7 +28,7 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const CombatTalents = {
 	name: 'Combat',
 	data: SavedTalents.create({
-		talentsString: '00532-0252051050035010223100501251',
+		talentsString: '00532-0252051000035015223100501251',
 		glyphs: Glyphs.create({
 			major1: RogueMajorGlyph.GlyphOfKillingSpree,
 			major2: RogueMajorGlyph.GlyphOfRupture,
