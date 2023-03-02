@@ -8,12 +8,15 @@ import (
 )
 
 func (paladin *Paladin) registerExorcismSpell() {
-	paladin.Exorcism = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48801},
-		SpellSchool: core.SpellSchoolHoly,
-		ProcMask:    core.ProcMaskSpellDamage,
-		Flags:       core.SpellFlagMeleeMetrics,
+	bonusSpellPower := 0 +
+		core.TernaryFloat64(paladin.Equip[proto.ItemSlot_ItemSlotRanged].ID == 28065, 120, 0)
 
+	paladin.Exorcism = paladin.RegisterSpell(core.SpellConfig{
+		ActionID:        core.ActionID{SpellID: 48801},
+		SpellSchool:     core.SpellSchoolHoly,
+		ProcMask:        core.ProcMaskSpellDamage,
+		Flags:           core.SpellFlagMeleeMetrics,
+		BonusSpellPower: bonusSpellPower,
 		ManaCost: core.ManaCostOptions{
 			BaseCost:   0.08,
 			Multiplier: 1 - 0.02*float64(paladin.Talents.Benediction),

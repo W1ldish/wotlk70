@@ -14,7 +14,15 @@ func (shaman *Shaman) ShockCD() time.Duration {
 // Shared logic for all shocks.
 func (shaman *Shaman) newShockSpellConfig(spellID int32, spellSchool core.SpellSchool, baseCost float64, shockTimer *core.Timer) core.SpellConfig {
 	actionID := core.ActionID{SpellID: spellID}
-
+	var bonusSpellpower float64
+	switch shaman.Equip[core.ItemSlotRanged].ID {
+	case 27947:
+		bonusSpellpower = 46
+	case 27984:
+		bonusSpellpower = 46
+	case 22395:
+		bonusSpellpower = 30
+	}
 	return core.SpellConfig{
 		ActionID:    actionID,
 		SpellSchool: spellSchool,
@@ -38,8 +46,8 @@ func (shaman *Shaman) newShockSpellConfig(spellID int32, spellSchool core.SpellS
 				Duration: shaman.ShockCD(),
 			},
 		},
-
-		BonusHitRating: float64(shaman.Talents.ElementalPrecision) * core.SpellHitRatingPerHitChance,
+		BonusSpellPower: bonusSpellpower,
+		BonusHitRating:  float64(shaman.Talents.ElementalPrecision) * core.SpellHitRatingPerHitChance,
 		DamageMultiplier: 1 +
 			0.01*float64(shaman.Talents.Concussion) +
 			core.TernaryFloat64(shaman.HasSetBonus(ItemSetThrallsBattlegear, 4), 0.25, 0),

@@ -204,6 +204,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-IdolofTerror-33509"
+ value: {
+  dps: 558.84297
+  tps: 1338.42431
+  dtps: 2.43753
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-IdoloftheRavenGoddess-32387"
  value: {
   dps: 565.28282

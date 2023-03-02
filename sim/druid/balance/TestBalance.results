@@ -184,6 +184,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestBalance-AllItems-IdolofTerror-33509"
+ value: {
+  dps: 1076.03918
+  tps: 959.90175
+ }
+}
+dps_results: {
  key: "TestBalance-AllItems-IdoloftheRavenGoddess-32387"
  value: {
   dps: 1068.02725

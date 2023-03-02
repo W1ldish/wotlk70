@@ -227,6 +227,33 @@ func init() {
 		}))
 	})
 
+	core.NewItemEffect(33509, func(agent core.Agent) {
+		druid := agent.(DruidAgent).GetDruid()
+		procAura := druid.NewTemporaryStatsAura("Idol of Terror Proc", core.ActionID{SpellID: 43737}, stats.Stats{stats.Agility: 65}, time.Second*10)
+		icd := core.Cooldown{
+			Timer:    druid.NewTimer(),
+			Duration: time.Second * 10,
+		}
+		druid.RegisterAura(core.Aura{
+			Label:    "Idol of Terror",
+			Duration: core.NeverExpires,
+			OnReset: func(aura *core.Aura, sim *core.Simulation) {
+				aura.Activate(sim)
+			},
+			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+				if !druid.IsMangle(spell) || !icd.IsReady(sim) {
+					return
+				}
+				if sim.RandomFloat("Idol of Terror") > 0.85 {
+					return
+				}
+				icd.Use(sim)
+				procAura.Activate(sim)
+
+			},
+		})
+	})
+
 	core.NewItemEffect(33510, func(agent core.Agent) {
 		druid := agent.(DruidAgent).GetDruid()
 

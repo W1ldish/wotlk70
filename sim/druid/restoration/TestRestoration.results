@@ -124,6 +124,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-IdolofTerror-33509"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-IdoloftheRavenGoddess-32387"
  value: {}
 }

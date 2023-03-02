@@ -9,13 +9,14 @@ import (
 
 func (paladin *Paladin) registerHolyWrathSpell() {
 	results := make([]*core.SpellResult, len(paladin.Env.Encounter.Targets))
-
+	bonusSpellPower := 0 +
+		core.TernaryFloat64(paladin.Equip[proto.ItemSlot_ItemSlotRanged].ID == 28065, 120, 0)
 	paladin.HolyWrath = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48817},
-		SpellSchool: core.SpellSchoolHoly,
-		ProcMask:    core.ProcMaskSpellDamage,
-		Flags:       core.SpellFlagMeleeMetrics,
-
+		ActionID:        core.ActionID{SpellID: 48817},
+		SpellSchool:     core.SpellSchoolHoly,
+		ProcMask:        core.ProcMaskSpellDamage,
+		Flags:           core.SpellFlagMeleeMetrics,
+		BonusSpellPower: bonusSpellPower,
 		ManaCost: core.ManaCostOptions{
 			BaseCost:   0.20,
 			Multiplier: 1 - 0.02*float64(paladin.Talents.Benediction),

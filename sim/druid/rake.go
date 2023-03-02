@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"github.com/Tereneckla/wotlk/sim/core"
+	"github.com/Tereneckla/wotlk/sim/core/proto"
 	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
@@ -51,7 +52,7 @@ func (druid *Druid) registerRakeSpell() {
 		},
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 90 + 0.01*spell.MeleeAttackPower()
+			baseDamage := 90 + 0.01*spell.MeleeAttackPower() + core.TernaryFloat64(druid.Equip[proto.ItemSlot_ItemSlotRanged].ID == 27989, 30, 0) + core.TernaryFloat64(druid.Equip[proto.ItemSlot_ItemSlotRanged].ID == 27990, 30, 0)
 			if druid.BleedCategories.Get(target).AnyActive() {
 				baseDamage *= 1.3
 			}

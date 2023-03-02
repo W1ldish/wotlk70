@@ -10,6 +10,8 @@ import (
 func (druid *Druid) registerMoonfireSpell() {
 	numTicks := druid.moonfireTicks()
 
+	bonusSpellpower := core.TernaryFloat64(druid.Equip[proto.ItemSlot_ItemSlotRanged].ID == 23197, 33, 0)
+
 	starfireBonusCrit := float64(druid.Talents.ImprovedInsectSwarm) * core.CritRatingPerCritChance
 
 	baseDamageMultiplier := 1 +
@@ -37,7 +39,7 @@ func (druid *Druid) registerMoonfireSpell() {
 				GCD: core.GCDDefault,
 			},
 		},
-
+		BonusSpellPower:  bonusSpellpower,
 		BonusCritRating:  float64(druid.Talents.ImprovedMoonfire) * 5 * core.CritRatingPerCritChance,
 		DamageMultiplier: baseDamageMultiplier - malusInitialDamageMultiplier,
 

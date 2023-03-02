@@ -168,6 +168,24 @@ func init() {
 		})
 	})
 
+	core.NewItemEffect(27484, func(agent core.Agent) {
+		paladin := agent.(PaladinAgent).GetPaladin()
+		procAura := paladin.NewTemporaryStatsAura("Tome of the Avengement Proc", core.ActionID{SpellID: 34258}, stats.Stats{stats.MeleeCrit: 53, stats.SpellCrit: 53}, time.Second*5)
+
+		paladin.RegisterAura(core.Aura{
+			Label:    "Tome of the Avengement",
+			Duration: core.NeverExpires,
+			OnReset: func(aura *core.Aura, sim *core.Simulation) {
+				aura.Activate(sim)
+			},
+			OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+				if spell.Flags.Matches(SpellFlagPrimaryJudgement) {
+					procAura.Activate(sim)
+				}
+			},
+		})
+	})
+
 	core.NewItemEffect(32489, func(agent core.Agent) {
 		paladin := agent.(PaladinAgent).GetPaladin()
 
