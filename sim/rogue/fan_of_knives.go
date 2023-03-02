@@ -1,6 +1,5 @@
 package rogue
 
-/*
 import (
 	"time"
 
@@ -78,4 +77,3 @@ func (rogue *Rogue) registerFanOfKnives() {
 		},
 	})
 }
-*/

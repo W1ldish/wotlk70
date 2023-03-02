@@ -81,8 +81,8 @@ dps_results: {
 dps_results: {
  key: "TestDemonology-AllItems-VoidheartRaiment"
  value: {
-  dps: 2428.45142
-  tps: 1624.11006
+  dps: 2419.74499
+  tps: 1615.21386
  }
 }
 dps_results: {

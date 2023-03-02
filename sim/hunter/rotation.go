@@ -89,7 +89,7 @@ func (hunter *Hunter) trySwapAspect(sim *core.Simulation) bool {
 			hunter.permaHawk = true
 		}
 		if hunter.permaHawk || currentMana > hunter.Rotation.ViperStopManaPercent {
-			hunter.AspectOfTheDragonHawk.Cast(sim, nil)
+			hunter.AspectOfTheHawk.Cast(sim, nil)
 			return true
 		}
 	} else if hunter.currentAspect != hunter.AspectOfTheViperAura && !hunter.permaHawk && currentMana < hunter.Rotation.ViperStartManaPercent {

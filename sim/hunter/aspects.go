@@ -8,7 +8,7 @@ import (
 	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
-func (hunter *Hunter) registerAspectOfTheDragonHawkSpell() {
+func (hunter *Hunter) registerAspectOfTheHawkSpell() {
 	var impHawkAura *core.Aura
 	const improvedHawkProcChance = 0.1
 	if hunter.Talents.ImprovedAspectOfTheHawk > 0 {
@@ -30,7 +30,7 @@ func (hunter *Hunter) registerAspectOfTheDragonHawkSpell() {
 	}
 
 	actionID := core.ActionID{SpellID: 61847}
-	hunter.AspectOfTheDragonHawkAura = hunter.NewTemporaryStatsAuraWrapped(
+	hunter.AspectOfTheHawkAura = hunter.NewTemporaryStatsAuraWrapped(
 		"Aspect of the Hawk",
 		actionID,
 		stats.Stats{
@@ -57,14 +57,14 @@ func (hunter *Hunter) registerAspectOfTheDragonHawkSpell() {
 				}
 			}
 		})
-	hunter.applySharedAspectConfig(true, hunter.AspectOfTheDragonHawkAura)
+	hunter.applySharedAspectConfig(true, hunter.AspectOfTheHawkAura)
 
-	hunter.AspectOfTheDragonHawk = hunter.RegisterSpell(core.SpellConfig{
+	hunter.AspectOfTheHawk = hunter.RegisterSpell(core.SpellConfig{
 		ActionID: actionID,
 		Flags:    core.SpellFlagAPL,
 
 		ApplyEffects: func(sim *core.Simulation, _ *core.Unit, _ *core.Spell) {
-			hunter.AspectOfTheDragonHawkAura.Activate(sim)
+			hunter.AspectOfTheHawkAura.Activate(sim)
 		},
 	})
 }

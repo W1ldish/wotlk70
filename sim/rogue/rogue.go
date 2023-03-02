@@ -62,7 +62,6 @@ type Rogue struct {
 	Backstab         *core.Spell
 	BladeFlurry      *core.Spell
 	DeadlyPoison     *core.Spell
-	FanOfKnives      *core.Spell
 	Feint            *core.Spell
 	Garrote          *core.Spell
 	Ambush           *core.Spell
@@ -82,6 +81,7 @@ type Rogue struct {
 	ColdBlood        *core.Spell
 	MasterOfSubtlety *core.Spell
 	Overkill         *core.Spell
+	FanOfKnives      *core.Spell
 
 	Envenom      *core.Spell
 	Eviscerate   *core.Spell
@@ -182,6 +182,7 @@ func (rogue *Rogue) Initialize() {
 	rogue.registerThistleTeaCD()
 	rogue.registerAmbushSpell()
 	rogue.registerEnvenom()
+	rogue.registerFanOfKnives()
 
 	rogue.finishingMoveEffectApplier = rogue.makeFinishingMoveEffectApplier()
 	rogue.DelayDPSCooldownsForArmorDebuffs(time.Second * 14)
