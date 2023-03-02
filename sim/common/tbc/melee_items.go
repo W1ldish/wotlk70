@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	core.AddEffectsToTest = false
+	core.AddEffectsToTest = true
 	core.NewSimpleStatItemEffect(28484, stats.Stats{stats.Health: 1500, stats.Strength: 150}, time.Second*15, time.Minute*30) // Bulwark of Kings
 	core.NewSimpleStatItemEffect(28485, stats.Stats{stats.Health: 1500, stats.Strength: 150}, time.Second*15, time.Minute*30) // Bulwark of Ancient Kings
 
@@ -226,7 +226,7 @@ func init() {
 
 	core.NewItemEffect(31332, func(agent core.Agent) {
 		character := agent.GetCharacter()
-		mh, oh := character.GetWeaponHands(31193)
+		mh, oh := character.GetWeaponHands(31332)
 		procMask := core.GetMeleeProcMaskForHands(mh, oh)
 
 		ppmm := character.AutoAttacks.NewPPMManager(1.0, procMask)
