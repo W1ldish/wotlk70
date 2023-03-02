@@ -160,7 +160,7 @@ func RunTestSuite(t *testing.T, suiteName string, generator TestGenerator) {
 
 	defer func() {
 		if p := recover(); p != nil {
-			//panic(fmt.Sprintf("Panic during test %s: %v", currentTestName, p))
+			panic(fmt.Sprintf("Panic during test %s: %v", currentTestName, p))
 		}
 	}()
 

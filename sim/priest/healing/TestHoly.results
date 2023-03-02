@@ -68,6 +68,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 18.9032
+  tps: 8.92358
+  hps: 402.26004
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 19.44919
@@ -92,11 +100,35 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 18.9032
+  tps: 8.92358
+  hps: 402.26004
+ }
+}
+dps_results: {
+ key: "TestHoly-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 19.07551
+  tps: 8.92358
+  hps: 407.32318
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-CloakofDarkness-33122"
  value: {
   dps: 18.9032
   tps: 8.92358
   hps: 407.32318
+ }
+}
+dps_results: {
+ key: "TestHoly-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 18.9032
+  tps: 8.92358
+  hps: 402.26004
  }
 }
 dps_results: {
@@ -156,6 +188,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-Heartrazor-29962"
+ value: {
+  dps: 18.9032
+  tps: 8.92358
+  hps: 402.26004
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-IncarnateRaiment"
  value: {
   dps: 25.7723
@@ -201,6 +241,14 @@ dps_results: {
   dps: 19.52836
   tps: 9.63336
   hps: 411.66262
+ }
+}
+dps_results: {
+ key: "TestHoly-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 18.9032
+  tps: 8.92358
+  hps: 402.26004
  }
 }
 dps_results: {
@@ -252,6 +300,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestHoly-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 18.9032
+  tps: 8.92358
+  hps: 402.26004
+ }
+}
+dps_results: {
  key: "TestHoly-AllItems-TheTwinStars"
  value: {
   dps: 20.10432
@@ -279,6 +335,14 @@ dps_results: {
  key: "TestHoly-AllItems-Warp-SpringCoil-30450"
  value: {
   dps: 19.07551
+  tps: 8.92358
+  hps: 402.26004
+ }
+}
+dps_results: {
+ key: "TestHoly-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 18.9032
   tps: 8.92358
   hps: 402.26004
  }

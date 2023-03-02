@@ -51,6 +51,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 2115.26764
+  tps: 1602.16139
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 2174.40723
@@ -86,10 +93,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 2124.29304
+  tps: 1610.1369
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Blinkstrike-31332"
+ value: {
+  dps: 2115.26764
+  tps: 1602.16139
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 2184.66848
+  tps: 1652.39215
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-CloakofDarkness-33122"
  value: {
   dps: 2161.48415
   tps: 1642.34141
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 2115.26764
+  tps: 1602.16139
  }
 }
 dps_results: {
@@ -167,6 +202,13 @@ dps_results: {
  value: {
   dps: 3172.77356
   tps: 2518.84596
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-Heartrazor-29962"
+ value: {
+  dps: 2148.33229
+  tps: 1632.48744
  }
 }
 dps_results: {
@@ -254,6 +296,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 2136.60041
+  tps: 1621.01259
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 2156.44979
@@ -324,6 +373,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestMM-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 2115.26764
+  tps: 1602.16139
+ }
+}
+dps_results: {
  key: "TestMM-AllItems-TheTwinBladesofAzzinoth"
  value: {
   dps: 2328.82865
@@ -356,6 +412,13 @@ dps_results: {
  value: {
   dps: 2513.40076
   tps: 1904.26734
+ }
+}
+dps_results: {
+ key: "TestMM-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 2115.26764
+  tps: 1602.16139
  }
 }
 dps_results: {

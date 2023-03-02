@@ -58,6 +58,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 389.5647
+  tps: 330.80934
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 397.76973
@@ -86,6 +93,41 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 738.58835
+  tps: 639.45883
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-Blinkstrike-31332"
+ value: {
+  dps: 933.11781
+  tps: 776.13719
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 421.00924
+  tps: 358.02596
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-BulwarkofKings-28484"
+ value: {
+  dps: 444.3632
+  tps: 378.62539
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-BulwarkoftheAncientKings-28485"
+ value: {
+  dps: 450.73492
+  tps: 384.61738
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-BurningRage"
  value: {
   dps: 559.16629
@@ -97,6 +139,13 @@ dps_results: {
  value: {
   dps: 414.90597
   tps: 352.22696
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 389.5647
+  tps: 330.80934
  }
 }
 dps_results: {
@@ -181,6 +230,13 @@ dps_results: {
  value: {
   dps: 456.75893
   tps: 389.03273
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-Heartrazor-29962"
+ value: {
+  dps: 890.44704
+  tps: 755.28147
  }
 }
 dps_results: {
@@ -275,6 +331,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 1017.87694
+  tps: 844.28557
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 399.61984
@@ -345,6 +408,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArms-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 967.52865
+  tps: 822.61717
+ }
+}
+dps_results: {
  key: "TestArms-AllItems-TheTwinBladesofAzzinoth"
  value: {
   dps: 1466.31075
@@ -391,6 +461,13 @@ dps_results: {
  value: {
   dps: 528.32921
   tps: 452.59064
+ }
+}
+dps_results: {
+ key: "TestArms-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 1410.92691
+  tps: 1142.22133
  }
 }
 dps_results: {

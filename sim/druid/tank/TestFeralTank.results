@@ -60,6 +60,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 544.76652
+  tps: 1309.96886
+  dtps: 2.43753
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 557.04055
@@ -84,6 +92,22 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 567.786
+  tps: 1356.92886
+  dtps: 2.41409
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 587.45531
+  tps: 1400.93007
+  dtps: 2.43753
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-BrutalGladiator'sIdolofResolve-35019"
  value: {
   dps: 544.76652
@@ -97,6 +121,14 @@ dps_results: {
   dps: 585.39772
   tps: 1392.0381
   dtps: 2.42158
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 544.76652
+  tps: 1309.96886
+  dtps: 2.43753
  }
 }
 dps_results: {
@@ -161,6 +193,14 @@ dps_results: {
   dps: 544.76652
   tps: 1309.96886
   dtps: 2.43753
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-Heartrazor-29962"
+ value: {
+  dps: 737.27267
+  tps: 1686.72995
+  dtps: 2.23395
  }
 }
 dps_results: {
@@ -276,6 +316,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 752.42856
+  tps: 1733.46273
+  dtps: 2.19722
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 560.75947
@@ -332,6 +380,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeralTank-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 721.84615
+  tps: 1670.94934
+  dtps: 2.3074
+ }
+}
+dps_results: {
  key: "TestFeralTank-AllItems-TheTwinStars"
  value: {
   dps: 544.76652
@@ -385,6 +441,14 @@ dps_results: {
   dps: 683.63171
   tps: 1600.2667
   dtps: 2.29802
+ }
+}
+dps_results: {
+ key: "TestFeralTank-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 860.91367
+  tps: 1933.05323
+  dtps: 2.06909
  }
 }
 dps_results: {

@@ -58,6 +58,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 1050.39359
+  tps: 672.78083
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 1141.66271
@@ -72,10 +79,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestArcane-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 1050.39359
+  tps: 672.78083
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-Blinkstrike-31332"
+ value: {
+  dps: 1050.39359
+  tps: 672.78083
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 1088.64263
+  tps: 696.05111
+ }
+}
+dps_results: {
  key: "TestArcane-AllItems-CloakofDarkness-33122"
  value: {
   dps: 1058.53814
   tps: 677.66757
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 1050.39359
+  tps: 672.78083
  }
 }
 dps_results: {
@@ -97,6 +132,13 @@ dps_results: {
  value: {
   dps: 1183.96816
   tps: 752.92558
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-Heartrazor-29962"
+ value: {
+  dps: 1050.39359
+  tps: 672.78083
  }
 }
 dps_results: {
@@ -202,6 +244,13 @@ dps_results: {
  value: {
   dps: 2116.39476
   tps: 1334.88024
+ }
+}
+dps_results: {
+ key: "TestArcane-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 1050.39359
+  tps: 672.78083
  }
 }
 dps_results: {

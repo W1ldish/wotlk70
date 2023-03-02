@@ -60,6 +60,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 3592.86308
+  tps: 3665.46177
+  dtps: 4.82979
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 3628.9541
@@ -84,6 +92,38 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-Blinkstrike-31332"
+ value: {
+  dps: 3664.4417
+  tps: 3737.44653
+  dtps: 4.82979
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 3614.34299
+  tps: 3687.34782
+  dtps: 4.82979
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-BulwarkofKings-28484"
+ value: {
+  dps: 3649.63734
+  tps: 3722.34433
+  dtps: 4.82979
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-BulwarkoftheAncientKings-28485"
+ value: {
+  dps: 3662.91159
+  tps: 3735.61858
+  dtps: 4.82979
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-BurningRage"
  value: {
   dps: 3522.20907
@@ -96,6 +136,14 @@ dps_results: {
  value: {
   dps: 3680.31206
   tps: 3752.97609
+  dtps: 4.82979
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 3585.80433
+  tps: 3658.80916
   dtps: 4.82979
  }
 }
@@ -308,6 +356,14 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestRetribution-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 3705.24565
+  tps: 3778.25048
+  dtps: 4.82979
+ }
+}
+dps_results: {
  key: "TestRetribution-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 3627.83875
@@ -424,6 +480,14 @@ dps_results: {
  value: {
   dps: 3250.78275
   tps: 3323.29905
+  dtps: 4.82979
+ }
+}
+dps_results: {
+ key: "TestRetribution-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 3777.45869
+  tps: 3850.46352
   dtps: 4.82979
  }
 }

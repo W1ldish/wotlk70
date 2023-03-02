@@ -51,6 +51,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 832.63651
+  tps: 327.27339
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 877.43186
@@ -79,6 +86,27 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 1034.55388
+  tps: 448.54948
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 873.78833
+  tps: 344.07913
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-BulwarkofAzzinoth-32375"
+ value: {
+  dps: 843.83568
+  tps: 331.219
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-CataclysmHarness"
  value: {
   dps: 1218.29732
@@ -97,6 +125,13 @@ dps_results: {
  value: {
   dps: 857.21964
   tps: 336.89025
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 832.63651
+  tps: 327.27339
  }
 }
 dps_results: {
@@ -191,6 +226,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-Heartrazor-29962"
+ value: {
+  dps: 1105.63783
+  tps: 481.36854
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-MadnessoftheBetrayer-32505"
  value: {
   dps: 878.63639
@@ -244,6 +286,13 @@ dps_results: {
  value: {
   dps: 875.19439
   tps: 349.1355
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 1146.23616
+  tps: 509.00695
  }
 }
 dps_results: {
@@ -331,6 +380,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestEnhancement-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 1091.81886
+  tps: 473.77032
+ }
+}
+dps_results: {
  key: "TestEnhancement-AllItems-TheTwinStars"
  value: {
   dps: 877.88536
@@ -363,6 +419,13 @@ dps_results: {
  value: {
   dps: 1064.95754
   tps: 426.6952
+ }
+}
+dps_results: {
+ key: "TestEnhancement-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 1244.76885
+  tps: 573.73449
  }
 }
 dps_results: {

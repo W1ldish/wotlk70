@@ -96,6 +96,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 162.86558
+  tps: 396.66276
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 165.82009
@@ -124,6 +131,48 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 259.71447
+  tps: 672.06598
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-Blinkstrike-31332"
+ value: {
+  dps: 276.48199
+  tps: 691.35016
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 174.58721
+  tps: 424.54115
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-BulwarkofAzzinoth-32375"
+ value: {
+  dps: 224.82648
+  tps: 599.42259
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-BulwarkofKings-28484"
+ value: {
+  dps: 185.25149
+  tps: 453.45178
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-BulwarkoftheAncientKings-28485"
+ value: {
+  dps: 186.74165
+  tps: 455.78603
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-BurningRage"
  value: {
   dps: 234.49497
@@ -135,6 +184,13 @@ dps_results: {
  value: {
   dps: 175.73376
   tps: 429.32238
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 162.86558
+  tps: 396.66276
  }
 }
 dps_results: {
@@ -219,6 +275,13 @@ dps_results: {
  value: {
   dps: 189.98169
   tps: 463.39818
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-Heartrazor-29962"
+ value: {
+  dps: 298.8064
+  tps: 752.78078
  }
 }
 dps_results: {
@@ -313,6 +376,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 295.16703
+  tps: 731.85636
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 168.33023
@@ -383,6 +453,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtectionWarrior-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 300.65271
+  tps: 758.6153
+ }
+}
+dps_results: {
  key: "TestProtectionWarrior-AllItems-TheTwinBladesofAzzinoth"
  value: {
   dps: 499.96358
@@ -429,6 +506,13 @@ dps_results: {
  value: {
   dps: 217.88922
   tps: 531.46128
+ }
+}
+dps_results: {
+ key: "TestProtectionWarrior-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 295.13722
+  tps: 716.05404
  }
 }
 dps_results: {

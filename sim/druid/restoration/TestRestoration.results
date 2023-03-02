@@ -52,6 +52,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-BandoftheEternalDefender-29297"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-BandoftheEternalSage-29305"
  value: {}
 }
@@ -64,11 +68,23 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-BladeofUnquenchedThirst-31193"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-BraidedEterniumChain-24114"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-BrutalGladiator'sIdolofResolve-35019"
  value: {}
 }
 dps_results: {
  key: "TestRestoration-AllItems-CloakofDarkness-33122"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-CommendationofKael'thas-34473"
  value: {}
 }
 dps_results: {
@@ -101,6 +117,10 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-Gladiator'sWildhide"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-Heartrazor-29962"
  value: {}
 }
 dps_results: {
@@ -160,6 +180,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-RodoftheSunKing-29996"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-SextantofUnstableCurrents-30626"
  value: {}
 }
@@ -188,6 +212,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestRestoration-AllItems-TheNightBlade-31331"
+ value: {}
+}
+dps_results: {
  key: "TestRestoration-AllItems-TheTwinStars"
  value: {}
 }
@@ -213,6 +241,10 @@ dps_results: {
 }
 dps_results: {
  key: "TestRestoration-AllItems-WastewalkerArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestRestoration-AllItems-WorldBreaker-30090"
  value: {}
 }
 dps_results: {

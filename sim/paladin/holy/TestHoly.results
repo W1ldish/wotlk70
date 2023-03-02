@@ -52,6 +52,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-BandoftheEternalDefender-29297"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-BandoftheEternalSage-29305"
  value: {}
 }
@@ -68,11 +72,35 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-Blinkstrike-31332"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-BraidedEterniumChain-24114"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-BulwarkofAzzinoth-32375"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-BulwarkofKings-28484"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-BulwarkoftheAncientKings-28485"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-BurningRage"
  value: {}
 }
 dps_results: {
  key: "TestHoly-AllItems-CloakofDarkness-33122"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-CommendationofKael'thas-34473"
  value: {}
 }
 dps_results: {
@@ -184,6 +212,10 @@ dps_results: {
  value: {}
 }
 dps_results: {
+ key: "TestHoly-AllItems-RodoftheSunKing-29996"
+ value: {}
+}
+dps_results: {
  key: "TestHoly-AllItems-SextantofUnstableCurrents-30626"
  value: {}
 }
@@ -233,6 +265,10 @@ dps_results: {
 }
 dps_results: {
  key: "TestHoly-AllItems-WastewalkerArmor"
+ value: {}
+}
+dps_results: {
+ key: "TestHoly-AllItems-WorldBreaker-30090"
  value: {}
 }
 dps_results: {

@@ -217,7 +217,7 @@ func ApplyNonSimmableFilters(db *database.WowDatabase) {
 	})
 }
 func tbcEnchantsFilter(_ database.EnchantDBKey, enchant *proto.UIEnchant) bool {
-	if enchant.SpellId == 46594 || enchant.SpellId == 42974 || enchant.SpellId == 63746 {
+	if enchant.SpellId == 46594 || enchant.SpellId == 42974 || enchant.SpellId == 63746 || enchant.SpellId == 46578 {
 		return true
 	}
 	if enchant.SpellId > 42974 {
@@ -229,7 +229,7 @@ func simmableItemFilter(_ int32, item *proto.UIItem) bool {
 	if _, ok := database.ItemAllowList[item.Id]; ok {
 		return true
 	}
-	if item.Id > 38000 {
+	if item.Id > 39000 {
 		return false
 	}
 

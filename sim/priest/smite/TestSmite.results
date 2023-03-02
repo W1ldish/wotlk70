@@ -72,6 +72,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 311.11588
@@ -93,10 +100,31 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 287.06334
+  tps: 257.75859
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-CloakofDarkness-33122"
  value: {
   dps: 281.18829
   tps: 252.56044
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
  }
 }
 dps_results: {
@@ -156,6 +184,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-Heartrazor-29962"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-IncarnateRaiment"
  value: {
   dps: 503.72674
@@ -195,6 +230,13 @@ dps_results: {
  value: {
   dps: 324.43377
   tps: 288.24465
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
  }
 }
 dps_results: {
@@ -240,6 +282,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestSmite-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
+ }
+}
+dps_results: {
  key: "TestSmite-AllItems-TheTwinStars"
  value: {
   dps: 333.19384
@@ -265,6 +314,13 @@ dps_results: {
  value: {
   dps: 286.7886
   tps: 257.43329
+ }
+}
+dps_results: {
+ key: "TestSmite-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 280.96649
+  tps: 252.34345
  }
 }
 dps_results: {

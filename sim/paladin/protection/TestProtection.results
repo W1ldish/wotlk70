@@ -58,6 +58,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 591.22811
+  tps: 1254.74774
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 602.70171
@@ -86,6 +93,34 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-Blinkstrike-31332"
+ value: {
+  dps: 591.22811
+  tps: 1254.74774
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 605.94177
+  tps: 1282.37053
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-BulwarkofKings-28484"
+ value: {
+  dps: 633.0895
+  tps: 1343.05064
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-BulwarkoftheAncientKings-28485"
+ value: {
+  dps: 639.20818
+  tps: 1356.5874
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-BurningRage"
  value: {
   dps: 722.24077
@@ -97,6 +132,13 @@ dps_results: {
  value: {
   dps: 613.46873
   tps: 1299.68869
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 591.22811
+  tps: 1254.74774
  }
 }
 dps_results: {
@@ -289,6 +331,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestProtection-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 591.22811
+  tps: 1254.74774
+ }
+}
+dps_results: {
  key: "TestProtection-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 598.32547
@@ -377,6 +426,13 @@ dps_results: {
  value: {
   dps: 701.8892
   tps: 1481.93849
+ }
+}
+dps_results: {
+ key: "TestProtection-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 591.22811
+  tps: 1254.74774
  }
 }
 dps_results: {

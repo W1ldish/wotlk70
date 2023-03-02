@@ -23,7 +23,6 @@ func init() {
 	core.NewSimpleStatOffensiveTrinketEffect(32483, stats.Stats{stats.SpellHaste: 175}, time.Second*20, time.Minute*2)  // Skull of Gul'dan
 	core.NewSimpleStatOffensiveTrinketEffect(33829, stats.Stats{stats.SpellPower: 211}, time.Second*20, time.Minute*2)  // Hex Shrunken Head
 	core.NewSimpleStatOffensiveTrinketEffect(34429, stats.Stats{stats.SpellPower: 320}, time.Second*15, time.Second*90) // Shifting Naaru Sliver
-	core.NewSimpleStatOffensiveTrinketEffect(38290, stats.Stats{stats.SpellPower: 155}, time.Second*20, time.Minute*2)  // Dark Iron Smoking Pipe
 
 	// Defensive trinkets. Keep these in order by item ID.
 	core.NewSimpleStatDefensiveTrinketEffect(29376, stats.Stats{stats.SpellPower: 99}, time.Second*20, time.Minute*2) // Essence of the Marytr

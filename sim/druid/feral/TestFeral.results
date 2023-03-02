@@ -58,6 +58,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeral-AllItems-BandoftheEternalDefender-29297"
+ value: {
+  dps: 1388.18241
+  tps: 1585.51355
+ }
+}
+dps_results: {
  key: "TestFeral-AllItems-BandoftheEternalSage-29305"
  value: {
   dps: 1394.66649
@@ -79,6 +86,20 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeral-AllItems-BladeofUnquenchedThirst-31193"
+ value: {
+  dps: 1418.93864
+  tps: 1614.19982
+ }
+}
+dps_results: {
+ key: "TestFeral-AllItems-BraidedEterniumChain-24114"
+ value: {
+  dps: 1420.35772
+  tps: 1623.35791
+ }
+}
+dps_results: {
  key: "TestFeral-AllItems-BrutalGladiator'sIdolofResolve-35019"
  value: {
   dps: 1388.18241
@@ -90,6 +111,13 @@ dps_results: {
  value: {
   dps: 1424.24101
   tps: 1621.7597
+ }
+}
+dps_results: {
+ key: "TestFeral-AllItems-CommendationofKael'thas-34473"
+ value: {
+  dps: 1388.18241
+  tps: 1585.51355
  }
 }
 dps_results: {
@@ -146,6 +174,13 @@ dps_results: {
  value: {
   dps: 1388.18241
   tps: 1583.42985
+ }
+}
+dps_results: {
+ key: "TestFeral-AllItems-Heartrazor-29962"
+ value: {
+  dps: 1666.00944
+  tps: 1888.88747
  }
 }
 dps_results: {
@@ -247,6 +282,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeral-AllItems-RodoftheSunKing-29996"
+ value: {
+  dps: 1663.97411
+  tps: 1898.0746
+ }
+}
+dps_results: {
  key: "TestFeral-AllItems-SextantofUnstableCurrents-30626"
  value: {
   dps: 1399.59254
@@ -296,6 +338,13 @@ dps_results: {
  }
 }
 dps_results: {
+ key: "TestFeral-AllItems-TheNightBlade-31331"
+ value: {
+  dps: 1732.16807
+  tps: 1920.8194
+ }
+}
+dps_results: {
  key: "TestFeral-AllItems-TheTwinStars"
  value: {
   dps: 1388.18241
@@ -342,6 +391,13 @@ dps_results: {
  value: {
   dps: 1604.57907
   tps: 1829.63164
+ }
+}
+dps_results: {
+ key: "TestFeral-AllItems-WorldBreaker-30090"
+ value: {
+  dps: 1873.13139
+  tps: 2136.85574
  }
 }
 dps_results: {
