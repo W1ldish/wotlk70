@@ -10,7 +10,7 @@ func (warlock *Warlock) registerDrainSoulSpell() {
 	soulSiphonMultiplier := 0.03 * float64(warlock.Talents.SoulSiphon)
 
 	warlock.DrainSoul = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47855},
+		ActionID:    core.ActionID{SpellID: 27217},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       core.SpellFlagChanneled,

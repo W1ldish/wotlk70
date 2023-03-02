@@ -44,13 +44,17 @@ var ItemSetVoidheartRaiment = core.NewItemSet(core.ItemSet{
 					aura.Activate(sim)
 				},
 				OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
-					if sim.RandomFloat("cycl4p") > 0.05 {
-						return
-					}
 					if spell.SpellSchool.Matches(core.SpellSchoolShadow) {
+						if sim.RandomFloat("cycl4pShadow") > 0.05 {
+							return
+						}
 						shadowBonus.Activate(sim)
+
 					}
 					if spell.SpellSchool.Matches(core.SpellSchoolFire) {
+						if sim.RandomFloat("cycl4pFire") > 0.05 {
+							return
+						}
 						fireBonus.Activate(sim)
 					}
 				},

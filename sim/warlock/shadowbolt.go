@@ -18,7 +18,7 @@ func (warlock *Warlock) registerShadowBoltSpell() {
 	}
 
 	warlock.ShadowBolt = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 47809},
+		ActionID:     core.ActionID{SpellID: 27209},
 		SpellSchool:  core.SpellSchoolShadow,
 		ProcMask:     core.ProcMaskSpellDamage,
 		MissileSpeed: 20,

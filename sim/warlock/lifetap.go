@@ -6,7 +6,7 @@ import (
 )
 
 func (warlock *Warlock) registerLifeTapSpell() {
-	actionID := core.ActionID{SpellID: 57946}
+	actionID := core.ActionID{SpellID: 27222}
 	baseRestore := 1164.0 * (1.0 + 0.1*float64(warlock.Talents.ImprovedLifeTap))
 	manaMetrics := warlock.NewManaMetrics(actionID)
 

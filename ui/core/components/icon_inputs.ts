@@ -185,7 +185,7 @@ export const MajorArmorDebuff = InputHelpers.makeMultiIconInput([
 
 export const MinorArmorDebuff = InputHelpers.makeMultiIconInput([
 	makeTristateDebuffInput(ActionId.fromSpellId(770), ActionId.fromSpellId(33602), 'faerieFire'),
-	makeTristateDebuffInput(ActionId.fromSpellId(50511), ActionId.fromSpellId(18180), 'curseOfWeakness'),
+	makeTristateDebuffInput(ActionId.fromSpellId(30909), ActionId.fromSpellId(18180), 'curseOfWeakness'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(56631), 'sting'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(53598), 'sporeCloud'),
 ], 'Minor ArP');
@@ -194,7 +194,7 @@ export const AttackPowerDebuff = InputHelpers.makeMultiIconInput([
 	makeBooleanDebuffInput(ActionId.fromSpellId(26016), 'vindication'),
 	makeTristateDebuffInput(ActionId.fromSpellId(47437), ActionId.fromSpellId(12879), 'demoralizingShout'),
 	makeTristateDebuffInput(ActionId.fromSpellId(48560), ActionId.fromSpellId(16862), 'demoralizingRoar'),
-	makeTristateDebuffInput(ActionId.fromSpellId(50511), ActionId.fromSpellId(18180), 'curseOfWeakness'),
+	makeTristateDebuffInput(ActionId.fromSpellId(30909), ActionId.fromSpellId(18180), 'curseOfWeakness'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(55487), 'demoralizingScreech'),
 ], 'Atk Pwr');
 
@@ -241,7 +241,7 @@ export const SpellHitDebuff = InputHelpers.makeMultiIconInput([
 export const SpellDamageDebuff = InputHelpers.makeMultiIconInput([
 	makeBooleanDebuffInput(ActionId.fromSpellId(51161), 'ebonPlaguebringer'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(48511), 'earthAndMoon'),
-	makeBooleanDebuffInput(ActionId.fromSpellId(47865), 'curseOfElements'),
+	makeBooleanDebuffInput(ActionId.fromSpellId(27228), 'curseOfElements'),
 ], 'Spell Dmg');
 
 export const HuntersMark = withLabel(makeQuadstateDebuffInput(ActionId.fromSpellId(14325), ActionId.fromSpellId(19423), ActionId.fromItemId(42907), 'huntersMark'), 'Mark');

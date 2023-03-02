@@ -265,9 +265,6 @@ func applyBuffEffects(agent Agent, raidBuffs *proto.RaidBuffs, partyBuffs *proto
 	registerRevitalizeHotCD(agent, "Rejuvination", ActionID{SpellID: 26982}, 5, 3*time.Second, individualBuffs.RevitalizeRejuvination)
 	registerRevitalizeHotCD(agent, "Wild Growth", ActionID{SpellID: 53251}, 7, time.Second, individualBuffs.RevitalizeWildGrowth)
 
-	registerUnholyFrenzyCD(agent, individualBuffs.UnholyFrenzy)
-	registerTricksOfTheTradeCD(agent, individualBuffs.TricksOfTheTrades)
-	registerShatteringThrowCD(agent, individualBuffs.ShatteringThrows)
 	registerPowerInfusionCD(agent, individualBuffs.PowerInfusions)
 	registerManaTideTotemCD(agent, partyBuffs.ManaTideTotems)
 	registerInnervateCD(agent, individualBuffs.Innervates)
@@ -907,33 +904,6 @@ func registerRevitalizeHotCD(agent Agent, label string, hotID ActionID, ticks in
 	})
 
 	ApplyFixedUptimeAura(aura, uptimePercent, totalDuration, 1)
-}
-
-const ShatteringThrowCD = time.Minute * 5
-
-func registerShatteringThrowCD(agent Agent, numShatteringThrows int32) {
-	if numShatteringThrows == 0 {
-		return
-	}
-
-	stAura := ShatteringThrowAura(&agent.GetCharacter().Env.Encounter.Targets[0].Unit)
-
-	registerExternalConsecutiveCDApproximation(
-		agent,
-		externalConsecutiveCDApproximation{
-			ActionID:         ActionID{SpellID: 64382, Tag: -1},
-			AuraTag:          ShatteringThrowAuraTag,
-			CooldownPriority: CooldownPriorityDefault,
-			AuraDuration:     ShatteringThrowDuration,
-			AuraCD:           ShatteringThrowCD,
-			Type:             CooldownTypeDPS,
-
-			ShouldActivate: func(sim *Simulation, character *Character) bool {
-				return true
-			},
-			AddAura: func(sim *Simulation, character *Character) { stAura.Activate(sim) },
-		},
-		numShatteringThrows)
 }
 
 var InnervateAuraTag = "Innervate"

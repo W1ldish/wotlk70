@@ -57,7 +57,7 @@ func (wp *WarlockPet) newIntercept() *core.Spell {
 
 func (wp *WarlockPet) newFirebolt() *core.Spell {
 	return wp.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47964},
+		ActionID:    core.ActionID{SpellID: 27267},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 
@@ -88,7 +88,7 @@ func (wp *WarlockPet) newCleave() *core.Spell {
 	numHits := core.MinInt32(2, wp.Env.GetNumTargets())
 
 	return wp.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47994},
+		ActionID:    core.ActionID{SpellID: 30223},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
@@ -126,7 +126,7 @@ func (wp *WarlockPet) newCleave() *core.Spell {
 
 func (wp *WarlockPet) newLashOfPain() *core.Spell {
 	return wp.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47992},
+		ActionID:    core.ActionID{SpellID: 27274},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 
@@ -158,7 +158,7 @@ func (wp *WarlockPet) newLashOfPain() *core.Spell {
 }
 
 func (wp *WarlockPet) newShadowBite() *core.Spell {
-	actionID := core.ActionID{SpellID: 54053}
+	actionID := core.ActionID{SpellID: 54052}
 
 	var petManaMetrics *core.ResourceMetrics
 	maxManaMult := 0.04 * float64(wp.owner.Talents.ImprovedFelhunter)

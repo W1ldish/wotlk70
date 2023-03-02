@@ -44,20 +44,10 @@ func (warlock *Warlock) initProcTrackers() {
 	warlock.addProc(54999, "Hyperspeed Acceleration", true)
 	warlock.addProc(26297, "Berserking (Troll)", true)
 	warlock.addProc(33697, "Blood Fury", true)
-
-	warlock.addProc(40255, "Dying Curse Proc", false)
-	warlock.addProc(55379, "Illustration of the Dragon Soul Proc", false)
-	warlock.addProc(45518, "Flare of the Heavens Proc", false)
-
-	warlock.addProc(45466, "Scale of Fates Proc", false)
-	warlock.addProc(39229, "Embrace of the Spider Proc", false)
 }
 
 func (warlock *Warlock) setupDSCooldowns() {
 	warlock.majorCds = make([]*core.MajorCooldown, 0)
-
-	// hyperspeed accelerators
-	warlock.DSCooldownSync(core.ActionID{SpellID: 54758}, false)
 
 	// berserking (troll)
 	warlock.DSCooldownSync(core.ActionID{SpellID: 26297}, false)
@@ -65,23 +55,8 @@ func (warlock *Warlock) setupDSCooldowns() {
 	// blood fury (orc)
 	warlock.DSCooldownSync(core.ActionID{SpellID: 33697}, false)
 
-	// potion of speed
-	warlock.DSCooldownSync(core.ActionID{ItemID: 40211}, true)
-
 	// Power Infusion
 	warlock.DSCooldownSync(core.ActionID{SpellID: 10060}, false)
-
-	// Eradication
-	warlock.DSCooldownSync(core.ActionID{SpellID: 47197}, false)
-
-	// active sp trinkets
-	warlock.DSCooldownSync(core.ActionID{ItemID: 40255}, false)
-	warlock.DSCooldownSync(core.ActionID{ItemID: 40432}, false)
-	warlock.DSCooldownSync(core.ActionID{ItemID: 45518}, false)
-
-	// active haste trinkets
-	warlock.DSCooldownSync(core.ActionID{ItemID: 39229}, false)
-	warlock.DSCooldownSync(core.ActionID{ItemID: 36972}, false)
 }
 
 func (warlock *Warlock) DSCooldownSync(actionID core.ActionID, isPotion bool) {

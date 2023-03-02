@@ -16,7 +16,7 @@ func (warlock *Warlock) registerImmolateSpell() {
 		warlock.GrandFirestoneBonus()
 
 	warlock.Immolate = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47811},
+		ActionID:    core.ActionID{SpellID: 27215},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 

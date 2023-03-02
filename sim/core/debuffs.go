@@ -272,16 +272,16 @@ func JudgementOfLightAura(target *Unit) *Aura {
 func CurseOfElementsAura(target *Unit) *Aura {
 	aura := target.GetOrRegisterAura(Aura{
 		Label:    "Curse of Elements",
-		ActionID: ActionID{SpellID: 47865},
+		ActionID: ActionID{SpellID: 27228},
 		Duration: time.Minute * 5,
 		OnGain: func(aura *Aura, sim *Simulation) {
-			aura.Unit.AddStatsDynamic(sim, stats.Stats{stats.ArcaneResistance: -165, stats.FireResistance: -165, stats.FrostResistance: -165, stats.ShadowResistance: -165, stats.NatureResistance: -165})
+			aura.Unit.AddStatsDynamic(sim, stats.Stats{stats.ArcaneResistance: -88, stats.FireResistance: -88, stats.FrostResistance: -88, stats.ShadowResistance: -88, stats.NatureResistance: -88})
 		},
 		OnExpire: func(aura *Aura, sim *Simulation) {
-			aura.Unit.AddStatsDynamic(sim, stats.Stats{stats.ArcaneResistance: 165, stats.FireResistance: 165, stats.FrostResistance: 165, stats.ShadowResistance: 165, stats.NatureResistance: 165})
+			aura.Unit.AddStatsDynamic(sim, stats.Stats{stats.ArcaneResistance: 88, stats.FireResistance: 88, stats.FrostResistance: 88, stats.ShadowResistance: 88, stats.NatureResistance: 88})
 		},
 	})
-	spellDamageEffect(aura, 1.13)
+	spellDamageEffect(aura, 1.11)
 	return aura
 }
 
@@ -629,11 +629,11 @@ func ExposeArmorAura(target *Unit, hasGlyph bool) *Aura {
 func CurseOfWeaknessAura(target *Unit, points int32) *Aura {
 	aura := target.GetOrRegisterAura(Aura{
 		Label:    "Curse of Weakness" + strconv.Itoa(int(points)),
-		ActionID: ActionID{SpellID: 50511},
+		ActionID: ActionID{SpellID: 30909},
 		Duration: time.Minute * 2,
 	})
 	minorArmorReductionEffect(aura, 0.05)
-	apReductionEffect(aura, 478*(1+0.1*float64(points)))
+	apReductionEffect(aura, 350*(1+0.1*float64(points)))
 	return aura
 }
 
@@ -666,27 +666,6 @@ func minorArmorReductionEffect(aura *Aura, reduction float64) *ExclusiveEffect {
 		},
 		OnExpire: func(ee *ExclusiveEffect, sim *Simulation) {
 			ee.Aura.Unit.PseudoStats.ArmorMultiplier /= multiplier
-		},
-	})
-}
-
-var ShatteringThrowAuraTag = "ShatteringThrow"
-
-var ShatteringThrowDuration = time.Second * 10
-
-func ShatteringThrowAura(target *Unit) *Aura {
-	armorReduction := 0.2
-
-	return target.GetOrRegisterAura(Aura{
-		Label:    "Shattering Throw",
-		Tag:      ShatteringThrowAuraTag,
-		ActionID: ActionID{SpellID: 64382},
-		Duration: ShatteringThrowDuration,
-		OnGain: func(aura *Aura, sim *Simulation) {
-			aura.Unit.PseudoStats.ArmorMultiplier *= (1.0 - armorReduction)
-		},
-		OnExpire: func(aura *Aura, sim *Simulation) {
-			aura.Unit.PseudoStats.ArmorMultiplier *= (1.0 / (1.0 - armorReduction))
 		},
 	})
 }

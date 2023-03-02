@@ -12,7 +12,7 @@ func (warlock *Warlock) registerUnstableAfflictionSpell() {
 	canCrit := warlock.Talents.Pandemic
 
 	warlock.UnstableAffliction = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47843},
+		ActionID:    core.ActionID{SpellID: 30405},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 

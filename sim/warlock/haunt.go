@@ -8,7 +8,7 @@ import (
 )
 
 func (warlock *Warlock) registerHauntSpell() {
-	actionID := core.ActionID{SpellID: 59164}
+	actionID := core.ActionID{SpellID: 59161}
 
 	debuffMultiplier := 1.2
 	if warlock.HasMajorGlyph(proto.WarlockMajorGlyph_GlyphOfHaunt) {

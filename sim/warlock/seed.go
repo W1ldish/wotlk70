@@ -7,7 +7,7 @@ import (
 )
 
 func (warlock *Warlock) registerSeedSpell() {
-	actionID := core.ActionID{SpellID: 47836}
+	actionID := core.ActionID{SpellID: 27243}
 
 	seedExplosion := warlock.RegisterSpell(core.SpellConfig{
 		ActionID:    actionID.WithTag(1),

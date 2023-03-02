@@ -829,7 +829,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Curse of Weakness',
-						actionId: ActionId.fromSpellId(50511),
+						actionId: ActionId.fromSpellId(30909),
 						playerData: playerClass(Class.ClassWarlock, player => player.getRotation().curse == WarlockCurse.Weakness),
 					},
 					{
@@ -952,7 +952,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Curse of Elements',
-						actionId: ActionId.fromSpellId(47865),
+						actionId: ActionId.fromSpellId(27228),
 						playerData: playerClass(Class.ClassWarlock, player => player.getRotation().curse == WarlockCurse.Elements),
 					},
 				],
@@ -997,7 +997,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Curse of Weakness',
-						actionId: ActionId.fromSpellId(50511),
+						actionId: ActionId.fromSpellId(30909),
 						playerData: playerClassAndTalent(Class.ClassWarlock, 'improvedCurseOfWeakness', player => player.getRotation().curse == WarlockCurse.Weakness),
 					},
 					{

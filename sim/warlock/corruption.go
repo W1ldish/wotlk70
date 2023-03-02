@@ -12,7 +12,7 @@ func (warlock *Warlock) registerCorruptionSpell() {
 	canCrit := warlock.Talents.Pandemic
 
 	warlock.Corruption = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47813},
+		ActionID:    core.ActionID{SpellID: 27216},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 

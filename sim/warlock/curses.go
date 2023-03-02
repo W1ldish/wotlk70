@@ -11,7 +11,7 @@ func (warlock *Warlock) registerCurseOfElementsSpell() {
 	warlock.CurseOfElementsAuras = warlock.NewEnemyAuraArray(core.CurseOfElementsAura)
 
 	warlock.CurseOfElements = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47865},
+		ActionID:    core.ActionID{SpellID: 27228},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskEmpty,
 
@@ -47,7 +47,7 @@ func (warlock *Warlock) registerCurseOfWeaknessSpell() {
 	})
 
 	warlock.CurseOfWeakness = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 50511},
+		ActionID:    core.ActionID{SpellID: 30909},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskEmpty,
 
@@ -121,7 +121,7 @@ func (warlock *Warlock) registerCurseOfAgonySpell() {
 	}
 
 	warlock.CurseOfAgony = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47864},
+		ActionID:    core.ActionID{SpellID: 27218},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 
@@ -170,7 +170,7 @@ func (warlock *Warlock) registerCurseOfAgonySpell() {
 
 func (warlock *Warlock) registerCurseOfDoomSpell() {
 	warlock.CurseOfDoom = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47867},
+		ActionID:    core.ActionID{SpellID: 30910},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 

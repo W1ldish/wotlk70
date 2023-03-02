@@ -8,7 +8,7 @@ import (
 
 func (warlock *Warlock) registerSoulFireSpell() {
 	warlock.SoulFire = warlock.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 47825},
+		ActionID:     core.ActionID{SpellID: 30545},
 		SpellSchool:  core.SpellSchoolFire,
 		ProcMask:     core.ProcMaskSpellDamage,
 		MissileSpeed: 24,

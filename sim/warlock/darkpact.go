@@ -13,7 +13,7 @@ func (warlock *Warlock) registerDarkPactSpell() {
 		return
 	}
 
-	actionID := core.ActionID{SpellID: 59092}
+	actionID := core.ActionID{SpellID: 27265}
 	baseRestore := 700.0
 	manaMetrics := warlock.NewManaMetrics(actionID)
 	petManaMetrics := warlock.Pet.NewManaMetrics(actionID)
