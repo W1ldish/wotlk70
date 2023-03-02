@@ -17,7 +17,7 @@ func (warrior *Warrior) RegisterRendSpell(rageThreshold float64, healthThreshold
 	}
 
 	warrior.Rend = warrior.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47465},
+		ActionID:    core.ActionID{SpellID: 25208},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagNoOnCastComplete,

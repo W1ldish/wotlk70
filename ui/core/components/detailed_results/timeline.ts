@@ -1131,18 +1131,18 @@ const idToCategoryMap: Record<number, number> = {
 	[12536]: SPELL_ACTION_CATEGORY + 0.61, // Clearcasting
 
 	// Warrior
-	[47520]: 0.1, // Cleave
-	[47450]: 0.1, // Heroic Strike
-	[47475]: MELEE_ACTION_CATEGORY + 0.05, // Slam
+	[30223]: 0.1, // Cleave
+	[30324]: 0.1, // Heroic Strike
+	[25242]: MELEE_ACTION_CATEGORY + 0.05, // Slam
 	[23881]: MELEE_ACTION_CATEGORY + 0.1, // Bloodthirst
-	[47486]: MELEE_ACTION_CATEGORY + 0.1, // Mortal Strike
+	[30330]: MELEE_ACTION_CATEGORY + 0.1, // Mortal Strike
 	[30356]: MELEE_ACTION_CATEGORY + 0.1, // Shield Slam
-	[47498]: MELEE_ACTION_CATEGORY + 0.21, // Devastate
-	[47467]: MELEE_ACTION_CATEGORY + 0.22, // Sunder Armor
+	[30022]: MELEE_ACTION_CATEGORY + 0.21, // Devastate
+	[25225]: MELEE_ACTION_CATEGORY + 0.22, // Sunder Armor
 	[57823]: MELEE_ACTION_CATEGORY + 0.23, // Revenge
 	[1680]: MELEE_ACTION_CATEGORY + 0.24, // Whirlwind
 	[7384]: MELEE_ACTION_CATEGORY + 0.25, // Overpower
-	[47471]: MELEE_ACTION_CATEGORY + 0.42, // Execute
+	[25236]: MELEE_ACTION_CATEGORY + 0.42, // Execute
 	[12867]: SPELL_ACTION_CATEGORY + 0.51, // Deep Wounds
 	[58874]: SPELL_ACTION_CATEGORY + 0.52, // Damage Shield
 	[47296]: SPELL_ACTION_CATEGORY + 0.53, // Critical Block

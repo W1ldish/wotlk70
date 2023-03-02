@@ -8,7 +8,7 @@ import (
 
 func (warrior *Warrior) registerSlamSpell() {
 	warrior.Slam = warrior.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47475},
+		ActionID:    core.ActionID{SpellID: 25242},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

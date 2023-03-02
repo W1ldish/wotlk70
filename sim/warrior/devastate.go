@@ -17,7 +17,7 @@ func (warrior *Warrior) registerDevastateSpell() {
 	weaponMulti := 1.2
 
 	warrior.Devastate = warrior.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47498},
+		ActionID:    core.ActionID{SpellID: 30022},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics,

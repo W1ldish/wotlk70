@@ -803,7 +803,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 				effects: [
 					{
 						label: 'Sunder Armor',
-						actionId: ActionId.fromSpellId(47467),
+						actionId: ActionId.fromSpellId(25225),
 						playerData: playerClass(Class.ClassWarrior, player => player.isSpec(Spec.SpecProtectionWarrior) || (player as Player<Spec.SpecWarrior>).getRotation().sunderArmor == SunderArmor.SunderArmorMaintain),
 					},
 					{
@@ -977,7 +977,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Demoralizing Shout',
-						actionId: ActionId.fromSpellId(47437),
+						actionId: ActionId.fromSpellId(25203),
 						playerData: playerClassAndMissingTalent(Class.ClassWarrior, 'improvedDemoralizingShout', player => (player.spec == Spec.SpecWarrior && (player as Player<Spec.SpecWarrior>).getRotation().maintainDemoShout) || (player.spec == Spec.SpecProtectionWarrior && (player as Player<Spec.SpecProtectionWarrior>).getRotation().demoShoutChoice != 0)),
 					},
 					{
@@ -1017,7 +1017,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 					},
 					{
 						label: 'Thunder Clap',
-						actionId: ActionId.fromSpellId(47502),
+						actionId: ActionId.fromSpellId(25264),
 						playerData: playerClassAndMissingTalent(Class.ClassWarrior, 'improvedThunderClap', player => (player.spec == Spec.SpecWarrior && (player as Player<Spec.SpecWarrior>).getRotation().maintainThunderClap) || (player.spec == Spec.SpecProtectionWarrior && (player as Player<Spec.SpecProtectionWarrior>).getRotation().thunderClapChoice != 0)),
 					},
 					{

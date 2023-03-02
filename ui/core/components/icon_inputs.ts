@@ -178,7 +178,7 @@ export const RevitalizeWildGrowth = makeMultistateMultiplierIndividualBuffInput(
 // Debuffs
 
 export const MajorArmorDebuff = InputHelpers.makeMultiIconInput([
-	makeBooleanDebuffInput(ActionId.fromSpellId(47467), 'sunderArmor'),
+	makeBooleanDebuffInput(ActionId.fromSpellId(25225), 'sunderArmor'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(8647), 'exposeArmor'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(55754), 'acidSpit'),
 ], 'Major ArP');
@@ -192,7 +192,7 @@ export const MinorArmorDebuff = InputHelpers.makeMultiIconInput([
 
 export const AttackPowerDebuff = InputHelpers.makeMultiIconInput([
 	makeBooleanDebuffInput(ActionId.fromSpellId(26016), 'vindication'),
-	makeTristateDebuffInput(ActionId.fromSpellId(47437), ActionId.fromSpellId(12879), 'demoralizingShout'),
+	makeTristateDebuffInput(ActionId.fromSpellId(25203), ActionId.fromSpellId(12879), 'demoralizingShout'),
 	makeTristateDebuffInput(ActionId.fromSpellId(48560), ActionId.fromSpellId(16862), 'demoralizingRoar'),
 	makeTristateDebuffInput(ActionId.fromSpellId(30909), ActionId.fromSpellId(18180), 'curseOfWeakness'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(55487), 'demoralizingScreech'),
@@ -211,7 +211,7 @@ export const CritDebuff = InputHelpers.makeMultiIconInput([
 ], 'Crit');
 
 export const MeleeAttackSpeedDebuff = InputHelpers.makeMultiIconInput([
-	makeTristateDebuffInput(ActionId.fromSpellId(47502), ActionId.fromSpellId(12666), 'thunderClap'),
+	makeTristateDebuffInput(ActionId.fromSpellId(25264), ActionId.fromSpellId(12666), 'thunderClap'),
 	makeTristateDebuffInput(ActionId.fromSpellId(55095), ActionId.fromSpellId(51456), 'frostFever'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(53696), 'judgementsOfTheJust'),
 	makeBooleanDebuffInput(ActionId.fromSpellId(48485), 'infectedWounds'),

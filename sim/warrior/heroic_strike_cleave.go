@@ -13,7 +13,7 @@ func (warrior *Warrior) registerHeroicStrikeSpell() {
 	}
 
 	warrior.HeroicStrikeOrCleave = warrior.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47450},
+		ActionID:    core.ActionID{SpellID: 30324},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagNoOnCastComplete | SpellFlagBloodsurge,
@@ -55,7 +55,7 @@ func (warrior *Warrior) registerCleaveSpell() {
 	results := make([]*core.SpellResult, numHits)
 
 	warrior.HeroicStrikeOrCleave = warrior.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47520},
+		ActionID:    core.ActionID{SpellID: 30223},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

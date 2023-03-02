@@ -654,7 +654,7 @@ var SharedSpellsIcons = []int32{
 
 	// Raid Debuffs
 	8647,
-	47467,
+	25225,
 	55754,
 
 	770,
@@ -665,7 +665,7 @@ var SharedSpellsIcons = []int32{
 	53598,
 
 	26016,
-	47437,
+	25203,
 	12879,
 	48560,
 	16862,
@@ -679,7 +679,7 @@ var SharedSpellsIcons = []int32{
 	20337,
 	58410,
 
-	47502,
+	25264,
 	12666,
 	55095,
 	51456,

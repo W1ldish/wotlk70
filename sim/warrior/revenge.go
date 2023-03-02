@@ -23,17 +23,17 @@ func (warrior *Warrior) registerRevengeSpell(cdTimer *core.Timer) {
 			Duration: core.NeverExpires,
 			ActionID: core.ActionID{SpellID: 58398},
 			OnGain: func(aura *core.Aura, sim *core.Simulation) {
-				if warrior.HeroicStrikeOrCleave.SpellID == 47450 {
+				if warrior.HeroicStrikeOrCleave.SpellID == 30324 {
 					warrior.HeroicStrikeOrCleave.CostMultiplier -= 1
 				}
 			},
 			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-				if warrior.HeroicStrikeOrCleave.SpellID == 47450 {
+				if warrior.HeroicStrikeOrCleave.SpellID == 30324 {
 					warrior.HeroicStrikeOrCleave.CostMultiplier += 1
 				}
 			},
 			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
-				if spell == warrior.HeroicStrikeOrCleave && warrior.HeroicStrikeOrCleave.SpellID == 47450 {
+				if spell == warrior.HeroicStrikeOrCleave && warrior.HeroicStrikeOrCleave.SpellID == 30324 {
 					aura.Deactivate(sim)
 				}
 			},

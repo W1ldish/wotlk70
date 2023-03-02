@@ -25,7 +25,7 @@ func (warrior *Warrior) registerShieldSlamSpell() {
 	}
 
 	warrior.ShieldSlam = warrior.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 47488},
+		ActionID:    core.ActionID{SpellID: 30356},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial, // TODO: Is this right?
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

@@ -559,7 +559,7 @@ func SunderArmorAura(target *Unit) *Aura {
 	var effect *ExclusiveEffect
 	aura := target.GetOrRegisterAura(Aura{
 		Label:     "Sunder Armor",
-		ActionID:  ActionID{SpellID: 47467},
+		ActionID:  ActionID{SpellID: 25225},
 		Duration:  time.Second * 30,
 		MaxStacks: 5,
 		OnStacksChange: func(aura *Aura, sim *Simulation, oldStacks int32, newStacks int32) {
@@ -701,17 +701,17 @@ func DemoralizingRoarAura(target *Unit, points int32) *Aura {
 		ActionID: ActionID{SpellID: 48560},
 		Duration: time.Second * 30,
 	})
-	apReductionEffect(aura, 411*(1+0.08*float64(points)))
+	apReductionEffect(aura, 220*(1+0.08*float64(points)))
 	return aura
 }
 
 func DemoralizingShoutAura(target *Unit, boomingVoicePts int32, impDemoShoutPts int32) *Aura {
 	aura := target.GetOrRegisterAura(Aura{
 		Label:    "DemoralizingShout-" + strconv.Itoa(int(impDemoShoutPts)),
-		ActionID: ActionID{SpellID: 47437},
+		ActionID: ActionID{SpellID: 25203},
 		Duration: time.Duration(float64(time.Second*30) * (1 + 0.1*float64(boomingVoicePts))),
 	})
-	apReductionEffect(aura, 411*(1+0.08*float64(impDemoShoutPts)))
+	apReductionEffect(aura, 300*(1+0.08*float64(impDemoShoutPts)))
 	return aura
 }
 
@@ -751,7 +751,7 @@ func apReductionEffect(aura *Aura, apReduction float64) *ExclusiveEffect {
 func ThunderClapAura(target *Unit, points int32) *Aura {
 	aura := target.GetOrRegisterAura(Aura{
 		Label:    "ThunderClap-" + strconv.Itoa(int(points)),
-		ActionID: ActionID{SpellID: 47502},
+		ActionID: ActionID{SpellID: 25264},
 		Duration: time.Second * 30,
 	})
 	AtkSpeedReductionEffect(aura, []float64{1.1, 1.14, 1.17, 1.2}[points])
