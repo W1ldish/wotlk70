@@ -12,7 +12,7 @@ func (paladin *Paladin) registerExorcismSpell() {
 		core.TernaryFloat64(paladin.Equip[proto.ItemSlot_ItemSlotRanged].ID == 28065, 120, 0)
 
 	paladin.Exorcism = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:        core.ActionID{SpellID: 48801},
+		ActionID:        core.ActionID{SpellID: 27138},
 		SpellSchool:     core.SpellSchoolHoly,
 		ProcMask:        core.ProcMaskSpellDamage,
 		Flags:           core.SpellFlagMeleeMetrics,

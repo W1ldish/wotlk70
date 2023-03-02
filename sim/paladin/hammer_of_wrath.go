@@ -9,7 +9,7 @@ import (
 
 func (paladin *Paladin) registerHammerOfWrathSpell() {
 	paladin.HammerOfWrath = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48806},
+		ActionID:    core.ActionID{SpellID: 27180},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics,

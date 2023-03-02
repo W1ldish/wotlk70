@@ -12,7 +12,7 @@ func (paladin *Paladin) registerHolyWrathSpell() {
 	bonusSpellPower := 0 +
 		core.TernaryFloat64(paladin.Equip[proto.ItemSlot_ItemSlotRanged].ID == 28065, 120, 0)
 	paladin.HolyWrath = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:        core.ActionID{SpellID: 48817},
+		ActionID:        core.ActionID{SpellID: 27139},
 		SpellSchool:     core.SpellSchoolHoly,
 		ProcMask:        core.ProcMaskSpellDamage,
 		Flags:           core.SpellFlagMeleeMetrics,

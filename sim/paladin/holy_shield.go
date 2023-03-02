@@ -9,7 +9,7 @@ import (
 )
 
 func (paladin *Paladin) registerHolyShieldSpell() {
-	actionID := core.ActionID{SpellID: 48952}
+	actionID := core.ActionID{SpellID: 27179}
 	numCharges := int32(8)
 
 	procSpell := paladin.RegisterSpell(core.SpellConfig{

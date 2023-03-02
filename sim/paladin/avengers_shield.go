@@ -14,7 +14,7 @@ func (paladin *Paladin) registerAvengersShieldSpell() {
 	results := make([]*core.SpellResult, numHits)
 
 	paladin.AvengersShield = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48827},
+		ActionID:    core.ActionID{SpellID: 32700},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics,

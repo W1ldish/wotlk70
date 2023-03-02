@@ -125,11 +125,11 @@ export const RetributionPaladinRotationPriorityConfig = InputHelpers.makeCustomR
 	values: [
 		{ actionId: ActionId.fromSpellId(53408), value: SpellOption.JudgementOfWisdom },
 		{ actionId: ActionId.fromSpellId(53385), value: SpellOption.DivineStorm },
-		{ actionId: ActionId.fromSpellId(48806), value: SpellOption.HammerOfWrath },
-		{ actionId: ActionId.fromSpellId(48819), value: SpellOption.Consecration },
-		{ actionId: ActionId.fromSpellId(48817), value: SpellOption.HolyWrath },
+		{ actionId: ActionId.fromSpellId(27180), value: SpellOption.HammerOfWrath },
+		{ actionId: ActionId.fromSpellId(27173), value: SpellOption.Consecration },
+		{ actionId: ActionId.fromSpellId(27139), value: SpellOption.HolyWrath },
 		{ actionId: ActionId.fromSpellId(35395), value: SpellOption.CrusaderStrike },
-		{ actionId: ActionId.fromSpellId(48801), value: SpellOption.Exorcism },
+		{ actionId: ActionId.fromSpellId(27138), value: SpellOption.Exorcism },
 		{ actionId: ActionId.fromSpellId(54428), value: SpellOption.DivinePlea }
 	],
 	showWhen: (player: Player<Spec.SpecRetributionPaladin>) => player.getRotation().type == RotationType.Custom,
@@ -141,11 +141,11 @@ export const RetributionPaladinCastSequenceConfig = InputHelpers.makeCustomRotat
 	values: [
 		{ actionId: ActionId.fromSpellId(53408), value: SpellOption.JudgementOfWisdom },
 		{ actionId: ActionId.fromSpellId(53385), value: SpellOption.DivineStorm },
-		{ actionId: ActionId.fromSpellId(48806), value: SpellOption.HammerOfWrath },
-		{ actionId: ActionId.fromSpellId(48819), value: SpellOption.Consecration },
-		{ actionId: ActionId.fromSpellId(48817), value: SpellOption.HolyWrath },
+		{ actionId: ActionId.fromSpellId(27180), value: SpellOption.HammerOfWrath },
+		{ actionId: ActionId.fromSpellId(27173), value: SpellOption.Consecration },
+		{ actionId: ActionId.fromSpellId(27139), value: SpellOption.HolyWrath },
 		{ actionId: ActionId.fromSpellId(35395), value: SpellOption.CrusaderStrike },
-		{ actionId: ActionId.fromSpellId(48801), value: SpellOption.Exorcism },
+		{ actionId: ActionId.fromSpellId(27138), value: SpellOption.Exorcism },
 		{ actionId: ActionId.fromSpellId(54428), value: SpellOption.DivinePlea }
 	],
 	showWhen: (player: Player<Spec.SpecRetributionPaladin>) => player.getRotation().type == RotationType.CastSequence,

@@ -1025,18 +1025,18 @@ const idToCategoryMap: Record<number, number> = {
 	[61411]: MELEE_ACTION_CATEGORY + 0.50, // Shield of Righteousness
 	[53595]: MELEE_ACTION_CATEGORY + 0.51, // Hammer of Righteousness
 	[20182]: MELEE_ACTION_CATEGORY + 0.60, // Reckoning
-	[48952]: SPELL_ACTION_CATEGORY + 0.10, // Holy Shield
+	[27179]: SPELL_ACTION_CATEGORY + 0.10, // Holy Shield
 	[31803]: SPELL_ACTION_CATEGORY + 0.20, // Holy Vengeance
-	[48801]: SPELL_ACTION_CATEGORY + 0.30, // Exorcism
-	[48819]: SPELL_ACTION_CATEGORY + 0.40, // Consecration
+	[27138]: SPELL_ACTION_CATEGORY + 0.30, // Exorcism
+	[27173]: SPELL_ACTION_CATEGORY + 0.40, // Consecration
 	[53408]: SPELL_ACTION_CATEGORY + 0.51, // Judgement of Wisdom
 	[20271]: SPELL_ACTION_CATEGORY + 0.52, // Judgement of Light
 	[31804]: SPELL_ACTION_CATEGORY + 0.53, // Judgement of Vengeance
 	[20467]: SPELL_ACTION_CATEGORY + 0.54, // Judgement of Command
 	[20187]: SPELL_ACTION_CATEGORY + 0.55, // Judgement of Righteousness
 	[31878]: SPELL_ACTION_CATEGORY + 0.56, // Judgements of the Wise
-	[48817]: SPELL_ACTION_CATEGORY + 0.50, // Holy Wrath
-	[48806]: SPELL_ACTION_CATEGORY + 0.60, // Hammer of Wrath
+	[27139]: SPELL_ACTION_CATEGORY + 0.50, // Holy Wrath
+	[27180]: SPELL_ACTION_CATEGORY + 0.60, // Hammer of Wrath
 	[54428]: SPELL_ACTION_CATEGORY + 0.70, // Divine Plea
 	[66233]: SPELL_ACTION_CATEGORY + 0.80, // Ardent Defender
 

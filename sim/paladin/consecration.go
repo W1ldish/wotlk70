@@ -15,7 +15,7 @@ func (paladin *Paladin) registerConsecrationSpell() {
 		core.TernaryFloat64(paladin.Equip[proto.ItemSlot_ItemSlotRanged].ID == 27917, 47, 0)
 
 	paladin.Consecration = paladin.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48819},
+		ActionID:    core.ActionID{SpellID: 27173},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskEmpty,
 		Flags:       core.SpellFlagMeleeMetrics,

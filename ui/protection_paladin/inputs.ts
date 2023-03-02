@@ -20,14 +20,14 @@ export const ProtectionPaladinRotationPriorityConfig = InputHelpers.makeCustomRo
 	numColumns: 2,
 	values: [
 		{ actionId: ActionId.fromSpellId(53408), value: SpellOption.JudgementOfWisdom },
-		{ actionId: ActionId.fromSpellId(48806), value: SpellOption.HammerOfWrath },
-		{ actionId: ActionId.fromSpellId(48819), value: SpellOption.Consecration },
-		{ actionId: ActionId.fromSpellId(48817), value: SpellOption.HolyWrath },
-		{ actionId: ActionId.fromSpellId(48801), value: SpellOption.Exorcism },
+		{ actionId: ActionId.fromSpellId(27180), value: SpellOption.HammerOfWrath },
+		{ actionId: ActionId.fromSpellId(27173), value: SpellOption.Consecration },
+		{ actionId: ActionId.fromSpellId(27139), value: SpellOption.HolyWrath },
+		{ actionId: ActionId.fromSpellId(27138), value: SpellOption.Exorcism },
 		//{ actionId: ActionId.fromSpellId(61411), value: SpellOption.ShieldOfRighteousness },
-		{ actionId: ActionId.fromSpellId(48827), value: SpellOption.AvengersShield },
+		{ actionId: ActionId.fromSpellId(32700), value: SpellOption.AvengersShield },
 		{ actionId: ActionId.fromSpellId(53595), value: SpellOption.HammerOfTheRighteous },
-		{ actionId: ActionId.fromSpellId(48952), value: SpellOption.HolyShield },
+		{ actionId: ActionId.fromSpellId(27179), value: SpellOption.HolyShield },
 	],
 });
 
