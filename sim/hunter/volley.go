@@ -9,7 +9,7 @@ import (
 
 func (hunter *Hunter) registerVolleySpell() {
 	hunter.Volley = hunter.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 58434},
+		ActionID:    core.ActionID{SpellID: 27022},
 		SpellSchool: core.SpellSchoolArcane,
 		ProcMask:    core.ProcMaskRangedSpecial,
 		Flags:       core.SpellFlagChanneled | core.SpellFlagAPL,

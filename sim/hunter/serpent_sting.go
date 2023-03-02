@@ -12,7 +12,7 @@ func (hunter *Hunter) registerSerpentStingSpell() {
 	huntersWithGlyphOfSteadyShot := hunter.GetAllHuntersWithGlyphOfSteadyShot()
 
 	hunter.SerpentSting = hunter.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 49001},
+		ActionID:    core.ActionID{SpellID: 27016},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskEmpty,
 		Flags:       core.SpellFlagAPL,

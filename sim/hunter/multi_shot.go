@@ -11,7 +11,7 @@ func (hunter *Hunter) registerMultiShotSpell(timer *core.Timer) {
 	numHits := core.MinInt32(3, hunter.Env.GetNumTargets())
 
 	hunter.MultiShot = hunter.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 49048},
+		ActionID:    core.ActionID{SpellID: 27021},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskRangedSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,

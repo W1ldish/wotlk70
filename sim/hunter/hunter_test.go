@@ -162,17 +162,17 @@ var DefaultRotation = core.APLRotationFromJsonString(`{
 	"enabled": true,
 	"priorityList": [
 		{"action": {
-			"condition": {"not": {"val": {"dotIsActive": {"spellId": { "spellId": 49001 }}}}},
-			"castSpell": {"spellId": { "spellId": 49001 }}
+			"condition": {"not": {"val": {"dotIsActive": {"spellId": { "spellId": 27016 }}}}},
+			"castSpell": {"spellId": { "spellId": 27016 }}
 		}},
-		{"action": {"castSpell": {"spellId": { "spellId": 63672 }}}},
-		{"action": {"castSpell": {"spellId": { "spellId": 60053 }}}},
-		{"action": {"castSpell": {"spellId": { "spellId": 49050 }}}},
+		{"action": {"castSpell": {"spellId": { "spellId": 63670 }}}},
+		{"action": {"castSpell": {"spellId": { "spellId": 60051 }}}},
+		{"action": {"castSpell": {"spellId": { "spellId": 27065 }}}},
 		{"action": {
-			"condition": {"not": {"val": {"dotIsActive": {"spellId": { "spellId": 60053 }}}}},
-			"castSpell": {"spellId": { "spellId": 49045 }}
+			"condition": {"not": {"val": {"dotIsActive": {"spellId": { "spellId": 60051 }}}}},
+			"castSpell": {"spellId": { "spellId": 27019 }}
 		}},
-		{"action": {"castSpell": {"spellId": { "spellId": 49052 }}}}
+		{"action": {"castSpell": {"spellId": { "spellId": 34120 }}}}
 	]
 }`)
 

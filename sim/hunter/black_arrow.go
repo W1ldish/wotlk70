@@ -12,7 +12,7 @@ func (hunter *Hunter) registerBlackArrowSpell(timer *core.Timer) {
 		return
 	}
 
-	actionID := core.ActionID{SpellID: 63672}
+	actionID := core.ActionID{SpellID: 63670}
 
 	hunter.BlackArrow = hunter.RegisterSpell(core.SpellConfig{
 		ActionID:    actionID,

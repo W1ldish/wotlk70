@@ -15,7 +15,7 @@ func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 		cdReduction = time.Second * 4
 	}
 	hunter.ExplosiveTrap = hunter.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 49067},
+		ActionID:    core.ActionID{SpellID: 27025},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 

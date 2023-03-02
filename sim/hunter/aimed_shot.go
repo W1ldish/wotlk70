@@ -13,7 +13,7 @@ func (hunter *Hunter) registerAimedShotSpell(timer *core.Timer) {
 	}
 
 	hunter.AimedShot = hunter.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 49050},
+		ActionID:    core.ActionID{SpellID: 27065},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskRangedSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,

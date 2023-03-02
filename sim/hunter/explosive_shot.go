@@ -18,11 +18,11 @@ func (hunter *Hunter) registerExplosiveShotSpell(timer *core.Timer) {
 }
 
 func (hunter *Hunter) makeExplosiveShotSpell(timer *core.Timer, downrank bool) *core.Spell {
-	actionID := core.ActionID{SpellID: 60053}
+	actionID := core.ActionID{SpellID: 60051}
 	minFlatDamage := 221.0
 	maxFlatDamage := 265.0
 	if downrank {
-		actionID = core.ActionID{SpellID: 60052}
+		actionID = core.ActionID{SpellID: 60050}
 		minFlatDamage = 144.0
 		maxFlatDamage = 172.0
 	}

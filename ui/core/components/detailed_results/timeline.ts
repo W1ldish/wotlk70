@@ -999,23 +999,23 @@ const idToCategoryMap: Record<number, number> = {
 	[26988]: SPELL_ACTION_CATEGORY + 0.50, // Moonfire
 
 	// Hunter
-	[48996]: 0.1, // Raptor Strike
+	[27014]: 0.1, // Raptor Strike
 	[53217]: 0.6, // Wild Quiver
 	[53209]: MELEE_ACTION_CATEGORY + 0.10, // Chimera Shot
 	[53353]: MELEE_ACTION_CATEGORY + 0.11, // Chimera Shot Serpent
-	[60053]: MELEE_ACTION_CATEGORY + 0.10, // Explosive Shot
-	[49050]: MELEE_ACTION_CATEGORY + 0.20, // Aimed Shot
-	[49048]: MELEE_ACTION_CATEGORY + 0.21, // Multi Shot
-	[49045]: MELEE_ACTION_CATEGORY + 0.22, // Arcane Shot
-	[49052]: MELEE_ACTION_CATEGORY + 0.27, // Steady Shot
+	[60051]: MELEE_ACTION_CATEGORY + 0.10, // Explosive Shot
+	[27065]: MELEE_ACTION_CATEGORY + 0.20, // Aimed Shot
+	[27021]: MELEE_ACTION_CATEGORY + 0.21, // Multi Shot
+	[27019]: MELEE_ACTION_CATEGORY + 0.22, // Arcane Shot
+	[34120]: MELEE_ACTION_CATEGORY + 0.27, // Steady Shot
 	[61006]: MELEE_ACTION_CATEGORY + 0.28, // Kill Shot
 	[34490]: MELEE_ACTION_CATEGORY + 0.29, // Silencing Shot
-	[49001]: MELEE_ACTION_CATEGORY + 0.30, // Serpent Sting
+	[27016]: MELEE_ACTION_CATEGORY + 0.30, // Serpent Sting
 	[3043]: MELEE_ACTION_CATEGORY + 0.30, // Scorpid Sting
 	[53238]: MELEE_ACTION_CATEGORY + 0.31, // Piercing Shots
-	[63672]: MELEE_ACTION_CATEGORY + 0.32, // Black Arrow
-	[49067]: MELEE_ACTION_CATEGORY + 0.33, // Explosive Trap
-	[58434]: MELEE_ACTION_CATEGORY + 0.34, // Volley
+	[63670]: MELEE_ACTION_CATEGORY + 0.32, // Black Arrow
+	[27025]: MELEE_ACTION_CATEGORY + 0.33, // Explosive Trap
+	[27022]: MELEE_ACTION_CATEGORY + 0.34, // Volley
 
 	// Paladin
 	[35395]: MELEE_ACTION_CATEGORY + 0.10, // Crusader Strike
