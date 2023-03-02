@@ -12,9 +12,6 @@ const (
 	TotemOfAncestralGuidance = 32330
 	TotemOfStorms            = 23199
 	TotemOfTheVoid           = 28248
-	TotemOfHex               = 40267
-	VentureCoLightningRod    = 38361
-	ThunderfallTotem         = 45255
 )
 
 const (
@@ -73,8 +70,7 @@ func (shaman *Shaman) electricSpellBonusDamage(spellCoeff float64) float64 {
 	bonusDamage := 0 +
 		core.TernaryFloat64(shaman.Equip[core.ItemSlotRanged].ID == TotemOfStorms, 33, 0) +
 		core.TernaryFloat64(shaman.Equip[core.ItemSlotRanged].ID == TotemOfTheVoid, 55, 0) +
-		core.TernaryFloat64(shaman.Equip[core.ItemSlotRanged].ID == TotemOfAncestralGuidance, 85, 0) +
-		core.TernaryFloat64(shaman.Equip[core.ItemSlotRanged].ID == TotemOfHex, 165, 0)
+		core.TernaryFloat64(shaman.Equip[core.ItemSlotRanged].ID == TotemOfAncestralGuidance, 85, 0)
 
 	return bonusDamage * spellCoeff // These items do not benefit from the bonus coeff from shamanism.
 }

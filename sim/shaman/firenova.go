@@ -13,7 +13,7 @@ func (shaman *Shaman) registerFireNovaSpell() {
 	fireNovaCooldown := 10 - fireNovaGlyphCDReduction - impFireNovaCDReduction
 
 	shaman.FireNova = shaman.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 61657},
+		ActionID:    core.ActionID{SpellID: 25547},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagFocusable,

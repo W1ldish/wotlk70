@@ -12,7 +12,7 @@ func (shaman *Shaman) registerThunderstormSpell() {
 		return
 	}
 
-	actionID := core.ActionID{SpellID: 59159}
+	actionID := core.ActionID{SpellID: 59156}
 	manaMetrics := shaman.NewManaMetrics(actionID)
 
 	manaRestore := 0.08

@@ -38,7 +38,7 @@ export const ShamanShieldInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.
 	values: [
 		{ value: ShamanShield.NoShield, tooltip: 'No Shield' },
 		{ actionId: ActionId.fromSpellId(57960), value: ShamanShield.WaterShield },
-		{ actionId: ActionId.fromSpellId(49281), value: ShamanShield.LightningShield },
+		{ actionId: ActionId.fromSpellId(25472), value: ShamanShield.LightningShield },
 	],
 });
 
@@ -46,10 +46,10 @@ export const ShamanImbueMH = InputHelpers.makeSpecOptionsEnumIconInput<Spec.Spec
 	fieldName: 'imbueMh',
 	values: [
 		{ value: ShamanImbue.NoImbue, tooltip: 'No Main Hand Enchant' },
-		{ actionId: ActionId.fromSpellId(58804), value: ShamanImbue.WindfuryWeapon },
-		{ actionId: ActionId.fromSpellId(58790), value: ShamanImbue.FlametongueWeapon, text: 'R10'},
-		{ actionId: ActionId.fromSpellId(58789), value: ShamanImbue.FlametongueWeaponDownrank, text: 'R9'},
-		{ actionId: ActionId.fromSpellId(58796), value: ShamanImbue.FrostbrandWeapon },
+		{ actionId: ActionId.fromSpellId(25505), value: ShamanImbue.WindfuryWeapon },
+		{ actionId: ActionId.fromSpellId(25489), value: ShamanImbue.FlametongueWeapon, text: 'R10'},
+		{ actionId: ActionId.fromSpellId(16342), value: ShamanImbue.FlametongueWeaponDownrank, text: 'R9'},
+		{ actionId: ActionId.fromSpellId(25500), value: ShamanImbue.FrostbrandWeapon },
 	],
 });
 
@@ -57,10 +57,10 @@ export const ShamanImbueOH = InputHelpers.makeSpecOptionsEnumIconInput<Spec.Spec
 	fieldName: 'imbueOh',
 	values: [
 		{ value: ShamanImbue.NoImbue, tooltip: 'No Off Hand Enchant' },
-		{ actionId: ActionId.fromSpellId(58804), value: ShamanImbue.WindfuryWeapon },
-		{ actionId: ActionId.fromSpellId(58790), value: ShamanImbue.FlametongueWeapon, text: 'R10'},
-		{ actionId: ActionId.fromSpellId(58789), value: ShamanImbue.FlametongueWeaponDownrank, text: 'R9'},
-		{ actionId: ActionId.fromSpellId(58796), value: ShamanImbue.FrostbrandWeapon },
+		{ actionId: ActionId.fromSpellId(25505), value: ShamanImbue.WindfuryWeapon },
+		{ actionId: ActionId.fromSpellId(25489), value: ShamanImbue.FlametongueWeapon, text: 'R10'},
+		{ actionId: ActionId.fromSpellId(16342), value: ShamanImbue.FlametongueWeaponDownrank, text: 'R9'},
+		{ actionId: ActionId.fromSpellId(25500), value: ShamanImbue.FrostbrandWeapon },
 	],
 });
 
@@ -117,19 +117,19 @@ export const EnhancementShamanRotationConfig = {
 				fieldName: 'customRotation',
 				numColumns: 2,
 				values: [
-					{ actionId: ActionId.fromSpellId(49238), value: CustomRotationSpell.LightningBolt},
-					{ actionId: ActionId.fromSpellId(49238), value: CustomRotationSpell.LightningBoltWeave, text: "Weave" },
-					{ actionId: ActionId.fromSpellId(49238), value: CustomRotationSpell.LightningBoltDelayedWeave, text: "Delay" },
+					{ actionId: ActionId.fromSpellId(25449), value: CustomRotationSpell.LightningBolt},
+					{ actionId: ActionId.fromSpellId(25449), value: CustomRotationSpell.LightningBoltWeave, text: "Weave" },
+					{ actionId: ActionId.fromSpellId(25449), value: CustomRotationSpell.LightningBoltDelayedWeave, text: "Delay" },
 					{ actionId: ActionId.fromSpellId(17364), value: CustomRotationSpell.StormstrikeDebuffMissing, text: "Debuff"  },
 					{ actionId: ActionId.fromSpellId(17364), value: CustomRotationSpell.Stormstrike },
-					{ actionId: ActionId.fromSpellId(49233), value: CustomRotationSpell.FlameShock },
-					{ actionId: ActionId.fromSpellId(49231), value: CustomRotationSpell.EarthShock },
-					{ actionId: ActionId.fromSpellId(58734), value: CustomRotationSpell.MagmaTotem },
-					{ actionId: ActionId.fromSpellId(61657), value: CustomRotationSpell.FireNova },
+					{ actionId: ActionId.fromSpellId(25457), value: CustomRotationSpell.FlameShock },
+					{ actionId: ActionId.fromSpellId(25454), value: CustomRotationSpell.EarthShock },
+					{ actionId: ActionId.fromSpellId(25552), value: CustomRotationSpell.MagmaTotem },
+					{ actionId: ActionId.fromSpellId(25547), value: CustomRotationSpell.FireNova },
 					{ actionId: ActionId.fromSpellId(60103), value: CustomRotationSpell.LavaLash },
-					{ actionId: ActionId.fromSpellId(49281), value: CustomRotationSpell.LightningShield },
+					{ actionId: ActionId.fromSpellId(25472), value: CustomRotationSpell.LightningShield },
 					{ actionId: ActionId.fromSpellId(60043), value: CustomRotationSpell.LavaBurst, text: "Weave" },
-					{ actionId: ActionId.fromSpellId(49236), value: CustomRotationSpell.FrostShock},
+					{ actionId: ActionId.fromSpellId(25464), value: CustomRotationSpell.FrostShock},
 				],
 				showWhen: (player: Player<Spec.SpecEnhancementShaman>) => player.getRotation().rotationType == RotationType.Custom,
 			}),

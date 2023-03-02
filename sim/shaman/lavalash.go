@@ -5,24 +5,15 @@ import (
 
 	"github.com/Tereneckla/wotlk/sim/core"
 	"github.com/Tereneckla/wotlk/sim/core/proto"
-	"github.com/Tereneckla/wotlk/sim/core/stats"
 )
 
 // Totem IDs
-const (
-	VentureCoFlameSlicer                      = 38367
-	DeadlyGladiatorsTotemOfIndomitability     = 42607
-	FuriousGladiatorsTotemOfIndomitability    = 42608
-	RelentlessGladiatorsTotemOfIndomitability = 42609
-	WrathfulGladiatorsTotemOfIndomitability   = 51507
-)
+const ()
 
 func (shaman *Shaman) registerLavaLashSpell() {
 	if !shaman.Talents.LavaLash {
 		return
 	}
-
-	flatDamageBonus := core.TernaryFloat64(shaman.Equip[core.ItemSlotRanged].ID == VentureCoFlameSlicer, 25, 0)
 
 	imbueMultiplier := 1.0
 	if shaman.SelfBuffs.ImbueOH == proto.ShamanImbue_FlametongueWeapon || shaman.SelfBuffs.ImbueOH == proto.ShamanImbue_FlametongueWeaponDownrank {
@@ -33,16 +24,6 @@ func (shaman *Shaman) registerLavaLashSpell() {
 	}
 
 	var indomitabilityAura *core.Aura
-	switch shaman.Equip[core.ItemSlotRanged].ID {
-	case DeadlyGladiatorsTotemOfIndomitability:
-		indomitabilityAura = shaman.NewTemporaryStatsAura("Deadly Aggression", core.ActionID{SpellID: 60549}, stats.Stats{stats.AttackPower: 120}, time.Second*10)
-	case FuriousGladiatorsTotemOfIndomitability:
-		indomitabilityAura = shaman.NewTemporaryStatsAura("Furious Gladiator's Libram of Fortitute", core.ActionID{SpellID: 60551}, stats.Stats{stats.AttackPower: 144}, time.Second*10) //wowhead is wierd about this one, might be the same in-game idk
-	case RelentlessGladiatorsTotemOfIndomitability:
-		indomitabilityAura = shaman.NewTemporaryStatsAura("Relentless Aggression", core.ActionID{SpellID: 60553}, stats.Stats{stats.AttackPower: 172}, time.Second*10)
-	case WrathfulGladiatorsTotemOfIndomitability:
-		indomitabilityAura = shaman.NewTemporaryStatsAura("Fury of the Gladiator", core.ActionID{SpellID: 60555}, stats.Stats{stats.AttackPower: 204}, time.Second*10)
-	}
 
 	shaman.LavaLash = shaman.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 60103},
@@ -70,8 +51,7 @@ func (shaman *Shaman) registerLavaLashSpell() {
 		ThreatMultiplier: shaman.spellThreatMultiplier(),
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := flatDamageBonus +
-				spell.Unit.OHWeaponDamage(sim, spell.MeleeAttackPower()) +
+			baseDamage := spell.Unit.OHWeaponDamage(sim, spell.MeleeAttackPower()) +
 				spell.BonusWeaponDamage()
 
 			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)

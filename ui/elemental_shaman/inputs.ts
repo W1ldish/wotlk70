@@ -23,7 +23,7 @@ export const ShamanShieldInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.
 	values: [
 		{ value: ShamanShield.NoShield, tooltip: 'No Shield' },
 		{ actionId: ActionId.fromSpellId(57960), value: ShamanShield.WaterShield },
-		{ actionId: ActionId.fromSpellId(49281), value: ShamanShield.LightningShield },
+		{ actionId: ActionId.fromSpellId(25472), value: ShamanShield.LightningShield },
 	],
 });
 

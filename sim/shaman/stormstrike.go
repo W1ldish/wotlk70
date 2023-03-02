@@ -9,8 +9,6 @@ import (
 )
 
 var StormstrikeActionID = core.ActionID{SpellID: 17364}
-var TotemOfTheDancingFlame int32 = 45169
-var TotemOfDueling int32 = 40322
 
 func (shaman *Shaman) StormstrikeDebuffAura(target *core.Unit) *core.Aura {
 	return target.GetOrRegisterAura(core.Aura{
@@ -42,9 +40,6 @@ func (shaman *Shaman) StormstrikeDebuffAura(target *core.Unit) *core.Aura {
 
 func (shaman *Shaman) newStormstrikeHitSpell(isMH bool) *core.Spell {
 	var flatDamageBonus float64 = 0
-	if shaman.Equip[core.ItemSlotRanged].ID == TotemOfTheDancingFlame {
-		flatDamageBonus += 155
-	}
 	if shaman.HasSetBonus(ItemSetCycloneHarness, 4) {
 		flatDamageBonus += 30
 	}
@@ -93,11 +88,6 @@ func (shaman *Shaman) registerStormstrikeSpell() {
 	if shaman.HasSetBonus(ItemSetSkyshatterHarness, 4) {
 		skyshatterAura = shaman.NewTemporaryStatsAura("Skyshatter 4pc AP Bonus", core.ActionID{SpellID: 38432}, stats.Stats{stats.AttackPower: 70}, time.Second*12)
 	}
-	var totemOfDuelingAura *core.Aura
-	if shaman.Equip[core.ItemSlotRanged].ID == TotemOfDueling {
-		totemOfDuelingAura = shaman.NewTemporaryStatsAura("Essense of the Storm", core.ActionID{SpellID: 60766},
-			stats.Stats{stats.MeleeHaste: 60, stats.SpellHaste: 60}, time.Second*6)
-	}
 
 	manaMetrics := shaman.NewManaMetrics(core.ActionID{SpellID: 51522})
 
@@ -138,9 +128,6 @@ func (shaman *Shaman) registerStormstrikeSpell() {
 
 				if skyshatterAura != nil {
 					skyshatterAura.Activate(sim)
-				}
-				if totemOfDuelingAura != nil {
-					totemOfDuelingAura.Activate(sim)
 				}
 
 				mhHit.Cast(sim, target)

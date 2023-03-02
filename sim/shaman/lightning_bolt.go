@@ -14,7 +14,7 @@ func (shaman *Shaman) registerLightningBoltSpell() {
 
 func (shaman *Shaman) newLightningBoltSpellConfig(isLightningOverload bool) core.SpellConfig {
 	spellConfig := shaman.newElectricSpellConfig(
-		core.ActionID{SpellID: 49238},
+		core.ActionID{SpellID: 25449},
 		0.1*core.TernaryFloat64(shaman.HasSetBonus(ItemSetEarthShatterGarb, 2), 0.95, 1),
 		time.Millisecond*2500,
 		isLightningOverload)
@@ -30,7 +30,7 @@ func (shaman *Shaman) newLightningBoltSpellConfig(isLightningOverload bool) core
 	var lbDotSpell *core.Spell
 	if !isLightningOverload && shaman.HasSetBonus(ItemSetWorldbreakerGarb, 4) {
 		lbDotSpell = shaman.RegisterSpell(core.SpellConfig{
-			ActionID:         core.ActionID{SpellID: 64930},
+			ActionID:         core.ActionID{SpellID: 45296},
 			SpellSchool:      core.SpellSchoolNature,
 			ProcMask:         core.ProcMaskEmpty,
 			Flags:            core.SpellFlagNoOnCastComplete | core.SpellFlagIgnoreModifiers,

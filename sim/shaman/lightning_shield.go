@@ -12,11 +12,11 @@ func (shaman *Shaman) registerLightningShieldSpell() {
 		return
 	}
 
-	actionID := core.ActionID{SpellID: 49281}
+	actionID := core.ActionID{SpellID: 25472}
 	procChance := 0.02*float64(shaman.Talents.StaticShock) + core.TernaryFloat64(shaman.HasSetBonus(ItemSetThrallsBattlegear, 2), 0.03, 0)
 
 	procSpell := shaman.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 49279},
+		ActionID:    core.ActionID{SpellID: 26372},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskEmpty,
 

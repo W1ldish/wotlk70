@@ -236,7 +236,7 @@ func init() {
 				if !icd.IsReady(sim) {
 					return
 				}
-				if spell.ActionID.SpellID == 49238 && sim.RandomFloat("Skycall Totem") < 0.15 {
+				if spell.ActionID.SpellID == 25449 && sim.RandomFloat("Skycall Totem") < 0.15 {
 					procAura.Activate(sim)
 					icd.Use(sim)
 				}

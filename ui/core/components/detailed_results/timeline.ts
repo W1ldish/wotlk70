@@ -1065,22 +1065,22 @@ const idToCategoryMap: Record<number, number> = {
 	[57968]: SPELL_ACTION_CATEGORY + 0.2, // Instant Poison
 
 	// Shaman
-	[58804]: 0.11, // Windfury Weapon
-	[58790]: 0.12, // Flametongue Weapon
-	[58796]: 0.12, // Frostbrand Weapon
+	[25505]: 0.11, // Windfury Weapon
+	[25489]: 0.12, // Flametongue Weapon
+	[25500]: 0.12, // Frostbrand Weapon
 	[17364]: MELEE_ACTION_CATEGORY + 0.10, // Stormstrike
 	[60103]: MELEE_ACTION_CATEGORY + 0.20, // Lava Lash
-	[49233]: SPELL_ACTION_CATEGORY + 0.21, // Flame Shock
-	[49231]: SPELL_ACTION_CATEGORY + 0.22, // Earth Shock
-	[49236]: SPELL_ACTION_CATEGORY + 0.23, // Frost Shock
+	[25457]: SPELL_ACTION_CATEGORY + 0.21, // Flame Shock
+	[25454]: SPELL_ACTION_CATEGORY + 0.22, // Earth Shock
+	[25464]: SPELL_ACTION_CATEGORY + 0.23, // Frost Shock
 	[60043]: SPELL_ACTION_CATEGORY + 0.31, // Lava Burst
-	[49238]: SPELL_ACTION_CATEGORY + 0.32, // Lightning Bolt
-	[49271]: SPELL_ACTION_CATEGORY + 0.33, // Chain Lightning
-	[61657]: SPELL_ACTION_CATEGORY + 0.41, // Fire Nova
-	[58734]: SPELL_ACTION_CATEGORY + 0.42, // Magma Totem
-	[58704]: SPELL_ACTION_CATEGORY + 0.43, // Searing Totem
-	[49281]: SPELL_ACTION_CATEGORY + 0.51, // Lightning Shield
-	[49279]: SPELL_ACTION_CATEGORY + 0.52, // Lightning Shield (Proc)
+	[25449]: SPELL_ACTION_CATEGORY + 0.32, // Lightning Bolt
+	[25442]: SPELL_ACTION_CATEGORY + 0.33, // Chain Lightning
+	[25547]: SPELL_ACTION_CATEGORY + 0.41, // Fire Nova
+	[25552]: SPELL_ACTION_CATEGORY + 0.42, // Magma Totem
+	[25533]: SPELL_ACTION_CATEGORY + 0.43, // Searing Totem
+	[25472]: SPELL_ACTION_CATEGORY + 0.51, // Lightning Shield
+	[26372]: SPELL_ACTION_CATEGORY + 0.52, // Lightning Shield (Proc)
 	[2825]: DEFAULT_ACTION_CATEGORY + 0.1, // Bloodlust
 
 	// Warlock

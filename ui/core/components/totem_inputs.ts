@@ -88,8 +88,8 @@ export function TotemsSection(parentElem: HTMLElement, simUI: IndividualSimUI<Sh
 		numColumns: 1,
 		values: [
 			{ color: '#ffb3ba', value: FireTotem.NoFireTotem },
-			{ actionId: ActionId.fromSpellId(58734), value: FireTotem.MagmaTotem },
-			{ actionId: ActionId.fromSpellId(58704), value: FireTotem.SearingTotem },
+			{ actionId: ActionId.fromSpellId(25552), value: FireTotem.MagmaTotem },
+			{ actionId: ActionId.fromSpellId(25533), value: FireTotem.SearingTotem },
 			{ actionId: ActionId.fromSpellId(57721), value: FireTotem.TotemOfWrath, showWhen: (player: Player<ShamanSpecs>) => player.getTalents().totemOfWrath },
 			{ actionId: ActionId.fromSpellId(25557), value: FireTotem.FlametongueTotem },
 		],

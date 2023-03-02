@@ -22,7 +22,7 @@ func (shaman *Shaman) registerSearingTotemSpell() {
 	}
 
 	shaman.SearingTotem = shaman.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 58704},
+		ActionID:    core.ActionID{SpellID: 25533},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskEmpty,
 		Flags:       SpellFlagTotem,
@@ -99,7 +99,7 @@ func (shaman *Shaman) registerMagmaTotemSpell() {
 	}
 
 	shaman.MagmaTotem = shaman.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 58734},
+		ActionID:    core.ActionID{SpellID: 25552},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskEmpty,
 		Flags:       SpellFlagTotem,
