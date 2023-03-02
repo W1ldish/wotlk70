@@ -390,9 +390,6 @@ func (rogue *Rogue) applyCombatPotency() {
 			}
 
 			// Fan of Knives OH hits do not proc combat potency
-			if spell.IsSpellAction(FanOfKnivesSpellID) {
-				return
-			}
 
 			if sim.RandomFloat("Combat Potency") > procChance {
 				return
@@ -419,10 +416,6 @@ func (rogue *Rogue) applyFocusedAttacks() {
 		},
 		OnSpellHitDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 			if !spell.ProcMask.Matches(core.ProcMaskMelee) || !result.DidCrit() {
-				return
-			}
-			// Fan of Knives OH hits do not trigger focused attacks
-			if spell.ProcMask.Matches(core.ProcMaskMeleeOH) && spell.IsSpellAction(FanOfKnivesSpellID) {
 				return
 			}
 			if sim.Proc(procChance, "Focused Attacks") {
@@ -474,10 +467,6 @@ func (rogue *Rogue) registerBladeFlurryCD() {
 				return
 			}
 			if result.Damage == 0 || !spell.ProcMask.Matches(core.ProcMaskMelee) {
-				return
-			}
-			// Fan of Knives off-hand hits are not cloned
-			if spell.IsSpellAction(FanOfKnivesSpellID) && spell.ProcMask.Matches(core.ProcMaskMeleeOH) {
 				return
 			}
 

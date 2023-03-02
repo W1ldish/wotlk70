@@ -10,13 +10,13 @@ import (
 var MHOutcome = core.OutcomeHit
 var OHOutcome = core.OutcomeHit
 
-var MutilateSpellID int32 = 48666
+var MutilateSpellID int32 = 34413
 
 func (rogue *Rogue) newMutilateHitSpell(isMH bool) *core.Spell {
-	actionID := core.ActionID{SpellID: 48665}
+	actionID := core.ActionID{SpellID: 34419}
 	procMask := core.ProcMaskMeleeMHSpecial
 	if !isMH {
-		actionID = core.ActionID{SpellID: 48664}
+		actionID = core.ActionID{SpellID: 34418}
 		procMask = core.ProcMaskMeleeOHSpecial
 	}
 

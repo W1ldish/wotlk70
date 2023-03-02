@@ -15,7 +15,7 @@ func (rogue *Rogue) registerEviscerate() {
 	deathMantleDamage := core.TernaryFloat64(rogue.HasSetBonus(ItemSetDeathmantle, 2), 40, 0)
 
 	rogue.Eviscerate = rogue.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 48668},
+		ActionID:     core.ActionID{SpellID: 26865},
 		SpellSchool:  core.SpellSchoolPhysical,
 		ProcMask:     core.ProcMaskMeleeMHSpecial,
 		Flags:        core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | rogue.finisherFlags(),

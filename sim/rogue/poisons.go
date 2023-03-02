@@ -33,7 +33,7 @@ func (rogue *Rogue) registerDeadlyPoisonSpell() {
 	var energyMetrics *core.ResourceMetrics
 
 	rogue.DeadlyPoison = rogue.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 57973},
+		ActionID:    core.ActionID{SpellID: 27186},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskSpellDamage,
 
@@ -187,7 +187,7 @@ func (rogue *Rogue) makeInstantPoison(procSource PoisonProcSource) *core.Spell {
 	isShivProc := procSource == ShivProc
 
 	return rogue.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 57968, Tag: int32(procSource)},
+		ActionID:    core.ActionID{SpellID: 26891, Tag: int32(procSource)},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskSpellDamage,
 
@@ -210,7 +210,7 @@ func (rogue *Rogue) makeWoundPoison(procSource PoisonProcSource) *core.Spell {
 	isShivProc := procSource == ShivProc
 
 	return rogue.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 57975, Tag: int32(procSource)},
+		ActionID:    core.ActionID{SpellID: 27188, Tag: int32(procSource)},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskSpellDamage,
 
@@ -235,7 +235,7 @@ func (rogue *Rogue) makeWoundPoison(procSource PoisonProcSource) *core.Spell {
 	})
 }
 
-var WoundPoisonActionID = core.ActionID{SpellID: 57975}
+var WoundPoisonActionID = core.ActionID{SpellID: 27188}
 
 func (rogue *Rogue) registerWoundPoisonSpell() {
 	woundPoisonDebuffAura := core.Aura{

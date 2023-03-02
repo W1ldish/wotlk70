@@ -532,9 +532,9 @@ var ExtraItemIcons = []int32{
 	23827,
 
 	// Poisons
-	43231,
-	43233,
-	43235,
+	21927,
+	22054,
+	22055,
 
 	// Thistle Tea
 	7676,

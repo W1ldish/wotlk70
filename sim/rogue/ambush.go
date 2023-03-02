@@ -9,7 +9,7 @@ import (
 
 func (rogue *Rogue) registerAmbushSpell() {
 	rogue.Ambush = rogue.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48691},
+		ActionID:    core.ActionID{SpellID: 48689},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | SpellFlagBuilder,

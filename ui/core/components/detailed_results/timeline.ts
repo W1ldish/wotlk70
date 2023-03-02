@@ -1053,16 +1053,16 @@ const idToCategoryMap: Record<number, number> = {
 	// Rogue
 	[6774]: MELEE_ACTION_CATEGORY + 0.1, // Slice and Dice
 	[8647]: MELEE_ACTION_CATEGORY + 0.2, // Expose Armor
-	[48672]: MELEE_ACTION_CATEGORY + 0.3, // Rupture
-	[57993]: MELEE_ACTION_CATEGORY + 0.3, // Envenom
-	[48668]: MELEE_ACTION_CATEGORY + 0.4, // Eviscerate
-	[48666]: MELEE_ACTION_CATEGORY + 0.5, // Mutilate
-	[48665]: MELEE_ACTION_CATEGORY + 0.6, // Mutilate (MH)
-	[48664]: MELEE_ACTION_CATEGORY + 0.7, // Mutilate (OH)
-	[48638]: MELEE_ACTION_CATEGORY + 0.5, // Sinister Strike
+	[26867]: MELEE_ACTION_CATEGORY + 0.3, // Rupture
+	[32684]: MELEE_ACTION_CATEGORY + 0.3, // Envenom
+	[26865]: MELEE_ACTION_CATEGORY + 0.4, // Eviscerate
+	[34413]: MELEE_ACTION_CATEGORY + 0.5, // Mutilate
+	[34419]: MELEE_ACTION_CATEGORY + 0.6, // Mutilate (MH)
+	[34418]: MELEE_ACTION_CATEGORY + 0.7, // Mutilate (OH)
+	[26862]: MELEE_ACTION_CATEGORY + 0.5, // Sinister Strike
 	[51723]: MELEE_ACTION_CATEGORY + 0.8, // Fan of Knives
-	[57973]: SPELL_ACTION_CATEGORY + 0.1, // Deadly Poison
-	[57968]: SPELL_ACTION_CATEGORY + 0.2, // Instant Poison
+	[27186]: SPELL_ACTION_CATEGORY + 0.1, // Deadly Poison
+	[26891]: SPELL_ACTION_CATEGORY + 0.2, // Instant Poison
 
 	// Shaman
 	[25505]: 0.11, // Windfury Weapon
@@ -1194,10 +1194,10 @@ const idToCategoryMap: Record<number, number> = {
 const idsToGroupForRotation: Array<number> = [
 	6774,  // Slice and Dice
 	8647, // Expose Armor
-	48668, // Eviscerate
-	48672, // Rupture
+	26865, // Eviscerate
+	26867, // Rupture
 	51690, // Killing Spree
-	57993, // Envenom
+	32684, // Envenom
 ];
 
 const percentageResources: Array<ResourceType> = [

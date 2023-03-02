@@ -14,7 +14,7 @@ func (rogue *Rogue) registerEnvenom() {
 	deathMantleDamage := core.TernaryFloat64(rogue.HasSetBonus(ItemSetDeathmantle, 2), 40, 0)
 	rogue.EnvenomAura = rogue.RegisterAura(core.Aura{
 		Label:    "Envenom",
-		ActionID: core.ActionID{SpellID: 57993},
+		ActionID: core.ActionID{SpellID: 32684},
 		OnGain: func(aura *core.Aura, sim *core.Simulation) {
 			rogue.deadlyPoisonProcChanceBonus += 0.15
 			rogue.UpdateInstantPoisonPPM(0.75)
@@ -28,7 +28,7 @@ func (rogue *Rogue) registerEnvenom() {
 	chanceToRetainStacks := []float64{0, 0.33, 0.66, 1}[rogue.Talents.MasterPoisoner]
 
 	rogue.Envenom = rogue.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 57993},
+		ActionID:     core.ActionID{SpellID: 32684},
 		SpellSchool:  core.SpellSchoolNature,
 		ProcMask:     core.ProcMaskMeleeMHSpecial, // not core.ProcMaskSpellDamage
 		Flags:        core.SpellFlagMeleeMetrics | rogue.finisherFlags(),

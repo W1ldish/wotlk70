@@ -169,7 +169,6 @@ func (rogue *Rogue) Initialize() {
 	rogue.registerPoisonAuras()
 	rogue.registerEviscerate()
 	rogue.registerExposeArmorSpell()
-	rogue.registerFanOfKnives()
 	rogue.registerFeintSpell()
 	rogue.registerGarrote()
 	rogue.registerHemorrhageSpell()

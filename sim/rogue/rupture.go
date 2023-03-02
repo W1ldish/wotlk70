@@ -8,7 +8,7 @@ import (
 )
 
 const RuptureEnergyCost = 25.0
-const RuptureSpellID = 48672
+const RuptureSpellID = 26867
 
 func (rogue *Rogue) registerRupture() {
 	glyphTicks := core.TernaryInt32(rogue.HasMajorGlyph(proto.RogueMajorGlyph_GlyphOfRupture), 2, 0)

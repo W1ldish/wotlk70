@@ -11,7 +11,7 @@ func (rogue *Rogue) registerSinisterStrikeSpell() {
 	hasGlyphOfSinisterStrike := rogue.HasMajorGlyph(proto.RogueMajorGlyph_GlyphOfSinisterStrike)
 
 	rogue.SinisterStrike = rogue.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48638},
+		ActionID:    core.ActionID{SpellID: 26862},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | SpellFlagBuilder,

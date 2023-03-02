@@ -20,9 +20,9 @@ export const MainHandImbue = InputHelpers.makeSpecOptionsEnumIconInput<Spec.Spec
 	numColumns: 1,
 	values: [
 		{ value: Poison.NoPoison, tooltip: 'No Main Hand Poison' },
-		{ actionId: ActionId.fromItemId(43233), value: Poison.DeadlyPoison },
-		{ actionId: ActionId.fromItemId(43231), value: Poison.InstantPoison },
-		{ actionId: ActionId.fromItemId(43235), value: Poison.WoundPoison },
+		{ actionId: ActionId.fromItemId(22054), value: Poison.DeadlyPoison },
+		{ actionId: ActionId.fromItemId(21927), value: Poison.InstantPoison },
+		{ actionId: ActionId.fromItemId(22055), value: Poison.WoundPoison },
 	],
 });
 
@@ -31,9 +31,9 @@ export const OffHandImbue = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecR
 	numColumns: 1,
 	values: [
 		{ value: Poison.NoPoison, tooltip: 'No Off Hand Poison' },
-		{ actionId: ActionId.fromItemId(43233), value: Poison.DeadlyPoison },
-		{ actionId: ActionId.fromItemId(43231), value: Poison.InstantPoison },
-		{ actionId: ActionId.fromItemId(43235), value: Poison.WoundPoison },
+		{ actionId: ActionId.fromItemId(22054), value: Poison.DeadlyPoison },
+		{ actionId: ActionId.fromItemId(21927), value: Poison.InstantPoison },
+		{ actionId: ActionId.fromItemId(22055), value: Poison.WoundPoison },
 	],
 });
 
