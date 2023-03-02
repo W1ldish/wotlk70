@@ -145,7 +145,7 @@ export class ActionId {
 		if (USE_WOTLK_DB) {
 			return 'https://wotlkdb.com/?spell=' + id;
 		} else {
-			return `https://wowhead.com/wotlk/${langPrefix}spell=${id}`;
+			return `https://wowhead.com/wotlk/${langPrefix}spell=${id}&lvl=70`;
 		}
 	}
 	static makeQuestUrl(id: number): string {
