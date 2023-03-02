@@ -10,7 +10,7 @@ func (priest *Priest) registerGreaterHealSpell() {
 	spellCoeff := 1.6114 + 0.08*float64(priest.Talents.EmpoweredHealing)
 
 	priest.GreaterHeal = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48063},
+		ActionID:    core.ActionID{SpellID: 25213},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskSpellHealing,
 		Flags:       core.SpellFlagHelpful,

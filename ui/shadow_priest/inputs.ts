@@ -24,12 +24,12 @@ export const ArmorInput = InputHelpers.makeSpecOptionsEnumIconInput<Spec.SpecSha
 
 export const MindBlastInput = InputHelpers.makeSpecOptionsBooleanIconInput<Spec.SpecShadowPriest>({
 	fieldName: 'useMindBlast',
-	id: ActionId.fromSpellId(48127),
+	id: ActionId.fromSpellId(25375),
 });
 
 export const ShadowWordDeathInput = InputHelpers.makeSpecOptionsBooleanIconInput<Spec.SpecShadowPriest>({
 	fieldName: 'useShadowWordDeath',
-	id: ActionId.fromSpellId(48158),
+	id: ActionId.fromSpellId(32996),
 });
 
 export const ShadowfiendInput = InputHelpers.makeSpecOptionsBooleanIconInput<Spec.SpecShadowPriest>({

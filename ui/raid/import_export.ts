@@ -717,7 +717,7 @@ const samePartyHealingSpells: Array<{id: number, name: string}> = [
 
 // Healing spells which only affect a single party, but not necessarily the caster's party.
 const otherPartyHealingSpells: Array<{id: number, name: string}> = [
-	{id: 48072, name: 'Prayer of Healing'},
+	{id: 25316, name: 'Prayer of Healing'},
 ];
 
 interface wclUrlData {

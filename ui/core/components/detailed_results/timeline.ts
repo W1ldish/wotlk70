@@ -1041,14 +1041,14 @@ const idToCategoryMap: Record<number, number> = {
 	[66233]: SPELL_ACTION_CATEGORY + 0.80, // Ardent Defender
 
 	// Priest
-	[48300]: SPELL_ACTION_CATEGORY + 0.11, // Devouring Plague
-	[48125]: SPELL_ACTION_CATEGORY + 0.12, // Shadow Word: Pain
-	[48160]: SPELL_ACTION_CATEGORY + 0.13, // Vampiric Touch
-	[48135]: SPELL_ACTION_CATEGORY + 0.14, // Holy Fire
-	[48123]: SPELL_ACTION_CATEGORY + 0.19, // Smite
-	[48127]: SPELL_ACTION_CATEGORY + 0.20, // Mind Blast
-	[48158]: SPELL_ACTION_CATEGORY + 0.30, // Shadow Word: Death
-	[48156]: SPELL_ACTION_CATEGORY + 0.40, // Mind Flay
+	[25467]: SPELL_ACTION_CATEGORY + 0.11, // Devouring Plague
+	[25368]: SPELL_ACTION_CATEGORY + 0.12, // Shadow Word: Pain
+	[24917]: SPELL_ACTION_CATEGORY + 0.13, // Vampiric Touch
+	[25384]: SPELL_ACTION_CATEGORY + 0.14, // Holy Fire
+	[25364]: SPELL_ACTION_CATEGORY + 0.19, // Smite
+	[25375]: SPELL_ACTION_CATEGORY + 0.20, // Mind Blast
+	[32996]: SPELL_ACTION_CATEGORY + 0.30, // Shadow Word: Death
+	[25387]: SPELL_ACTION_CATEGORY + 0.40, // Mind Flay
 
 	// Rogue
 	[6774]: MELEE_ACTION_CATEGORY + 0.1, // Slice and Dice

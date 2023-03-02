@@ -8,7 +8,7 @@ import (
 )
 
 func (priest *Priest) registerPrayerOfMendingSpell() {
-	actionID := core.ActionID{SpellID: 48113}
+	actionID := core.ActionID{SpellID: 33076}
 
 	pomAuras := make([]*core.Aura, len(priest.Env.AllUnits))
 	for _, unit := range priest.Env.AllUnits {

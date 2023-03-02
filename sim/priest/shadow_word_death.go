@@ -21,7 +21,7 @@ func (priest *Priest) registerShadowWordDeathSpell() {
 	hasGlyphOfShadow := priest.HasGlyph(int32(proto.PriestMajorGlyph_GlyphOfShadow))
 
 	priest.ShadowWordDeath = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48158},
+		ActionID:    core.ActionID{SpellID: 32996},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 

@@ -8,7 +8,7 @@ import (
 
 func (priest *Priest) RegisterSmiteSpell(memeDream bool) {
 	priest.Smite = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48123},
+		ActionID:    core.ActionID{SpellID: 25364},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskSpellDamage,
 

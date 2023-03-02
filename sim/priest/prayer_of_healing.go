@@ -11,7 +11,7 @@ func (priest *Priest) registerPrayerOfHealingSpell() {
 	var glyphSpell *core.Spell
 
 	priest.PrayerOfHealing = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48072},
+		ActionID:    core.ActionID{SpellID: 25316},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskSpellHealing,
 		Flags:       core.SpellFlagHelpful,

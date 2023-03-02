@@ -7,7 +7,7 @@ import (
 )
 
 func (priest *Priest) registerDevouringPlagueSpell() {
-	actionID := core.ActionID{SpellID: 48300}
+	actionID := core.ActionID{SpellID: 25467}
 	priest.DpInitMultiplier = 8 * 0.1 * float64(priest.Talents.ImprovedDevouringPlague)
 
 	priest.DevouringPlague = priest.RegisterSpell(core.SpellConfig{

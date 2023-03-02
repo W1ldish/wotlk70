@@ -133,7 +133,7 @@ export const MeleeHasteBuff = InputHelpers.makeMultiIconInput([
 ], 'Melee Haste');
 
 export const ReplenishmentBuff = InputHelpers.makeMultiIconInput([
-	makeBooleanIndividualBuffInput(ActionId.fromSpellId(48160), 'vampiricTouch'),
+	makeBooleanIndividualBuffInput(ActionId.fromSpellId(24917), 'vampiricTouch'),
 	makeBooleanIndividualBuffInput(ActionId.fromSpellId(31878), 'judgementsOfTheWise'),
 	makeBooleanIndividualBuffInput(ActionId.fromSpellId(53292), 'huntingParty'),
 	makeBooleanIndividualBuffInput(ActionId.fromSpellId(54118), 'improvedSoulLeech'),

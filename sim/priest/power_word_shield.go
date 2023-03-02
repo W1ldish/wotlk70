@@ -8,7 +8,7 @@ import (
 )
 
 func (priest *Priest) registerPowerWordShieldSpell() {
-	actionID := core.ActionID{SpellID: 48066}
+	actionID := core.ActionID{SpellID: 25218}
 	coeff := 0.8057 + 0.08*float64(priest.Talents.BorrowedTime)
 
 	wsDuration := time.Second * 15

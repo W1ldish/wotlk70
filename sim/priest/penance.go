@@ -30,7 +30,7 @@ func (priest *Priest) makePenanceSpell(isHeal bool) *core.Spell {
 	}
 
 	return priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 53007},
+		ActionID:    core.ActionID{SpellID: 53005},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    procMask,
 		Flags:       flags,

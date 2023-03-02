@@ -18,7 +18,7 @@ func (priest *Priest) registerShadowWordPainSpell() {
 	}
 
 	priest.ShadowWordPain = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48125},
+		ActionID:    core.ActionID{SpellID: 25368},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 

@@ -8,7 +8,7 @@ import (
 	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
-// TODO Mind Flay (48156) now "periodically triggers" Mind Flay (58381), probably to allow haste to work.
+// TODO Mind Flay (25387) now "periodically triggers" Mind Flay (58381), probably to allow haste to work.
 // The first never deals damage, so the latter should probably be used as ActionID here.
 
 func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
@@ -22,7 +22,7 @@ func (priest *Priest) newMindFlaySpell(numTicks int32) *core.Spell {
 	hasGlyphOfShadow := priest.HasGlyph(int32(proto.PriestMajorGlyph_GlyphOfShadow))
 
 	return priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48156}.WithTag(numTicks),
+		ActionID:    core.ActionID{SpellID: 25387}.WithTag(numTicks),
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       core.SpellFlagChanneled,

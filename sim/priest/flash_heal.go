@@ -11,7 +11,7 @@ func (priest *Priest) registerFlashHealSpell() {
 	spellCoeff := 0.8057 + 0.04*float64(priest.Talents.EmpoweredHealing)
 
 	priest.FlashHeal = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48071},
+		ActionID:    core.ActionID{SpellID: 25235},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskSpellHealing,
 		Flags:       core.SpellFlagHelpful,

@@ -8,7 +8,7 @@ import (
 )
 
 func (priest *Priest) registerRenewSpell() {
-	actionID := core.ActionID{SpellID: 48068}
+	actionID := core.ActionID{SpellID: 25222}
 	spellCoeff := (1.88 + .05*float64(priest.Talents.EmpoweredRenew)) / 5
 
 	if priest.Talents.EmpoweredRenew > 0 {

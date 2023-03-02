@@ -10,7 +10,7 @@ func (priest *Priest) registerBindingHealSpell() {
 	spellCoeff := 0.8057 + 0.04*float64(priest.Talents.EmpoweredHealing)
 
 	priest.BindingHeal = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48120},
+		ActionID:    core.ActionID{SpellID: 32546},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskSpellHealing,
 		Flags:       core.SpellFlagHelpful,

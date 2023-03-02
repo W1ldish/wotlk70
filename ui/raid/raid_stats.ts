@@ -693,7 +693,7 @@ const RAID_STATS_OPTIONS: RaidStatsOptions = {sections: [
 				effects: [
 					{
 						label: 'Vampiric Touch',
-						actionId: ActionId.fromSpellId(48160),
+						actionId: ActionId.fromSpellId(24917),
 						playerData: playerSpecAndTalent(Spec.SpecShadowPriest, 'vampiricTouch'),
 					},
 					{

@@ -111,7 +111,6 @@ func (priest *Priest) Initialize() {
 	priest.registerMindBlastSpell()
 	priest.registerShadowWordDeathSpell()
 	priest.registerShadowfiendSpell()
-	priest.registerStarshardsSpell()
 	priest.registerVampiricTouchSpell()
 	priest.registerDispersionSpell()
 

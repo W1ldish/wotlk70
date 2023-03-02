@@ -16,7 +16,7 @@ func (priest *Priest) registerCircleOfHealingSpell() {
 	targets := priest.Env.Raid.GetFirstNPlayersOrPets(numTargets)
 
 	priest.CircleOfHealing = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48089},
+		ActionID:    core.ActionID{SpellID: 34866},
 		SpellSchool: core.SpellSchoolHoly,
 		ProcMask:    core.ProcMaskSpellHealing,
 		Flags:       core.SpellFlagHelpful,
