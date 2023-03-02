@@ -7,15 +7,13 @@ import (
 )
 
 const IdolAvenger int32 = 31025
-const IdolSteadfastRenewal int32 = 40712
 
 func (druid *Druid) registerWrathSpell() {
 	spellCoeff := 0.571 + (0.02 * float64(druid.Talents.WrathOfCenarius))
-	bonusFlatDamage := core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == IdolAvenger, 25, 0) +
-		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == IdolSteadfastRenewal, 70, 0)
+	bonusFlatDamage := core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == IdolAvenger, 25, 0)
 
 	druid.Wrath = druid.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 48461},
+		ActionID:     core.ActionID{SpellID: 26985},
 		SpellSchool:  core.SpellSchoolNature,
 		ProcMask:     core.ProcMaskSpellDamage,
 		Flags:        SpellFlagNaturesGrace | SpellFlagOmenTrigger,

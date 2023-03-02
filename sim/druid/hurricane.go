@@ -8,7 +8,7 @@ import (
 
 func (druid *Druid) registerHurricaneSpell() {
 	druid.Hurricane = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48467},
+		ActionID:    core.ActionID{SpellID: 27012},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       core.SpellFlagChanneled | SpellFlagOmenTrigger,

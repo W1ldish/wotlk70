@@ -13,7 +13,7 @@ func (druid *Druid) registerTyphoonSpell() {
 	}
 
 	druid.Typhoon = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 61384},
+		ActionID:    core.ActionID{SpellID: 53225},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagOmenTrigger,

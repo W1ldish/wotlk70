@@ -10,14 +10,13 @@ import (
 
 func (druid *Druid) registerShredSpell() {
 	flatDamageBonus := (405 +
-		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 29390, 88, 0) +
-		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 40713, 203, 0)) / 2.25
+		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 29390, 88, 0)) / 2.25
 
 	hasGlyphofShred := druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfShred)
 	maxRipTicks := druid.MaxRipTicks()
 
 	druid.Shred = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48572},
+		ActionID:    core.ActionID{SpellID: 27002},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

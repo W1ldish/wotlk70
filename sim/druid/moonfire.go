@@ -25,7 +25,7 @@ func (druid *Druid) registerMoonfireSpell() {
 		core.TernaryFloat64(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfMoonfire), 0.75, 0)
 
 	druid.Moonfire = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48463},
+		ActionID:    core.ActionID{SpellID: 26988},
 		SpellSchool: core.SpellSchoolArcane,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagNaturesGrace | SpellFlagOmenTrigger,

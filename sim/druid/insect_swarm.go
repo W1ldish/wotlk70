@@ -7,17 +7,14 @@ import (
 	"github.com/Tereneckla/wotlk/sim/core/proto"
 )
 
-const CryingWind int32 = 45270
-
 func (druid *Druid) registerInsectSwarmSpell() {
 	missAuras := druid.NewEnemyAuraArray(core.InsectSwarmAura)
 	hasGlyph := druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfInsectSwarm)
-	idolSpellPower := core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == CryingWind, 396, 0)
 
 	impISMultiplier := 1 + 0.01*float64(druid.Talents.ImprovedInsectSwarm)
 
 	druid.InsectSwarm = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48468},
+		ActionID:    core.ActionID{SpellID: 27013},
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagOmenTrigger,
@@ -51,7 +48,7 @@ func (druid *Druid) registerInsectSwarmSpell() {
 			TickLength:    time.Second * 2,
 
 			OnSnapshot: func(sim *core.Simulation, target *core.Unit, dot *core.Dot, isRollover bool) {
-				dot.SnapshotBaseDamage = 172 + 0.2*(dot.Spell.SpellPower()+idolSpellPower)
+				dot.SnapshotBaseDamage = 172 + 0.2*(dot.Spell.SpellPower())
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {

@@ -12,8 +12,7 @@ func (druid *Druid) registerStarfireSpell() {
 	bonusCoeff := 0.04 * float64(druid.Talents.WrathOfCenarius)
 
 	idolSpellPower := 0 +
-		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 27518, 55, 0) + // Ivory Moongoddess
-		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 40321, 165, 0) // Shooting Star
+		core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 27518, 55, 0) // Ivory Moongoddess
 
 	hasGlyph := druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfStarfire)
 	maxMoonfireTicks := druid.moonfireTicks() + core.TernaryInt32(hasGlyph, 3, 0)
@@ -22,7 +21,7 @@ func (druid *Druid) registerStarfireSpell() {
 		nordrassilMult = 1.1
 	}
 	druid.Starfire = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48465},
+		ActionID:    core.ActionID{SpellID: 26986},
 		SpellSchool: core.SpellSchoolArcane,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagNaturesGrace | SpellFlagOmenTrigger,

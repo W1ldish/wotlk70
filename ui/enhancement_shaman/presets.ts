@@ -41,7 +41,7 @@ import * as Tooltips from '../core/constants/tooltips.js';
 export const StandardTalents = {
 	name: 'Standard',
 	data: SavedTalents.create({
-		talentsString: '053030152-30405003105021333031131031051',
+		talentsString: '053030152-3040500310984633031131031051',
 		glyphs: Glyphs.create({
 			major1: ShamanMajorGlyph.GlyphOfStormstrike,
 			major2: ShamanMajorGlyph.GlyphOfFlametongueWeapon,

@@ -16,7 +16,7 @@ func (druid *Druid) registerRebirthSpell() {
 	}
 
 	druid.Rebirth = druid.RegisterSpell(core.SpellConfig{
-		ActionID: core.ActionID{SpellID: 48477},
+		ActionID: core.ActionID{SpellID: 26994},
 		Flags:    SpellFlagOmenTrigger,
 
 		ManaCost: core.ManaCostOptions{

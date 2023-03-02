@@ -981,22 +981,22 @@ const idToCategoryMap: Record<number, number> = {
 	[OtherAction.OtherActionShoot]: 0.5,
 
 	// Druid
-	[48480]: 0.1, // Maul
-	[48564]: MELEE_ACTION_CATEGORY + 0.10, // Mangle (Bear)
-	[48568]: MELEE_ACTION_CATEGORY + 0.20, // Lacerate
-	[48562]: MELEE_ACTION_CATEGORY + 0.30, // Swipe (Bear)
+	[26996]: 0.1, // Maul
+	[33987]: MELEE_ACTION_CATEGORY + 0.10, // Mangle (Bear)
+	[33745]: MELEE_ACTION_CATEGORY + 0.20, // Lacerate
+	[26997]: MELEE_ACTION_CATEGORY + 0.30, // Swipe (Bear)
 
-	[48566]: MELEE_ACTION_CATEGORY + 0.10, // Mangle (Cat)
-	[48572]: MELEE_ACTION_CATEGORY + 0.20, // Shred
-	[49800]: MELEE_ACTION_CATEGORY + 0.51, // Rip
+	[33983]: MELEE_ACTION_CATEGORY + 0.10, // Mangle (Cat)
+	[27002]: MELEE_ACTION_CATEGORY + 0.20, // Shred
+	[27008]: MELEE_ACTION_CATEGORY + 0.51, // Rip
 	[52610]: MELEE_ACTION_CATEGORY + 0.52, // Savage Roar
-	[48577]: MELEE_ACTION_CATEGORY + 0.53, // Ferocious Bite
+	[24248]: MELEE_ACTION_CATEGORY + 0.53, // Ferocious Bite
 
-	[48465]: SPELL_ACTION_CATEGORY + 0.10, // Starfire
-	[48461]: SPELL_ACTION_CATEGORY + 0.20, // Wrath
-	[53201]: SPELL_ACTION_CATEGORY + 0.30, // Starfall
-	[48468]: SPELL_ACTION_CATEGORY + 0.40, // Insect Swarm
-	[48463]: SPELL_ACTION_CATEGORY + 0.50, // Moonfire
+	[26986]: SPELL_ACTION_CATEGORY + 0.10, // Starfire
+	[26985]: SPELL_ACTION_CATEGORY + 0.20, // Wrath
+	[53199]: SPELL_ACTION_CATEGORY + 0.30, // Starfall
+	[27013]: SPELL_ACTION_CATEGORY + 0.40, // Insect Swarm
+	[26988]: SPELL_ACTION_CATEGORY + 0.50, // Moonfire
 
 	// Hunter
 	[48996]: 0.1, // Raptor Strike

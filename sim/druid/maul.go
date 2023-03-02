@@ -16,7 +16,7 @@ func (druid *Druid) registerMaulSpell(rageThreshold float64) {
 	numHits := core.TernaryInt32(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfMaul) && druid.Env.GetNumTargets() > 1, 2, 1)
 
 	druid.Maul = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48480},
+		ActionID:    core.ActionID{SpellID: 26996},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagNoOnCastComplete,

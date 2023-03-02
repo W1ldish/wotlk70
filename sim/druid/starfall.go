@@ -17,7 +17,7 @@ func (druid *Druid) registerStarfallSpell() {
 	tickLength := core.TernaryDuration(druid.Env.GetNumTargets() > 1, time.Millisecond*500, time.Millisecond*1000)
 
 	druid.Starfall = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 53201},
+		ActionID:    core.ActionID{SpellID: 53199},
 		SpellSchool: core.SpellSchoolArcane,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagNaturesGrace | SpellFlagOmenTrigger,

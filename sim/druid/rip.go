@@ -14,12 +14,10 @@ func (druid *Druid) registerRipSpell() {
 	comboPointCoeff := 47.0
 	if druid.Equip[core.ItemSlotRanged].ID == 28372 { // Idol of Feral Shadows
 		comboPointCoeff += 7
-	} else if druid.Equip[core.ItemSlotRanged].ID == 39757 { // Idol of Worship
-		comboPointCoeff += 21
 	}
 
 	druid.Rip = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 49800},
+		ActionID:    core.ActionID{SpellID: 27008},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics,

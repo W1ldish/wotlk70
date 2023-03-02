@@ -10,7 +10,7 @@ func (druid *Druid) registerFerociousBiteSpell() {
 	dmgPerComboPoint := 169.0 + core.TernaryFloat64(druid.Equip[core.ItemSlotRanged].ID == 25667, 14, 0)
 
 	druid.FerociousBite = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48577},
+		ActionID:    core.ActionID{SpellID: 24248},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

@@ -17,7 +17,7 @@ func (druid *Druid) registerMangleBearSpell() {
 	glyphBonus := core.TernaryFloat64(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfMangle), 1.1, 1.0)
 
 	druid.MangleBear = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48564},
+		ActionID:    core.ActionID{SpellID: 33987},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
@@ -73,7 +73,7 @@ func (druid *Druid) registerMangleCatSpell() {
 	glyphBonus := core.TernaryFloat64(druid.HasMajorGlyph(proto.DruidMajorGlyph_GlyphOfMangle), 1.1, 1.0)
 
 	druid.MangleCat = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48566},
+		ActionID:    core.ActionID{SpellID: 33983},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

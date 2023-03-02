@@ -8,15 +8,13 @@ func (druid *Druid) registerSwipeBearSpell() {
 	flatBaseDamage := 76.0
 	if druid.Equip[core.ItemSlotRanged].ID == 23198 { // Idol of Brutality
 		flatBaseDamage += 10
-	} else if druid.Equip[core.ItemSlotRanged].ID == 38365 { // Idol of Perspicacious Attacks
-		flatBaseDamage += 24
 	}
 
 	thdm := core.TernaryFloat64(druid.HasSetBonus(ItemSetThunderheartHarness, 4), 1.15, 1.0)
 	fidm := 1.0 + 0.1*float64(druid.Talents.FeralInstinct)
 
 	druid.SwipeBear = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48562},
+		ActionID:    core.ActionID{SpellID: 26997},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,

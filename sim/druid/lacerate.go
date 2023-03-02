@@ -19,7 +19,7 @@ func (druid *Druid) registerLacerateSpell() {
 	}
 
 	druid.Lacerate = druid.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 48568},
+		ActionID:    core.ActionID{SpellID: 33745},
 		SpellSchool: core.SpellSchoolPhysical,
 		ProcMask:    core.ProcMaskMeleeMHSpecial,
 		Flags:       core.SpellFlagMeleeMetrics,
