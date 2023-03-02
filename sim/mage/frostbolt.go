@@ -17,7 +17,7 @@ func (mage *Mage) registerFrostboltSpell() {
 	}
 
 	mage.Frostbolt = mage.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 42842},
+		ActionID:     core.ActionID{SpellID: 27072},
 		SpellSchool:  core.SpellSchoolFrost,
 		ProcMask:     core.ProcMaskSpellDamage,
 		Flags:        SpellFlagMage | BarrageSpells,

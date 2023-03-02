@@ -10,7 +10,7 @@ func (mage *Mage) registerBlizzardSpell() {
 	results := make([]*core.SpellResult, len(mage.Env.Encounter.Targets))
 
 	mage.Blizzard = mage.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 42939},
+		ActionID:    core.ActionID{SpellID: 27085},
 		SpellSchool: core.SpellSchoolFrost,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagMage | core.SpellFlagChanneled,
@@ -38,7 +38,7 @@ func (mage *Mage) registerBlizzardSpell() {
 			AffectedByCastSpeed: true,
 			OnSnapshot: func(sim *core.Simulation, _ *core.Unit, dot *core.Dot, _ bool) {
 				target := mage.CurrentTarget
-				dot.SnapshotBaseDamage = 184.8 + (4.0/3.5/8)*dot.Spell.SpellPower()
+				dot.SnapshotBaseDamage = 273.8 + (4.0/3.5/8)*dot.Spell.SpellPower()
 				dot.SnapshotBaseDamage *= sim.Encounter.AOECapMultiplier()
 				dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(dot.Spell.Unit.AttackTables[target.UnitIndex])
 			},

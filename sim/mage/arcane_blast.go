@@ -28,7 +28,7 @@ func (mage *Mage) registerArcaneBlastSpell() {
 		},
 	})
 
-	actionID := core.ActionID{SpellID: 42897}
+	actionID := core.ActionID{SpellID: 30451}
 	spellCoeff := 2.5/3.5 + .03*float64(mage.Talents.ArcaneEmpowerment)
 
 	mage.ArcaneBlast = mage.RegisterSpell(core.SpellConfig{

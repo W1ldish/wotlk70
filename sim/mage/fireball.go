@@ -12,7 +12,7 @@ func (mage *Mage) registerFireballSpell() {
 	hasGlyph := mage.HasMajorGlyph(proto.MageMajorGlyph_GlyphOfFireball)
 
 	mage.Fireball = mage.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 42833},
+		ActionID:     core.ActionID{SpellID: 38692},
 		SpellSchool:  core.SpellSchoolFire,
 		ProcMask:     core.ProcMaskSpellDamage,
 		Flags:        SpellFlagMage | BarrageSpells | HotStreakSpells,

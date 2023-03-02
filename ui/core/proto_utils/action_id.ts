@@ -228,7 +228,7 @@ export class ActionId {
 				if (this.tag) name += ' (DoT)';
 				break;
 			case 'Living Bomb':
-				if (this.spellId == 55362) name += ' (Explosion)';
+				if (this.spellId == 55361) name += ' (Explosion)';
 				break;
 			case 'Mind Flay':
 				if (this.tag == 1) {

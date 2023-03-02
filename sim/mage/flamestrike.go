@@ -8,7 +8,7 @@ import (
 
 func (mage *Mage) registerFlamestrikeSpell() {
 	mage.Flamestrike = mage.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 42926},
+		ActionID:    core.ActionID{SpellID: 27086},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagMage,

@@ -1102,18 +1102,18 @@ const idToCategoryMap: Record<number, number> = {
 	[47193]: SPELL_ACTION_CATEGORY + 0.82, // Demonic Empowerment
 
 	// Mage
-	[42842]: SPELL_ACTION_CATEGORY + 0.01, // Frostbolt
+	[27072]: SPELL_ACTION_CATEGORY + 0.01, // Frostbolt
 	[47610]: SPELL_ACTION_CATEGORY + 0.02, // Frostfire Bolt
-	[42897]: SPELL_ACTION_CATEGORY + 0.02, // Arcane Blast
-	[42833]: SPELL_ACTION_CATEGORY + 0.02, // Fireball
-	[42859]: SPELL_ACTION_CATEGORY + 0.03, // Scorch
-	[42891]: SPELL_ACTION_CATEGORY + 0.1, // Pyroblast
-	[42846]: SPELL_ACTION_CATEGORY + 0.1, // Arcane Missiles
+	[30451]: SPELL_ACTION_CATEGORY + 0.02, // Arcane Blast
+	[38692]: SPELL_ACTION_CATEGORY + 0.02, // Fireball
+	[27074]: SPELL_ACTION_CATEGORY + 0.03, // Scorch
+	[33938]: SPELL_ACTION_CATEGORY + 0.1, // Pyroblast
+	[38704]: SPELL_ACTION_CATEGORY + 0.1, // Arcane Missiles
 	[44572]: SPELL_ACTION_CATEGORY + 0.1, // Deep Freeze
-	[44781]: SPELL_ACTION_CATEGORY + 0.2, // Arcane Barrage
+	[44780]: SPELL_ACTION_CATEGORY + 0.2, // Arcane Barrage
 	[42914]: SPELL_ACTION_CATEGORY + 0.2, // Ice Lance
-	[55360]: SPELL_ACTION_CATEGORY + 0.2, // Living Bomb
-	[55362]: SPELL_ACTION_CATEGORY + 0.21, // Living Bomb (Explosion)
+	[55359]: SPELL_ACTION_CATEGORY + 0.2, // Living Bomb
+	[55361]: SPELL_ACTION_CATEGORY + 0.21, // Living Bomb (Explosion)
 	[12654]: SPELL_ACTION_CATEGORY + 0.3, // Ignite
 	[12472]: SPELL_ACTION_CATEGORY + 0.4, // Icy Veins
 	[11129]: SPELL_ACTION_CATEGORY + 0.4, // Combustion

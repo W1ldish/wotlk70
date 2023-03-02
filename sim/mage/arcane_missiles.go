@@ -11,7 +11,7 @@ func (mage *Mage) registerArcaneMissilesSpell() {
 	spellCoeff := 1/3.5 + 0.03*float64(mage.Talents.ArcaneEmpowerment)
 
 	mage.ArcaneMissiles = mage.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 42846},
+		ActionID:     core.ActionID{SpellID: 38704},
 		SpellSchool:  core.SpellSchoolArcane,
 		ProcMask:     core.ProcMaskSpellDamage,
 		Flags:        SpellFlagMage | core.SpellFlagChanneled,

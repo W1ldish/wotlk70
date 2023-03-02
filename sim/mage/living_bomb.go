@@ -13,7 +13,7 @@ func (mage *Mage) registerLivingBombSpell() {
 	}
 
 	livingBombExplosionSpell := mage.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 55362},
+		ActionID:    core.ActionID{SpellID: 55361},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagMage | HotStreakSpells,
@@ -45,7 +45,7 @@ func (mage *Mage) registerLivingBombSpell() {
 	}
 
 	mage.LivingBomb = mage.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 55360},
+		ActionID:    core.ActionID{SpellID: 55359},
 		SpellSchool: core.SpellSchoolFire,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagMage,

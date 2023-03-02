@@ -15,7 +15,7 @@ func (mage *Mage) registerPyroblastSpell() {
 	tickCoeff := 0.05 + 0.05*float64(mage.Talents.EmpoweredFire)
 
 	mage.Pyroblast = mage.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 42891},
+		ActionID:     core.ActionID{SpellID: 33938},
 		SpellSchool:  core.SpellSchoolFire,
 		ProcMask:     core.ProcMaskSpellDamage,
 		Flags:        SpellFlagMage,

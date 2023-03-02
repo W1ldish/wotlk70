@@ -7,7 +7,7 @@ import (
 
 func (mage *Mage) registerArcaneExplosionSpell() {
 	mage.ArcaneExplosion = mage.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 42921},
+		ActionID:    core.ActionID{SpellID: 27082},
 		SpellSchool: core.SpellSchoolArcane,
 		ProcMask:    core.ProcMaskSpellDamage,
 		Flags:       SpellFlagMage,

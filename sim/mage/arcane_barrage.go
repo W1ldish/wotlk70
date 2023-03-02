@@ -13,7 +13,7 @@ func (mage *Mage) registerArcaneBarrageSpell() {
 	}
 
 	mage.ArcaneBarrage = mage.RegisterSpell(core.SpellConfig{
-		ActionID:     core.ActionID{SpellID: 44781},
+		ActionID:     core.ActionID{SpellID: 44780},
 		SpellSchool:  core.SpellSchoolFrost,
 		ProcMask:     core.ProcMaskSpellDamage,
 		Flags:        SpellFlagMage | BarrageSpells,
