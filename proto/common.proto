@@ -869,6 +869,7 @@ message Duration {
 }
 
 enum RandomEnchant {
+	RandomEnchantNone = 0;
 	Spirit = 15;
 	Stamina = 16;
 	Strength = 17;
@@ -936,21 +937,21 @@ enum RandomEnchant {
 	Wild = 60;
 	Knight = 66;
 	Seer2 = 67;
-	Ancestor = 70;
+	Ancestor2 = 70;
 	Bandit2 = 71;
-	Battle = 72;
-	Elder2 = 73;
+	Battle2 = 72;
+	Elder3 = 73;
 	Beast2 = 74;
 	Champion2 = 75;
 	Grove2 = 76;
 	Knight2 = 77;
 	Moon2 = 79;
-	Wild = 80;
-	Vision = 82;
+	Wild2 = 80;
+	Vision2 = 82;
 	Sun2 = 83;
 	Sorcerer2 = 85;
 	Soldier2 = 86;
-	Shadow = 87;
+	Shadow2 = 87;
 	Foreseer = 88;
 	Thief = 89;
 	Necromancer = 90;
