@@ -336,7 +336,7 @@ export class Target {
 			parryHaste: true,
 			spellSchool: SpellSchool.SpellSchoolPhysical,
 			stats: Stats.fromMap({
-				[Stat.StatArmor]: 6300,
+				[Stat.StatArmor]: 6200,
 				[Stat.StatAttackPower]: 574,
 			}).asArray(),
 			targetInputs: new Array<TargetInput>(0),
