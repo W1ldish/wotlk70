@@ -8,7 +8,7 @@ import (
 
 func (priest *Priest) registerVampiricTouchSpell() {
 	priest.VampiricTouch = priest.RegisterSpell(core.SpellConfig{
-		ActionID:    core.ActionID{SpellID: 24917},
+		ActionID:    core.ActionID{SpellID: 34917},
 		SpellSchool: core.SpellSchoolShadow,
 		ProcMask:    core.ProcMaskSpellDamage,
 

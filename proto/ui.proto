@@ -73,6 +73,9 @@ message UIItem {
 
 	Expansion expansion = 24;
 	repeated UIItemSource sources = 23;
+
+	repeated Suffix suffixes = 30;
+	Suffix suffix = 31;
 }
 
 enum Expansion {

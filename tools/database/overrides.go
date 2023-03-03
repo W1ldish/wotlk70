@@ -340,6 +340,7 @@ var ItemOverrides = []*proto.UIItem{
 	{Id: 34946, Phase: 6}, //Inscribed Legplates of the Aldor
 	{Id: 34947, Phase: 6}, //Blue's Greaves of the Righteous Guardian
 
+	{Id: 30684, Suffixes: []proto.Suffix{proto.Suffix_SuffixInvoker, proto.Suffix_SuffixSorcerer, proto.Suffix_SuffixSpellPower, proto.Suffix_SuffixOwl, proto.Suffix_SuffixEagle, proto.Suffix_SuffixSpirit, proto.Suffix_SuffixStamina, proto.Suffix_SuffixWhale, proto.Suffix_SuffixIntellect, proto.Suffix_SuffixProphet, proto.Suffix_SuffixPhysician, proto.Suffix_SuffixFrostProtection, proto.Suffix_SuffixArcaneProtection, proto.Suffix_SuffixFireProtection, proto.Suffix_SuffixNatureProtection, proto.Suffix_SuffixShadowProtection}},
 }
 
 // Keep these sorted by item ID.
@@ -627,7 +628,7 @@ var SharedSpellsIcons = []int32{
 	65990,
 	29193,
 
-	24917,
+	34917,
 	31878,
 	53292,
 	54118,

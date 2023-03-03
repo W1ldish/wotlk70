@@ -53,11 +53,12 @@ type Item struct {
 
 	GemSockets  []proto.GemColor
 	SocketBonus stats.Stats
+	Suffixes    []proto.Suffix
 
 	// Modified for each instance of the item.
 	Gems    []Gem
 	Enchant Enchant
-
+	Suffix  proto.Suffix
 	//Internal use
 	TempEnchant int32
 }
@@ -78,6 +79,7 @@ func ItemFromProto(pData *proto.SimItem) Item {
 		GemSockets:       pData.GemSockets,
 		SocketBonus:      stats.FromFloatArray(pData.SocketBonus),
 		SetName:          pData.SetName,
+		Suffix:           pData.Suffix,
 	}
 }
 

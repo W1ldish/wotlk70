@@ -1043,7 +1043,7 @@ const idToCategoryMap: Record<number, number> = {
 	// Priest
 	[25467]: SPELL_ACTION_CATEGORY + 0.11, // Devouring Plague
 	[25368]: SPELL_ACTION_CATEGORY + 0.12, // Shadow Word: Pain
-	[24917]: SPELL_ACTION_CATEGORY + 0.13, // Vampiric Touch
+	[34917]: SPELL_ACTION_CATEGORY + 0.13, // Vampiric Touch
 	[25384]: SPELL_ACTION_CATEGORY + 0.14, // Holy Fire
 	[25364]: SPELL_ACTION_CATEGORY + 0.19, // Smite
 	[25375]: SPELL_ACTION_CATEGORY + 0.20, // Mind Blast
