@@ -1,4 +1,4 @@
-import { GemColor } from '../proto/common.js';
+import { GemColor, Suffix } from '../proto/common.js';
 import { ItemSlot } from '../proto/common.js';
 import { ItemSpec } from '../proto/common.js';
 import { ItemType } from '../proto/common.js';
@@ -36,7 +36,7 @@ export class EquippedItem {
 		this._item = item;
 		this._enchant = enchant || null;
 		this._gems = gems || [];
-
+		
 		this.numPossibleSockets = this.numSockets();
 
 		// Fill gems with null so we always have the same number of gems as gem slots.
@@ -155,7 +155,7 @@ export class EquippedItem {
 	}
 
 	asActionId(): ActionId {
-		return ActionId.fromItemId(this._item.id);
+		return ActionId.fromItemId(this._item.id, this.item.suffix);
 	}
 
 	asSpec(): ItemSpec {
@@ -163,6 +163,9 @@ export class EquippedItem {
 			id: this._item.id,
 			enchant: this._enchant?.effectId,
 			gems: this._gems.map(gem => gem?.id || 0),
+			suffix: this._item.suffix,
+			ivl: this._item.ilvl,
+			quality: this._item.quality
 		});
 	}
 
@@ -178,6 +181,9 @@ export class EquippedItem {
 		}
 	}
 
+	getPossibleSuffixes(): Suffix[] {
+		return this._item.suffixes
+	}
 
 
 	numSockets(): number {
@@ -228,5 +234,100 @@ export class EquippedItem {
 			}
 		});
 		return failed;
+	}
+
+	static getSuffixName(suffix: Suffix): string {
+		switch(suffix) {
+			case Suffix.SuffixMonkey: return "of the Monkey";
+			case Suffix.SuffixEagle: return "of the Eagle";
+			case Suffix.SuffixBear: return "of the Bear";
+			case Suffix.SuffixWhale: return "of the Whale";
+			case Suffix.SuffixOwl: return "of the Owl";
+			case Suffix.SuffixGorilla: return "of the Gorilla";
+			case Suffix.SuffixFalcon: return "of the Falcon";
+			case Suffix.SuffixBoar: return "of the Boar";
+			case Suffix.SuffixWolf: return "of the Wolf";
+			case Suffix.SuffixTiger: return "of the Tiger";
+			case Suffix.SuffixSpirit: return "of Spirit";
+			case Suffix.SuffixStamina: return "of Stamina";
+			case Suffix.SuffixStrength: return "of Strength";
+			case Suffix.SuffixAgility: return "of Agility";
+			case Suffix.SuffixIntellect: return "of Intellect";
+			case Suffix.SuffixPower: return "of Power";
+			case Suffix.SuffixArcaneWrath: return "of Arcane Wrath";
+			case Suffix.SuffixFieryWrath: return "of Fiery Wrath";
+			case Suffix.SuffixFrozenWrath: return "of Frozen Wrath";
+			case Suffix.SuffixNaturesWrath: return "of Nature's Wrath";
+			case Suffix.SuffixShadowWrath: return "of Shadow Wrath";
+			case Suffix.SuffixSpellPower: return "of Spell Power";
+			case Suffix.SuffixDefense: return "of Defense";
+			case Suffix.SuffixRegeneration: return "of Regeneration";
+			case Suffix.SuffixEluding: return "of Eluding";
+			case Suffix.SuffixConcentration: return "of Concentration";
+			case Suffix.SuffixArcaneProtection: return "of Arcane Protection";
+			case Suffix.SuffixFireProtection: return "of Fire Protection";
+			case Suffix.SuffixFrostProtection: return "of Frost Protection";
+			case Suffix.SuffixNatureProtection: return "of Nature Protection";
+			case Suffix.SuffixShadowProtection: return "of Shadow Protection";
+			case Suffix.SuffixSorcerer: return "of the Sorcerer";
+			case Suffix.SuffixPhysician: return "of the Physician";
+			case Suffix.SuffixProphet: return "of the Prophet";
+			case Suffix.SuffixInvoker: return "of the Invoker";
+			case Suffix.SuffixBandit: return "of the Bandit";
+			case Suffix.SuffixBeast: return "of the Beast";
+			case Suffix.SuffixHierophant: return "of the Hierophant";
+			case Suffix.SuffixSoldier: return "of the Soldier";
+			case Suffix.SuffixElder: return "of the Elder";
+			case Suffix.SuffixChampion: return "of the Champion";
+			case Suffix.SuffixTest: return "of the Test";
+			case Suffix.SuffixBlocking: return "of Blocking";
+			case Suffix.SuffixPaladinTesting: return "of Paladin Testing";
+			case Suffix.SuffixGrove: return "of the Grove";
+			case Suffix.SuffixHunt: return "of the Hunt";
+			case Suffix.SuffixMind: return "of the Mind";
+			case Suffix.SuffixCrusade: return "of the Crusade";
+			case Suffix.SuffixVision: return "of the Vision";
+			case Suffix.SuffixAncestor: return "of the Ancestor";
+			case Suffix.SuffixNightmare: return "of the Nightmare";
+			case Suffix.SuffixBattle: return "of the Battle";
+			case Suffix.SuffixShadow: return "of the Shadow";
+			case Suffix.SuffixSun: return "of the Sun";
+			case Suffix.SuffixMoon: return "of the Moon";
+			case Suffix.SuffixWild: return "of the Wild";
+			case Suffix.SuffixSpellPowerResistance: return "of Spell Power";
+			case Suffix.SuffixStrengthResistance: return "of Strength";
+			case Suffix.SuffixAgilityResistance: return "of Agility";
+			case Suffix.SuffixPowerResistance: return "of Power";
+			case Suffix.SuffixMagicResistance: return "of Magic";
+			case Suffix.SuffixKnight: return "of the Knight";
+			case Suffix.SuffixSeer: return "of the Seer";
+			case Suffix.SuffixBear60: return "of the Bear";
+			case Suffix.SuffixEagle60: return "of the Eagle";
+			case Suffix.SuffixAncestor60: return "of the Ancestor";
+			case Suffix.SuffixBandit60: return "of the Bandit";
+			case Suffix.SuffixBattle60: return "of the Battle";
+			case Suffix.SuffixElder60: return "of the Elder";
+			case Suffix.SuffixBeast60: return "of the Beast";
+			case Suffix.SuffixChampion60: return "of the Champion";
+			case Suffix.SuffixGrove60: return "of the Grove";
+			case Suffix.SuffixKnight60: return "of the Knight";
+			case Suffix.SuffixMonkey60: return "of the Monkey";
+			case Suffix.SuffixMoon60: return "of the Moon";
+			case Suffix.SuffixWild60: return "of the Wild";
+			case Suffix.SuffixWhale60: return "of the Whale";
+			case Suffix.SuffixVision60: return "of the Vision";
+			case Suffix.SuffixSun60: return "of the Sun";
+			case Suffix.SuffixStamina60: return "of Stamina";
+			case Suffix.SuffixSorcerer60: return "of the Sorcerer";
+			case Suffix.SuffixSoldier60: return "of the Soldier";
+			case Suffix.SuffixShadow60: return "of the Shadow";
+			case Suffix.SuffixForeseer: return "of the Foreseer";
+			case Suffix.SuffixThief: return "of the Thief";
+			case Suffix.SuffixNecromancer: return "of the Necromancer";
+			case Suffix.SuffixMarksman: return "of the Marksman";
+			case Suffix.SuffixSquire: return "of the Squire";
+			case Suffix.SuffixRestoration: return "of Restoration";
+			default: return "";
+		}
 	}
 };

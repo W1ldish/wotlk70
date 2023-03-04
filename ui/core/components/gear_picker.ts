@@ -33,6 +33,7 @@ import {
 	ItemSpec,
 	ItemSwap,
 	ItemType,
+	Suffix,
 } from '../proto/common';
 import {
 	UIEnchant as Enchant,
@@ -97,7 +98,7 @@ class ItemPicker extends Component {
 	// All items and enchants that are eligible for this slot
 	private _items: Array<Item> = [];
 	private _enchants: Array<Enchant> = [];
-
+	private _suffixes: Array<Item> = [];
 	private _equippedItem: EquippedItem | null = null;
 
 	constructor(parent: HTMLElement, simUI: SimUI, player: Player<any>, slot: ItemSlot) {
@@ -112,7 +113,7 @@ class ItemPicker extends Component {
       </a>
       <div class="item-picker-labels-container">
         <a class="item-picker-name" href="javascript:void(0)" role="button"></a><br>
-        <a class="item-picker-enchant" href="javascript:void(0)" role="button"></a>
+        <a class="item-picker-enchant" href="javascript:void(0)" role="button"></a><br>
       </div>
     `;
 
@@ -268,7 +269,7 @@ class ItemPicker extends Component {
 			equippedItem: this._equippedItem,
 			eligibleItems: this._items,
 			eligibleEnchants: this._enchants,
-			gearData: gearData
+			gearData: gearData,
 		})
 	}
 }
@@ -284,6 +285,7 @@ export class IconItemSwapPicker<SpecType extends Spec, ValueType> extends Input<
 	// All items and enchants that are eligible for this slot
 	private _items: Array<Item> = [];
 	private _enchants: Array<Enchant> = [];
+	private _suffixes: Array<Item> = [];
 
 	constructor(parent: HTMLElement, simUI: SimUI, player: Player<SpecType>, slot: ItemSlot, config: InputConfig<Player<SpecType>, ValueType>) {
 		super(parent, 'icon-picker-root', player, config)
@@ -428,6 +430,7 @@ enum SelectorModalTabs {
 	Gem1 = 'Gem1',
 	Gem2 = 'Gem2',
 	Gem3 = 'Gem3',
+	Suffix = 'Suffix',
 }
 
 interface SelectorModalConfig {
@@ -436,7 +439,7 @@ interface SelectorModalConfig {
 	equippedItem: EquippedItem | null,
 	eligibleItems: Array<Item>,
 	eligibleEnchants: Array<Enchant>,
-	gearData: GearData
+	gearData: GearData,
 }
 
 class SelectorModal extends BaseModal {
@@ -536,6 +539,63 @@ class SelectorModal extends BaseModal {
 					gearData.equipItem(eventID, equippedItem.withEnchant(null));
 			});
 
+			if (equippedItem) {
+				const eligibleSuffixes: Item[] = [];
+				
+				equippedItem.getPossibleSuffixes().forEach(suffix => {
+					var item = equippedItem.item;
+					item.suffix = suffix;
+		
+					eligibleSuffixes.push(item);
+				});
+				this.addTab(
+					'Suffixes',
+					eligibleSuffixes.map(item => {
+						return {
+							item: item,
+							id: item.id,
+							actionId: ActionId.fromItemId(item.id,item.suffix),
+							name: item.name + " " + EquippedItem.getSuffixName(item.suffix),
+							quality: item.quality,
+							heroic: item.heroic,
+							phase: item.phase,
+							baseEP: this.player.computeItemEP(item, slot),
+							ignoreEPFilter: false,
+							onEquip: (eventID, item: Item) => {
+								const equippedItem = gearData.getEquippedItem();
+								if (equippedItem) {
+									gearData.equipItem(eventID, equippedItem.withItem(item));
+								} else {
+									gearData.equipItem(eventID, new EquippedItem(item));
+								}
+							},
+						};
+					}),
+					item => this.player.computeItemEP(item, slot),
+					equippedItem => equippedItem?.item,
+					GemColor.GemColorUnknown,
+					eventID => {
+						gearData.equipItem(eventID, null);
+					}/* ,
+					tabAnchor => {
+						tabAnchor.classList.add('selector-modal-tab-suffix')
+						const updateSuffixTab = () => {
+							const equippedItem = gearData.getEquippedItem();
+							const suffix = equippedItem?.item.suffix;
+							const suffixElem = tabAnchor.querySelector('.selector-modal-tab-suffix') as HTMLElement;
+							// if (equippedItem && equippedItem.getPossibleSuffixes.length > 0 ) {
+							// 	suffixElem.classList.remove('hide');
+							// } else {
+							// 	suffixElem.classList.add('hide');
+							// }
+						};
+	
+						gearData.changeEvent.on(updateSuffixTab);
+						this.addOnDisposeCallback(() => gearData.changeEvent.off(updateSuffixTab));
+						updateSuffixTab();
+					} */
+					);
+			}
 		this.addGemTabs(slot, equippedItem, gearData);
 	}
 

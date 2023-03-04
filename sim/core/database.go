@@ -38,6 +38,7 @@ type Item struct {
 	ID        int32
 	Type      proto.ItemType
 	ArmorType proto.ArmorType
+	ilvl      int32
 	// Weapon Stats
 	WeaponType       proto.WeaponType
 	HandType         proto.HandType
@@ -59,6 +60,7 @@ type Item struct {
 	Gems    []Gem
 	Enchant Enchant
 	Suffix  proto.Suffix
+
 	//Internal use
 	TempEnchant int32
 }
@@ -80,6 +82,8 @@ func ItemFromProto(pData *proto.SimItem) Item {
 		SocketBonus:      stats.FromFloatArray(pData.SocketBonus),
 		SetName:          pData.SetName,
 		Suffix:           pData.Suffix,
+		ilvl:             pData.Ilvl,
+		Quality:          pData.Quality,
 	}
 }
 
@@ -88,6 +92,8 @@ func (item Item) ToItemSpecProto() *proto.ItemSpec {
 		Id:      item.ID,
 		Enchant: item.Enchant.EffectID,
 		Gems:    []int32{},
+		Suffix:  item.Suffix,
+		Quality: item.Quality,
 	}
 	for _, gem := range item.Gems {
 		itemSpec.Gems = append(itemSpec.Gems, gem.ID)
@@ -127,6 +133,9 @@ type ItemSpec struct {
 	ID      int32
 	Enchant int32
 	Gems    []int32
+	Suffix  proto.Suffix
+	ilvl    int32
+	Quality proto.ItemQuality
 }
 
 type Equipment [proto.ItemSlot_ItemSlotRanged + 1]Item
@@ -188,6 +197,9 @@ func ProtoToEquipmentSpec(es *proto.EquipmentSpec) EquipmentSpec {
 		}
 		spec.Gems = item.Gems
 		spec.Enchant = item.Enchant
+		spec.Suffix = item.Suffix
+		spec.ilvl = item.Ivl
+		spec.Quality = item.Quality
 		coreEquip[i] = spec
 	}
 
@@ -228,6 +240,10 @@ func NewItem(itemSpec ItemSpec) Item {
 			}
 		}
 	}
+	item.ilvl = itemSpec.ilvl
+	item.Suffix = itemSpec.Suffix
+	item.Quality = itemSpec.Quality
+
 	return item
 }
 
@@ -279,6 +295,12 @@ func (equipment Equipment) Stats() stats.Stats {
 
 		for _, gem := range item.Gems {
 			equipStats = equipStats.Add(gem.Stats)
+		}
+		if item.Suffix > 0 {
+			//panic(fmt.Sprintf("%d  %d  %d   %d   %d  ", item.ID, item.ilvl, item.Quality, item.Type, item.Suffix))
+
+			//panic(stats.GetSuffixStats(item.ID, item.ilvl, item.Quality, item.Type, item.Suffix).String())
+			equipStats = equipStats.Add(stats.GetSuffixStats(item.ID, item.ilvl, item.Quality, item.Type, item.Suffix))
 		}
 
 		// Check socket bonus

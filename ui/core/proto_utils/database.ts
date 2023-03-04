@@ -159,7 +159,7 @@ export class Database {
 		const item = this.items[itemSpec.id];
 		if (!item)
 			return null;
-
+		item.suffix = itemSpec.suffix;
 		let enchant: Enchant | null = null;
 		if (itemSpec.enchant) {
 			const slots = getEligibleItemSlots(item);

@@ -140,6 +140,16 @@ export class ActionId {
 			return `https://wowhead.com/wotlk/${langPrefix}item=${id}`;
 		}
 	}
+
+	static makeItemUrlSuffix(id: number, suffix: number): string {
+		const langPrefix = getWowheadLanguagePrefix();
+		if (USE_WOTLK_DB) {
+			return `https://wotlkdb.com/?item=${id}&rand=${suffix}`;
+		} else {
+			return `https://wowhead.com/wotlk/${langPrefix}item=${id}&rand=-${suffix}`;
+		}
+	}
+
 	static makeSpellUrl(id: number): string {
 		const langPrefix = getWowheadLanguagePrefix();
 		if (USE_WOTLK_DB) {
@@ -175,7 +185,12 @@ export class ActionId {
 
 	setWowheadHref(elem: HTMLAnchorElement) {
 		if (this.itemId) {
-			elem.href = ActionId.makeItemUrl(this.itemId);
+			if (this.tag && this.tag != 0) {
+				elem.href = ActionId.makeItemUrlSuffix(this.itemId,this.tag);
+			} else {
+				elem.href = ActionId.makeItemUrl(this.itemId);
+			}
+			
 		} else if (this.spellId) {
 			elem.href = ActionId.makeSpellUrl(this.spellId);
 		}

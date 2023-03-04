@@ -709,6 +709,9 @@ message ItemSpec {
 	int32 id = 2;
 	int32 enchant = 3;
 	repeated int32 gems = 4;
+	Suffix suffix = 5;
+	int32 ivl = 6;
+	ItemQuality quality = 7;
 }
 
 message EquipmentSpec {
@@ -743,6 +746,8 @@ message SimItem {
 	string set_name = 14;
 	
 	Suffix suffix = 15;
+	int32 ilvl = 16;
+	ItemQuality quality = 17;
 }
 
 // Extra enum for describing which items are eligible for an enchant, when
