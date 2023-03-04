@@ -151,7 +151,7 @@ export class HunterPetTalentsPicker extends Component {
 					this.curTalents = options.petTalents;
 				},
 				pointsPerRow: 3,
-				maxPoints: 16,
+				maxPoints: 13,
 			});
 
 			const savedTalentsManager = new SavedDataManager<Player<Spec.SpecHunter>, string>(pickerContainer, this.simUI, this.player, {
@@ -211,7 +211,7 @@ export class HunterPetTalentsPicker extends Component {
 		});
 
 		const updateIsBM = () => {
-			const maxPoints = this.player.getTalents().beastMastery ? 20 : 16;
+			const maxPoints = this.player.getTalents().beastMastery ? 17 : 13;
 			pickers.forEach(picker => picker.setMaxPoints(maxPoints));
 		};
 		player.talentsChangeEmitter.on(updateIsBM);
@@ -242,9 +242,6 @@ export const cunningDefault: HunterPetTalents = HunterPetTalents.create({
 	spikedCollar: 3,
 	cornered: 2,
 	feedingFrenzy: 2,
-	wolverineBite: true,
-	bullheaded: true,
-	wildHunt: 1,
 });
 export const ferocityDefault: HunterPetTalents = HunterPetTalents.create({
 	cobraReflexes: 2,
@@ -253,9 +250,6 @@ export const ferocityDefault: HunterPetTalents = HunterPetTalents.create({
 	boarsSpeed: true,
 	cullingTheHerd: 3,
 	spidersBite: 3,
-	rabid: true,
-	callOfTheWild: true,
-	wildHunt: 1,
 });
 export const tenacityDefault: HunterPetTalents = HunterPetTalents.create({
 	cobraReflexes: 2,
@@ -265,9 +259,6 @@ export const tenacityDefault: HunterPetTalents = HunterPetTalents.create({
 	guardDog: 2,
 	thunderstomp: true,
 	graceOfTheMantis: 2,
-	taunt: true,
-	roarOfSacrifice: true,
-	wildHunt: 1,
 });
 const defaultTalents = [cunningDefault, ferocityDefault, tenacityDefault];
 
@@ -281,9 +272,8 @@ export const cunningBMDefault: HunterPetTalents = HunterPetTalents.create({
 	feedingFrenzy: 2,
 	wolverineBite: true,
 	bullheaded: true,
-	graceOfTheMantis: 2,
+	graceOfTheMantis: 1,
 	wildHunt: 2,
-	roarOfSacrifice: true,
 });
 export const ferocityBMDefault: HunterPetTalents = HunterPetTalents.create({
 	cobraReflexes: 2,
@@ -295,8 +285,7 @@ export const ferocityBMDefault: HunterPetTalents = HunterPetTalents.create({
 	spidersBite: 3,
 	rabid: true,
 	callOfTheWild: true,
-	sharkAttack: 2,
-	wildHunt: 2,
+	sharkAttack: 1,
 });
 export const tenacityBMDefault: HunterPetTalents = HunterPetTalents.create({
 	cobraReflexes: 2,
@@ -307,9 +296,7 @@ export const tenacityBMDefault: HunterPetTalents = HunterPetTalents.create({
 	guardDog: 2,
 	thunderstomp: true,
 	graceOfTheMantis: 2,
-	taunt: true,
 	roarOfSacrifice: true,
-	wildHunt: 2,
 });
 const defaultBMTalents = [cunningBMDefault, ferocityBMDefault, tenacityBMDefault];
 
