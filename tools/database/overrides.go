@@ -16,6 +16,20 @@ var ItemOverrides = []*proto.UIItem{
 	{ /** Lightning Etched Specs */ Id: 34355, ClassAllowlist: []proto.Class{proto.Class_ClassShaman}},
 	{ /** Annihilator Holo-Gogs */ Id: 34847, ClassAllowlist: []proto.Class{proto.Class_ClassMage, proto.Class_ClassPriest, proto.Class_ClassWarlock}},
 
+	{Id: 32653, Phase: 2},
+	{Id: 32650, Phase: 2},
+	{Id: 32654, Phase: 2},
+	{Id: 32652, Phase: 2},
+	{Id: 32651, Phase: 2},
+	{Id: 32645, Phase: 2},
+	{Id: 32647, Phase: 2},
+	{Id: 32648, Phase: 2},
+	{Id: 32539, Phase: 2},
+	{Id: 32538, Phase: 2},
+	{Id: 32771, Phase: 2},
+	{Id: 32770, Phase: 2},
+	{Id: 32864, Phase: 2},
+
 	{Id: 29276, Phase: 2}, //Violet Signet
 	{Id: 29277, Phase: 2}, //Violet Signet
 	{Id: 29278, Phase: 2}, //Violet Signet
