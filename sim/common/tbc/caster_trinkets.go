@@ -18,14 +18,12 @@ func init() {
 	core.NewSimpleStatOffensiveTrinketEffect(28223, stats.Stats{stats.SpellPower: 167}, time.Second*20, time.Minute*2)  // Arcanist's Stone
 	core.NewSimpleStatOffensiveTrinketEffect(29132, stats.Stats{stats.SpellPower: 150}, time.Second*15, time.Second*90) // Scryer's Bloodgem
 	core.NewSimpleStatOffensiveTrinketEffect(29179, stats.Stats{stats.SpellPower: 150}, time.Second*15, time.Second*90) // Xiri's Gift
-	core.NewSimpleStatOffensiveTrinketEffect(29370, stats.Stats{stats.SpellPower: 155}, time.Second*20, time.Minute*2)  // Icon of the Silver Crescent
+	core.NewSimpleStatOffensiveTrinketEffect(29370, stats.Stats{stats.SpellPower: 158}, time.Second*20, time.Minute*2)  // Icon of the Silver Crescent
 	core.NewSimpleStatOffensiveTrinketEffect(30340, stats.Stats{stats.SpellPower: 125}, time.Second*15, time.Second*90) // Living Ruby Serpent
 	core.NewSimpleStatOffensiveTrinketEffect(32483, stats.Stats{stats.SpellHaste: 175}, time.Second*20, time.Minute*2)  // Skull of Gul'dan
 	core.NewSimpleStatOffensiveTrinketEffect(33829, stats.Stats{stats.SpellPower: 211}, time.Second*20, time.Minute*2)  // Hex Shrunken Head
 	core.NewSimpleStatOffensiveTrinketEffect(34429, stats.Stats{stats.SpellPower: 320}, time.Second*15, time.Second*90) // Shifting Naaru Sliver
-
-	// Defensive trinkets. Keep these in order by item ID.
-	core.NewSimpleStatDefensiveTrinketEffect(29376, stats.Stats{stats.SpellPower: 99}, time.Second*20, time.Minute*2) // Essence of the Marytr
+	core.NewSimpleStatOffensiveTrinketEffect(29376, stats.Stats{stats.SpellPower: 158}, time.Second*20, time.Minute*2)  // Essence of the Marytr
 
 	// Proc effects. Keep these in order by item ID.
 
