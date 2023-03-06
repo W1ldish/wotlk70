@@ -11,7 +11,7 @@ func TestSingleAuraExclusiveDurationNoOverwrite(t *testing.T) {
 	target := Unit{
 		Type:        EnemyUnit,
 		Index:       0,
-		Level:       83,
+		Level:       73,
 		auraTracker: newAuraTracker(),
 	}
 	mangle := MangleAura(&target)
@@ -36,7 +36,7 @@ func TestSingleAuraExclusiveDurationOverwrite(t *testing.T) {
 	target := Unit{
 		Type:        EnemyUnit,
 		Index:       0,
-		Level:       83,
+		Level:       73,
 		auraTracker: newAuraTracker(),
 	}
 	mangle := MangleAura(&target)

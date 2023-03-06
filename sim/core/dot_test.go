@@ -98,7 +98,7 @@ func SetupFakeSim() *Simulation {
 		},
 		Encounter: &proto.Encounter{
 			Targets: []*proto.Target{
-				{Name: "target", Level: 83, MobType: proto.MobType_MobTypeDemon},
+				{Name: "target", Level: 73, MobType: proto.MobType_MobTypeDemon},
 			},
 			Duration: 180,
 		},
