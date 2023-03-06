@@ -549,7 +549,7 @@ func (warlock *Warlock) setupDemonicPact() {
 			}
 
 			icd.Use(sim)
-			newSPBonus := (warlock.GetStat(stats.SpellPower) + core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0)) * demonicPactMultiplier
+			newSPBonus := (warlock.GetStat(stats.SpellPower) + core.TernaryFloat64(warlock.HasActiveAura("Shadowflame"), 135, 0) - core.TernaryFloat64(warlock.DemonicPactAura.IsActive(), warlock.DemonicPactAura.ExclusiveEffects[0].Priority, 0)) * demonicPactMultiplier
 
 			shouldRefresh := !warlock.DemonicPactAura.IsActive() ||
 				warlock.DemonicPactAura.RemainingDuration(sim) < time.Second*10 ||
