@@ -963,7 +963,7 @@ func InnervateAura(character *Character, actionTag int32) *Aura {
 		ActionID: actionID,
 		Duration: InnervateDuration,
 		OnGain: func(aura *Aura, sim *Simulation) {
-			const manaPerTick = 3496 * 2.25 / 10 // WotLK druid's base mana
+			const manaPerTick = 2370 * 2.25 / 10 // Level 70 druid's base mana
 			StartPeriodicAction(sim, PeriodicActionOptions{
 				Period:   InnervateDuration / 10,
 				NumTicks: 10,
